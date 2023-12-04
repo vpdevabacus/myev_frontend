@@ -1,12 +1,10 @@
-import logo from './logo.svg';
+import Home from "./screens/Home";
 
 function App() {
   return (
-    <div>
-     <h1 className="text-2xl font-bold border-2 text-[#e50914] w-30">
-      Hello world!
-    </h1>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
