@@ -22,6 +22,7 @@ import facebook from "../assets/Images/facebook.png";
 import footer_myEV_logo from "../assets/Images/footer_myEV_logo.png";
 import Polygon from "../assets/Images/Polygon.png";
 import location from "../assets/Images/location.png";
+import filling_machine from "../assets/Images/filling_machine.png";
 
 
 
@@ -37,8 +38,9 @@ const ImageIcons = {
   footer_myEV_logo,
   Polygon,
   location,
-   blueBg,
+  blueBg,
   Ellipse,
-
+  filling_machine
+}
 
 export default ImageIcons;
