@@ -44,10 +44,10 @@ const Banner = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" justify-center items-center ">
-                            <img className="w-3/4 absolute top-[770px]" src={ImageIcons.car} >
+                        {/* <div className=" justify-center items-center  ">
+                            <img className="w-3/4 absolute top-[770px] " src={ImageIcons.car} >
                             </img>
-                        </div>
+                        </div> */}
 
                     </section>
                 </section>
