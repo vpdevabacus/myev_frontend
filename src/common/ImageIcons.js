@@ -22,6 +22,9 @@ import facebook from "../assets/Images/facebook.png";
 import footer_myEV_logo from "../assets/Images/footer_myEV_logo.png";
 import Polygon from "../assets/Images/Polygon.png";
 import location from "../assets/Images/location.png";
+import clock from "../assets/Images/clock.png";
+import earth from "../assets/Images/earth.png";
+
 
 
 
@@ -39,6 +42,8 @@ const ImageIcons = {
   location,
    blueBg,
   Ellipse,
-
+  clock,
+  earth
+}
 
 export default ImageIcons;
