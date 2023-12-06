@@ -1,15 +1,11 @@
+import React from "react";
 import ImageIcons from "../../common/ImageIcons";
 
 const backgroundImagePath = ImageIcons.feature_bg;
-const imagePath = ImageIcons.car;
 
 const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
     height: '950px',
-};
-const style1 = {
-    backgroundImage: `url('${imagePath}')`,
-    height: '900px',
 };
 
 const Banner = () => {
@@ -98,7 +94,7 @@ const Banner = () => {
     return (
         <>
 
-            <div>
+            <div className="mt-20">
                 <section>
                     <section className="relative">
                         <div className="bg-cover " style={style}>
