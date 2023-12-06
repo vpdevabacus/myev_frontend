@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 import myEV_logo from "../assets/Images/myEV_logo.png";
 import aboutUs_car from "../assets/Images/aboutUs_car.png";
 import Rectangle from "../assets/Images/Rectangle.png";
@@ -24,7 +13,8 @@ import Polygon from "../assets/Images/Polygon.png";
 import location from "../assets/Images/location.png";
 import clock from "../assets/Images/clock.png";
 import earth from "../assets/Images/earth.png";
-
+import filling_machine from "../assets/Images/filling_machine.png";
+import shape1 from "../assets/Images/shape1.png";
 
 
 
@@ -40,10 +30,12 @@ const ImageIcons = {
   footer_myEV_logo,
   Polygon,
   location,
-   blueBg,
+  blueBg,
   Ellipse,
+  filling_machine,
   clock,
-  earth
+  earth,
+  shape1,
 }
 
 export default ImageIcons;

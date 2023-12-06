@@ -1,7 +1,15 @@
-import React from 'react';
-import ImageIcons from '../../common/ImageIcons';
+import React from "react";
+import ImageIcons from "../../common/ImageIcons";
 
-const Features = () => {
+const backgroundImagePath = ImageIcons.feature_bg;
+
+const style = {
+    backgroundImage: `url('${backgroundImagePath}')`,
+    height: '950px',
+};
+
+const Banner = () => {
+
     const leftItems = [
         {
             id: '01',
@@ -82,40 +90,52 @@ const Features = () => {
         </div>
     );
 
+
     return (
         <>
-            <div className="py-16 mt-5">
-                <div className="w-full relative flex items-center justify-center">
-                    <img src={ImageIcons.feature_bg} alt="dining" className="w-full z-0 hidden xl:block" />
 
-                    <div className="bg-[#016C80] bg-opacity-80 w-full h-full px-4 flex items-center justify-center absolute z-40">
-                        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 my-6 text-white text-6xl">
-                            <p>Excellent And Best Services</p>
-                        </div>
-                        <div className="container relative inset-0 flex items-center justify-center top-12 ">
-                            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 ml-4 text-white">
-                                <ul className="">
-                                    {leftItems.map((item) => (
-                                        <ListItem key={item.id} item={item} />
-                                    ))}
-                                </ul>
-                            </div>
-                            <img src={ImageIcons.feature_machine} alt="Center Image" className="w-4/12  h-auto" />
-                            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 mr-4 text-white w-12/12 flex flex-row">
-                                <div className='w-6/12'></div>
-                                <ul className=" w-6/12">
-                                    {rightItems.map((item) => (
-                                        <ListItem1 key={item.id} item={item} />
-                                    ))}
-                                </ul>
-                            </div>
+            <div className="mt-20">
+                <section>
+                    <section className="relative">
+                        <div className="bg-cover " style={style}>
+                            <div class="absolute inset-0 bg-[#016C80] bg-opacity-80"></div>
+                            <div className="bg-[#016C80] bg-opacity-50 w-full h-full px-4 flex items-center justify-center absolute z-40">
+                                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 my-6 text-white text-6xl">
+                                    <p>Excellent And Best Services</p>
+                                </div>
+                                <div className="container relative inset-0 flex items-center justify-center top-12 ">
+                                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 ml-4 text-white">
+                                        <ul className="">
+                                            {leftItems.map((item) => (
+                                                <ListItem key={item.id} item={item} />
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <img src={ImageIcons.feature_machine} alt="Center Image" className="w-3/12  h-auto" />
+                                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 mr-4 text-white w-12/12 flex flex-row">
+                                        <div className='w-6/12'></div>
+                                        <ul className=" w-6/12">
+                                            {rightItems.map((item) => (
+                                                <ListItem1 key={item.id} item={item} />
+                                            ))}
+                                        </ul>
+                                    </div>
 
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                        {/* <div className=" justify-center items-center  ">
+                            <img className="w-3/4 absolute top-[770px] " src={ImageIcons.car} >
+                            </img>
+                        </div> */}
+
+                    </section>
+                </section>
             </div>
-        </>
-    );
-};
 
-export default Features;
+        </>
+    )
+
+}
+
+export default Banner;
