@@ -5,6 +5,7 @@ import AboutUs from "../components/home/AboutUs";
 import Features from "../components/home/Features";
 
 import Footer from "../components/footer/Footer";
+import Strategy from "../components/strategy/Strategy";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner/>
             <AboutUs />
             <Features />
+            <Strategy/>
             <Footer/>
         </>
     )

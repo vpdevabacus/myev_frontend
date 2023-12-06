@@ -8,41 +8,8 @@ import { MdLocationPin, MdPhone } from "react-icons/md";
 const Footer = () => {
     return (
         <>
-       
-<div class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12 xl:px-32">
-        <div class="mb-16 text-center">
-            <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">Tailus blocks leadership</h2>
-            <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Tailus prides itself not only on award-winning technology, but also on the talent of its people of some of the brightest minds and most experienced executives in business.</p>
-        </div>
-        <div class="grid gap-12 items-center md:grid-cols-4">
-            <div class="space-y-4 align-self-start">
-                <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" 
-                    src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="woman" loading="lazy" width="640" height="805"></img>
-                <div>
-                    <h4 class="text-2xl">Hentoni Doe</h4>
-                    <span class="block text-sm text-gray-500">CEO-Founder</span>
-                </div>
-            </div>
-            <div class="space-y-4 text-center align-self-end">
-                <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80" 
-                    src="https://tailus.io/sources/blocks/classic/preview/images/man.jpg" alt="man" loading="lazy" width="1000" height="667"></img>
-                <div>
-                    <h4 class="text-2xl">Jonathan Doe</h4>
-                    <span class="block text-sm text-gray-500">Chief Technical Officer</span>
-                </div>
-            </div>
-            <div class="space-y-4 text-center">
-                <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" 
-                    src="https://tailus.io/sources/blocks/classic/preview/images/woman.jpg" alt="woman" loading="lazy" width="1000" height="667"></img>
-                <div>
-                    <h4 class="text-2xl">Anabelle Doe</h4>
-                    <span class="block text-sm text-gray-500">Chief Operations Officer</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+            
             <div className=" bg-[#0B7132] px-6 py-12  ">
                 <div className="container mx-auto  ">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-6 flex items-center ">
@@ -57,7 +24,7 @@ const Footer = () => {
 
                         </div>
                         <div className="sm:col-span-2 flex items-center">
-                        <img src={ImageIcons.clock} className='h-10 w-10 mr-2' />
+                            <img src={ImageIcons.clock} className='h-10 w-10 mr-2' />
                             <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">24/7 Emergency Services</h1>
                         </div>
                     </div>
