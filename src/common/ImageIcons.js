@@ -14,6 +14,7 @@ import location from "../assets/Images/location.png";
 import clock from "../assets/Images/clock.png";
 import earth from "../assets/Images/earth.png";
 import filling_machine from "../assets/Images/filling_machine.png";
+import shape1 from "../assets/Images/shape1.png";
 
 
 
@@ -31,10 +32,10 @@ const ImageIcons = {
   location,
   blueBg,
   Ellipse,
-  alpha,
   filling_machine,
   clock,
   earth,
+  shape1,
 }
 
 export default ImageIcons;
