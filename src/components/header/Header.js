@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <>
-            <header className="header w-full text-[#fff] bg-white body-font">
+            <header className="header w-full text-[#fff] bg-white body-font fixed z-50 border-b border-b-[#828282]">
                 <div className="w-full flex flex-col items-start mx-auto md:flex-row bg-black px-8 py-1 justify-between">
                     <div className="flex items-center font-medium md:mb-0">
                         <FaRegEnvelope className='h-5 w-6' />
