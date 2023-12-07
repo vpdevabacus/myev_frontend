@@ -156,7 +156,6 @@ const Charges = () => {
                             <div class="mt-6 p-0">
                                 <div className="flex justify-center gap-3 lg:justify-start">
                                     <button className="px-3 md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl"><i className="fa-solid fa-arrow-right-to-bracket"></i>Sign Up</button>
-
                                 </div>
                             </div>
                         </div>
