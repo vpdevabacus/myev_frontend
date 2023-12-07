@@ -2,12 +2,22 @@ import React from 'react';
 import ImageIcons from '../../common/ImageIcons';
 
 const backgroundImagePath = ImageIcons.shape1;
+const backgroundImagePath1 = ImageIcons.shape2;
+
+
 
 const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
     height: '646px',
     width: '410px'
 };
+
+const style1 = {
+    backgroundImage: `url('${backgroundImagePath1}')`,
+    height: '646px',
+    width: '410px'
+};
+
 const Charges = () => {
 
     const features = [
@@ -47,6 +57,16 @@ const Charges = () => {
             <div className=" flex flex-row items-center justify-start">
                 <img src={ImageIcons.Polygon} />
                 <p className='ml-4 text-lg text-[#6E6E6E]'>{item.text}</p>
+
+            </div>
+
+        </div>
+    );
+    const FeatureList1 = ({ item }) => (
+        <div className='my-1 flex flex-col '>
+            <div className=" flex flex-row items-center justify-start">
+                <img src={ImageIcons.Polygon} />
+                <p className='ml-4 text-lg text-[#fff]'>{item.text}</p>
 
             </div>
 
@@ -116,21 +136,21 @@ const Charges = () => {
 
 
                     <div class="max-w-sm mx-auto relative rounded-lg cursor-pointer cursor-pointer">
-                        <div className="bg-cover px-4 py-8 " style={style}>
-                            <div class="relative m-0 mb-0 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
-                                <p className="text-xl font-semibold tracking-tight text-[#0B7132] sm:text-3xl leading-9">
+                        <div className="bg-cover px-4 py-8 " style={style1}>
+                            <div class="relative m-0 mb-0 overflow-hidden rounded-none  bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
+                                <p className="text-xl font-semibold tracking-tight text-[#fff] sm:text-3xl leading-9">
                                     HOME CHARGING
                                 </p>
-                                <p className="text-4xl font-semibold  text-[#000] sm:text-6xl mt-3">
+                                <p className="text-4xl font-semibold  text-[#fff] sm:text-6xl mt-3">
                                     ₹ 1,18,000/-
                                 </p>
-                                <p className="text-xl font-normal  text-[#676767] sm:text-xl mt-7">
+                                <p className="text-xl font-normal  text-[#fff] sm:text-xl mt-7">
                                     Amet minim mollit no duis deser ulamco sit enim aliqua.
                                 </p>
                             </div>
                             <div class="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
                                 {features.map((item) => (
-                                    <FeatureList key={item.id} item={item} />
+                                    <FeatureList1 key={item.id} item={item} />
                                 ))}
                             </div>
                             <div class="mt-6 p-0">
