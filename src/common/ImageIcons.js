@@ -15,6 +15,7 @@ import clock from "../assets/Images/clock.png";
 import earth from "../assets/Images/earth.png";
 import filling_machine from "../assets/Images/filling_machine.png";
 import shape1 from "../assets/Images/shape1.png";
+import shape2 from "../assets/Images/shape2.png";
 
 
 
@@ -36,6 +37,8 @@ const ImageIcons = {
   clock,
   earth,
   shape1,
+  shape2,
+
 }
 
 export default ImageIcons;

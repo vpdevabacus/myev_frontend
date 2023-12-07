@@ -1,9 +1,9 @@
-import Home from "./screens/Home";
+import AppLayout from "./layout/AppLayout";
 
 function App() {
   return (
     <>
-      <Home />
+      <AppLayout />
     </>
   );
 }
