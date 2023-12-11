@@ -9,20 +9,26 @@ const Header = () => {
     return (
         <>
             <header className="header w-full text-[#fff] bg-white body-font">
-                <div className="w-full flex flex-col items-start mx-auto md:flex-row bg-black px-8 py-1 justify-between">
-                    <div className="flex items-center font-medium md:mb-0">
-                        <FaRegEnvelope className='h-5 w-6' />
-                        <span className="ml-2 font-normal text-[#fff] text-lg" >mailto:info@vpventuresindia.com</span>
-                        <span className='mx-4'>|</span>
-                        <MdPhone className='h-5 w-6' />
-                        <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
-                    </div>
+                <div className="w-full bg-black px-8 py-3">
+                    <div className="container flex flex-col items-start mx-auto md:flex-row justify-between">
+                        <div className="flex font-medium md:mb-0">
+                            <div className="flex items-center" >
+                                <FaRegEnvelope className='h-5 w-6' />
+                                <span className="ml-2 font-normal text-[#fff] text-lg" >mailto:info@vpventuresindia.com</span>
+                            </div>
+                            <div className="flex items-center ">
+                                <span className='mx-4'>|</span>
+                                <MdPhone className='h-5 w-6' />
+                                <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
+                            </div>
+                        </div>
 
-                    <div className="items-center flex md:mb-0 mt-1">
-                        <FaFacebookF className='h-5 w-6 mr-2' />
-                        <FaTwitter className='h-5 w-6 mr-2' />
-                        <FaInstagram className='h-5 w-6 mr-2' />
-                        <FaYoutube className='h-5 w-6' />
+                        <div className="items-center flex md:mb-0 mt-1">
+                            <FaFacebookF className='h-5 w-6 mr-2' />
+                            <FaTwitter className='h-5 w-6 mr-2' />
+                            <FaInstagram className='h-5 w-6 mr-2' />
+                            <FaYoutube className='h-5 w-6' />
+                        </div>
                     </div>
                 </div>
                 <div className="w-full flex flex-col items-start p-6 mx-auto md:flex-row">

@@ -16,6 +16,11 @@ import earth from "../assets/Images/earth.png";
 import filling_machine from "../assets/Images/filling_machine.png";
 import shape1 from "../assets/Images/shape1.png";
 import shape2 from "../assets/Images/shape2.png";
+import petrol from "../assets/Images/petrol.png";
+import map from "../assets/Images/map.png";
+import roundedimage from "../assets/Images/roundedimage.png";
+import chargingsession from "../assets/Images/chargingsession.png";
+
 
 
 
@@ -38,7 +43,10 @@ const ImageIcons = {
   earth,
   shape1,
   shape2,
-
+  petrol,
+  map,
+  roundedimage,
+  chargingsession
 }
 
 export default ImageIcons;
