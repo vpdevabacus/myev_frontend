@@ -48,7 +48,6 @@ const Banner = () => {
                             <img className="w-3/4 absolute top-[770px] " src={ImageIcons.car} >
                             </img>
                         </div>
-
                     </section>
                 </section>
             </div>

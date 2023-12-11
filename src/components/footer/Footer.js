@@ -20,8 +20,6 @@ const Footer = () => {
                         <div className="sm:col-span-2  ">
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Call US On</h1>
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white">+91 75081 00021</h1>
-
-
                         </div>
                         <div className="sm:col-span-2 flex items-center">
                             <img src={ImageIcons.clock} className='h-10 w-10 mr-2' />
@@ -129,7 +127,6 @@ const Footer = () => {
                                     <MdPhone className='h-6 w-6 mr-3 text-white' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">+91 75081 00021</a>
                                 </li>
-
                             </nav>
                         </div>
                     </div>

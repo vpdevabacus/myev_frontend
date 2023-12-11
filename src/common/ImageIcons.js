@@ -16,6 +16,10 @@ import earth from "../assets/Images/earth.png";
 import filling_machine from "../assets/Images/filling_machine.png";
 import shape1 from "../assets/Images/shape1.png";
 import shape2 from "../assets/Images/shape2.png";
+import petrol from "../assets/Images/petrol.png";
+import map from "../assets/Images/map.png";
+import roundedimage from "../assets/Images/roundedimage.png";
+import chargingsession from "../assets/Images/chargingsession.png";
 import services_banner from "../assets/Images/services_banner.png";
 import services1 from "../assets/Images/services1.png";
 import services2 from "../assets/Images/services2.png";
@@ -24,6 +28,8 @@ import services4 from "../assets/Images/services4.png";
 import services5 from "../assets/Images/services5.png";
 import services6 from "../assets/Images/services6.png";
 import right_arrow from "../assets/Images/right_arrow.png";
+
+
 
 
 
@@ -46,6 +52,11 @@ const ImageIcons = {
   earth,
   shape1,
   shape2,
+  design,
+  petrol,
+  map,
+  roundedimage,
+  chargingsession,
   services_banner,
   services1,
   services2,
@@ -54,7 +65,6 @@ const ImageIcons = {
   services5,
   services6,
   right_arrow
-
 }
 
 export default ImageIcons;

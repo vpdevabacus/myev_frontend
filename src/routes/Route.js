@@ -1,6 +1,5 @@
 import React from 'react'
-import {
-    Route,createBrowserRouter,createRoutesFromElements,} from "react-router-dom";
+import {createBrowserRouter,createRoutesFromElements,Route} from "react-router-dom";
 import Home from '../screens/Home';
 import Services from '../screens/Services';
 import AppLayout from '../layout/AppLayout';
@@ -16,11 +15,7 @@ const router = createBrowserRouter(
             <Route path="" element={<Home />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="services" element={<Services />} />
-
-
-        
-
-        </Route>
+        </Route> 
     )
 );
 
