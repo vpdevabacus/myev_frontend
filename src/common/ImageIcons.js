@@ -52,7 +52,6 @@ const ImageIcons = {
   earth,
   shape1,
   shape2,
-  design,
   petrol,
   map,
   roundedimage,
