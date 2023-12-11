@@ -8,29 +8,17 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <>
-            <header className="header w-full text-[#fff] bg-white body-font">
-                <div className="w-full bg-black px-8 py-3">
-                    <div className="container flex flex-col items-start mx-auto md:flex-row justify-between">
-                        <div className="flex font-medium md:mb-0">
-                            <div className="flex items-center" >
-                                <FaRegEnvelope className='h-5 w-6' />
-                                <span className="ml-2 font-normal text-[#fff] text-lg" >mailto:info@vpventuresindia.com</span>
-                            </div>
-                            <div className="flex items-center ">
-                                <span className='mx-4'>|</span>
-                                <MdPhone className='h-5 w-6' />
-                                <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
-                            </div>
+            <header className="header w-full text-[#fff] bg-white body-font fixed z-50">
+
+                <header className="header w-full text-[#fff] bg-white body-font  border-b border-b-[#828282]">
+                    <div className="w-full flex flex-col items-start mx-auto md:flex-row bg-black px-8 py-1 justify-between">
+                        <div className="flex items-center font-medium md:mb-0">
+                            <FaRegEnvelope className='h-5 w-6' />
+                            <span className="ml-2 font-normal text-[#fff] text-lg" >mailto:info@vpventuresindia.com</span>
+                            <span className='mx-4'>|</span>
+                            <MdPhone className='h-5 w-6' />
+                            <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
                         </div>
-            <header className="header w-full text-[#fff] bg-white body-font fixed z-50 border-b border-b-[#828282]">
-                <div className="w-full flex flex-col items-start mx-auto md:flex-row bg-black px-8 py-1 justify-between">
-                    <div className="flex items-center font-medium md:mb-0">
-                        <FaRegEnvelope className='h-5 w-6' />
-                        <span className="ml-2 font-normal text-[#fff] text-lg" >mailto:info@vpventuresindia.com</span>
-                        <span className='mx-4'>|</span>
-                        <MdPhone className='h-5 w-6' />
-                        <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
-                    </div>
 
                         <div className="items-center flex md:mb-0 mt-1">
                             <FaFacebookF className='h-5 w-6 mr-2' />
@@ -39,7 +27,8 @@ const Header = () => {
                             <FaYoutube className='h-5 w-6' />
                         </div>
                     </div>
-                </div>
+
+                </header>
                 <div className="w-full flex flex-col items-start p-6 mx-auto md:flex-row">
                     <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
                         <img src={ImageIcons.myEV_logo} className='h-20 w-44' />

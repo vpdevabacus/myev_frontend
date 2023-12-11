@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <>
 
-            
+
             <div className=" bg-[#0B7132] px-6 py-12  ">
                 <div className="container mx-auto  ">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-6 flex items-center ">
@@ -17,7 +17,7 @@ const Footer = () => {
                             <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Find Our near Branches</h1>
                             <img src={ImageIcons.earth} className='h-10 w-10 ml-2' />
                         </div>
-                        <div className="sm:col-span-2  ">
+                        <div className="sm:col-span-2 ">
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Call US On</h1>
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white">+91 75081 00021</h1>
                         </div>
