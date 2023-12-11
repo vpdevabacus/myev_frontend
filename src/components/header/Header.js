@@ -22,6 +22,15 @@ const Header = () => {
                                 <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
                             </div>
                         </div>
+            <header className="header w-full text-[#fff] bg-white body-font fixed z-50 border-b border-b-[#828282]">
+                <div className="w-full flex flex-col items-start mx-auto md:flex-row bg-black px-8 py-1 justify-between">
+                    <div className="flex items-center font-medium md:mb-0">
+                        <FaRegEnvelope className='h-5 w-6' />
+                        <span className="ml-2 font-normal text-[#fff] text-lg" >mailto:info@vpventuresindia.com</span>
+                        <span className='mx-4'>|</span>
+                        <MdPhone className='h-5 w-6' />
+                        <span className="ml-2 font-normal text-[#fff] text-lg" >+91 75081 00021</span>
+                    </div>
 
                         <div className="items-center flex md:mb-0 mt-1">
                             <FaFacebookF className='h-5 w-6 mr-2' />

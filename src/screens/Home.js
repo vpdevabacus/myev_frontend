@@ -21,6 +21,11 @@ const Home = () => {
             <New/>
            <Footer/>
            <About/>
+           <Charges />
+            {/* <Strategy/> */}
+            <Footer />
+            <About />
+
 
         </>
     )
