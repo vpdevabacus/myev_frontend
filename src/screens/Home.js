@@ -14,10 +14,9 @@ const Home = () => {
             <AboutUs />
             <Features />
             <Strategy />
+            <About />
             <Charges />
             <Footer />
-
-
         </>
     )
 };
