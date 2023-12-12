@@ -6,9 +6,6 @@ import Features from "../components/home/Features";
 import Strategy from "../components/home/Strategy";
 import Charges from "../components/home/Charges";
 import Footer from "../components/footer/Footer";
-import About from "../components/about/About";
-import New from "../components/Hnji";
-
 const Home = () => {
     return (
         <>
@@ -16,17 +13,10 @@ const Home = () => {
             <Banner />
             <AboutUs />
             <Features />
-            <Charges />
             <Strategy />
-            <New />
-
             <About />
             <Charges />
-            {/* <Strategy/> */}
             <Footer />
-            <About />
-
-
         </>
     )
 };
