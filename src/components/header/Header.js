@@ -45,10 +45,10 @@ const Header = () => {
                 </header>
                 <div className="w-full flex items-start p-6 mx-auto flex-row sm:flex-row justify-between ">
                     <div>
-                    <NavLink to="/" className="flex items-center font-medium text-gray-900 title-font">
+                        <NavLink to="/" className="flex items-center font-medium text-gray-900 title-font">
                             <img src={ImageIcons.myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44 cursor-pointer' />
-                            </NavLink>
-                        
+                        </NavLink>
+
                     </div>
                     <div className='flex flex-row mt-2'>
                         <div className="md:block sm:hidden hidden flex items-center justify-center text-base md:ml-auto md:my-auto">
@@ -62,20 +62,26 @@ const Header = () => {
                                 <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform rotate-180 md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#0B7132'></path></svg>
                             }
                             {dropdownOpen && (
-                                <div className="absolute top-40 py-2 px-4  bg-rose-400 rounded-md shadow-xl z-20 right-80 border border-2 border-t-black">
-                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">
-                                        AC Charger Service                                    </a>
-                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">
-                                        DC Charger Service                                    </a>
-                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">
-                                        Home Charger                                    </a>
-                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">
-                                        Support EV Brand
+                                <div className="absolute top-40 py-2  bg-white rounded-md shadow-xl z-20 right-80 border border-2 border-t-[#0B7132]">
+                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">AC Charger Service </a>
+                                    <div className='w-full bg-[#DDDDDD] h-px'>
+                                    </div>
+                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">DC Charger Service                                    </a>
+                                    <div className='w-full bg-[#DDDDDD] h-px'>
+                                    </div>
+
+                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">Home Charger                                    </a>
+                                    <div className='w-full bg-[#DDDDDD] h-px'>
+                                    </div>
+                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">Support EV Brand
                                     </a>
-                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">
-                                        Commercial Systems                                    </a>
-                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">
-                                        Public Stations                                   </a>
+                                    <div className='w-full bg-[#DDDDDD] h-px'>
+                                    </div>
+                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">Commercial Systems                                    </a>
+                                    <div className='w-full bg-[#DDDDDD] h-px'>
+                                    </div>
+                                    <a href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-blue-500 hover:text-white">Public Stations                                   </a>
+
                                 </div>
                             )}
                             <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl ml-10" : "mr-10 font-normal text-lg lg:text-xl text-[#000] ml-10"}>Contact Us</NavLink>
