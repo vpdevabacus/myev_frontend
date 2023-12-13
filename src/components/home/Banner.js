@@ -38,36 +38,45 @@ const Banner = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" mx-auto w-8/12 py-14 ">
-                            <img className="w-3/4 absolute top-[770px]  " src={ImageIcons.car} >
-                            </img>
+                        <div className=" py-8 sm:py-12 md:py-12 lg:py-32 xl:py-20 2xl:py-40 bg-[#0B7132] mb-28 mx-0 -mt-2">
+                            {/* <div class=" container mx-auto absolute mt-40 ml-40">
+                                <div class="w-9/12 mx-auto bg-[#E7F0F7] mb-8 rounded-2xl ">
+                                    <div class="xl:flex xl:w-11/12 mx-auto pb-20 ">
+                                        <div class="xl:w-6/12 pt-10 text-center xl:text-start">
+                                            <p class="text-[#0B7132] text-xl xl:text-2xl font-medium mt-5">CONVENIENT & FAST</p>
+                                            <p class="text-black font-bold  md:text-4xl xl:text-5xl md:font-semibold mt-3">Discover Places Nearby</p>
+                                            <p class=" xl:w-8/12 text-black text-base xl:text-lg font-medium mt-3 px-12 xl:-ml-10 ">Lorem Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                        </div>
+                                        <div class="xl:w-6/12 mx-auto w-8/12 mt-10">
+                                            <img src={ImageIcons.map} />
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div> */}
+                            <div className=" mx-auto w-12/12 py-14 ">
+                                <img className=" absolute top-[500px] w-full h-200  pb-10 mt-80 sm:mt-60 md:mt-44 xl:mt-0" src={ImageIcons.movingcar} >
+                                </img>
+                            </div>
                         </div>
+
+
+
+
 
 
 
                     </section>
                 </section>
 
-
             </div>
-            <div class=" container mx-auto pt-80 pb-10 ">
-                <div class="w-9/12 mx-auto bg-[#E7F0F7] mb-8 rounded-2xl ">
-                    <div class="xl:flex xl:w-11/12 mx-auto pb-20 ">
-                        <div class="xl:w-6/12 pt-10 text-center xl:text-start">
-                            <p class="text-[#0B7132] text-xl xl:text-2xl font-medium mt-5">CONVENIENT & FAST</p>
-                            <p class="text-black font-bold  md:text-4xl xl:text-5xl md:font-semibold mt-3">Discover Places Nearby</p>
-                            <p class=" xl:w-8/12 text-black text-base xl:text-lg font-medium mt-3 px-12 xl:-ml-10 ">Lorem Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                        </div>
-                        <div class="xl:w-6/12 mx-auto w-8/12 mt-10">
-                            <img src={ImageIcons.map} />
 
 
-                        </div>
 
-                    </div>
 
-                </div>
-            </div>
 
         </>
     )

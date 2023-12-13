@@ -33,6 +33,8 @@ import work1 from "../assets/Images/work1.png";
 import work2 from "../assets/Images/work2.png";
 import work3 from "../assets/Images/work3.png";
 import pdf from "../assets/Images/pdf.png";
+import movingcar from "../assets/Images/movingcar.gif";
+
 
 
 
@@ -72,7 +74,8 @@ const ImageIcons = {
   work1,
   work2,
   work3,
-  pdf
+  pdf,
+  movingcar
 }
 
 export default ImageIcons;

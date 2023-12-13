@@ -89,11 +89,11 @@ const Footer = () => {
                             <div className="h-0.5 w-12 bg-[#0B7132]"></div>
                             <nav className="mb-10 list-none">
                                 <li className="mt-3 flex ">
-                                    <img src={ImageIcons.pdf} className='h-4 w-4 mr-2' />
+                                    <img src={ImageIcons.pdf} className='h-6 w-6 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">AC Charger Services</a>
                                 </li>
                                 <li className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
+                                    <img src={ImageIcons.pdf} className='h-6 w-6 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">DC Charger Services</a>
                                 </li>
                                 <li className="mt-3 flex ">
