@@ -52,6 +52,7 @@ const Banner = () => {
     ]
 
     const ListItem = ({ item }) => (
+        <div className='my-12 flex flex-col w-6/12 sm:d-block '>
         <div className='my-12 flex flex-col  w-6/12 sm:d-block '>
             <div className=" flex flex-row items-center justify-start ">
                 <div className="rounded-full h-16 w-16 bg-[#fff] py-4" >
@@ -100,7 +101,7 @@ const Banner = () => {
                         <div className="bg-cover " style={style}>
                             <div class="absolute inset-0 bg-[#016C80] bg-opacity-80"></div>
                             <div className="bg-[#016C80] bg-opacity-50 w-full h-full px-4 flex items-center justify-center absolute z-40">
-                                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 my-6  font-semibold text-3xl text-white lg:text-4xl xl:text-5xl">
+                                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 my-6 font-semibold text-3xl text-white sm:text-center lg:text-4xl xl:text-5xl">
                                     <p>Excellent And Best Services</p>
                                 </div>
                                 <div className="container relative inset-0 flex items-center justify-center top-12 ">
