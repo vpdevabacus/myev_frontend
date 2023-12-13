@@ -11,8 +11,8 @@ const Strategy = () => {
                     </div>
                     <div className="grid gap-12 items-center md:grid-cols-2 xl:gap-2 xl:grid-cols-4 md:-mt-20 xl:mt-0">
                         <div className="space-y-4 text-center">
-                            <img className="w-60 h-60 mx-auto object-cover rounded-full md:w-60 md:h-60 lg:w-64 lg:h-64"
-                                src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
+                            <img className="w-60 h-60 mx-auto object-cover md:w-60 md:h-60 lg:w-64 lg:h-64"
+                                src={ImageIcons.work} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Fast Charging</h4>
                                 <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
@@ -20,7 +20,7 @@ const Strategy = () => {
                         </div>
                         <div className="space-y-4 text-center">
                             <img className="w-60 h-60 mx-auto object-cover rounded-full md:mt-80 xl:mt-32 md:w-60 md:h-60 lg:w-64 lg:h-64"
-                                src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
+                                src={ImageIcons.work1} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Good Management</h4>
                                 <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
@@ -28,7 +28,7 @@ const Strategy = () => {
                         </div>
                         <div className="space-y-4 text-center">
                             <img className="w-60 h-60 mx-auto object-cover rounded-full md:-mt-60 xl:mt-0 md:w-60 md:h-60 lg:w-64 lg:h-64"
-                                src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
+                                src={ImageIcons.work2} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Renewable Energy</h4>
                                 <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
@@ -36,7 +36,7 @@ const Strategy = () => {
                         </div>
                         <div className="space-y-4 text-center">
                             <img className="w-60 h-60 mx-auto object-cover rounded-full md:mt-40 xl:mt-32 md:w-60 md:h-60 lg:w-64 lg:h-64"
-                                src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
+                                src={ImageIcons.work3} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Quality Charger</h4>
                                 <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>

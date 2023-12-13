@@ -28,7 +28,11 @@ import services4 from "../assets/Images/services4.png";
 import services5 from "../assets/Images/services5.png";
 import services6 from "../assets/Images/services6.png";
 import right_arrow from "../assets/Images/right_arrow.png";
-
+import work from "../assets/Images/work.png";
+import work1 from "../assets/Images/work1.png";
+import work2 from "../assets/Images/work2.png";
+import work3 from "../assets/Images/work3.png";
+import pdf from "../assets/Images/pdf.png";
 
 
 
@@ -63,7 +67,12 @@ const ImageIcons = {
   services4,
   services5,
   services6,
-  right_arrow
+  right_arrow,
+  work,
+  work1,
+  work2,
+  work3,
+  pdf
 }
 
 export default ImageIcons;
