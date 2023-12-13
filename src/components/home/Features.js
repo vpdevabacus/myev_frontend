@@ -53,6 +53,7 @@ const Banner = () => {
 
     const ListItem = ({ item }) => (
         <div className='my-12 flex flex-col w-6/12 sm:d-block '>
+        <div className='my-12 flex flex-col  w-6/12 sm:d-block '>
             <div className=" flex flex-row items-center justify-start ">
                 <div className="rounded-full h-16 w-16 bg-[#fff] py-4" >
                     <p className=" text-black text-center font-bold text-base sm:text-lg md:text-xl 2xl:text-2xl ">

@@ -28,26 +28,27 @@ const Header = () => {
                     <div className="w-full flex flex-row items-start mx-auto sm:flex-row bg-black px-8 py-1 justify-between">
                         <div className="flex items-center font-medium md:mb-0">
                             <FaRegEnvelope className='h-5 w-6' />
-                            <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block " >mailto:info@vpventuresindia.com</span>
+                            <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block " >info@vpventuresindia.com</span>
                             <span className='mx-4 hidden md:block'>|</span>
                             <MdPhone className='h-5 w-6 ml-3 md:ml-0' />
                             <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block " >+91 75081 00021</span>
                         </div>
 
                         <div className="items-center flex md:mb-0 mt-1">
-                            <FaFacebookF className='h-5 w-6 mr-2' />
-                            <FaTwitter className='h-5 w-6 mr-2' />
-                            <FaInstagram className='h-5 w-6 mr-2' />
-                            <FaYoutube className='h-5 w-6' />
+                            <FaFacebookF className='h-5 w-6 mr-2 cursor-pointer' />
+                            <FaTwitter className='h-5 w-6 mr-2 cursor-pointer' />
+                            <FaInstagram className='h-5 w-6 mr-2 cursor-pointer' />
+                            <FaYoutube className='h-5 w-6 cursor-pointer' />
                         </div>
                     </div>
 
                 </header>
                 <div className="w-full flex items-start p-6 mx-auto flex-row sm:flex-row justify-between ">
                     <div>
-                        <a className="flex items-center font-medium text-gray-900 title-font ">
-                            <img src={ImageIcons.myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44' />
-                        </a>
+                    <NavLink to="/" className="flex items-center font-medium text-gray-900 title-font">
+                            <img src={ImageIcons.myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44 cursor-pointer' />
+                            </NavLink>
+                        
                     </div>
                     <div className='flex flex-row mt-2'>
                         <div className="md:block sm:hidden hidden flex items-center justify-center text-base md:ml-auto md:my-auto">
