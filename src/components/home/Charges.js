@@ -4,8 +4,6 @@ import ImageIcons from '../../common/ImageIcons';
 const backgroundImagePath = ImageIcons.shape1;
 const backgroundImagePath1 = ImageIcons.shape2;
 
-
-
 const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
     height: '646px',
@@ -76,35 +74,35 @@ const Charges = () => {
     return (
         <>
 
-            <div class=" mx-auto lg:h-screen flex items-center justify-center  w-full bg-[#F1F8E8]">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full container">
-
-                    <div className="text-left">
+            <div class="  flex items-center justify-center  w-full bg-[#F1F8E8]">
+                <div class="my-20 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:w-full xl:container xl:px-6 lg:px-20">
 
 
-                        <div className="max-w-xl text-center lg:text-left">
-                            <div>
-                                <div className='flex flex-row place-items-center'>
-                                    <p className="text-xl font-medium tracking-tight text-[#0B7132] sm:text-3xl leading-9">
-                                        ABOUT ECHARGE
-                                    </p>
-                                    <img src={ImageIcons.Rectangle} className='h-0.5 w-20 ml-8' />
-                                </div>
-                                <p className="text-3xl font-semibold  text-[#000] sm:text-5xl mt-3">
-                                    Price of Our Services on The Road
+
+
+                    <div className="max-w-sm text-center lg:text-left">
+                        <div>
+                            <div className='flex flex-row place-items-center'>
+                                <p className="text-xl font-medium tracking-tight text-[#0B7132] sm:text-3xl leading-9">
+                                    ABOUT ECHARGE
                                 </p>
-                                <p className="max-w-xl text-xl font-normal text-[#000] mt-6">
-                                    An EV charging station is a device that provides electric energy for recharging electric vehicles, enabling the transfer of electrical energy from the grid to the vehicle's battery pack.</p>
-                                <img src={ImageIcons.filling_machine} className='h-auto w-22' />
+                                <img src={ImageIcons.Rectangle} className='h-0.5 w-20 ml-8' />
                             </div>
-
-
-
+                            <p className="text-3xl font-semibold  text-[#000] sm:text-5xl mt-3">
+                                Price of Our Services on The Road
+                            </p>
+                            <p className="max-w-xl text-xl font-normal text-[#000] mt-6">
+                                An EV charging station is a device that provides electric energy for recharging electric vehicles, enabling the transfer of electrical energy from the grid to the vehicle's battery pack.</p>
+                            <img src={ImageIcons.filling_machine} className='h-auto w-22' />
                         </div>
 
 
 
                     </div>
+
+
+
+
 
 
                     <div class="max-w-sm mx-auto relative rounded-lg cursor-pointer cursor-pointer">
@@ -135,7 +133,7 @@ const Charges = () => {
                     </div>
 
 
-                    <div class="max-w-sm mx-auto relative rounded-lg cursor-pointer cursor-pointer">
+                    <div class="max-w-sm mx-auto relative rounded-lg cursor-pointer cursor-pointer ">
                         <div className="bg-cover px-4 py-8 " style={style1}>
                             <div class="relative m-0 mb-0 overflow-hidden rounded-none  bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
                                 <p className="text-xl font-semibold tracking-tight text-[#fff] sm:text-3xl leading-9">

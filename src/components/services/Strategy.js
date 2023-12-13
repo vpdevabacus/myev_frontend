@@ -3,7 +3,7 @@ import ImageIcons from "../../common/ImageIcons";
 const Strategy = () => {
     return (
         <>
-            <div className="py-20 bg-gray-50 ">
+            <div className="py-20 bg-[#F1F8E8] ">
                 <div className="container mx-auto px-6 md:px-12 xl:px-32">
                     <div className="xl:mb-2 text-center">
                         <h2 className="text-center text-2xl text-gray-900 font-bold md:text-4xl mb-10 md:mb-0">How we work</h2>
