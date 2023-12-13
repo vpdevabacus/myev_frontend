@@ -17,13 +17,13 @@ const Footer = () => {
                             <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Find Our near Branches</h1>
                             <img src={ImageIcons.earth} className='h-10 w-10 ml-2' />
                         </div>
-                        <div className="sm:col-span-2 ">
+                        <div className="sm:col-span-2 text-center ">
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Call US On</h1>
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white">+91 75081 00021</h1>
                         </div>
-                        <div className="sm:col-span-2 flex items-center">
+                        <div className="sm:col-span-2 flex items-center text-center place-items-center">
                             <img src={ImageIcons.clock} className='h-10 w-10 mr-2' />
-                            <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">24/7 Emergency Services</h1>
+                            <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white  ">24/7 Emergency Services</h1>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const Footer = () => {
             <footer className="w-full text-gray-700 bg-[#212226] body-font">
                 <div
                     className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
-                    <div className="flex-shrink-0 w-100 mx-auto text-center md:mx-0 md:text-left">
+                    <div className="flex-shrink-0 w-100 mx-auto text-center  md:text-left md:mb-10">
                         <a className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                             <img src={ImageIcons.footer_myEV_logo} className='h-14 w-6/12' />
                         </a>
@@ -89,7 +89,7 @@ const Footer = () => {
                             <div className="h-0.5 w-12 bg-[#0B7132]"></div>
                             <nav className="mb-10 list-none">
                                 <li className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
+                                    <img src={ImageIcons.pdf} className='h-4 w-4 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">AC Charger Services</a>
                                 </li>
                                 <li className="mt-3 flex ">
@@ -131,7 +131,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#212226]">
+                <div className="bg-[#212226] border-t border-[#ffffff]">
                     <div className="container px-5 py-4 mx-auto">
                         <p className="text-sm text-white capitalize xl:text-center">© 2020 All rights reserved</p>
                     </div>
