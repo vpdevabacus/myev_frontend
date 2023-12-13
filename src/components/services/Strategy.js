@@ -6,7 +6,7 @@ const Strategy = () => {
             <div className="py-20 bg-[#F1F8E8] ">
                 <div className="container mx-auto px-6 md:px-12 xl:px-32">
                     <div className="xl:mb-2 text-center">
-                        <h2 className="text-center text-2xl text-gray-900 font-bold md:text-4xl mb-10 md:mb-0">How we work</h2>
+                        <h2 className="text-center text-2xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">How We Work</h2>
 
                     </div>
                     <div className="grid gap-12 items-center md:grid-cols-2 xl:gap-2 xl:grid-cols-4 md:-mt-20 xl:mt-0">
@@ -47,7 +47,7 @@ const Strategy = () => {
             </div>
 
 
-            {/* <div className="container mx-auto py-12 bg-black rounded-tl-full rounded-br-full  ">
+            <div className="container mx-auto py-20 bg-black rounded-tl-full rounded-br-full  ">
                 <div class="w-10/12 mx-auto flex">
                     <div class="w-3/12 flex space-between">
                         <div >
@@ -95,7 +95,7 @@ const Strategy = () => {
                     </div>
 
                 </div>
-            </div> */}
+            </div>
         </>
     )
 

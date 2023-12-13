@@ -75,7 +75,7 @@ const ServicesList = () => {
     return (
         <>
             <div className='container mx-auto py-8'>
-                <div className="flex flex-wrap mt-8">
+                <div className="flex flex-wrap mt-12">
                     {ServicesList.map((item) => (
                         <List key={item.id} item={item} />
                     ))}
