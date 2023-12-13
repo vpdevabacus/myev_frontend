@@ -15,16 +15,15 @@ const AboutUs = () => {
                                     <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first ">
                                         <div className="max-w-xl text-center lg:text-left">
                                             <div>
-                                                <div className='flex flex-row place-items-center'>
+                                                <div className= ''>
                                                     <p className="text-xl font-medium tracking-tight text-[#0B7132] sm:text-3xl leading-9">
                                                         ABOUT US
                                                     </p>
-                                                    <img src={ImageIcons.Rectangle} className='h-0.5 w-20 ml-8' />
                                                 </div>
-                                                <p className="text-3xl font-semibold  text-[#000] sm:text-5xl mt-7">
+                                                <p className="text-3xl font-semibold text-[#000] text-4xl lg:text-5xl mt-7">
                                                     What is an EV Charging Station?
                                                 </p>
-                                                <p className="max-w-xl mt-7 text-xl font-normal text-[#000">
+                                                <p className="max-w-xl mt-7 text-xl font-normal text-[#000]">
                                                     An EV charging station is a device that provides electric energy for recharging electric vehicles, enabling the transfer of electrical energy from the grid to the vehicle's battery pack.
                                                 </p>
                                                 <p className="max-w-xl mt-5 text-xl font-normal text-[#000">

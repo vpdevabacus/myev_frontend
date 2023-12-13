@@ -8,7 +8,7 @@ import OurTeam from '../components/about/OurTeam'
 const AboutUs = () => {
     return (
         <>
-            <Header />
+        <Header />
         <Banner/>
         <About/>
         <OurTeam/>
