@@ -93,7 +93,7 @@ const Footer = () => {
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">AC Charger Services</a>
                                 </li>
                                 <li className="mt-3 flex ">
-                                    <img src={ImageIcons.pdf} className='h-6 w-6 mr-2' />
+                                    <img src={ImageIcons.document} className='h-6 w-6 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">DC Charger Services</a>
                                 </li>
                                 <li className="mt-3 flex ">
