@@ -38,6 +38,12 @@ import movingcar from "../assets/Images/movingcar.gif";
 import mapsection from "../assets/Images/mapsection.png";
 import AC_Power from "../assets/Images/AC_Power.png";
 import whyUS from "../assets/Images/whyUS.png"
+import contact_banner from "../assets/Images/contact_banner.png";
+import Rectangle1 from "../assets/Images/Rectangle1.png";
+
+
+
+
 
 
 
@@ -82,7 +88,10 @@ const ImageIcons = {
   document,
   mapsection,
   AC_Power,
-  whyUS
+  whyUS,
+  contact_banner,
+  Rectangle1
+
 }
 
 export default ImageIcons;
