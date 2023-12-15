@@ -1,4 +1,5 @@
 import ImageIcons from "../../common/ImageIcons";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const backgroundImagePath = ImageIcons.bannerimage;
 
@@ -32,9 +33,23 @@ const Banner = () => {
                             >
                                 <div className='text-center space-x-4'>
 
-                                    <button className="backdrop-blur-sm transition duration-500 ease-in-out bg-white border border-[#E2E8F0] translate-y-1 text-[#16161d] hover:bg-neutral-200 text-lg font-semibold py-4 px-9 rounded-lg inline-flex items-center">
-                                        <span className="text-[#0B7132] font-bold "> Explore Charging Solutions</span>
+                                    <button className="backdrop-blur-sm transition duration-500 ease-in-out bg-white border border-[#E2E8F0] translate-y-1 text-[#16161d] hover:bg-neutral-200 text-lg font-semibold py-4 px-6 rounded-lg inline-flex items-center">
+                                        <span>
+                                            <FaApple className='h-4 w-4 lg:h-10 lg:w-10 mr-5 ' />
+                                        </span>
+                                        <div className="flex flex-col">
+                                            <span className="text-[#0B7132] font-bold ">Available on</span>
+                                            <span className="text-[#0B7132] font-bold -mt-1">APP STORE</span>
+                                        </div>
                                     </button>
+                                    <button className="backdrop-blur-sm transition duration-500 ease-in-out bg-white border border-[#E2E8F0] translate-y-1 text-[#16161d] hover:bg-neutral-200 text-lg font-semibold py-4 px-6 rounded-lg inline-flex items-center">
+                                        <span>
+                                            <FaGooglePlay className='h-4 w-4 lg:h-10 lg:w-10 mr-5 ' />
+                                        </span>
+                                        <div className="flex flex-col">
+                                            <span className="text-[#0B7132] font-bold ">Available on</span>
+                                            <span className="text-[#0B7132] font-bold -mt-1">APP STORE</span>
+                                        </div>                                    </button>
                                 </div>
                             </div>
                         </div>

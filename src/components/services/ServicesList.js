@@ -1,9 +1,11 @@
 import React from 'react'
 import ImageIcons from '../../common/ImageIcons'
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const ServicesList = () => {
+
 
     const ServicesList = [
         {
@@ -43,7 +45,17 @@ const ServicesList = () => {
         }
     ]
 
+    const navigate = useNavigate();
+
+
+
     const List = ({ item }) => {
+        console.log("DFSDFv", item)
+
+        const handleClick = () => {
+            navigate("/services/details", { state: item });
+        };
+
         return (
             <div className="w-full md:w-1/2 xl:w-1/3 px-4">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
@@ -62,8 +74,11 @@ const ServicesList = () => {
                         </p>
                         <div className="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white capitalize bg-transparent rounded-md ">
                             <div className='cursor-pointer bg-transparent flex flex-row text-black hover:text-[#0B7132]'>
-                                <span className="mx-1 text-xl  font-medium ">Read More</span>
-                                <FaArrowRightLong className='w-7 h-8 ml-2 ' />
+                                <div onClick={handleClick} className='flex flex-row' >
+                                    <span className="mx-1 text-xl font-medium">Read More</span>
+                                    <FaArrowRightLong className='w-7 h-8 ml-2' />
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -71,6 +86,7 @@ const ServicesList = () => {
             </div>
         )
     }
+
 
     return (
         <>

@@ -1,4 +1,6 @@
-import ImageIcons from "../../common/ImageIcons";
+import React from 'react'
+import ImageIcons from '../../common/ImageIcons'
+import { useLocation } from 'react-router-dom';
 
 const backgroundImagePath = ImageIcons.bannerimage;
 
@@ -10,8 +12,12 @@ const style = {
     alignItems: 'center',
 };
 
-
 const Banner = () => {
+
+    const location = useLocation();
+    const data = location?.state;
+    console.log("banner", data);
+
     return (
         <>
             <div>
@@ -23,30 +29,16 @@ const Banner = () => {
                             >
                                 <h4
                                     className="font-bold leading-10  text-left text-[#ffffff] text-center sm:leading-none text-5xl sm:text-9xl ">
-                                    <span className="inline md:block text-7xl text-center ">About Us</span>
+                                    <span className="inline md:block text-7xl text-center ">{data?.title}</span>
                                 </h4>
                             </div>
                         </div>
 
                     </section>
                 </section>
-                <img src={ImageIcons.mapsection} />
             </div>
-
-            {/* <div className="flex-box bg-[#cccccc] p-5 h-25 d-flex flex-wrap items-start">
-                <div className="">1</div>
-                <div className=" flex-box-2">2</div>
-                <div className="">3</div>
-                <div className="">4</div>
-                <div className="">5</div>
-                <div className="">6</div>
-                <div className="">7</div>
-                <div className="">8</div>
-                <div className="">9</div>
-            </div> */}
-
         </>
     )
-
 }
-export default Banner;
+
+export default Banner

@@ -36,8 +36,8 @@ import pdf from "../assets/Images/pdf.png";
 import document from "../assets/Images/document.png";
 import movingcar from "../assets/Images/movingcar.gif";
 import mapsection from "../assets/Images/mapsection.png";
-
-
+import AC_Power from "../assets/Images/AC_Power.png";
+import whyUS from "../assets/Images/whyUS.png"
 
 
 
@@ -80,7 +80,9 @@ const ImageIcons = {
   pdf,
   movingcar,
   document,
-  mapsection
+  mapsection,
+  AC_Power,
+  whyUS
 }
 
 export default ImageIcons;
