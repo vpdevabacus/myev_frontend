@@ -7,13 +7,13 @@ const backgroundImagePath1 = ImageIcons.shape2;
 const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
     height: '646px',
-    width: '410px'
+
 };
 
 const style1 = {
     backgroundImage: `url('${backgroundImagePath1}')`,
     height: '646px',
-    width: '410px'
+
 };
 
 const Charges = () => {

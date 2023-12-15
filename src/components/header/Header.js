@@ -31,7 +31,7 @@ const Header = () => {
                             <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >info@vpventuresindia.com</span>
                             <span className='mx-4 hidden md:block'>|</span>
                             <MdPhone className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
-                            <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >+91 75081 00021</span>
+                            <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >+91 95925-95975</span>
                         </div>
 
                         <div className="items-center flex md:mb-0 mt-1 ">
@@ -104,34 +104,30 @@ const Header = () => {
                                     transform: show ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-28 scale-90 pointer-events-none',
                                 }}
                             >
-                                <div className=" pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
+                                <div className=" bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div className='bg-transparent '>
-                                            <div className="flex flex-row items-start rounded-lg  p-2 " >
 
-                                                <div className="ml-3">
-                                                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl" : "mr-10 font-normal text-lg lg:text-xl text-[#000]"}>Home</NavLink>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" >
+                                        <div className="flex flex-row items-start rounded-lg  w-full" >
 
-                                            <div className="ml-3">
-                                                <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl" : "mr-10 font-normal text-lg lg:text-xl text-[#000]"}>About Us</NavLink>
-                                            </div>
+                                            <NavLink to="/" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">Home</div></NavLink>
+
                                         </div>
 
-                                        <div className="flex flex-row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" >
+                                        <div className="flex flex-row items-start rounded-lg  w-full" >
 
-                                            <div className="ml-3">
-                                                <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl" : "mr-10 font-normal text-lg lg:text-xl text-[#000]"}>Our Services</NavLink>
-                                            </div>
+                                            <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">About Us</div></NavLink>
+
                                         </div>
-                                        <div className="flex flex-row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" >
 
-                                            <div className="ml-3">
-                                                <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl" : "mr-10 font-normal text-lg lg:text-xl text-[#000]"}>Contact Us</NavLink>
-                                            </div>
+                                        <div className="flex flex-row items-start rounded-lg  w-full" >
+
+                                            <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">Our Services</div></NavLink>
+
+                                        </div>
+                                        <div className="flex flex-row items-start rounded-lg  w-full" >
+
+                                            <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">Contact Us</div></NavLink>
+
                                         </div>
                                     </div>
                                 </div>
