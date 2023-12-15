@@ -1,4 +1,5 @@
 import ImageIcons from "../../common/ImageIcons";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const backgroundImagePath = ImageIcons.bannerimage;
 
@@ -28,12 +29,27 @@ const Banner = () => {
                                 <span className=" text-base md:text-xl font-medium text-[#ffffff] ">It’s your chance to own an EV Charging Station (Without having to manage it)</span>
                             </div>
                             <div
-                                className="max-w-lg px-4 py-20 mx-auto text-left md:max-w-none md:text-center"
+                                className="max-w-lg px-4 py-20 mx-auto text-left md:max-w-none md:text-center cursor-pointer z-50 relative"
                             >
                                 <div className='text-center space-x-4'>
 
-                                    <button className="backdrop-blur-sm transition duration-500 ease-in-out bg-white border border-[#E2E8F0] translate-y-1 text-[#16161d] hover:bg-neutral-200 text-lg font-semibold py-4 px-9 rounded-lg inline-flex items-center">
-                                        <span className="text-[#0B7132] font-bold "> Explore Charging Solutions</span>
+                                    <button className=" bg-white border border-[#E2E8F0] text-[#0B7132] hover:text-[#fff]  text-lg font-semibold py-3 px-4 rounded-lg inline-flex items-center hover:shadow-[inset_13rem_0_0_0] hover:shadow-[#0B7132] duration-[400ms,700ms] transition-[color,box-shadow]">
+                                        <span>
+                                            <FaApple className='h-4 w-4 lg:h-10 lg:w-10 mr-5   ' />
+                                        </span>
+                                        <div className="flex flex-col">
+                                            <span className=" font-bold  ">Available on</span>
+                                            <span className=" font-bold -mt-1 ">APP STORE</span>
+                                        </div>
+                                    </button>
+                                    <button className=" bg-white border border-[#E2E8F0]  text-[#0B7132] hover:text-[#fff] text-lg font-semibold py-3 px-3 rounded-lg inline-flex items-center hover:shadow-[inset_13rem_0_0_0] hover:shadow-[#0B7132] duration-[400ms,700ms] transition-[color,box-shadow]">
+                                        <span>
+                                            <FaGooglePlay className='h-4 w-4 lg:h-10 lg:w-10 mr-5   ' />
+                                        </span>
+                                        <div className="flex flex-col">
+                                            <span className=" font-bold  ">Available on</span>
+                                            <span className=" font-bold -mt-1 ">GOOGLE PLAY</span>
+                                        </div>
                                     </button>
                                 </div>
                             </div>

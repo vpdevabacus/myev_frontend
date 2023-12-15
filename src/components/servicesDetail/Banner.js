@@ -1,5 +1,6 @@
 import React from 'react'
 import ImageIcons from '../../common/ImageIcons'
+import { useLocation } from 'react-router-dom';
 
 const backgroundImagePath = ImageIcons.bannerimage;
 
@@ -12,6 +13,11 @@ const style = {
 };
 
 const Banner = () => {
+
+    const location = useLocation();
+    const data = location?.state;
+    console.log("banner", data);
+
     return (
         <>
             <div>
@@ -23,7 +29,7 @@ const Banner = () => {
                             >
                                 <h4
                                     className="font-bold leading-10  text-left text-[#ffffff] text-center sm:leading-none text-5xl sm:text-9xl ">
-                                    <span className="inline md:block text-7xl text-center ">Our Services</span>
+                                    <span className="inline md:block text-7xl text-center ">{data?.title}</span>
                                 </h4>
                             </div>
                         </div>
