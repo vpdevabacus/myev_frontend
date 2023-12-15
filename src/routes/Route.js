@@ -4,6 +4,9 @@ import Home from '../screens/Home';
 import Services from '../screens/Services';
 import AppLayout from '../layout/AppLayout';
 import AboutUs from '../screens/AboutUs';
+import ContactUs from "../screens/ContactUs"
+
+
 
 
 
@@ -15,6 +18,8 @@ const router = createBrowserRouter(
             <Route path="" element={<Home />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="services" element={<Services />} />
+            <Route path="contact" element={<ContactUs/>} />
+
         </Route> 
     )
 );

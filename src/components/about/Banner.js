@@ -31,7 +31,6 @@ const Banner = () => {
 
                     </section>
                 </section>
-                <img src={ImageIcons.mapsection}  />
             </div>
             
             {/* <div className="flex-box bg-[#cccccc] p-5 h-25 d-flex flex-wrap items-start">
