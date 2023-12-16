@@ -24,31 +24,31 @@ const FAQs = () => {
     const items = [
         {
             id: 1,
-            ques: 'How Long Does It Take To Charge My Vehicle?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: 'Is myEV Point offering charge points at business/work premises?',
+            ans: "myEV Point offers end-to-end customized solutions for EV Charging needs at business/work premises."
         },
         {
             id: 2,
-            ques: 'Can I Charge My Car On Any Charger?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: 'What about safety and maintenance?',
+            ans: "myEV Point Chargers comes with in-built multiple protection systems which significantly reduces risks related to electric safety at Commercial spaces & Offices. myEV Point also offers Annual Maintenance for almost all of our charger models."
         },
         {
             id: 3,
-            ques: 'Where Can I Find The Nearest Charging Station?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: 'Whom do I contact in case of any problem while charging my car or with my charger?',
+            ans: "Please contact myEV Point customer care team for any problems with your charger which is supplied by myEV Point."
         },
         {
             id: 4,
-            ques: 'How Much Does It Cost To Charge My Vehicle?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: 'Do I need my own charging cable?',
+            ans: "Almost all of the DC fast chargers have inbuilt connector cables. However, some chargers (typically some AC chargers) requires charging connector cable to be brought by the user."
         },
     ];
 
     return (
-        <div className=" w-full py-3 mx-auto my-32 tracking-wide md:px-2 md:mt-20">
-            <div className="flex justify-center text-3xl font-semibold text-[#000] text-4xl lg:text-5xl mb-10">Frequently Asked Questions</div>
+        <div className=" w-full mx-auto my-12 md:my-32 tracking-wide md:px-2 md:mt-20">
+            <h2 className="text-center text-3xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 ">Frequently Asked Questions</h2>
 
-            <div className="container mx-auto grid gap-1 py-8 px-20 text-lg leading-6 text-gray-800 md:gap-8 md:grid-cols-2">
+            <div className="container mx-auto grid gap-6 py-8 px-20 text-lg leading-6 text-gray-800 md:gap-8 md:grid-cols-2">
                 {items.map((item) => (
                     <div key={item.id} className="space-y-3">
                         <div
@@ -58,7 +58,7 @@ const FAQs = () => {
                             <div style={handleHeading(item.id)}
                                 className="w-full p-2 text-left cursor-pointer">
                                 <div className="flex items-center justify-between px-2">
-                                    <span className="tracking-wide text-2xl font-medium">{`Question ${item.ques}`}</span>
+                                    <span className="tracking-wide text-lg sm:text-xl lg:text-2xl font-medium">{`Question ${item.ques}`}</span>
                                     <span
                                         className={`transition-transform duration-200 transform fill-current ${handleRotate(
                                             item.id
@@ -80,7 +80,7 @@ const FAQs = () => {
                                 style={handleToggle(item.id)}
                                 className="relative overflow-hidden transition-all duration-200 max-h-0"
                             >
-                                <div className="px-6 py-4 text-black text-xl font-normal">{`${item.ans}`}</div>
+                                <div className="px-6 py-4 text-black text-base lg:text-lg lg:text-xl font-normal">{`${item.ans}`}</div>
                             </div>
                         </div>
                     </div>
