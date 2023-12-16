@@ -45,10 +45,11 @@ import percentage from "../assets/Images/percentage.png";
 import vision from "../assets/Images/vision.png";
 import mission from "../assets/Images/mission.png";
 import pattern from "../assets/Images/pattern.png";
-
-
-
-
+import fastMachine from "../assets/Images/fast_machine.png"
+import slowMachine from "../assets/Images/slow_machine.png"
+import team_member_3 from "../assets/Images/team_member_3.png"
+import team_member_2 from "../assets/Images/team_member_2.png"
+import team_member_1 from "../assets/Images/team_member_1.png"
 
 
 
@@ -99,11 +100,17 @@ const ImageIcons = {
   whyUS,
   contact_banner,
   Rectangle1,
+  fastMachine,
+  slowMachine,
+  team_member_3,
+  team_member_2,
+  team_member_1,
   Aboutimage,
   percentage,
   vision,
   mission,
   pattern
+
 
 }
 

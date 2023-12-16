@@ -1,0 +1,55 @@
+.boxAnimation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 85%;
+    width: 85%;
+    border: 2px solid white;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+}
+
+.boxAnimation:before,
+.boxAnimation:after {
+    content: '';
+    position: absolute;
+    box-sizing: inherit;
+    width: 100%;
+    height: 100%;
+
+}
+
+.boxAnimation:before,
+.boxAnimation:after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+}
+
+.boxAnimation:before {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: scale3d(0, 1, 1);
+}
+
+.boxAnimation:after {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: scale3d(1, 0, 1);
+}
+
+.team_box:hover .boxAnimation:before,
+.team_box:hover .boxAnimation:after {
+    transform: scale3d(1, 1, 1);
+    transition: transform 0.5s;
+}
+
+/* .our_teem figure path {
+    fill: #000244;
+} */
+
+.our_teem figure a:hover path {
+    fill: #3c62e9;
+}
