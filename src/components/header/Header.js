@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ImageIcons from '../../common/ImageIcons'
-import { FaRegEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaRegUserCircle, FaYoutube } from "react-icons/fa";
+import { FaRegEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
 import { NavLink, Link } from 'react-router-dom';
 
@@ -35,10 +35,11 @@ const Header = () => {
                         </div>
 
                         <div className="items-center flex md:mb-0 mt-1 ">
-                            <FaFacebookF className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' />
-                            <FaTwitter className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' />
-                            <FaInstagram className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' />
-                            <FaYoutube className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' />
+                            <Link to='https://www.facebook.com/myevpoint'><FaFacebookF className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
+                            <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
+                            <Link to='https://in.pinterest.com/myevpoint/'><FaPinterest className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
+                            <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'><FaYoutube className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
+                            <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6  cursor-pointer hover:text-[#0B7132]' /></Link>
                         </div>
                     </div>
 
@@ -70,7 +71,7 @@ const Header = () => {
                                     <div className='w-full bg-[#DDDDDD] h-px'>
                                     </div>
 
-                                    <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">Home Charger</Link>
+                                    {/* <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">Home Charger</Link>
                                     <div className='w-full bg-[#DDDDDD] h-px'>
                                     </div>
                                     <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">Support EV Brand
@@ -80,7 +81,7 @@ const Header = () => {
                                     <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">Commercial Systems</Link>
                                     <div className='w-full bg-[#DDDDDD] h-px'>
                                     </div>
-                                    <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">Public Stations</Link>
+                                    <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">Public Stations</Link> */}
 
                                 </div>
                             )}

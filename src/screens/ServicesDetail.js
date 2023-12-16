@@ -5,6 +5,7 @@ import OurTeam from "../components/about/OurTeam"
 import Footer from '../components/footer/Footer'
 import Banner from '../components/servicesDetail/Banner'
 import WhyUs from '../components/servicesDetail/WhyUS'
+import Chargers from '../components/servicesDetail/Chargers'
 
 const ServicesDetail = () => {
     return (
@@ -12,6 +13,7 @@ const ServicesDetail = () => {
             <Header />
             <Banner />
             <ServicesDetails />
+            <Chargers />
             <WhyUs />
             <Footer />
         </>
