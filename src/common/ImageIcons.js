@@ -40,6 +40,14 @@ import AC_Power from "../assets/Images/AC_Power.png";
 import whyUS from "../assets/Images/whyUS.png"
 import contact_banner from "../assets/Images/contact_banner.png";
 import Rectangle1 from "../assets/Images/Rectangle1.png";
+import Aboutimage from "../assets/Images/Aboutimage.png";
+import percentage from "../assets/Images/percentage.png";
+import vision from "../assets/Images/vision.png";
+import mission from "../assets/Images/mission.png";
+import pattern from "../assets/Images/pattern.png";
+
+
+
 
 
 
@@ -90,7 +98,12 @@ const ImageIcons = {
   AC_Power,
   whyUS,
   contact_banner,
-  Rectangle1
+  Rectangle1,
+  Aboutimage,
+  percentage,
+  vision,
+  mission,
+  pattern
 
 }
 
