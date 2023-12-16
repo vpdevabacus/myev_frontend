@@ -40,7 +40,11 @@ import AC_Power from "../assets/Images/AC_Power.png";
 import whyUS from "../assets/Images/whyUS.png"
 import contact_banner from "../assets/Images/contact_banner.png";
 import Rectangle1 from "../assets/Images/Rectangle1.png";
-
+import fastMachine from "../assets/Images/fast_machine.png"
+import slowMachine from "../assets/Images/slow_machine.png"
+import team_member_3 from "../assets/Images/team_member_3.png"
+import team_member_2 from "../assets/Images/team_member_2.png"
+import team_member_1 from "../assets/Images/team_member_1.png"
 
 
 
@@ -90,7 +94,12 @@ const ImageIcons = {
   AC_Power,
   whyUS,
   contact_banner,
-  Rectangle1
+  Rectangle1,
+  fastMachine,
+  slowMachine,
+  team_member_3,
+  team_member_2,
+  team_member_1
 
 }
 
