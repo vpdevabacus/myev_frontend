@@ -6,28 +6,31 @@ import { MdLocationPin, MdPhone } from "react-icons/md";
 
 
 const Footer = () => {
+
+    const currentYear = new Date().getFullYear();
+
     return (
         <>
 
 
-            <div className=" bg-[#0B7132] px-6 py-12  ">
+            {/* <div className=" bg-[#0B7132] px-6 py-12  ">
                 <div className="container mx-auto  ">
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-6 flex items-center ">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-y-10 md:grid-cols-6 flex items-center  ">
                         <div className="sm:col-span-2 flex text-center">
                             <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Find Our near Branches</h1>
-                            <img src={ImageIcons.earth} className='h-10 w-10 ml-2' />
+                            <img src={ImageIcons.earth} className='h-10 w-10 ml-2 hidden sm:block' />
                         </div>
-                        <div className="sm:col-span-2 text-center ">
-                            <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Call US On</h1>
+                        <div className="sm:col-span-2 text-left sm:text-center ">
+                            <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Call Us On</h1>
                             <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white">+91 75081 00021</h1>
                         </div>
-                        <div className="sm:col-span-2 flex items-center text-center place-items-center">
-                            <img src={ImageIcons.clock} className='h-10 w-10 mr-2' />
-                            <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white  ">24/7 Emergency Services</h1>
+                        <div className="sm:col-span-2 flex flex-col text-left sm:flex-row sm:text-end justify-end ">
+                            <img src={ImageIcons.clock} className='h-10 w-10 mr-2 hidden sm:block' />
+                            <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">24/7 Emergency Services</h1>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             <footer className="w-full text-gray-700 bg-[#212226] body-font">
@@ -85,29 +88,18 @@ const Footer = () => {
                             </nav>
                         </div>
                         <div className="w-full px-4 lg:w-1/3 md:w-1/2">
-                            <h2 className="mb-3  text-lg font-medium text-white tracking-widest title-font">Useful Links</h2>
+                            <h2 className="mb-3  text-lg font-medium text-white tracking-widest title-font">Downloads</h2>
                             <div className="h-0.5 w-12 bg-[#0B7132]"></div>
                             <nav className="mb-10 list-none">
                                 <li className="mt-3 flex ">
                                     <img src={ImageIcons.pdf} className='h-6 w-6 mr-2' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">AC Charger Services</a>
+                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Download our Brochures</a>
                                 </li>
                                 <li className="mt-3 flex ">
                                     <img src={ImageIcons.document} className='h-6 w-6 mr-2' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">DC Charger Services</a>
+                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Our company details</a>
                                 </li>
-                                <li className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">EV Drivers Services</a>
-                                </li>
-                                <li className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Home Charging</a>
-                                </li>
-                                <li className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Building Services</a>
-                                </li>
+
                             </nav>
                         </div>
 
@@ -117,7 +109,9 @@ const Footer = () => {
                             <nav className="mb-10 list-none">
                                 <li className="mt-3 flex ">
                                     <MdLocationPin className='h-9 w-9 mr-2 text-white' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">MAGNET Co-Work Plot No. 130, Industrial Area, Phase 1, Chandigarh</a>
+                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Plot No. B-70, Phase 7,
+
+                                        SAS Nagar, Punjab 160055</a>
                                 </li>
                                 <li className="mt-3 flex ">
                                     <FaRegEnvelope className='h-5 w-5 mr-3 text-white' />
@@ -125,7 +119,7 @@ const Footer = () => {
                                 </li>
                                 <li className="mt-3 flex ">
                                     <MdPhone className='h-6 w-6 mr-3 text-white' />
-                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">+91 75081 00021</a>
+                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">+91 95925-95975</a>
                                 </li>
                             </nav>
                         </div>
@@ -133,7 +127,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-[#212226] border-t border-[#ffffff]">
                     <div className="container px-5 py-4 mx-auto">
-                        <p className="text-sm text-white capitalize xl:text-center">© 2020 All rights reserved</p>
+                        <p className="text-sm text-white capitalize xl:text-center">© {currentYear} All rights reserved</p>
                     </div>
                 </div>
             </footer>

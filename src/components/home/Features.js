@@ -52,7 +52,7 @@ const Features = () => {
     ]
 
     const ListItem = ({ item }) => (
-        <div className='my-12 flex flex-col w-6/12 sm:d-block '>
+        <div className='my-12 flex flex-col sm:d-block '>
             <div className=" flex flex-row items-center justify-start ">
                 <div className="rounded-full h-16 w-16 bg-[#fff] py-4" >
                     <p className=" text-black text-center font-bold text-base sm:text-lg md:text-xl 2xl:text-2xl ">
@@ -94,27 +94,29 @@ const Features = () => {
     return (
         <>
 
-            <div className="mt-80">
+            <div className="mt-20">
                 <section>
                     <section className="relative ">
                         <div className="bg-cover " style={style}>
-                            <div class="absolute inset-0 bg-[#016C80] bg-opacity-80"></div>
-                            <div className="bg-[#016C80] bg-opacity-50 w-full h-full px-4 flex items-center justify-center absolute z-40">
-                                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 my-6 font-semibold text-3xl text-white sm:text-center lg:text-4xl xl:text-5xl">
+                            <div class="absolute inset-0 bg-[#016C80] bg-opacity-90"></div>
+                            <div className="  container mx-auto h-full  flex items-center justify-center  z-40">
+                                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 my-6 font-semibold text-3xl text-white sm:text-center lg:text-4xl xl:text-5xl">
                                     <p>Excellent And Best Services</p>
                                 </div>
-                                <div className="container relative inset-0 flex items-center justify-center top-12 ">
-                                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white">
+                                <div className="w-12/12 relative flex flex-row 2xl:top-24 md:top-0 px-4 xl:px-o  ">
+                                    <div className="w-4/12 text-white ">
                                         <ul className="">
                                             {leftItems.map((item) => (
                                                 <ListItem key={item.id} item={item} />
                                             ))}
                                         </ul>
                                     </div>
-                                    <img src={ImageIcons.feature_machine} alt="Center Image" className="w-3/12  h-auto hidden lg:inline-block " />
-                                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white w-12/12 flex flex-row">
-                                        <div className='w-6/12'></div>
-                                        <ul className=" w-6/12">
+                                    <div className="w-4/12 ">
+                                        <img src={ImageIcons.feature_machine} alt="Center Image" className="w-10/12  h-auto hidden lg:inline-block " />
+                                    </div>
+                                    <div className=" text-white flex flex-end w-4/12 justify-items-end ">
+
+                                        <ul className=" ">
                                             {rightItems.map((item) => (
                                                 <ListItem1 key={item.id} item={item} />
                                             ))}
