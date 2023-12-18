@@ -15,8 +15,6 @@ const AboutUs = () => {
         <Testimonials/>
         <OurTeam/>
         <Footer/>
-
-
         </>
     )
 }
