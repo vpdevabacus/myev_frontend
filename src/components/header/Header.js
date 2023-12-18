@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import ImageIcons from '../../common/ImageIcons'
 import { FaRegEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
@@ -18,7 +18,40 @@ const Header = () => {
         setDropdownOpen(s => !s);
     };
 
+    const closeDropdown = () => {
+        setDropdownOpen(false)
+    }
 
+    const phoneNumber = '+919592595975';
+    const phoneLink = `tel:${phoneNumber}`;
+
+    const callPhoneNumber = () => {
+        window.location.href = phoneLink;
+    };
+
+    const email = 'info@vpventuresindia.com';
+    const mailtoLink = `mailto:${email}`;
+
+    const openMail = () => {
+        window.open(mailtoLink);
+    };
+
+    const dropdownRef = useRef(null);
+
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [dropdownRef]);
 
     return (
         <>
@@ -28,10 +61,10 @@ const Header = () => {
                     <div className="w-full flex flex-row items-start mx-auto sm:flex-row bg-black px-8 py-1 justify-between">
                         <div className="flex items-center font-medium md:mb-0">
                             <FaRegEnvelope className='h-5 w-6 cursor-pointer' />
-                            <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >info@vpventuresindia.com</span>
+                            <span onClick={openMail} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >{email}</span>
                             <span className='mx-4 hidden md:block'>|</span>
                             <MdPhone className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
-                            <span className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >+91 95925-95975</span>
+                            <span onClick={callPhoneNumber} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >{phoneNumber}</span>
                         </div>
 
                         <div className="items-center flex md:mb-0 mt-1 ">
@@ -63,11 +96,13 @@ const Header = () => {
                                 <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform rotate-180 md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#0B7132'></path></svg>
                             }
                             {dropdownOpen && (
-                                <div className="absolute md:top-36 lg:top-40 bg-white rounded-md shadow-xl z-20 right-40 border border-2 border-t-[#0B7132]">
-                                    <Link className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">AC Charger Service </Link>
+                                <div
+                                    ref={dropdownRef}
+                                    className="absolute md:top-36 lg:top-40 bg-white rounded-md shadow-xl z-20 right-40 border border-2 border-t-[#0B7132]">
+                                    <Link to='/services/ac_charger_services' className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white" onClick={closeDropdown} >AC Charger Service </Link>
                                     <div className='w-full bg-[#DDDDDD] h-px'>
                                     </div>
-                                    <Link href="#" className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white">DC Charger Service</Link>
+                                    <Link to='/services/dc_charger_services' className="block px-2 py-2 text-xl font-normal text-black hover:bg-[#0B7132] hover:text-white" onClick={closeDropdown} >DC Charger Service</Link>
                                     <div className='w-full bg-[#DDDDDD] h-px'>
                                     </div>
 
@@ -148,7 +183,7 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;
 
 
 
