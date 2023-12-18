@@ -14,12 +14,12 @@ const Features = () => {
         {
             id: '01',
             text: "Maximize Your Earnings",
-            description: "Earn up to ₹ 4 /unit ",
+            description: "Earn up to ₹4 Per Unit with Our Exclusive Rewards Program!",
         },
         {
             id: '02',
             text: "Top Income Opportunities",
-            description: "Best Passive Income Opportunity",
+            description: "The Ultimate Passive Income Opportunity Awaits You!",
 
         },
         {
@@ -39,13 +39,13 @@ const Features = () => {
         {
             id: '05',
             text: "Eco-Friendly Finances",
-            description: "Green & Sustainable Investment",
+            description: "Going Green and Growing Wealth.",
 
         },
         {
             id: '06',
             text: "Smooth Sailing",
-            description: "No operational headache",
+            description: "No operational headaches, just smooth sailing.",
 
         },
 

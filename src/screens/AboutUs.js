@@ -9,12 +9,12 @@ import Testimonials from '../components/about/Testimonials'
 const AboutUs = () => {
     return (
         <>
-        <Header />
-        <Banner/>
-        <About/>
-        <Testimonials/>
-        <OurTeam/>
-        <Footer/>
+            <Header />
+            <Banner />
+            <About />
+            <Testimonials />
+            <OurTeam />
+            <Footer />
         </>
     )
 }

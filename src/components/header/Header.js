@@ -60,10 +60,10 @@ const Header = () => {
                 <header className="header w-full text-[#fff] bg-white body-font border-b border-b-[#828282] ">
                     <div className="w-full flex flex-row items-start mx-auto sm:flex-row bg-black px-8 py-1 justify-between">
                         <div className="flex items-center font-medium md:mb-0">
-                            <FaRegEnvelope className='h-5 w-6 cursor-pointer' />
+                            <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
                             <span onClick={openMail} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >{email}</span>
                             <span className='mx-4 hidden md:block'>|</span>
-                            <MdPhone className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
+                            <MdPhone onClick={openMail} className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
                             <span onClick={callPhoneNumber} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >{phoneNumber}</span>
                         </div>
 

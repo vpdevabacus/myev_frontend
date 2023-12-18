@@ -1,8 +1,8 @@
 import ImageIcons from '../../common/ImageIcons'
 import { BiLogoFacebook } from "react-icons/bi";
-import { FaRegEnvelope, FaTwitter, FaYoutube,FaPinterest,FaLinkedinIn  } from "react-icons/fa";
+import { FaRegEnvelope, FaTwitter, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdLocationPin, MdPhone } from "react-icons/md";
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -44,25 +44,25 @@ const Footer = () => {
                         <p className="mt-2 text-base text-white ">It’s your chance to own an EV </p>
                         <p className="mt-1 text-base text-white ">Charging Station (Without having to manage it)</p>
                         <div className="mt-4 inline-flex justify-center mt-2 sm:ml-auto sm:mt-3 sm:justify-start">
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 ">
-                            <Link to='https://www.facebook.com/myevpoint'><BiLogoFacebook className='h-5 w-6 text-white' /></Link>
+                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
+                                <Link to='https://www.facebook.com/myevpoint'><BiLogoFacebook className='h-5 w-6 text-white' /></Link>
                             </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 ">
-                            <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 text-white' /></Link>
+                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
+                                <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 text-white' /></Link>
 
                             </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 ">
-                            <Link to='https://in.pinterest.com/myevpoint/'>
-                                <FaPinterest className='h-5 w-6 text-white ' />
+                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
+                                <Link to='https://in.pinterest.com/myevpoint/'>
+                                    <FaPinterest className='h-5 w-6 text-white ' />
                                 </Link>
 
                             </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 ">
-                            <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'><FaYoutube className='h-5 w-6 text-white' /></Link>
+                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
+                                <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'><FaYoutube className='h-5 w-6 text-white' /></Link>
 
                             </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 ">
-                            <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6 text-white' /></Link>
+                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
+                                <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6 text-white' /></Link>
 
                             </div>
                         </div>
@@ -72,14 +72,14 @@ const Footer = () => {
                             <h2 className="mb-3  text-lg font-medium text-white tracking-widest title-font">Our Services</h2>
                             <div className="h-0.5 w-12 bg-[#0B7132]"></div>
                             <nav className="mb-10 list-none">
-                                <li className="mt-3 flex ">
+                                <Link to='/services/ac_charger_services' className="mt-3 flex ">
                                     <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">AC Charger Services</a>
-                                </li>
-                                <li className="mt-3 flex ">
+                                </Link>
+                                <Link to='/services/dc_charger_services' className="mt-3 flex ">
                                     <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">DC Charger Services</a>
-                                </li>
+                                </Link>
                             </nav>
                         </div>
                         <div className="w-full px-4 lg:w-1/3 md:w-1/2">
@@ -90,34 +90,50 @@ const Footer = () => {
                                     <img src={ImageIcons.pdf} className='h-6 w-6 mr-2' />
                                     <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Download our Brochures</a>
                                 </li>
-                                
+
+
+                            </nav>
+
+                            <h2 className="mb-3  text-lg font-medium text-white tracking-widest title-font">Terms and Privacy</h2>
+                            <div className="h-0.5 w-12 bg-[#0B7132]"></div>
+                            <nav className="mb-10 list-none">
+                                <Link to='/terms&conditions' className="mt-3 flex ">
+                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
+                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Terms & Conditions</a>
+                                </Link>
+                                <Link to='/privacy_policy' className="mt-3 flex ">
+                                    <img src={ImageIcons.Polygon} className='h-3.5 w-3.5 mr-2' />
+                                    <a className="text-white cursor-pointer hover:text-gray-500 text-sm">Privacy Policy</a>
+                                </Link>
+
 
                             </nav>
                         </div>
+
 
                         <div className="w-full px-4 lg:w-1/3 md:w-1/2">
                             <h2 className="mb-3  text-lg font-medium text-white tracking-widest   title-font">Contact Info</h2>
                             <div className="h-0.5 w-12 bg-[#0B7132]"></div>
                             <nav className="mb-10 list-none">
                                 <li className="mt-3 flex ">
-                                    <MdLocationPin className='h-9 w-9 mr-2 text-white' />
+                                    <MdLocationPin className='h-7 w-7 mr-3 text-white' />
                                     <a className="text-white  text-sm">Plot No. B-70, Phase 7,
 
                                         SAS Nagar, Punjab 160055</a>
                                 </li>
                                 <li className="mt-3 flex ">
-                                    <FaRegEnvelope className='h-5 w-5 mr-3 text-white' />
+                                    <FaRegEnvelope className='h-5 w-5 mr-3 ml-1 text-white' />
                                     <a className="text-white  text-sm">info@vpventuresindia.com</a>
                                 </li>
                                 <li className="mt-3 flex ">
-                                    <MdPhone className='h-6 w-6 mr-3 text-white' />
+                                    <MdPhone className='h-6 w-6 mr-3 ml-1 text-white' />
                                     <a className="text-white text-sm">+91 95925-95975</a>
                                 </li>
                             </nav>
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#212226] border-t border-[#ffffff]">
+                <div className="bg-[#212226] border-t border-[#ffffff] text-center">
                     <div className="container px-5 py-4 mx-auto">
                         <p className="text-sm text-white capitalize xl:text-center">© {currentYear} All rights reserved</p>
                     </div>

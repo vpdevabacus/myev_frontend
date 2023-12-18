@@ -6,6 +6,10 @@ import AppLayout from '../layout/AppLayout';
 import AboutUs from '../screens/AboutUs';
 import ServicesDetail from '../screens/ServicesDetail';
 import ContactUs from "../screens/ContactUs"
+import Terms from "../screens/Terms"
+import Privacy from "../screens/Privacy"
+
+import PrivacyPolicy from '../components/termsPrivacy/Privacy';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -18,8 +22,10 @@ const router = createBrowserRouter(
             <Route path="services" element={<Services />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="/services/:type" element={<ServicesDetail />} />
+            <Route path="terms&conditions" element={<Terms />} />
+            <Route path="privacy_policy" element={<Privacy />} />
 
-            {/* <Route path="services/details" element={<ServicesDetail />} /> */}
+
         </Route>
 
     )
