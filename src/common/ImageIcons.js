@@ -50,6 +50,10 @@ import slowMachine from "../assets/Images/slow_machine.png"
 import team_member_3 from "../assets/Images/team_member_3.png"
 import team_member_2 from "../assets/Images/team_member_2.png"
 import team_member_1 from "../assets/Images/team_member_1.png"
+import leftarrow from "../assets/Images/leftarrow.png"
+import rightarrow from "../assets/Images/rightarrow.png"
+
+
 
 
 
@@ -115,7 +119,9 @@ const ImageIcons = {
   percentage,
   vision,
   mission,
-  pattern
+  pattern,
+  rightarrow,
+  leftarrow
 
 
 }

@@ -1,4 +1,6 @@
 import ImageIcons from "../../common/ImageIcons";
+import React, { useState } from 'react';
+
 const backgroundImagePath = ImageIcons.pattern;
 
 const style = {
@@ -8,7 +10,54 @@ const style = {
 
 
 
+
+
 const Testimonials = () => {
+
+
+
+    const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+
+    const testimonialsData = [
+        {
+          text: "The electric vehicle charging point was conveniently located, making it easy for me to charge my EV while running errands.",
+          author: "Tania Andrew",
+          position: "Frontend Lead @ Google",
+          image: ImageIcons.team_member_1,
+        },
+        {
+            text: "I liked the simplicity of the payment system and the ease of connecting my EV to the charging point.",
+            author: "Tania Andrew",
+            position: "Frontend Lead @ Google",
+            image: ImageIcons.team_member_2,
+          },
+          {
+            text: "The fast-charging capabilities allowed me to top up my battery quickly, minimizing downtime.",
+            author: "Tania Andrew",
+            position: "Frontend Lead @ Google",
+            image: ImageIcons.team_member_3,
+          },
+          {
+            text: "The availability of free or discounted charging at certain locations is a great incentive for EV owners.",
+            author: "Tania Andrew",
+            position: "Frontend Lead @ Google",
+            image: ImageIcons.team_member_1,
+          },
+        // Add more testimonials as needed
+      ];
+
+
+    const handlePrevious = () => {
+        setCurrentTestimonialIndex((prevIndex) => (prevIndex === 0 ? testimonialsData.length - 1 : prevIndex - 1));
+      };
+
+      const handleNext = () => {
+        setCurrentTestimonialIndex((prevIndex) => (prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 1));
+      };
+      const currentTestimonial = testimonialsData[currentTestimonialIndex];
+
+    
+
     return (
         <>
          <div className="bg-cover w-full" style={style}>
@@ -16,18 +65,33 @@ const Testimonials = () => {
 
             <div className="py-20 ">
                 <div className="container mx-auto px-6 md:px-12 xl:px-32">
+                
                     <div className="mb-16 text-center">
                         <p className="text-[#0B7132] text-lg font-semibold lg:w-8/12 lg:mx-auto">TESTIMONIALS</p>
                         <h2 className="mb-4 text-center mt-4 text-2xl text-gray-900 font-bold md:text-4xl">What Client's Say about</h2>
                     </div>
+                   
                 </div>
 
                 <div className="relative flex w-full max-w-[40rem] flex-col mx-auto rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                    <div className="mb-6 p-0">
+              
+                    <div className="mb-6 p-0 flex ">
+                    <div>
+                    <img src ={ImageIcons.leftarrow} onClick={handlePrevious} className="text-yellow-700 mr-32 w-10 h-22" >
+            
+            </img>
+            </div>
                         <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                            "I appreciate your hospital really good environment and excellent patient care. You are continuously handle patient treatment wonderfully. Thanks for your great service. Please enjoy the chocolates."
+                           {currentTestimonial.text}
                         </p>
+                        <div >
+                    <img src ={ImageIcons.rightarrow} onClick={handleNext} className="text-yellow-700 ml-32 w-10 h-22  " >
+            
+            </img>
+            </div>
+
                     </div>
+                   
                     <div className="5 flex items-center mx-auto gap-0">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -98,14 +162,14 @@ const Testimonials = () => {
                     <div className="relative mx-auto mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 text-gray-700 shadow-none">
 
                         <img
-                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                            src={currentTestimonial.image}
                             alt="tania andrew"
-                            className="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
+                            className="relative inline-block h-[58px] w-[58px] rounded-lg object-cover object-center"
                         />
                         <div className="flex w-full flex-col gap-0.5">
                             <div className="flex items-center justify-between">
                                 <h5 className="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                                    Tania Andrew
+                                   {currentTestimonial.author}
                                 </h5>
 
                             </div>

@@ -13,19 +13,19 @@ const Features = () => {
     const leftItems = [
         {
             id: '01',
-            text: "AC Charger Services",
-            description: "Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.",
+            text: "Maximize Your Earnings",
+            description: "Earn up to ₹ 4 /unit ",
         },
         {
             id: '02',
-            text: "EV Drivers Services",
-            description: "Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.",
+            text: "Top Income Opportunities",
+            description: "Best Passive Income Opportunity",
 
         },
         {
             id: '03',
-            text: "EV Drivers Services",
-            description: "Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith vbnfgbvnjhfgjhnfghfg            .",
+            text: "Effortless Earnings",
+            description: "Automated Monthly Payouts and Monitoring",
 
         },
 
@@ -33,28 +33,28 @@ const Features = () => {
     const rightItems = [
         {
             id: '04',
-            text: "DC Charger Services",
-            description: "Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.",
+            text: "Cost Reduction Strategies",
+            description: "Lower Maintenance cost",
         },
         {
             id: '05',
-            text: "Home Charging",
-            description: "Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.",
+            text: "Eco-Friendly Finances",
+            description: "Green & Sustainable Investment",
 
         },
         {
             id: '06',
-            text: "Building Services",
-            description: "Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith vbnfgbvnjhfgjhnfghfg            .",
+            text: "Smooth Sailing",
+            description: "No operational headache",
 
         },
 
     ]
 
     const ListItem = ({ item }) => (
-        <div className='my-12 flex flex-col sm:d-block '>
+        <div className='my-5 md:my-12 flex flex-col sm:d-block '>
             <div className=" flex flex-row items-center justify-start ">
-                <div className="rounded-full h-16 w-16 bg-[#fff] py-4" >
+                <div className="rounded-full w-12 h-12 md:h-16 md:w-16 bg-[#fff] py-3 md:py-4" >
                     <p className=" text-black text-center font-bold text-base sm:text-lg md:text-xl 2xl:text-2xl ">
                         {item.id}
                     </p>
@@ -70,9 +70,9 @@ const Features = () => {
         </div>
     );
     const ListItem1 = ({ item }) => (
-        <div className='my-12 flex flex-col '>
+        <div className='my-5 md:my-12 flex flex-col '>
             <div className=" flex flex-row items-center justify-start ">
-                <div className="rounded-full h-16 w-16 bg-[#fff] py-4" >
+                <div className="rounded-full w-12 h-12 md:h-16 md:w-16 bg-[#fff] py-3 md:py-4" >
                     <p className=" text-black text-center font-bold text-base sm:text-lg  md:text-xl 2xl:text-2xl ">
                         {item.id}
                     </p>
@@ -100,11 +100,11 @@ const Features = () => {
                         <div className="bg-cover " style={style}>
                             <div class="absolute inset-0 bg-[#016C80] bg-opacity-90"></div>
                             <div className="  container mx-auto h-full  flex items-center justify-center  z-40">
-                                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 my-6 font-semibold text-3xl text-white sm:text-center lg:text-4xl xl:text-5xl">
+                                <div className="absolute text-center  top-5 md:top-8 left-1/2 transform -translate-x-1/2 my-6 font-semibold text-3xl text-white sm:text-center lg:text-4xl xl:text-5xl">
                                     <p>Excellent And Best Services</p>
                                 </div>
-                                <div className="w-12/12 relative flex flex-row 2xl:top-24 md:top-0 px-4 xl:px-o  ">
-                                    <div className="w-4/12 text-white ">
+                                <div className="w-12/12 relative md:flex md:flex-row 2xl:top-24 top-16  sm:top-0 px-4 xl:px-o  ">
+                                    <div className="md:w-4/12 text-white ">
                                         <ul className="">
                                             {leftItems.map((item) => (
                                                 <ListItem key={item.id} item={item} />
@@ -114,7 +114,7 @@ const Features = () => {
                                     <div className="w-4/12 ">
                                         <img src={ImageIcons.feature_machine} alt="Center Image" className="w-10/12  h-auto hidden lg:inline-block " />
                                     </div>
-                                    <div className=" text-white flex flex-end w-4/12 justify-items-end ">
+                                    <div className=" text-white flex flex-end md:w-4/12 justify-items-end ">
 
                                         <ul className=" ">
                                             {rightItems.map((item) => (
