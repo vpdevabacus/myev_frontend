@@ -100,16 +100,29 @@ const ImageIcons = {
   whyUS,
   contact_banner,
   Rectangle1,
+<<<<<<< HEAD
   Aboutimage,
   percentage,
   vision,
   mission,
   pattern ,
+=======
+>>>>>>> 85985d78d52c1ef411dc834857d835524286d993
   fastMachine,
   slowMachine,
   team_member_3,
   team_member_2,
+<<<<<<< HEAD
   team_member_1
+=======
+  team_member_1,
+  Aboutimage,
+  percentage,
+  vision,
+  mission,
+  pattern
+
+>>>>>>> 85985d78d52c1ef411dc834857d835524286d993
 
 }
 
