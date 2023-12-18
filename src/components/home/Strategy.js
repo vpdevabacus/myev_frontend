@@ -15,7 +15,7 @@ const Strategy = () => {
                                 src={ImageIcons.work} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Fast Charging</h4>
-                                <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-sm text-black mt-3">Experience the convenience of fast charging for your devices. Our fast charging solutions deliver a quick and efficient power boost, ensuring you stay connected and on the go without unnecessary delays.</span>
                             </div>
                         </div>
                         <div className="space-y-4 text-center">
@@ -23,7 +23,7 @@ const Strategy = () => {
                                 src={ImageIcons.work1} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Good Management</h4>
-                                <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-sm text-black mt-3">Good Management is the cornerstone of organizational success. It involves skillful coordination, strategic decision-making, and effective communication to guide a team towards achieving its goals.</span>
                             </div>
                         </div>
                         <div className="space-y-4 text-center">
@@ -31,7 +31,7 @@ const Strategy = () => {
                                 src={ImageIcons.work2} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Renewable Energy</h4>
-                                <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-sm text-black">Renewable energy is the key to a greener and more sustainable future. This form of energy is derived from naturally replenishing sources such as sunlight, wind, and water.</span>
                             </div>
                         </div>
                         <div className="space-y-4 text-center">
@@ -39,7 +39,7 @@ const Strategy = () => {
                                 src={ImageIcons.work3} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl font-medium">Quality Charger</h4>
-                                <span className="block text-sm text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-sm text-black">A high-quality charger designed for efficient and reliable power delivery, ensuring fast and safe charging for your devices. Our quality charger is built with advanced technology to provide optimal performance and durability, meeting the demands of modern electronics.</span>
                             </div>
                         </div>
                     </div>

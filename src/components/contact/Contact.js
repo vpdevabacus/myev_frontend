@@ -17,14 +17,11 @@ const style = {
 const Contact = () => {
     return (
         <>
-            <div>
-                <img src={ImageIcons.contact_banner} />
-            </div>
-
-            <div className="bg-[#F1F8E8] p-10">
-                <section class=" w-10/12 mx-auto mb-10 ">
-                    <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 ">
-                        <div className="bg-cover p-28 mb-16 " style={style}>
+            
+            <div className="bg-[#F1F8E8] p-10 w-full">
+                <section class=" w-10/12 mx-auto mb-10  ">
+                    <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3  px-4">
+                        <div className="bg-cover px-10 xl:p-28 mb-16 " style={style}>
                             <div className="w-16 h-16  rounded-full bg-[#F1F8E8] px-5 py-5 mx-auto text-center  ">
                                 <MdPhone className='h-5 w-6 text-[#0B7132]' />
 
@@ -33,7 +30,7 @@ const Contact = () => {
                             <p className="text-black pt-3 text-base text-center font-medium">+91 75081 00021</p>
                         </div>
 
-                            <div className="bg-cover p-28 mb-16 " style={style}>
+                        <div className="bg-cover p-20 xl:p-28 mb-16 " style={style}>
                                 <div className="w-16 h-16  rounded-full bg-[#F1F8E8] px-5 py-5 mx-auto text-center  ">
                                     <FaRegEnvelope className='h-5 w-6 text-[#0B7132]' />
 
@@ -43,7 +40,7 @@ const Contact = () => {
                           
                         </div>
 
-                        <div className="bg-cover p-28 mb-16 " style={style}>
+                        <div className="bg-cover p-20 xl:p-28 mb-16 " style={style}>
                             <div className="w-16 h-16  rounded-full bg-[#F1F8E8] px-5 py-5 mx-auto text-center  ">
                                 <MdLocationPin className='h-5 w-6 text-[#0B7132]' />
                                
@@ -56,16 +53,16 @@ const Contact = () => {
                     </div>
                 </section>
             </div>-
-            <div className="flex flex-row ">
+            <div className="lg:flex flex-row ">
 
-                <div className="flex-shrink-0 w-5/12 pl-16 text-center mt-40 md:text-left md:mb-10">
-                    <p className="mt-2 text-xl text-[#0B7132] font-medium	">Send a message</p>
-                    <p className="mt-2 text-5xl text-black font-bold">Get in touch </p>
-                    <p className="mt-2 text-lg text-black ">It’s your chance to own an EV </p>
-                    <p className="mt-1 text-lg text-black ">Charging Station (Without having to manage it)</p>
-                    <div className="mt-4 inline-flex justify-center mt-2 sm:ml-auto sm:mt-3 sm:justify-start">
+                <div className="lg:flex-shrink-0  lg:w-5/12  lg:pl-16  mt-40  lg:text-left md:mb-10">
+                    <p className="mt-2 text-xl text-[#0B7132] text-center lg:text-start font-medium	">Send a message</p>
+                    <p className="mt-2 text-5xl text-black text-center lg:text-start font-bold">Get in touch </p>
+                    <p className="mt-2 text-lg text-black text-center lg:text-start">It’s your chance to own an EV </p>
+                    <p className="mt-1 text-lg text-black text-center lg:text-start">Charging Station (Without having to manage it)</p>
+                    <div className="mt-4 flex justify-center  mt-2  lg:mt-3 lg:justify-start">
                         <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 ">
-                            <BiLogoFacebook className='h-5 w-6 text-[#0B7132]' />
+                            <BiLogoFacebook className='h-5 w-6 text-[#0B7132] ' />
                         </div>
                         <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 ">
                             <FaTwitter className='h-5 w-6 text-[#0B7132]' />
@@ -81,7 +78,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div class="w-4/12 mx-auto bg-white p-16 shadow-lg mt-8 mb-8">
+                <div class=" md:w-8/12 lg:w-4/12 mx-10 sm:mx-20 md:mx-40 lg:mx-auto bg-white p-16 shadow-lg mt-8 mb-8">
 
                     <form>
 
