@@ -27,22 +27,22 @@ const WhyUs = () => {
     const items = [
         {
             id: 1,
-            ques: 'How Long Does It Take To Charge My Vehicle?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: 'How can I find electric vehicle charging stations on a road trip?',
+            ans: "Costs vary based on electricity rates and charging speed. Generally cheaper than traditional fuel. Public charging may have fees."
         },
         {
             id: 2,
-            ques: 'Can I Charge My Car On Any Charger?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: ' Is it possible to overcharge an electric vehicle?',
+            ans: "No, modern EVs and charging stations are designed to prevent overcharging. Once the battery reaches full capacity, charging stops automatically."
         },
         {
             id: 3,
-            ques: 'Where Can I Find The Nearest Charging Station?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ques: 'Can I charge my electric vehicle in the rain or snow?',
+            ans: " Yes, electric vehicle charging is safe in various weather conditions. Charging ports are designed to be weather-resistant."
         },
         {
             id: 4,
-            ques: 'How Much Does It Cost To Charge My Vehicle?',
+            ques: 'How much does it cost to charge an electric vehicle?',
             ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
         },
     ];
