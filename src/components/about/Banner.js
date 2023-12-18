@@ -29,22 +29,9 @@ const Banner = () => {
                     </section>
                 </section>
 
-                <img src={ImageIcons.mapsection} />
 
 
             </div>
-
-            {/* <div className="flex-box bg-[#cccccc] p-5 h-25 d-flex flex-wrap items-start">
-                <div className="">1</div>
-                <div className=" flex-box-2">2</div>
-                <div className="">3</div>
-                <div className="">4</div>
-                <div className="">5</div>
-                <div className="">6</div>
-                <div className="">7</div>
-                <div className="">8</div>
-                <div className="">9</div>
-            </div> */}
 
         </>
     )

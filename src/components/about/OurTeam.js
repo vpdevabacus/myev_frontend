@@ -18,12 +18,12 @@ const OurTeam = () => {
                             <figure className=' relative h-[400px] duration-500 overflow-hidden before:content before:absolute before:top-[0] before:left-[0] before:h-[100%] before:w-[100%] group-hover:before:bg-black/[.6] before:z-10 rounded-tl-3xl rounded-br-3xl'>
                                 <img
                                     src={item.teamImage}
-                                    className='w-[100%] h-[100%] object-cover	duration-500 group-hover:scale-[1.1]'
+                                    className='w-[100%] h-[100%] object-cover   duration-500 group-hover:scale-[1.1]'
                                     alt='team'
                                     width=""
                                     height=""
                                 />
-                                <figcaption className='duration-500 flex justify-center absolute left-[0] translate-y-[-50%] top-[50%] tr right-[0] text-center gap-[10px] z-20 opacity-0 invisible group-hover:opacity-100	 group-hover:visible'>
+                                <figcaption className='duration-500 flex justify-center absolute left-[0] translate-y-[-50%] top-[50%] tr right-[0] text-center gap-[10px] z-20 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
                                     <Link to={item.facebookLink} className='w-[35px] h-[35px] rounded-[50%] bg-[#fff] duration-300 text-[#000244]  flex justify-center items-center hover:scale-[1.1]' ><FaFacebookF /></Link>
                                     <Link to={item.linkedinLink} className='w-[35px] h-[35px] rounded-[50%] bg-[#fff] duration-300 text-[#000244]  flex justify-center items-center hover:scale-[1.1]' ><FaTwitter /></Link>
                                     <Link to={item.tweeterLink} className='w-[35px] h-[35px] rounded-[50%] bg-[#fff] duration-300 text-[#000244]  flex justify-center items-center hover:scale-[1.1]'><FaTwitter /></Link>

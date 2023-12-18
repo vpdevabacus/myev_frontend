@@ -40,6 +40,11 @@ import AC_Power from "../assets/Images/AC_Power.png";
 import whyUS from "../assets/Images/whyUS.png"
 import contact_banner from "../assets/Images/contact_banner.png";
 import Rectangle1 from "../assets/Images/Rectangle1.png";
+import Aboutimage from "../assets/Images/Aboutimage.png";
+import percentage from "../assets/Images/percentage.png";
+import vision from "../assets/Images/vision.png";
+import mission from "../assets/Images/mission.png";
+import pattern from "../assets/Images/pattern.png";
 import fastMachine from "../assets/Images/fast_machine.png"
 import slowMachine from "../assets/Images/slow_machine.png"
 import team_member_3 from "../assets/Images/team_member_3.png"
@@ -99,7 +104,13 @@ const ImageIcons = {
   slowMachine,
   team_member_3,
   team_member_2,
-  team_member_1
+  team_member_1,
+  Aboutimage,
+  percentage,
+  vision,
+  mission,
+  pattern
+
 
 }
 
