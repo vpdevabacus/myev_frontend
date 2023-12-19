@@ -135,7 +135,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-[#212226] border-t border-[#ffffff] text-center">
                     <div className="container px-5 py-4 mx-auto">
-                        <p className="text-sm text-white capitalize xl:text-center">© {currentYear} All rights reserved</p>
+                        <p className="text-sm text-white capitalize xl:text-center">Copyright {currentYear}  by VP Clean Energy Pvt. Ltd. All Right Reserved.</p>
                     </div>
                 </div>
             </footer>

@@ -58,7 +58,7 @@ const FAQs = () => {
                             <div style={handleHeading(item.id)}
                                 className="w-full p-2 text-left cursor-pointer">
                                 <div className="flex items-center justify-between px-2">
-                                    <span className="tracking-wide text-lg sm:text-xl lg:text-2xl font-medium">{`Question ${item.ques}`}</span>
+                                    <span className="tracking-wide text-lg sm:text-xl lg:text-2xl font-medium">{` ${item.ques}`}</span>
                                     <span
                                         className={`transition-transform duration-200 transform fill-current ${handleRotate(
                                             item.id

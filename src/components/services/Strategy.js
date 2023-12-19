@@ -15,7 +15,7 @@ const Strategy = () => {
                                 src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl sm:text-3xl font-medium">Fast Charging</h4>
-                                <span className="block text-base sm:text-lg text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-base sm:text-lg text-black">Experience swift device charging with our efficient solutions. Enjoy quick power boosts that keep you connected and on the move, eliminating unnecessary delays.</span>
                             </div>
                         </div>
                         <div className="space-y-4 text-center">
@@ -23,7 +23,7 @@ const Strategy = () => {
                                 src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl sm:text-3xl font-medium">Good Management</h4>
-                                <span className="block text-base sm:text-lg text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-base sm:text-lg text-black">Good management is vital for organizational success, involving coordination, strategic decisions, and effective communication to steer teams towards their goals.</span>
                             </div>
                         </div>
                         <div className="space-y-4 text-center">
@@ -31,7 +31,7 @@ const Strategy = () => {
                                 src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl sm:text-3xl font-medium">Renewable Energy</h4>
-                                <span className="block text-base sm:text-lg text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-base sm:text-lg text-black">Renewable energy is the key to a sustainable future, harnessed from naturally replenishing sources like sunlight, wind, and water.</span>
                             </div>
                         </div>
                         <div className="space-y-4 text-center">
@@ -39,7 +39,7 @@ const Strategy = () => {
                                 src={ImageIcons.bannerimage} alt="woman" loading="lazy" ></img>
                             <div>
                                 <h4 className="text-2xl sm:text-3xl font-medium">Quality Charger</h4>
-                                <span className="block text-base sm:text-lg text-black">Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</span>
+                                <span className="block text-base sm:text-lg text-black">Efficient, reliable charging for modern devices. Our high-quality charger delivers fast and safe power, meeting the demands of today's electronics.</span>
                             </div>
                         </div>
                     </div>

@@ -28,7 +28,7 @@ const WhyUs = () => {
         {
             id: 1,
             ques: 'How can I find electric vehicle charging stations on a road trip?',
-            ans: "Costs vary based on electricity rates and charging speed. Generally cheaper than traditional fuel. Public charging may have fees."
+            ans: "Use our mobile app and check your vehicle's built-in navigation for real-time information on charging station locations."
         },
         {
             id: 2,
@@ -43,7 +43,7 @@ const WhyUs = () => {
         {
             id: 4,
             ques: 'How much does it cost to charge an electric vehicle?',
-            ans: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            ans: "Costs vary based on electricity rates and charging speed. Generally cheaper than traditional fuel. Public charging may have fees."
         },
     ];
 
@@ -57,8 +57,7 @@ const WhyUs = () => {
                         <h2 className="text-center text-2xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Why you should choose us ?</h2>
                         <div className='px-8 sm:px-12'>
                             <p className="mt-10 text-lg lg:text-xl font-normal text-[#000] text-left">
-                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will.</p>
-                        </div>
+                                myEV Point is more than just a charging network; it's a community. Connect with fellow EV enthusiasts, share experiences, and stay informed about the latest developments in the world of electric vehicles.<br /><br />Choose myEV Point — Where Innovation Meets Reliability. Join us on the road to a sustainable and electrifying future.</p>                        </div>
 
                         <div className="relative flex flex-col lg:flex-row  m-auto  px-12 w-12/12 justify-between my-10 ">
                             <div className="md:w-10/12 md:mx-auto lg:mx-0 lg:w-5/12 my-auto">
@@ -74,7 +73,7 @@ const WhyUs = () => {
                                             <div style={handleHeading(item.id)}
                                                 className="w-full p-2 text-left cursor-pointer">
                                                 <div className="flex items-center justify-between px-2">
-                                                    <span className="tracking-wide text-base sm:text-lg lg:text-2xl font-medium">{`Question ${item.ques}`}</span>
+                                                    <span className="tracking-wide text-base sm:text-lg lg:text-2xl font-medium">{` ${item.ques}`}</span>
                                                     <span
                                                         className={`transition-transform duration-200 transform fill-current ${handleRotate(
                                                             item.id
