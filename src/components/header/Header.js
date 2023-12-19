@@ -77,7 +77,7 @@ const Header = () => {
                     </div>
 
                 </header>
-                <div className="w-full flex items-start p-6 mx-auto flex-row sm:flex-row justify-between ">
+                <div className="w-full flex items-start px-6 py-3 mx-auto flex-row sm:flex-row justify-between ">
                     <div>
                         <NavLink to="/" className="flex items-center font-medium text-gray-900 title-font">
                             <img src={ImageIcons.myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44 cursor-pointer' />
@@ -91,9 +91,9 @@ const Header = () => {
                             <NavLink to="/services" className={({ isActive }) => isActive ? "relative text-[#0B7132]  font-normal text-lg lg:text-xl" : "relative font-normal text-lg lg:text-xl text-[#000] hover:text-[#0B7132]"}>Our Services
                             </NavLink>
                             {dropdownOpen === false ?
-                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000'></path></svg>
+                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" className="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform md:-mt-1"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" color='#000'></path></svg>
                                 :
-                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform rotate-180 md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#0B7132'></path></svg>
+                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" className="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform rotate-180 md:-mt-1"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" color='#0B7132'></path></svg>
                             }
                             {dropdownOpen && (
                                 <div
@@ -123,10 +123,10 @@ const Header = () => {
                             <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl ml-10" : "mr-10 font-normal text-lg lg:text-xl text-[#000] hover:text-[#0B7132] ml-10"}>Contact Us</NavLink>
 
                         </div>
-                        <div class="md:hidden ml-10 mt-1 " onClick={handleMenu}>
-                            <button type="button" class="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
-                                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                                    <path class="hidden" d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
+                        <div className="md:hidden ml-10 mt-1 " onClick={handleMenu}>
+                            <button type="button" className="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+                                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                    <path className="hidden" d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
                                     <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
                                 </svg>
                             </button>

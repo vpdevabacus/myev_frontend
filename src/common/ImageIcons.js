@@ -52,6 +52,8 @@ import team_member_2 from "../assets/Images/team_member_2.png"
 import team_member_1 from "../assets/Images/team_member_1.png"
 import leftarrow from "../assets/Images/leftarrow.png"
 import rightarrow from "../assets/Images/rightarrow.png"
+import footer_right_bg from "../assets/Images/footer-right-bg.png"
+import footer_left_bg from "../assets/Images/footer-left-bg.png"
 
 
 
@@ -108,7 +110,7 @@ const ImageIcons = {
   percentage,
   vision,
   mission,
-  pattern ,
+  pattern,
   pattern,
   fastMachine,
   slowMachine,
@@ -121,7 +123,9 @@ const ImageIcons = {
   mission,
   pattern,
   rightarrow,
-  leftarrow
+  leftarrow,
+  footer_right_bg,
+  footer_left_bg
 
 
 }
