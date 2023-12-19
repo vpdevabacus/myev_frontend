@@ -55,18 +55,23 @@ const Header = () => {
 
     return (
         <>
-            <header className="header w-full text-[#fff] bg-white body-font fixed z-50">
-
-                <header className="header w-full text-[#fff] bg-white body-font border-b border-b-[#828282] ">
-                    <div className="w-full flex flex-row items-start mx-auto sm:flex-row bg-black px-8 py-1 justify-between">
-                        <div className="flex items-center font-medium md:mb-0">
-                            <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
-                            <span onClick={openMail} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >{email}</span>
-                            <span className='mx-4 hidden md:block'>|</span>
-                            <MdPhone onClick={openMail} className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
-                            <span onClick={callPhoneNumber} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >{phoneNumber}</span>
+            <header>
+                <div className="w-full text-[#fff] bg-white body-font fixed z-50"> 
+                <div className="w-full bg-black">
+                    <div className="container top-bar-header flex flex-row items-start mx-auto sm:flex-row justify-between">
+                        <div className="flex">
+                            <div className='flex items-center'>
+                                <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
+                                <span onClick={openMail} className="hidden md:block ml-2 font-size-16 text-[#fff] cursor-pointer" >{email}</span>
+                            </div>
+                            <div className='flex items-center'>
+                                <span className='hidden md:block clr-ddd mx-4'>|</span>
+                            </div>
+                            <div className='flex items-center'>
+                                <MdPhone onClick={openMail} className='h-5 w-6 cursor-pointer' />
+                                <span onClick={callPhoneNumber} className="hidden md:block ml-2 font-size-16 text-[#fff] cursor-pointer" >{phoneNumber}</span>
+                            </div>
                         </div>
-
                         <div className="items-center flex md:mb-0 mt-1 ">
                             <Link to='https://www.facebook.com/myevpoint'><FaFacebookF className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
                             <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
@@ -75,8 +80,8 @@ const Header = () => {
                             <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6  cursor-pointer hover:text-[#0B7132]' /></Link>
                         </div>
                     </div>
+                </div>
 
-                </header>
                 <div className="w-full flex items-start p-6 mx-auto flex-row sm:flex-row justify-between ">
                     <div>
                         <NavLink to="/" className="flex items-center font-medium text-gray-900 title-font">
@@ -177,6 +182,8 @@ const Header = () => {
                             <span className="font-medium text-base lg:text-lg">Login</span>
                         </button> */}
                     </div>
+                </div>
+
                 </div>
             </header>
         </>

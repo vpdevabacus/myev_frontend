@@ -68,3 +68,18 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
+
+
+/* 19 Dec 2023 CSS */
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.clr-ddd{color: #DDDDDD;}
+.font-size-16{font-size: 16px;line-height: 20.8px;}
+
+.top-bar-header {padding: 10px 0px;}
+
+/* End CSS */

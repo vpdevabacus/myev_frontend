@@ -76,16 +76,16 @@ const Testimonials = () => {
                     <div className="relative flex w-full max-w-[40rem] flex-col mx-auto rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
 
                         <div className="mb-6 p-0 flex ">
-                            <div>
-                                <img src={ImageIcons.leftarrow} onClick={handlePrevious} className="text-yellow-700 mr-32 w-10 h-22" >
+                            <div className="hidden sm:block">
+                                <img src={ImageIcons.rightarrow} onClick={handlePrevious} className=" h-14 w-8 sm:w-8 sm:h-16 md:w-10 md:h-20 lg:w-12 lg:h-28" >
 
                                 </img>
                             </div>
-                            <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                            <p className="block font-sans text-base font-light leading-relaxed px-16 mx-auto">
                                 {currentTestimonial.text}
                             </p>
-                            <div >
-                                <img src={ImageIcons.rightarrow} onClick={handleNext} className="text-yellow-700 ml-16 w-10 h-22  " >
+                            <div className="hidden sm:block" >
+                                <img src={ImageIcons.rightarrow} onClick={handleNext} className="w-8 h-16 md:w-10 md:h-20 lg:w-12 lg:h-28 " >
 
                                 </img>
                             </div>
@@ -171,7 +171,6 @@ const Testimonials = () => {
                                     <h5 className="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                                         {currentTestimonial.author}
                                     </h5>
-
                                 </div>
                                 <p className="block font-sans text-base font-light leading-relaxed text-blue-gray-900 antialiased">
                                     Frontend Lead @ Google
