@@ -63,7 +63,7 @@ const Header = () => {
                             <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
                             <span onClick={openMail} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >{email}</span>
                             <span className='mx-4 hidden md:block'>|</span>
-                            <MdPhone onClick={openMail} className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
+                            <MdPhone onClick={callPhoneNumber} className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
                             <span onClick={callPhoneNumber} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >{phoneNumber}</span>
                         </div>
 
