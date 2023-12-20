@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+
+
 const FAQs = () => {
 
     const [activeTab, setActiveTab] = useState(null);
