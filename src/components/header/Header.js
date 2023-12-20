@@ -55,18 +55,23 @@ const Header = () => {
 
     return (
         <>
-            <header className="header w-full text-[#fff] bg-white body-font fixed z-50">
-
-                <header className="header w-full text-[#fff] bg-white body-font border-b border-b-[#828282] ">
-                    <div className="w-full flex flex-row items-start mx-auto sm:flex-row bg-black px-8 py-1 justify-between">
-                        <div className="flex items-center font-medium md:mb-0">
-                            <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
-                            <span onClick={openMail} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer " >{email}</span>
-                            <span className='mx-4 hidden md:block'>|</span>
-                            <MdPhone onClick={callPhoneNumber} className='h-5 w-6 ml-3 md:ml-0 cursor-pointer' />
-                            <span onClick={callPhoneNumber} className="ml-2 font-normal text-[#fff] text-lg hidden sm:hidden md:block cursor-pointer" >{phoneNumber}</span>
+            <header>
+                <div className="w-full text-[#fff] bg-white body-font fixed z-50"> 
+                <div className="w-full bg-black">
+                    <div className="container top-bar-header flex flex-row items-start mx-auto sm:flex-row justify-between">
+                        <div className="flex">
+                            <div className='flex items-center'>
+                                <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
+                                <span onClick={openMail} className="hidden md:block ml-2 font-size-16 text-[#fff] cursor-pointer" >{email}</span>
+                            </div>
+                            <div className='flex items-center'>
+                                <span className='hidden md:block clr-ddd mx-4'>|</span>
+                            </div>
+                            <div className='flex items-center'>
+                                <MdPhone onClick={openMail} className='h-5 w-6 cursor-pointer' />
+                                <span onClick={callPhoneNumber} className="hidden md:block ml-2 font-size-16 text-[#fff] cursor-pointer" >{phoneNumber}</span>
+                            </div>
                         </div>
-
                         <div className="items-center flex md:mb-0 mt-1 ">
                             <Link to='https://www.facebook.com/myevpoint'><FaFacebookF className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
                             <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 mr-2 cursor-pointer hover:text-[#0B7132]' /></Link>
@@ -75,9 +80,9 @@ const Header = () => {
                             <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6  cursor-pointer hover:text-[#0B7132]' /></Link>
                         </div>
                     </div>
+                </div>
 
-                </header>
-                <div className="w-full flex items-start px-6 py-3 mx-auto flex-row sm:flex-row justify-between ">
+                <div className="w-full flex items-start p-6 mx-auto flex-row sm:flex-row justify-between ">
                     <div>
                         <NavLink to="/" className="flex items-center font-medium text-gray-900 title-font">
                             <img src={ImageIcons.myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44 cursor-pointer' />
@@ -91,9 +96,9 @@ const Header = () => {
                             <NavLink to="/services" className={({ isActive }) => isActive ? "relative text-[#0B7132]  font-normal text-lg lg:text-xl" : "relative font-normal text-lg lg:text-xl text-[#000] hover:text-[#0B7132]"}>Our Services
                             </NavLink>
                             {dropdownOpen === false ?
-                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" className="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform md:-mt-1"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" color='#000'></path></svg>
+                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000'></path></svg>
                                 :
-                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" className="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform rotate-180 md:-mt-1"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" color='#0B7132'></path></svg>
+                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="inline w-7 h-7 mt-2 ml-1  transition-transform duration-200 transform rotate-180 md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#0B7132'></path></svg>
                             }
                             {dropdownOpen && (
                                 <div
@@ -123,10 +128,10 @@ const Header = () => {
                             <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132] mr-10 font-normal text-lg lg:text-xl ml-10" : "mr-10 font-normal text-lg lg:text-xl text-[#000] hover:text-[#0B7132] ml-10"}>Contact Us</NavLink>
 
                         </div>
-                        <div className="md:hidden ml-10 mt-1 " onClick={handleMenu}>
-                            <button type="button" className="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
-                                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                                    <path className="hidden" d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
+                        <div class="md:hidden ml-10 mt-1 " onClick={handleMenu}>
+                            <button type="button" class="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+                                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                    <path class="hidden" d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
                                     <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
                                 </svg>
                             </button>
@@ -177,6 +182,8 @@ const Header = () => {
                             <span className="font-medium text-base lg:text-lg">Login</span>
                         </button> */}
                     </div>
+                </div>
+
                 </div>
             </header>
         </>

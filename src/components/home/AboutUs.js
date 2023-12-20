@@ -6,9 +6,6 @@ import ImageIcons from '../../common/ImageIcons'
 const AboutUs = () => {
     return (
         <>
-
-
-
             <div className='sm:px-28 mb-6 '>
                 <section className="relative flex items-center w-full">
                     <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-2 ">
@@ -32,16 +29,9 @@ const AboutUs = () => {
                                                 EV charging stations come in different sizes and charging speeds, ranging from slow chargers that can take several hours to fast chargers that can charge a vehicle in just 30 minutes or less. They can be located in public places such as parking lots, shopping centers, and rest areas, as well as in private residences, workplaces, and commercial buildings.
                                             </p>
                                         </div>
-
-
-
-
                                         <div className="flex justify-center gap-3 mt-10 lg:justify-start">
                                             <NavLink to="/About" >
                                                 <button className="px-3 px-4 md:px-8 py-1 py-2 md:py-4 bg-[#0B7132] hover:bg-white text-white rounded-lg text-xl hover:shadow-[inset_13rem_0_0_0] hover:shadow-[#0B7132] duration-[900ms,900ms] transition-[color,box-shadow]"><i className="fa-solid fa-arrow-right-to-bracket"></i> Read More</button>
-
-
-
                                             </NavLink>
                                         </div>
                                     </div>

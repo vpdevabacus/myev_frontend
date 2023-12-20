@@ -60,10 +60,10 @@ const Testimonials = () => {
 
     return (
         <>
-            <div className="bg-cover w-full" style={style}>
+            <div className="bg-cover " style={style}>
 
 
-                <div className="py-20 ">
+                <div className="py-20 mx-auto w-11/12">
                     <div className="container mx-auto px-6 md:px-12 xl:px-32">
 
                         <div className="mb-16 text-center">
@@ -76,16 +76,16 @@ const Testimonials = () => {
                     <div className="relative flex w-full max-w-[40rem] flex-col mx-auto rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
 
                         <div className="mb-6 p-0 flex ">
-                            <div>
-                                <img src={ImageIcons.leftarrow} onClick={handlePrevious} className="text-yellow-700 mr-32 w-10 h-22" >
+                            <div className="hidden sm:block">
+                                <img src={ImageIcons.rightarrow} onClick={handlePrevious} className=" h-14 w-8 sm:w-8 sm:h-16 md:w-10 md:h-20 lg:w-12 lg:h-28" >
 
                                 </img>
                             </div>
-                            <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                            <p className="block font-sans text-base font-light leading-relaxed px-16 mx-auto">
                                 {currentTestimonial.text}
                             </p>
-                            <div >
-                                <img src={ImageIcons.rightarrow} onClick={handleNext} className="text-yellow-700 ml-32 w-10 h-22  " >
+                            <div className="hidden sm:block" >
+                                <img src={ImageIcons.rightarrow} onClick={handleNext} className="w-8 h-16 md:w-10 md:h-20 lg:w-12 lg:h-28 " >
 
                                 </img>
                             </div>
@@ -101,9 +101,9 @@ const Testimonials = () => {
                                 className="h-5 w-5 text-yellow-700"
                             >
                                 <path
-                                    fillRule="evenodd"
+                                    fill-rule="evenodd"
                                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                    clipRule="evenodd"
+                                    clip-rule="evenodd"
                                 ></path>
                             </svg>
                             <svg
@@ -114,9 +114,9 @@ const Testimonials = () => {
                                 className="h-5 w-5 text-yellow-700"
                             >
                                 <path
-                                    fillRule="evenodd"
+                                    fill-rule="evenodd"
                                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                    clipRule="evenodd"
+                                    clip-rule="evenodd"
                                 ></path>
                             </svg>
                             <svg
@@ -127,9 +127,9 @@ const Testimonials = () => {
                                 className="h-5 w-5 text-yellow-700"
                             >
                                 <path
-                                    fillRule="evenodd"
+                                    fill-rule="evenodd"
                                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                    clipRule="evenodd"
+                                    clip-rule="evenodd"
                                 ></path>
                             </svg>
                             <svg
@@ -140,9 +140,9 @@ const Testimonials = () => {
                                 className="h-5 w-5 text-yellow-700"
                             >
                                 <path
-                                    fillRule="evenodd"
+                                    fill-rule="evenodd"
                                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                    clipRule="evenodd"
+                                    clip-rule="evenodd"
                                 ></path>
                             </svg>
                             <svg
@@ -153,9 +153,9 @@ const Testimonials = () => {
                                 className="h-5 w-5 text-yellow-700"
                             >
                                 <path
-                                    fillRule="evenodd"
+                                    fill-rule="evenodd"
                                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                    clipRule="evenodd"
+                                    clip-rule="evenodd"
                                 ></path>
                             </svg>
                         </div>
@@ -171,7 +171,6 @@ const Testimonials = () => {
                                     <h5 className="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                                         {currentTestimonial.author}
                                     </h5>
-
                                 </div>
                                 <p className="block font-sans text-base font-light leading-relaxed text-blue-gray-900 antialiased">
                                     Frontend Lead @ Google
