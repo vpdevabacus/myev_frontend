@@ -92,8 +92,8 @@ const Charges = () => {
     return (
         <>
 
-            <div class="  flex items-center justify-center  w-full bg-[#F1F8E8]">
-                <div class="my-20 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:w-full xl:container xl:px-6 lg:px-20">
+            <div className="  flex items-center justify-center  w-full bg-[#F1F8E8]">
+                <div className="my-20 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:w-full xl:container xl:px-6 lg:px-20">
 
 
 
@@ -121,9 +121,9 @@ const Charges = () => {
 
 
 
-                    <div class="max-w-sm mx-auto relative rounded-lg ">
+                    <div className="max-w-sm mx-auto relative rounded-lg ">
                         <div className="bg-cover px-4 py-8 " style={style}>
-                            <div class="relative m-0 mb-0 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
+                            <div className="relative m-0 mb-0 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
                                 <p className="text-xl font-semibold tracking-tight text-[#0B7132] sm:text-3xl leading-9">
                                     OFFICE AND WORKPLACE
                                 </p>
@@ -134,12 +134,12 @@ const Charges = () => {
                                     Charge your EV conveniently at work! Our workplace stations support eco-friendly commuting, making sustainability effortless.
                                 </p>
                             </div>
-                            <div class="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
+                            <div className="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
                                 {features.map((item) => (
                                     <FeatureList key={item.id} item={item} />
                                 ))}
                             </div>
-                            {/* <div class="mt-6 p-0">
+                            {/* <div className="mt-6 p-0">
                                 <div className="flex justify-center gap-3 lg:justify-start">
                                     <button className="px-3 md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl"><i className="fa-solid fa-arrow-right-to-bracket"></i>Sign Up</button>
 
@@ -149,9 +149,9 @@ const Charges = () => {
                     </div>
 
 
-                    <div class="max-w-sm mx-auto relative rounded-lg  ">
+                    <div className="max-w-sm mx-auto relative rounded-lg  ">
                         <div className="bg-cover px-4 py-8 " style={style1}>
-                            <div class="relative m-0 mb-0 overflow-hidden rounded-none  bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
+                            <div className="relative m-0 mb-0 overflow-hidden rounded-none  bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
                                 <p className="text-xl font-semibold tracking-tight text-[#fff] sm:text-3xl leading-9">
                                     MALLS AND HOTELS
                                 </p>
@@ -161,12 +161,12 @@ const Charges = () => {
                                 <p className="text-xl font-normal  text-[#fff] sm:text-xl mt-7">
                                     Explore our EV Charging Stations at top malls and hotels! As the world embraces sustainability, our cutting-edge solutions offer convenient electric vehicle charging. Join us in the green revolution!                                </p>
                             </div>
-                            <div class="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
+                            <div className="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
                                 {features1.map((item) => (
                                     <FeatureList1 key={item.id} item={item} />
                                 ))}
                             </div>
-                            {/* <div class="mt-6 p-0">
+                            {/* <div className="mt-6 p-0">
                                 <div className="flex justify-center gap-3 lg:justify-start">
                                     <button className="px-3 md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl"><i className="fa-solid fa-arrow-right-to-bracket"></i>Sign Up</button>
                                 </div>

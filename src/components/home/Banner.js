@@ -14,15 +14,15 @@ const Banner = () => {
 
 
             <section className="relative h-full w-full">
-                <div className="bg-cover w-full" style={style}>
+                <div className="bg-cover w-full bg-center" style={style}>
                     <div
                         className=" pt-64 md:max-w-none text-center mx-auto px-5 "
                     >
                         <h4
-                            className="font-semibold leading-10 tracking-tight text-left text-[#ffffff] text-center text-5xl md:text-7xl lg:text-8xl">
-                            <span className="inline sm:block ">Best<span className="text-[#0B7132]"> EV Vehicle</span> and </span>
+                            className="font-bold  text-left text-[#ffffff] text-center text-5xl md:text-7xl ">
+                            <span className="inline sm:block ">Best<span className="px-6 py-0"><span className="text-[#0B7132] bg-white px-2 py-0 ">EV Vehicle</span></span>and</span>
                             <span
-                                className="relative mt-2 md:mt-0 lg:mt-2 font-semibold  text-[#ffffff] leading-relaxed md:leading-loose text:xl sm:text-5xl md:text-7xl lg:text-8xl sm:inline-block mb-6 md:mb-0 lg:mb-14"
+                                className="relative mt-2 md:mt-0 font-semibold  text-[#ffffff] mt-20 text:xl sm:text-5xl md:text-7xl  sm:inline-block mb-6 md:mb-0 lg:mb-14"
                             >Charging Station</span>
                         </h4>
                         <span className=" text-base md:text-xl font-medium text-[#ffffff] ">It’s your chance to own an EV Charging Station (Without having to manage it)</span>

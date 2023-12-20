@@ -48,47 +48,47 @@ const Strategy = () => {
 
 
             {/* <div className="container mx-auto py-12 bg-black rounded-tl-full rounded-br-full  ">
-                <div class="w-10/12 mx-auto flex">
-                    <div class="w-3/12 flex space-between">
+                <div className="w-10/12 mx-auto flex">
+                    <div className="w-3/12 flex space-between">
                         <div >
-                            <img src={ImageIcons.chargingsession} class="w-20 h-20"></img>
+                            <img src={ImageIcons.chargingsession} className="w-20 h-20"></img>
                         </div>
-                        <div class="ml-3">
-                            <h5 class="text-white text-3xl font-semibold">1582+</h5>
-                            <p class="text-white font-weight: 500 text-lg">Charging sessions</p>
+                        <div className="ml-3">
+                            <h5 className="text-white text-3xl font-semibold">1582+</h5>
+                            <p className="text-white font-weight: 500 text-lg">Charging sessions</p>
                         </div>
 
 
                     </div>
-                    <div class="w-3/12 flex space-between">
+                    <div className="w-3/12 flex space-between">
                         <div >
-                            <img src={ImageIcons.chargingsession} class="w-20 h-20"></img>
+                            <img src={ImageIcons.chargingsession} className="w-20 h-20"></img>
                         </div>
-                        <div class="ml-3">
-                            <h5 class="text-white text-3xl font-semibold">1582+</h5>
-                            <p class="text-white font-weight: 500 text-lg">Charging sessions</p>
+                        <div className="ml-3">
+                            <h5 className="text-white text-3xl font-semibold">1582+</h5>
+                            <p className="text-white font-weight: 500 text-lg">Charging sessions</p>
                         </div>
 
 
                     </div>
-                    <div class="w-3/12 flex space-between">
+                    <div className="w-3/12 flex space-between">
                         <div >
-                            <img src={ImageIcons.chargingsession} class="w-20 h-20"></img>
+                            <img src={ImageIcons.chargingsession} className="w-20 h-20"></img>
                         </div>
-                        <div class="ml-3">
-                            <h5 class="text-white text-3xl font-semibold">1582+</h5>
-                            <p class="text-white font-weight: 500 text-lg">Charging sessions</p>
+                        <div className="ml-3">
+                            <h5 className="text-white text-3xl font-semibold">1582+</h5>
+                            <p className="text-white font-weight: 500 text-lg">Charging sessions</p>
                         </div>
 
 
                     </div>
-                    <div class="w-3/12 flex space-between">
+                    <div className="w-3/12 flex space-between">
                         <div >
-                            <img src={ImageIcons.chargingsession} class="w-20 h-20"></img>
+                            <img src={ImageIcons.chargingsession} className="w-20 h-20"></img>
                         </div>
-                        <div class="ml-3">
-                            <h5 class="text-white text-3xl font-semibold">1582+</h5>
-                            <p class="text-white font-weight: 500 text-lg">Charging sessions</p>
+                        <div className="ml-3">
+                            <h5 className="text-white text-3xl font-semibold">1582+</h5>
+                            <p className="text-white font-weight: 500 text-lg">Charging sessions</p>
                         </div>
 
 

@@ -98,7 +98,7 @@ const Features = () => {
                 <section>
                     <section className="relative ">
                         <div className="bg-cover " style={style}>
-                            <div class="absolute inset-0 bg-[#016C80] bg-opacity-90"></div>
+                            <div className="absolute inset-0 bg-[#016C80] bg-opacity-90"></div>
                             <div className="  container mx-auto h-full  flex items-center justify-center  z-40">
                                 <div className="absolute text-center  top-5 md:top-8 left-1/2 transform -translate-x-1/2 my-6 font-semibold text-3xl text-white sm:text-center lg:text-4xl xl:text-5xl">
                                     <p>Excellent And Best Services</p>

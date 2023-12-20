@@ -4,7 +4,7 @@
     left: 50%;
     height: 85%;
     width: 85%;
-    /* border: 2px solid white; */
+    box-shadow: inset 0 0 0 2px white;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transform: translate(-50%, -50%);
