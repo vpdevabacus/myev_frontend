@@ -70,7 +70,10 @@
 }
 
 
-
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* 19 Dec 2023 Common CSS */
