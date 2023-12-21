@@ -6,16 +6,22 @@ import Features from "../components/home/Features";
 import Strategy from "../components/home/Strategy";
 import Charges from "../components/home/Charges";
 import Footer from "../components/footer/Footer";
-const Home = () => {
+import Testimonials from "../components/testimonials/Testimonials";
+import ContactInfo from "../components/contact_info/ContactInfo";
+import EvCharging from "../components/ev-charging/EvCharging";
+ const Home = () => {
     return (
         <>
-            <Header />
+            {/* <Header />
             <Banner />
             <AboutUs />
             <Features />
             <Strategy />
             <Charges />
-            <Footer />
+            <Footer /> */}
+            <Testimonials />
+            <ContactInfo />
+            <EvCharging />
         </>
     )
 };
