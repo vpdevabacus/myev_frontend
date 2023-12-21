@@ -14,7 +14,7 @@ const Counting = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-16 lg:gap-2 sm:gap-10 justify-between items-center">
                             <div class="relative flex items-center justify-center sm:after:hidden after:content-[''] after:w-[100%] after:h-[1px] after:bg-[#0b713252] after:bottom-[-32px] after:absolute">
                                 <img class="w-[60px] xl:w-[75px] lg:w-[60px]" src={countingIcon1} alt="" />
-                                <div className='pl-[15px] text-left'>
+                                <div className='pl-[15px] text-left'> 
                                     <CountUp start={0} end={1582} duration={100}>
                                         {({ countUpRef, start }) => (
                                             <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-3px] after:relative" ref={countUpRef}></span>
