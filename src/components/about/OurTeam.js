@@ -5,13 +5,12 @@ import ImageIcons from '../../common/ImageIcons';
 
 const OurTeam = () => {
     return (
-        <section className="our_teem w-full  px-8 bg-[#F1F8E8] py-16">
-            <div className=" container mx-auto ">
+        <section className="our_teem bg-[#F1F8E8] py-[75px]">
+            <div className="container mx-auto">
+                <div className="mb-[50px] text-center">
+                    <h4 className="text-center text-[#0B7132] font-medium mb-[15px]">OUR TEAM MEMBER</h4>
 
-                <div className="mb-10 text-center">
-                    <h4 className="text-center text-lg text-[#0B7132] font-medium md:text-xl lg:text-2xl mb-6">OUR TEAM MEMBER</h4>
-
-                    <h2 className="text-center text-3xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Group of Certified & Experienced</h2>
+                    <h2>Group of Certified & Experienced</h2>
 
                 </div>
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 col:grid-cols-1 gap-[30px] btn-holder md:max-w-[unset] max-w-[350px] m-auto">

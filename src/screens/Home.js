@@ -10,6 +10,7 @@ import Testimonials from "../components/testimonials/Testimonials";
 import ContactInfo from "../components/contact_info/ContactInfo";
 import EvCharging from "../components/ev-charging/EvCharging";
 import Counting from "../components/counting/Counting";
+import OurTeam from "../components/about/OurTeam";
  const Home = () => {
     return (
         <>
@@ -18,7 +19,6 @@ import Counting from "../components/counting/Counting";
             <AboutUs />
             {/* <Features />
             <Strategy />
-            <Charges /> */}
 
             
            
