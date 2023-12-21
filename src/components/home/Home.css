@@ -1,6 +1,6 @@
 .strategy_bg {
     background: #fff;
-    padding: 112px 0px 112px 0px;
+    padding: 112px 0px 136px 0px;
 }
 .BOX-SECTION .box-2 {
     margin-top: 68px;
@@ -63,7 +63,6 @@
 }
 .Features-Section h2 {
     color: #fff;
-    font-size: 42px;
 }
 .Charging_Div .Price_section-div {
     letter-spacing: 0em;
@@ -121,10 +120,7 @@ span.PriceRS {
     .Features-Section .ul-Listing-div .H2-Header {
         font-size: 20px;
     }
-    .Features-Section h2 {
-        font-size: 28px;
-        margin-bottom: 0;
-    }
+
     .BOX-SECTION .box-2 {
         margin-top: 0;
     }

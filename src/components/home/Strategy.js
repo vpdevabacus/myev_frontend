@@ -7,7 +7,7 @@ const Strategy = () => {
       <div className="strategy_bg py-20">
         <div className="container mx-auto">
           <div className="xl:mb-2 text-center">
-            <h2 className="text-center text-gray-900 font-bold md:text-4xl mb-10 pb-12 Ho0w-We-Work">
+            <h2 className="text-center pb-12 Ho0w-We-Work">
               How we work
             </h2>
           </div>
