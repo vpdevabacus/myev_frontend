@@ -108,27 +108,25 @@ const Header = () => {
                                             <li className='menu-item-info'>
                                                 <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
                                                 Our Service 
-                                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="icon-down-menu inline ml-1 transition-transform duration-200 transform"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000'></path></svg>
                                                 </NavLink>
+                                                <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="icon-down-menu inline ml-1 transition-transform duration-200 transform"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000'></path></svg>
+                                                
+
+                                                {dropdownOpen == true &&
 
                                                 <div className='submenu-info'>
-                                                    <div className='submenu-links bg-white'>
+                                                    <div ref={dropdownRef} className='submenu-links bg-white'>
                                                         <ul className='submenu-link-menu'>
                                                             <li className='link-menu'>
-                                                                <NavLink to="/" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff] hover:bg-[#0B7132]"}>AC Charger Service</NavLink>
+                                                                <NavLink to="/services/ac_charger_services" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff] hover:bg-[#0B7132]"} onClick={closeDropdown}>AC Charger Service</NavLink>
                                                             </li>
                                                             <li className='link-menu'>
-                                                                <NavLink to="/" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"}>DC Charger Service</NavLink>
-                                                            </li>
-                                                            <li className='link-menu'>
-                                                                <NavLink to="/" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"}>AC Charger Service</NavLink>
-                                                            </li>
-                                                            <li className='link-menu'>
-                                                                <NavLink to="/" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"}>AC Charger Service</NavLink>
+                                                                <NavLink to="/services/dc_charger_services" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"} onClick={closeDropdown}>DC Charger Service</NavLink>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
+}
 
                                             </li>
                                             <li className='menu-item-info'>
