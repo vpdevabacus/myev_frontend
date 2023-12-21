@@ -44,7 +44,7 @@
     height: 42px;
     width: 42px;
     display: inline-block;
-    padding: 6px 0px 0px 10px;
+    padding: 6px 0px 0px 9px;
     margin-right: 10px;
 }
 .Features-Section .ul-Listing-div .H2-Header {
@@ -65,13 +65,35 @@
     color: #fff;
     font-size: 42px;
 }
-.features-phone-img img {
-    position: absolute;
-    left: -92px;
-    right: 0;
-    top: -327px;
+.Charging_Div .Price_section-div {
+    letter-spacing: 0em;
+    font-size: 50px;
 }
-
+.W-Div-Add .SUB-Header {
+    font-family: Poppins;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 60px;
+}
+.Charging_Div .Class_Modify p {
+    font-size: 16px;
+}
+.Charging_Div .leading-9 {
+    FONT-SIZE: 24PX;
+}
+.ECHARGE-Img {
+    width: 420px;
+    padding-top: 32px;
+}
+.Charging_Div .bg-cover:hover button {
+    background: #a5be2f;
+    color: #fff;
+    transition: 0.3s;
+}
+span.PriceRS {
+    font-family: Open sans-serif;
+    font-weight: 500;
+}
 
 @media (max-width: 767px){
     .BOX-SECTION img.afterDIV {
@@ -107,7 +129,10 @@
         margin-top: 0;
     }
     .responsive-CSS {
-        padding: 12px 70px;
+        padding: 12px 40px;
+    }
+    img.After_img_dnome {
+        display: none;
     }
     .Features-Section .ul-Listing-div {
         margin-bottom: 20px;
