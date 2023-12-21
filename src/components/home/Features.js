@@ -102,29 +102,26 @@ const Features = () => {
                   <div class="">
                     <ul className="ul-Listing-div">
                       <span className="H2-Header">
-                        <strong class="Ul-Number">01</strong>AC Charger Services
+                        <strong class="Ul-Number">01</strong>Maximize Your Earnings
                       </span>
                       <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
+                      Earn up to ₹4 Per Unit with Our Exclusive Rewards Program!
                       </li>
                     </ul>
                     <ul className="ul-Listing-div">
                       <span className="H2-Header">
-                        <strong class="Ul-Number">02</strong>AC Charger Services
+                        <strong class="Ul-Number">02</strong>Top Income Opportunities
                       </span>
                       <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
+                      The Ultimate Passive Income Opportunity Awaits You!
                       </li>
                     </ul>
                     <ul className="ul-Listing-div">
                       <span className="H2-Header">
-                        <strong class="Ul-Number">03</strong>AC Charger Services
+                        <strong class="Ul-Number">03</strong>Effortless Earnings
                       </span>
                       <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
+                      Automated Monthly Payouts and Monitoring
                       </li>
                     </ul>
                   </div>
@@ -138,29 +135,26 @@ const Features = () => {
                   <div class="">
                     <ul className="ul-Listing-div">
                       <span className="H2-Header">
-                        <strong class="Ul-Number">04</strong>AC Charger Services
+                        <strong class="Ul-Number">04</strong>Cost Reduction Strategies
                       </span>
                       <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
+                      Lower Maintenance cost
                       </li>
                     </ul>
                     <ul className="ul-Listing-div">
                       <span className="H2-Header">
-                        <strong class="Ul-Number">05</strong>AC Charger Services
+                        <strong class="Ul-Number">05</strong>Eco-Friendly Finances
                       </span>
                       <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
+                      Going Green and Growing Wealth.
                       </li>
                     </ul>
                     <ul className="ul-Listing-div">
                       <span className="H2-Header">
-                        <strong class="Ul-Number">05</strong>AC Charger Services
+                        <strong class="Ul-Number">06</strong>Smooth Sailing
                       </span>
                       <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
+                      No operational headaches, just smooth sailing.
                       </li>
                     </ul>
                   </div>
