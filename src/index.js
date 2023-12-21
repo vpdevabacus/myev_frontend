@@ -5,12 +5,15 @@ import './App.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from "react-router-dom";
 import router from './routes/Route';
+import ScrollToTop from './helpers/ScrollToTop';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} >
+      <ScrollToTop />
+    </RouterProvider>
   </React.StrictMode>
 );
 

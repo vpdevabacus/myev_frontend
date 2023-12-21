@@ -91,7 +91,7 @@ const Features = () => {
       >
         <div className="container mx-auto">
           <div className="xl:mb-2 text-center">
-            <h2 className="text-center text-2xl font-bold md:text-4xl mb-10 pb-12">
+            <h2 className="text-center pb-12">
               Excellent And Best Services
             </h2>
           </div>

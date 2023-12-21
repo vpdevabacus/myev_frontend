@@ -10,30 +10,25 @@ import Testimonials from "../components/testimonials/Testimonials";
 import ContactInfo from "../components/contact_info/ContactInfo";
 import EvCharging from "../components/ev-charging/EvCharging";
 import Counting from "../components/counting/Counting";
- const Home = () => {
+import OurTeam from "../components/about/OurTeam";
+const Home = () => {
     return (
         <>
-            {/* <Header />
-            <Banner />
-            <AboutUs />
-            {/* <Features />
-            <Strategy />
-            <Charges /> */}
 
-            
-           
-            <Header/>
+
+
+            <Header />
             <Banner />
             <AboutUs />
-            <Features/>
-            <Strategy/>
+            <Features />
+            <Strategy />
             <Charges />
             <Testimonials />
             <ContactInfo />
             {/* <EvCharging /> */}
             {/* <Counting /> */}
-            <Footer /> 
-            
+            <Footer />
+
 
             {/* <EvCharging /> */}
 
