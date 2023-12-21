@@ -14,7 +14,7 @@
     .font-size-16{font-size: 16px;line-height: 20.8px;}
     .logo-size-w{max-width: 190px;}
 }
-@media (max-width: 1023px){
+@media (max-width: 1024px){
     .top-bar-header {padding: 5px 0px;}
     .font-size-16{font-size: 14px;line-height: 18px;}
     .logo-size-w{max-width: 110px;}
