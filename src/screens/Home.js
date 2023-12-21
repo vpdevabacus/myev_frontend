@@ -19,9 +19,12 @@ import EvCharging from "../components/ev-charging/EvCharging";
             <Strategy />
             <Charges />
             <Footer /> */}
+            <Header/>
+            <Features/>
+            <Strategy/>
             <Testimonials />
             <ContactInfo />
-            <EvCharging />
+            {/* <EvCharging /> */}
         </>
     )
 };
