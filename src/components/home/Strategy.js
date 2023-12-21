@@ -93,12 +93,12 @@ const Strategy = () => {
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </div>
 
-          {/* tanu */}
+      {/* tanu */}
 
-          {/* <div className="grid gap-12 items-center md:grid-cols-2 xl:gap-2 xl:grid-cols-4 md:-mt-20 xl:mt-0">
+      {/* <div className="grid gap-12 items-center md:grid-cols-2 xl:gap-2 xl:grid-cols-4 md:-mt-20 xl:mt-0">
                         <div className="space-y-4 text-center">
                             <img className="w-60 h-60 mx-auto object-cover md:w-60 md:h-60 lg:w-64 lg:h-64"
                                 src={ImageIcons.work} alt="woman" loading="lazy" ></img>
@@ -133,8 +133,7 @@ const Strategy = () => {
                         </div>
                     </div> */}
 
-                    {/* tanu end  */}
-       
+      {/* tanu end  */}
 
       {/* <div className="container mx-auto py-12 bg-black rounded-tl-full rounded-br-full  ">
                 <div className="w-10/12 mx-auto flex">
