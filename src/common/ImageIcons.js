@@ -3,7 +3,7 @@ import aboutUs_car from "../assets/Images/aboutUs_car.png";
 import Rectangle from "../assets/Images/Rectangle.png";
 import feature_bg from "../assets/Images/feature_bg.png";
 import feature_machine from "../assets/Images/feature_machine.png";
-import bannerimage from "../assets/Images/bannerimage.png";
+import bannerimage from "../assets/Images/bg-img-hero.png";
 import car from "../assets/Images/car.png";
 import blueBg from "../assets/Images/blueBg.png"
 import Ellipse from "../assets/Images/Ellipse.png"
@@ -57,7 +57,7 @@ import footer_left_bg from "../assets/Images/footer-left-bg.png"
 import beforeimg  from "../assets/Images/before-img.png"
 import afterimg from "../assets/Images/after-img.png"
 import EVCharging from "../assets/Images/EVCharging.png"
-
+import EVCharging1 from "../assets/Images/About_E_Charge.jpg"
 
 
 
@@ -126,8 +126,8 @@ const ImageIcons = {
   rightarrow,
   leftarrow,
   footer_right_bg,
-  footer_left_bg
-
+  footer_left_bg,
+  EVCharging1
 
 }
 

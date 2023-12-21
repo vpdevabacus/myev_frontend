@@ -17,17 +17,22 @@ import OurTeam from "../components/about/OurTeam";
             {/* <Header />
             <Banner />
             <AboutUs />
-            <Features />
+            {/* <Features />
             <Strategy />
+
+            
+           
+            <Header/>
+            <Banner />
+            <AboutUs />
+            <Features/>
+            <Strategy/>
             <Charges />
-            <Footer /> */}
-          <Header />
             <Testimonials />
             <ContactInfo />
-
-            <EvCharging />
-            <Counting />
-            <OurTeam />
+            {/* <EvCharging /> */}
+            {/* <Counting /> */}
+            <Footer /> 
             
 
             {/* <EvCharging /> */}
