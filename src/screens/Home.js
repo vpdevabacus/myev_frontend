@@ -9,6 +9,7 @@ import Footer from "../components/footer/Footer";
 import Testimonials from "../components/testimonials/Testimonials";
 import ContactInfo from "../components/contact_info/ContactInfo";
 import EvCharging from "../components/ev-charging/EvCharging";
+import Counting from "../components/counting/Counting";
  const Home = () => {
     return (
         <>
@@ -22,6 +23,8 @@ import EvCharging from "../components/ev-charging/EvCharging";
             <Testimonials />
             <ContactInfo />
             <EvCharging />
+            <Counting />
+            
         </>
     )
 };
