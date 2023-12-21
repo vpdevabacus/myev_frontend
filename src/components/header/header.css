@@ -3,6 +3,25 @@
 .icon-down-menu {width: 20px;}
 .primary-menu-info li.menu-item-info {padding: 0px 15px;margin: 0px 5px;}
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    animation: smoothScroll 1s forwards;
+    z-index: 999;
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 /* submenu css */
 .submenu-links {border-top: 2px solid #0B7132;box-shadow: 0px 6px 8px rgb(0 0 0 / 15%);}
 .submenu-info {position: absolute;z-index: 11;margin-top: 42px;}

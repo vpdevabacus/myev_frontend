@@ -106,14 +106,14 @@ const Features = () => {
                         <div class="md:flex -mx-2 items-center">
                             <div class="w-1/3 px-2 Responsive-Query">
                                 <div class="">
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">01</strong>AC Charger Services</span>
-                                    <li>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</li>
+                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">01</strong>Maximize Your Earnings</span>
+                                    <li>Earn up to ₹4 Per Unit with Our Exclusive Rewards Program!</li>
                                     </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">02</strong>AC Charger Services</span>
-                                    <li>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</li>
+                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">02</strong>Top Income Opportunities</span>
+                                    <li>The Ultimate Passive Income Opportunity Awaits You!</li>
                                     </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">03</strong>AC Charger Services</span>
-                                    <li>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</li>
+                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">03</strong>Effortless Earnings</span>
+                                    <li>Automated Monthly Payouts and Monitoring.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -124,14 +124,14 @@ const Features = () => {
                             </div>
                             <div class="w-1/3 px-2 Responsive-Query">
                                 <div class="">
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">04</strong>AC Charger Services</span>
-                                    <li>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</li>
+                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">04</strong>Cost Reduction Strategies</span>
+                                    <li>Lower Maintenance cost.</li>
                                     </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">05</strong>AC Charger Services</span>
-                                    <li>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</li>
+                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">05</strong>Eco-Friendly Finances</span>
+                                    <li>Going Green and Growing Wealth.</li>
                                     </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">05</strong>AC Charger Services</span>
-                                    <li>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</li>
+                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">06</strong>Smooth Sailing</span>
+                                    <li>No operational headaches, just smooth sailing.</li>
                                     </ul>
                                 </div>
                             </div>
