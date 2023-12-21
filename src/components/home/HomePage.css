@@ -1,0 +1,33 @@
+/* Banner Section css */
+.hero-content-info h1 {max-width: 740px;}
+.hero-content-info p {line-height: normal;max-width: 550px;}
+
+/* Discover Places Nearby Section */
+.discover-nearby-box {max-width: 1140px;border-radius: 15px;padding: 25px;}
+.green-line-heading::after {content: "";border-bottom: 2px solid #0B7132;width: 82px;height: 2px;display: inline-block;vertical-align: middle;margin-left: 10px;
+    /* position: absolute;top: 50%;transform: translate(0, -50%); */ }
+.discover-nearby-box {margin-top: -115px;}
+
+/* Responsive css */
+@media (min-width: 1024px){
+    .hero-content-info p {font-size: 18px;}
+    .button-hero-info button {font-size: 18px;line-height: normal;}
+
+    /* car-bg-green-section css */
+    .evcar-info {margin-top: -175px;}
+    .hero-content-info {padding-bottom: 180px;}
+}
+@media (max-width: 1024px){
+    .hero-content-info p {font-size: 16px;}
+
+    /* car-bg-green-section css */
+    .evcar-info {margin-top: -95px;}
+    .hero-content-info {padding-bottom: 130px;}
+}
+@media (max-width: 768px){
+    .button-hero-info {max-width: 205px;margin: 0px auto;}
+
+    /* car-bg-green-section css */
+    .evcar-info {margin-top: -80px;}
+    .hero-content-info {padding-bottom: 110px;}
+}

@@ -16,8 +16,10 @@ import Counting from "../components/counting/Counting";
             {/* <Header />
             <Banner />
             <AboutUs />
-            <Features />
+            {/* <Features />
             <Strategy />
+            <Charges /> */}
+            <Footer />
             <Charges />
             <Footer /> */}
             <Header/>
