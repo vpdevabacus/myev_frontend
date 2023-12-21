@@ -54,16 +54,17 @@ import leftarrow from "../assets/Images/leftarrow.png"
 import rightarrow from "../assets/Images/rightarrow.png"
 import footer_right_bg from "../assets/Images/footer-right-bg.png"
 import footer_left_bg from "../assets/Images/footer-left-bg.png"
-
-
-
-
-
+import beforeimg  from "../assets/Images/before-img.png"
+import afterimg from "../assets/Images/after-img.png"
+import EVCharging from "../assets/Images/EVCharging.png"
 
 
 
 
 const ImageIcons = {
+  EVCharging,
+  beforeimg,
+  afterimg,
   myEV_logo,
   aboutUs_car,
   Rectangle,

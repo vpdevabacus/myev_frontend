@@ -1,0 +1,133 @@
+.strategy_bg {
+    background: #fff;
+    padding: 112px 0px 112px 0px;
+}
+.BOX-SECTION .box-2 {
+    margin-top: 68px;
+}
+.BOX-SECTION img.afterDIV {
+    position: absolute;
+    left: 18%;
+    top: 2%;
+    transform: rotate(3deg);
+    width: 220px;
+}
+.BOX-SECTION img.beforeDIV {
+    position: absolute;
+    bottom: -53px;
+    left: 44%;
+    transform: rotate(0deg);
+    width: 218px;
+}
+.BOX-SECTION img.afterDIV.afterDIV-modift {
+    left: 76%;
+}
+.BOX-SECTION span.Font-Set {
+    font-size: 17px;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.BOX-SECTION {
+    padding-top: 30px;
+}
+.Features-Section{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.Features-Section .ul-Listing-div .Ul-Number {
+    font-size: 22px;
+    font-weight: 400;
+    background: #fff;
+    color: #000000;
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+    padding: 6px 0px 0px 10px;
+    margin-right: 10px;
+}
+.Features-Section .ul-Listing-div .H2-Header {
+    font-size: 27px;
+    font-weight: 500;
+    color: #fff;
+}
+.Features-Section .ul-Listing-div {
+    margin-bottom: 54px;
+}
+.Features-Section .ul-Listing-div li {
+    font-size: 22px;
+    padding: 12px 0px;
+    color: #fff;
+    font-weight: 200;
+}
+.Features-Section h2 {
+    color: #fff;
+    font-size: 42px;
+}
+.features-phone-img img {
+    position: absolute;
+    left: -92px;
+    right: 0;
+    top: -327px;
+}
+
+
+@media (max-width: 767px){
+    .BOX-SECTION img.afterDIV {
+        display: none;
+    } 
+    .BOX-SECTION img.afterDIV.afterDIV-modift{
+        display: none;
+    }
+    .BOX-SECTION img.beforeDIV{
+        display: none;
+    }
+    .strategy_bg {
+        padding: 32px 16px;
+    }
+    .BOX-SECTION img {
+        width: 180px;
+    }
+    .Features-Section .features-phone-img {
+        display: none;
+    }
+    .w-1\/3.px-2.Responsive-Query {
+        width: 100%;
+        display: block;
+    }
+    .Features-Section .ul-Listing-div .H2-Header {
+        font-size: 20px;
+    }
+    .Features-Section h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    .BOX-SECTION .box-2 {
+        margin-top: 0;
+    }
+    .responsive-CSS {
+        padding: 12px 70px;
+    }
+    .Features-Section .ul-Listing-div {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 991px){
+    .BOX-SECTION img.afterDIV {
+        display: none !important;
+    } 
+    .BOX-SECTION img.afterDIV.afterDIV-modift{
+        display: none !important;
+    }
+    .BOX-SECTION img.beforeDIV{
+        display: none !important;
+    }
+    .Ho0w-We-Work {
+        padding: 0;
+        margin: 0;
+    }
+    .BOX-SECTION .box-2 {
+        margin-top: 0;
+    }
+}
