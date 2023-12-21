@@ -20,11 +20,18 @@ import Counting from "../components/counting/Counting";
             <Strategy />
             <Charges />
             <Footer /> */}
+            <Header/>
+            <Features/>
+            <Strategy/>
             <Testimonials />
             <ContactInfo />
+
             <EvCharging />
             <Counting />
             
+
+            {/* <EvCharging /> */}
+
         </>
     )
 };

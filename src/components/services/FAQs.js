@@ -21,6 +21,7 @@ const FAQs = () => {
 
     const handleHeading = (id) =>
         activeTab === id ? { backgroundColor: '#0B7132', borderRadius: '6px', color: '#fff' } : {};
+        
 
 
     const items = [
