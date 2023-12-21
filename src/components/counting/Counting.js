@@ -3,9 +3,9 @@ import countingIcon1 from "../../assets/icons/counting/1.svg";
 import countingIcon2 from "../../assets/icons/counting/2.svg";
 import countingIcon3 from "../../assets/icons/counting/3.svg";
 import countingIcon4 from "../../assets/icons/counting/4.svg";
-import CountUp, { useCountUp } from 'react-countup';
+import CountUp from 'react-countup';
 
-const Counting = () => {
+const Counting = () => {    
     return (
         <>
             <section className="testimonials py-[50px] md:py-[40px] px-[20px]">
@@ -17,7 +17,7 @@ const Counting = () => {
                                 <div className='pl-[15px] text-left'>
                                     <CountUp start={0} end={1582} duration={100}>
                                         {({ countUpRef, start }) => (
-                                            <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-4px] after:relative" ref={countUpRef}></span>
+                                            <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-3px] after:relative" ref={countUpRef}></span>
                                         )}
                                     </CountUp>
                                     <p className="text-[#FFFFFFCC]">Charging sessions</p>
@@ -41,7 +41,7 @@ const Counting = () => {
                                 <div className='pl-[15px] text-left'>
                                     <CountUp start={0} end={582} duration={100}>
                                         {({ countUpRef, start }) => (
-                                            <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-4px] after:relative" ref={countUpRef}></span>
+                                            <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-3px] after:relative" ref={countUpRef}></span>
                                         )}
                                     </CountUp>
                                     <p className="text-[#FFFFFFCC]">Green kms driven</p>
@@ -53,14 +53,12 @@ const Counting = () => {
                                 <div className='pl-[15px] text-left'>
                                     <CountUp start={0} end={682} duration={100}>
                                         {({ countUpRef, start }) => (
-                                            <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-4px] after:relative" ref={countUpRef}></span>
+                                            <span className="text-white text-[28px] xl:text-[34px] lg:text-[30px] font-semibold after:content-['+'] after:text-[32px] after:font-medium after:top-[-3px] after:relative" ref={countUpRef}></span>
                                         )}
                                     </CountUp>
                                     <p className="text-[#FFFFFFCC]">Electric Vehicles</p>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -68,5 +66,4 @@ const Counting = () => {
         </>
     )
 }
-
 export default Counting
