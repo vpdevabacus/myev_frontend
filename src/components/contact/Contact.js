@@ -4,11 +4,10 @@ import { BiLogoFacebook } from "react-icons/bi";
 import { MdPhone, MdLocationPin } from "react-icons/md";
 import { FaRegEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import "./ContactUs.css";
 
 
 const backgroundImagePath = ImageIcons.Rectangle1;
-
 const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
 
@@ -33,107 +32,118 @@ const openMail = () => {
 const Contact = () => {
     return (
         <>
-
-            <div className="bg-[#F1F8E8] p-10 w-full">
-                <section class=" w-10/12 mx-auto mb-10  ">
-                    <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3  px-4">
-                        <div className="bg-cover px-10 xl:p-28 mb-16 " style={style}>
-                            <div className="w-16 h-16  rounded-full bg-[#F1F8E8] px-5 py-5 mx-auto text-center   " onClick={callPhoneNumber}>
-                                <MdPhone className='h-5 w-6 text-[#0B7132]' />
-
+            {/* Contact Detail Section */}
+            <div className="contact-detail-section w-full bg-[#F1F8E8] py-20">
+                <div className="container mx-auto px-2">
+                    <div className="flex lg:gap-14 max-lg:gap-5 max-md:flex-col">
+                        <div className="md:w-1/3 relative max-md:mb-5">
+                            <div className="detail-content-box py-[60px] flex justify-center">
+                                <div className="text-center">
+                                    <div className="detial-icon-info mb-[20px]">
+                                        <div className="w-20 h-20 rounded-full bg-[#F1F8E8] mx-auto text-center p-5 cursor-pointer" onClick={callPhoneNumber}>
+                                            <MdPhone className='h-10 w-10 flex items-center justify-center text-[#0B7132]' />
+                                        </div>
+                                    </div>
+                                    <h4 className="text-center mb-2">Phone</h4>
+                                    <p className="text-center cursor-pointer" onClick={callPhoneNumber}>+91 75081 00021</p>
+                                </div>
                             </div>
-                            <p className="text-black text-2xl font-medium pt-5 text-center">Phone</p>
-                            <p className="text-black pt-3 text-base text-center font-medium">+91 75081 00021</p>
                         </div>
-
-                        <div className="bg-cover p-20 xl:p-28 mb-16 " style={style}>
-                            <div className="w-16 h-16  rounded-full bg-[#F1F8E8] px-5 py-5 mx-auto text-center  " onClick={openMail}>
-                                <FaRegEnvelope className='h-5 w-6 text-[#0B7132]' />
-
+                        <div className="md:w-1/3 relative max-md:mb-5">
+                            <div className="detail-content-box py-[60px] flex justify-center">
+                                <div className="text-center">
+                                    <div className="detial-icon-info mb-[20px]">
+                                        <div className="w-20 h-20 rounded-full bg-[#F1F8E8] mx-auto text-center p-5 cursor-pointer" onClick={openMail}>
+                                            <FaRegEnvelope className='h-10 w-10 flex items-center justify-center text-[#0B7132]' />
+                                        </div>
+                                    </div>
+                                    <h4 className="text-center mb-2">Email</h4>
+                                    <p className="text-center cursor-pointer" onClick={openMail}>info@vpventuresindia.com</p>
+                                </div>
                             </div>
-                            <p className="text-black text-2xl pt-5 text-center font-medium	">Email</p>
-                            <p className="text-black  pt-3 text-base text-center font-medium">info@vpventuresindia.com</p>
-
                         </div>
-
-                        <div className="bg-cover p-20 xl:p-28 mb-16 " style={style}>
-                            <div className="w-16 h-16  rounded-full bg-[#F1F8E8] px-5 py-5 mx-auto text-center  ">
-                                <MdLocationPin className='h-5 w-6 text-[#0B7132]' />
-
+                        <div className="md:w-1/3 relative">
+                            <div className="detail-content-box py-[60px] flex justify-center">
+                                <div className="text-center">
+                                    <div className="detial-icon-info mb-[20px]">
+                                        <div className="w-20 h-20 rounded-full bg-[#F1F8E8] mx-auto text-center p-5">
+                                            <MdLocationPin className='h-10 w-10 flex items-center justify-center text-[#0B7132]' />
+                                        </div>
+                                    </div>
+                                    <h4 className="text-center mb-2">Location</h4>
+                                    <p className="text-center px-2">MAGNET Co-Work Plot No. 130, Industrial Area, Phase 1, Chandigarh</p>
+                                </div>
                             </div>
-                            <p className="text-black text-2xl pt-5 text-center font-medium	">Location</p>
-                            <p className="text-black  pt-3 text-base text-center font-medium "> Industrial Area, Phase 1, Chandigarh</p>
                         </div>
-
-
                     </div>
-                </section>
-            </div>-
-            <div className="lg:flex flex-row ">
-
-                <div className="lg:flex-shrink-0  lg:w-5/12  lg:pl-16  mt-40  lg:text-left md:mb-10">
-                    <p className="mt-2 text-xl text-[#0B7132] text-center lg:text-start font-medium	">Send a message</p>
-                    <p className="mt-2 text-5xl text-black text-center lg:text-start font-bold">Get in touch </p>
-                    <p className="mt-2 text-lg text-black text-center lg:text-start">It’s your chance to own an EV </p>
-                    <p className="mt-1 text-lg text-black text-center lg:text-start">Charging Station (Without having to manage it)</p>
-                    <div className="mt-4 flex justify-center  mt-2  lg:mt-3 lg:justify-start">
-                        <Link to='https://www.facebook.com/myevpoint'>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 hover:scale-[1.1]  ">
-                                <BiLogoFacebook className='h-5 w-6 text-[#0B7132] ' />
-                            </div>
-                        </Link>
-                        <Link to='https://twitter.com/myevpoint'>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 hover:scale-[1.1]  ">
-                                <FaTwitter className='h-5 w-6 text-[#0B7132] ' />
-
-                            </div>
-                        </Link>
-                        <Link to='https://in.pinterest.com/myevpoint/'>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 hover:scale-[1.1]">
-                                <FaInstagram className='h-5 w-6 text-[#0B7132] ' />
-                            </div>
-                        </Link>
-                        <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 hover:scale-[1.1] h">
-                                <FaYoutube className='h-5 w-6 text-[#0B7132] ' />
-
-                            </div>
-                        </Link>
-                        <Link to='https://www.linkedin.com/company/my-ev-point/'>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#F1F8E8] px-3 py-3.5 hover:scale-[1.1] h">
-                                <FaLinkedinIn className='h-5 w-6 text-[#0B7132] ' />
-
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-                <div class=" md:w-8/12 lg:w-4/12 mx-10 sm:mx-20 md:mx-40 lg:mx-auto bg-white p-16 shadow-lg mt-8 mb-8">
-
-                    <form>
-
-                        <div class="mb-6">
-                            <input type="text" id="first_name" className="bg-[#F1F8E8] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Full name*" required></input>
-                        </div>
-                        <div class="mb-6">
-
-                            <input type="number" id="phone" className="bg-[#F1F8E8] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Phone number*" required></input>
-                        </div>
-                        <div class="mb-6">
-                            <input type="email" id="email" class="bg-[#F1F8E8] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email address*" required></input>
-                        </div>
-                        <div class="mb-6">
-                            <input type="text" id="message" className="bg-[#F1F8E8] border border-gray-300 text-gray-900 text-sm rounded-lg py-4 pt-3 pb-20 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Message" required></input>
-                        </div>
-
-                        <button type="submit" className="text-white bg-[#0B7132] hover:[#0B7132] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit Message</button>
-                    </form>
                 </div>
             </div>
+            {/* End Contact Detail Section */}
+
+            {/* Contact Form Section */}
+            <div className="contact-form-section w-full py-20">
+                <div className="container mx-auto px-2">
+                    <div className="flex lg:gap-10 max-lg:gap-5 max-md:flex-col items-center">
+                        <div className="md:w-1/2 max-md:mb-8">
+                            <div className="content-form-txt">
+                                <h4 className="text-[#0B7132] font-medium">Send a message</h4>
+                                <h2 className="mb-3">Get in touch</h2>
+                                <p className="mb-7 max-w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <div className="social-media-links flex">
+                                    <Link to='https://www.facebook.com/myevpoint'>
+                                        <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-3 hover:scale-[1.1]">
+                                            <BiLogoFacebook className='h-6 w-6 text-[#0B7132]' />
+                                        </div>
+                                    </Link>
+                                    <Link to='https://twitter.com/myevpoint'>
+                                        <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
+                                            <FaTwitter className='h-5 w-6 text-[#0B7132]' />
+                                        </div>
+                                    </Link>
+                                    <Link to='https://in.pinterest.com/myevpoint/'>
+                                        <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
+                                            <FaInstagram className='h-5 w-6 text-[#0B7132]' />
+                                        </div>
+                                    </Link>
+                                    <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'>
+                                        <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
+                                            <FaYoutube className='h-5 w-6 text-[#0B7132]' />
+                                        </div>
+                                    </Link>
+                                    <Link to='https://www.linkedin.com/company/my-ev-point/'>
+                                        <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1] h">
+                                            <FaLinkedinIn className='h-5 w-6 text-[#0B7132]' />
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="md:w-1/2 max-md:w-full  max-md:px-4">
+                            <div class="contact-us-form-info bg-white md:py-14 max-md:py-8 md:px-10 max-md:px-5">
+                                <form>
+                                    <div class="mb-5">
+                                        <input type="text" id="first_name" className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4" placeholder="Full name*" required></input>
+                                    </div>
+                                    <div class="mb-5">
+                                        <input type="email" id="email" class="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4" placeholder="Email address*" required></input>
+                                    </div>
+                                    <div class="mb-5">
+                                        <input type="number" id="phone" className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4" placeholder="Phone number*" required></input>
+                                    </div>
+                                    <div class="mb-5">
+                                        <textarea id="message" name="message" rows="4" placeholder="Enter message" className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4"></textarea>
+                                    </div>
+                                    <button type="submit" className="bg-[#0B7132] text-white hover:bg-[#000] rounded-lg block py-4 px-7 duration-[400ms,700ms]">Submit Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* End Contact Form Section */}
+    
             <img src={ImageIcons.mapsection} />
-
-
         </>
     )
-
 }
 export default Contact;
