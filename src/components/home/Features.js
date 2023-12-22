@@ -1,5 +1,7 @@
 import React from "react";
 import ImageIcons from "../../common/ImageIcons";
+import bgimgservices from "../../assets/Images/bg-img-services.png";
+import bgimgmachine from "../../assets/Images/bg-img-machine.png";
 
 const backgroundImagePath = ImageIcons.blueBg;
 
@@ -85,144 +87,72 @@ const Features = () => {
 
   return (
     <>
-      <div
-        className="strategy_bg py-20 Features-Section relative"
-        style={style}
-      >
-        <div className="container mx-auto">
-          <div className="xl:mb-2 text-center">
-            <h2 className="text-center text-2xl font-bold md:text-4xl mb-10 pb-12">
-              Excellent And Best Services
-            </h2>
-          </div>
-          <div class="BOX-SECTION mx-auto po">
-            <div class="px-2">
-              <div class="md:flex -mx-2">
-                <div class="w-1/3 px-2 Responsive-Query">
-                  <div class="">
-                    <ul className="ul-Listing-div">
-                      <span className="H2-Header">
-                        <strong class="Ul-Number">01</strong>AC Charger Services
-                      </span>
-                      <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
-                      </li>
-                    </ul>
-                    <ul className="ul-Listing-div">
-                      <span className="H2-Header">
-                        <strong class="Ul-Number">02</strong>AC Charger Services
-                      </span>
-                      <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
-                      </li>
-                    </ul>
-                    <ul className="ul-Listing-div">
-                      <span className="H2-Header">
-                        <strong class="Ul-Number">03</strong>AC Charger Services
-                      </span>
-                      <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
-                      </li>
-                    </ul>
+      {/* Service Section Start */}
+      <div className="features-section md:py-20 max-md:py-[50px] relative bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${bgimgservices})`}} >
+        <div className="container mx-auto px-2">
+          <h2 className="text-center md:pb-12 max-md:pb-8 text-[#fff]">Excellent And Best Services</h2>
+          <div className="features-listing-info">
+            <div className="flex items-center gap-5 max-md:flex-col">
+              <div className="md:w-1/3 max-md:order-1">
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">01</div>
+                        <h4 className="text-[#fff]">AC Charger Services</h4>
+                      </div>
+                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
                   </div>
-                </div>
-                <div class="w-1/3 px-2 features-phone-img relative">
-                  <div class="">
-                    <img src={ImageIcons.EVCharging} />
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">02</div>
+                        <h4 className="text-[#fff]">EV Drivers Services</h4>
+                      </div>
+                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
                   </div>
-                </div>
-                <div class="w-1/3 px-2 Responsive-Query">
-                  <div class="">
-                    <ul className="ul-Listing-div">
-                      <span className="H2-Header">
-                        <strong class="Ul-Number">04</strong>AC Charger Services
-                      </span>
-                      <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
-                      </li>
-                    </ul>
-                    <ul className="ul-Listing-div">
-                      <span className="H2-Header">
-                        <strong class="Ul-Number">05</strong>AC Charger Services
-                      </span>
-                      <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
-                      </li>
-                    </ul>
-                    <ul className="ul-Listing-div">
-                      <span className="H2-Header">
-                        <strong class="Ul-Number">05</strong>AC Charger Services
-                      </span>
-                      <li>
-                        Possimus laoreet lec exercit , ipsum adipisicing hic
-                        ipsum rec sith.
-                      </li>
-                    </ul>
+                  <div className="left-icon-box-info md:mb-8 max-md:mb-[10px]">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">03</div>
+                        <h4 className="text-[#fff]">EV Drivers Services</h4>
+                      </div>
+                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
                   </div>
+              </div>
+              <div className="md:w-1/3 max-md:order-3">
+                <div className="mid-img-info text-center bg-no-repeat bg-contain bg-center" style={{ backgroundImage: `url(${bgimgmachine})`}}> 
+                  <img src={ImageIcons.EVCharging} />
                 </div>
+              </div>
+              <div className="md:w-1/3 max-md:order-2">
+                <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">04</div>
+                        <h4 className="text-[#fff]">DC Charger Services</h4>
+                      </div>
+                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                  </div>
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">05</div>
+                        <h4 className="text-[#fff]">Home Charging</h4>
+                      </div>
+                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                  </div>
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">06</div>
+                        <h4 className="text-[#fff]">Building Services</h4>
+                      </div>
+                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      {/* Service Section End */}
 
       {/* <div className="mt-20">
     return (
         <>
-
-            <div className="strategy_bg py-20 Features-Section relative" style={style}>
-                    <div className="container mx-auto">
-                    <div className="xl:mb-2 text-center">
-                        <h2 className="text-center text-2xl font-bold md:text-4xl mb-10 pb-12">
-                        Excellent And Best Services
-                        </h2>
-                    </div>
-                    <div class="BOX-SECTION mx-auto po">
-                    <div class="px-2">
-                        <div class="md:flex -mx-2 items-center">
-                            <div class="w-1/3 px-2 Responsive-Query">
-                                <div class="">
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">01</strong>Maximize Your Earnings</span>
-                                    <li>Earn up to ₹4 Per Unit with Our Exclusive Rewards Program!</li>
-                                    </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">02</strong>Top Income Opportunities</span>
-                                    <li>The Ultimate Passive Income Opportunity Awaits You!</li>
-                                    </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">03</strong>Effortless Earnings</span>
-                                    <li>Automated Monthly Payouts and Monitoring.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="w-1/3 px-2 features-phone-img relative">
-                                <div class="">
-                                    <img src={ImageIcons.EVCharging}/>
-                                </div>
-                            </div>
-                            <div class="w-1/3 px-2 Responsive-Query">
-                                <div class="">
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">04</strong>Cost Reduction Strategies</span>
-                                    <li>Lower Maintenance cost.</li>
-                                    </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">05</strong>Eco-Friendly Finances</span>
-                                    <li>Going Green and Growing Wealth.</li>
-                                    </ul>
-                                    <ul className="ul-Listing-div"><span className="H2-Header"><strong class="Ul-Number">06</strong>Smooth Sailing</span>
-                                    <li>No operational headaches, just smooth sailing.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
             {/* <div className="mt-20">
 
                 <section>
@@ -256,8 +186,6 @@ const Features = () => {
                                 </div>
                             </div>
                         </div>
-
-
                     </section>
                 </section>
             </div> */}
