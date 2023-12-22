@@ -114,7 +114,7 @@ const Charges = () => {
                       <FeatureList key={item.id} item={item} />
                     ))}
                   </div>
-                  <button className="px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
+                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
                     Sign Up
                   </button>
                 </div>
@@ -133,7 +133,7 @@ const Charges = () => {
                       <FeatureList1 key={item.id} item={item} />
                     ))}
                   </div>
-                  <button className="px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
+                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
                     Sign Up
                   </button>
                 </div>
