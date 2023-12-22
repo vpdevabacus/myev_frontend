@@ -156,7 +156,7 @@ const Header = () => {
                 <div className="w-full">
                     {/* top bar info */}
                     <div className="w-full bg-black max-sm:hidden">
-                        <div className="container top-bar-header flex mx-auto justify-between items-center max-lg:flex-col">
+                        <div className="container top-bar-header flex mx-auto justify-between items-center max-lg:flex-col px-2 lg:py-2 max-lg:py-2">
                             {/* contact email and phone */}
                             <div className="flex text-[#fff] max-lg:mb-2">
                                 <div className='flex items-center'>
@@ -185,7 +185,7 @@ const Header = () => {
                     <div className={`${sticky.isSticky ? 'sticky' : ''} ${sticky.isSticky ? 'z-50' : ''}`} ref={headerRef}>
                         <div className="w-full bg-white header-navbar-info">
                             <div className='container mx-auto'>
-                                <div className='flex mx-auto justify-between gap-4 py-2'>
+                                <div className='flex mx-auto justify-between gap-4 py-2 px-2'>
                                     {/* Navbar Logo */}
                                     <div className='site-logo-info'>
                                         <NavLink to="/">

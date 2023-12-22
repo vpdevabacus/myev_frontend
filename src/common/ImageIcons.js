@@ -56,7 +56,7 @@ import footer_right_bg from "../assets/Images/footer-right-bg.png"
 import footer_left_bg from "../assets/Images/footer-left-bg.png"
 import beforeimg  from "../assets/Images/before-img.png"
 import afterimg from "../assets/Images/after-img.png"
-import EVCharging from "../assets/Images/EVCharging.png"
+import EVCharging from "../assets/Images/ev-machine.png"
 import EVCharging1 from "../assets/Images/About_E_Charge.jpg"
 
 
