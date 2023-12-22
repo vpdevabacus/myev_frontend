@@ -5,7 +5,7 @@
 /* Discover Places Nearby Section */
 .discover-nearby-box {max-width: 1140px;border-radius: 15px;padding: 25px;}
 .green-line-heading::after {content: "";border-bottom: 2px solid #0B7132;width: 82px;height: 2px;display: inline-block;vertical-align: middle;margin-left: 10px;
-    /* position: absolute;top: 50%;transform: translate(0, -50%); */ }
+/* position: absolute;top: 50%;transform: translate(0, -50%); */ }
 .discover-nearby-box {margin-top: -115px;}
 
 
