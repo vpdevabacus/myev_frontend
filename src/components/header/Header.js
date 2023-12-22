@@ -3,22 +3,24 @@ import "./header.css";
 import ImageIcons from '../../common/ImageIcons'
 import { FaRegEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link,useLocation } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import { IconButton } from '@mui/material';
-import { Menu } from '@mui/material';
-
 import ListItemText from '@mui/material/ListItemText';
 
 
 
+
+
 const Header = () => {
+
+    const location = useLocation();
+    const { pathname } = location;
+  
 
     const [state, setState] = React.useState({
         top: false,
@@ -55,17 +57,32 @@ const Header = () => {
             ))}
           </List> */}
             <Divider />
+
+            <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer pt-4 pl-3' />
             <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            {/* <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon> */}
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                <ListItem disablePadding className={`${pathname === '/' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton component={Link} to="/">
+                        {/* Add your logo here */}
+                        {/* <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer' /> */}
+                        <ListItemText primary="Home" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding className={`${pathname === '/about' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton component={Link} to="/about">
+                        <ListItemText primary="About Us" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding className={`${pathname === '/services' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton component={Link} to="/services">
+                        <ListItemText primary="Our Services" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding   className={`${pathname === '/contact' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton component={NavLink} to="/contact" >
+                        <ListItemText primary="Contact Us" />
+                    </ListItemButton>
+
+                </ListItem>
             </List>
         </Box>
     )
