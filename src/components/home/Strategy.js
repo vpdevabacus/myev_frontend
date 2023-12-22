@@ -1,5 +1,5 @@
 import ImageIcons from "../../common/ImageIcons";
-import "./Home.css";
+import "./HomePage.css";
 
 const Strategy = () => {
   return (
