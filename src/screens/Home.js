@@ -14,9 +14,6 @@ import OurTeam from "../components/about/OurTeam";
 const Home = () => {
     return (
         <>
-
-
-
             <Header />
             <Banner />
             <AboutUs />
@@ -25,13 +22,10 @@ const Home = () => {
             <Charges />
             <Testimonials />
             <ContactInfo />
-            {/* <EvCharging /> */}
-            {/* <Counting /> */}
+            <EvCharging />
+            <Counting />
             <Footer />
-
-
-            {/* <EvCharging /> */}
-
+            <EvCharging />
         </>
     )
 };
