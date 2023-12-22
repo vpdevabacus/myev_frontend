@@ -17,16 +17,15 @@ const AboutUs = () => {
     return (
         <>
             <Header />
-          
+
             <InnerPageBanner
                 title='About Us'
-                // description=' hjihihij.'
-                maxWidth='472px'
                 innerPageBanner={aboutBanner}
             />
-            {/* <Banner /> */}
             <EvCharging />
-            <Strategy />
+             
+                <Strategy />
+           
             <Counting />
             <Testimonials />
             <OurTeam />
