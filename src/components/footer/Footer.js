@@ -33,7 +33,7 @@ const Footer = () => {
                             <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 px-2 md:1 max-lg:gap-3 lg:gap-2 xl:gap-4">
                                 <div className="footer-col-first max-md:mb-6 max-lg:mb-8">
                                     <div className='site-logo-footer max-lg:mb-3 lg:mb-5'>
-                                        <img src={ImageIcons.footer_myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44' />
+                                        <img src={ImageIcons.footer_myEV_logo} className='footer-logo-size lg:h-20 lg:w-44' />
                                     </div>
                                     <div className='max-lg:mb-5 lg:mb-9'>
                                         <p className='text-white'>It’s your chance to own an EV Charging Station (Without having to manage it)</p>

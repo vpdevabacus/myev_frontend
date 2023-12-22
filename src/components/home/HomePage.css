@@ -5,8 +5,17 @@
 /* Discover Places Nearby Section */
 .discover-nearby-box {max-width: 1140px;border-radius: 15px;padding: 25px;}
 .green-line-heading::after {content: "";border-bottom: 2px solid #0B7132;width: 82px;height: 2px;display: inline-block;vertical-align: middle;margin-left: 10px;
-    /* position: absolute;top: 50%;transform: translate(0, -50%); */ }
+/* position: absolute;top: 50%;transform: translate(0, -50%); */ }
 .discover-nearby-box {margin-top: -115px;}
+
+
+/* features-section css */
+.mid-img-info img {width: 100%;max-width: 350px;margin: 0px auto;}
+
+/* How We Work Section css */
+.arrow-img-info {width: 100%;}
+.arrow-img-top-info {position: absolute;right: -115px;top: 3px;}
+.arrow-img-bottom-info {position: absolute;bottom: -30px;right: -60px;}
 
 /* Responsive css */
 @media (min-width: 1024px){
@@ -16,6 +25,9 @@
     /* car-bg-green-section css */
     .evcar-info {margin-top: -175px;}
     .hero-content-info {padding-bottom: 180px;}
+}
+@media (max-width: 1280px){
+    .arrow-img-top-info {right: -90px;}
 }
 @media (max-width: 1024px){
     .hero-content-info p {font-size: 16px;}

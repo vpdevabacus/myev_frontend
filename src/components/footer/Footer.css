@@ -9,6 +9,9 @@
     .footer-top-info {background-size: 210px , 160px;}
     .footer-copyright-info p {font-size: 15px;}
 }
+@media (max-width: 1024px){
+    .footer-logo-size {width: 100%;max-width: 150px;}
+}
 @media (max-width: 768px){
 .footer-top-info {background-size: 130px, 115px;}
 .footer-copyright-info p {font-size: 14px;}
