@@ -84,13 +84,9 @@ const Charges = () => {
             <div className="w-[39%]">
               <div>
                 <div className="flex flex-row place-items-center modify-responsive001">
-                  <p className="text-xl font-medium tracking-tight text-[#0B7132] sm:text-3xl leading-9">
+                  <h5 className="font-medium text-[#0B7132] green-hr-line">
                     ABOUT ECHARGE
-                  </p>
-                  <img
-                    src={ImageIcons.Rectangle}
-                    className="After_img_dnome h-0.5 w-20 ml-8"
-                  />
+                  </h5>
                 </div>
                 <p className="text-3xl font-semibold  text-[#000] sm:text-5xl mt-3 SUB-Header">
                   Price of Our Services on The Road
@@ -109,13 +105,13 @@ const Charges = () => {
 
             <div className="w-[61%] grid grid-cols-1 md:grid-cols-2 gap-x-[26px]">
               <div className="relative Charging_Div md:mr-0  Charging_Div2">
-                <div className="bg-cover px-[15px] pt-[35px] pb-[95px] " style={style}>
+                <div className="bg-cover px-[15px] pt-[35px] pb-[95px] bg-center bg-no-repeat" style={style}>
                   <div className="">
                     <h4 className="text-[#0B7132] mb-[5px]">
                       HOME CHARGING
                     </h4>
-                    <h2 className="text-black mb-[15px]">
-                      <span>₹</span> 1,18,000/-
+                    <h2 className="text-black mb-[15px] text-[50px]">
+                      <span className="font-sans font-normal">₹</span> 1,18,000/-
                     </h2>
                     <p className="text-[#676767] text-[20px]">
                       Amet minim mollit no duis deser ulamco sit enim aliqua.
@@ -126,7 +122,7 @@ const Charges = () => {
                       <FeatureList key={item.id} item={item} />
                     ))}
                   </div>
-                  <button className="px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl">
+                  <button className="px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
                     Sign Up
                   </button>
                 </div>
@@ -136,8 +132,8 @@ const Charges = () => {
                 <div className="bg-cover px-[15px] pt-[35px] pb-[95px" style={style1}>
                   <div className="">
                     <h4 className="text-white mb-[5px]">PUBLIC CHARGING</h4>
-                    <h2 className="text-white mb-[15px]">
-                      <span className="PriceRS">₹</span> 2,10,000/-
+                    <h2 className="text-white mb-[15px] text-[50px]">
+                      <span className="font-sans font-normal">₹</span> 2,10,000/-
                     </h2>
                     <p className="text-white text-[20px]">
                       Amet minim mollit no duis deser ulamco sit enim aliqua.
@@ -150,9 +146,8 @@ const Charges = () => {
                   </div>
                   <div className="mt-6 p-0">
                     <div className="flex justify-center gap-3 lg:justify-start">
-                      <button className="px-3 md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl">
-                        <i className="fa-solid fa-arrow-right-to-bracket"></i>Sign
-                        Up
+                      <button className="px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
+                        Sign Up
                       </button>
                     </div>
                   </div>
