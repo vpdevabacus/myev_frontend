@@ -142,7 +142,7 @@ const Contact = () => {
             </div>
             {/* End Contact Form Section */}
     
-            <img src={ImageIcons.mapsection} />
+            <img src={ImageIcons.mapsection} className="w-full" />
         </>
     )
 }
