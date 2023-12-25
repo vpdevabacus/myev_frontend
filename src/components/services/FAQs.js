@@ -1,8 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+
+
+
 
 
 
 const FAQs = () => {
+
+    const markers = [
+        { latitude: 37.7749, longitude: -122.4194 }, // San Francisco
+        { latitude: 34.0522, longitude: -118.2437 }, // Los Angeles
+        
+        { latitude: 40.7128, longitude: -74.0060 }, // New York
+    ];
+
+    const markersHtml = markers
+        .map((marker) => `<marker location="${marker.latitude},${marker.longitude}"></marker>`)
+        .join('');
+
+        const iframeHtml = `
+        <iframe
+          title="Google Map"
+          width="600"
+          height="450"
+          frameBorder="0"
+          style="border:0"
+          src="https://www.google.com/maps/embed/v1/view?key=&center=0,0&zoom=1&${markersHtml}"
+          allowfullscreen>
+        </iframe>
+      `;
+
+
 
     const [activeTab, setActiveTab] = useState(null);
     const [iconColor, setIconColor] = useState('#0B7132'); // Initial color
@@ -21,7 +49,7 @@ const FAQs = () => {
 
     const handleHeading = (id) =>
         activeTab === id ? { backgroundColor: '#0B7132', borderRadius: '6px', color: '#fff' } : {};
-        
+
 
 
     const items = [

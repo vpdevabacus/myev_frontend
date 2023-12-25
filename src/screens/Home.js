@@ -8,23 +8,39 @@ import Charges from "../components/home/Charges";
 import Footer from "../components/footer/Footer";
 import Testimonials from "../components/testimonials/Testimonials";
 import ContactInfo from "../components/contact_info/ContactInfo";
-import EvCharging from "../components/ev-charging/EvCharging";
-import Counting from "../components/counting/Counting";
-import OurTeam from "../components/about/OurTeam";
-const Home = () => {
+
+ const Home = () => {
     return (
         <>
+
+            {/* <Header />
             <Header />
+
             <Banner />
             <AboutUs />
-            <Features />
+            {/* <Features />
             <Strategy />
+            <Charges /> */}
+
+            
+           
+            <Header/>
+            <Banner />
+            <AboutUs />
+            <Features/>
+            <Strategy/>
             <Charges />
             <Testimonials />
             <ContactInfo />
             {/* <EvCharging /> */}
             {/* <Counting /> */}
+
+            <Footer /> 
+            
+
+
             <Footer />
+
             {/* <EvCharging /> */}
         </>
     )
