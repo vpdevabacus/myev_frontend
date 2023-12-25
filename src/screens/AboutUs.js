@@ -17,16 +17,20 @@ const AboutUs = () => {
     return (
         <>
             <Header />
-
-            <InnerPageBanner
-                title='About Us'
-                innerPageBanner={aboutBanner}
-            />
+            <InnerPageBanner title='About Us' maxWidth='472px' innerPageBanner={aboutBanner} />
             <EvCharging />
-             
-                <Strategy />
-           
-            <Counting />
+            <div className="services-strategy-section">
+                <div className="bg-[#F1F8E8] pb-20">
+                    <div className="sm:container lg:container m-auto pb-10">
+                        <Strategy />
+                    </div>
+                </div>
+                <div className="mt-[-155px]">
+                    <div className="sm:container lg:container m-auto">
+                        <Counting />
+                    </div>
+                </div>
+            </div>
             <Testimonials />
             <OurTeam />
             <ContactInfo />

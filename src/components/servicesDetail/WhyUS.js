@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-
-import ImageIcons from '../../common/ImageIcons'
+import ImageIcons from '../../common/ImageIcons';
+import phonenearby from '../../assets/Images/phonenearby.png';
+import mapdottedinfo from '../../assets/Images/mapdottedinfo.png';
 
 const WhyUs = () => {
 
@@ -49,74 +50,63 @@ const WhyUs = () => {
 
     return (
         <>
-
-
-            <div className=' container mx-auto '>
-                <section className="relative flex items-center w-full">
-                    <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-2 ">
-                        <h2 className="text-center text-2xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Why you should choose us ?</h2>
-                        <div className='px-8 sm:px-12'>
-                            <p className="mt-10 text-lg lg:text-xl font-normal text-[#000] text-left">
-                                myEV Point is more than just a charging network; it's a community. Connect with fellow EV enthusiasts, share experiences, and stay informed about the latest developments in the world of electric vehicles.<br /><br />Choose myEV Point — Where Innovation Meets Reliability. Join us on the road to a sustainable and electrifying future.</p>                        </div>
-
-                        <div className="relative flex flex-col lg:flex-row  m-auto  px-12 w-12/12 justify-between my-10 ">
-                            <div className="md:w-10/12 md:mx-auto lg:mx-0 lg:w-5/12 my-auto">
-                                <img className=" w-full mx-auto rounded-3xl lg:ml-auto  " alt="hero" src={ImageIcons.AC_Power} />
-                            </div>
-                            <div className="container grid gap-8 md:gap-8  py-8  text-lg leading-6 text-gray-800 md:gap-8 md:grid-cols-1 md:mx-auto lg:mx-0 md:w-11/12 lg:w-6/12 ">
+            <section className="why-choice-us-section w-full md:pb-20 max-md:pb-10 ">
+                <div className='container mx-auto px-2'>
+                    <div className='text-center mb-10'>
+                        <h2 className='mb-3'>Why you sould choice us ?</h2>
+                        <p className='max-w-[1080px] m-auto'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p>
+                    </div> 
+                    <div className='flex gap-4 max-md:flex-col max-w-[1024px] m-auto'>
+                        <div className='md:w-2/5 mb-5 max-md:order-2'>
+                            <img className="w-full mx-auto" alt="hero" src={ImageIcons.AC_Power} />
+                        </div>
+                        <div className='md:w-3/5 relative mb-5 max-md:order-1'>
+                            <div className="grid gap-4 px-2 text-lg leading-6 text-gray-800">
                                 {items.map((item) => (
-                                    <div key={item.id} className="space-y-3">
-                                        <div
-                                            className="relative transition-all duration-700 border rounded-md hover:shadow-2xl"
-                                            onClick={() => handleClick(item.id)}
-                                        >
-                                            <div style={handleHeading(item.id)}
-                                                className="w-full p-2 text-left cursor-pointer">
-                                                <div className="flex items-center justify-between px-2">
-                                                    <span className="tracking-wide text-base sm:text-lg lg:text-2xl font-medium">{` ${item.ques}`}</span>
-                                                    <span
-                                                        className={`transition-transform duration-200 transform fill-current ${handleRotate(
-                                                            item.id
-                                                        )}`}
-                                                    >
-                                                        <svg
-                                                            className="w-8 h-8 fill-current"
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 20 20"
-
-                                                        >
-                                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
+                                <div key={item.id}>
+                                    <div className="relative" onClick={() => handleClick(item.id)}>
+                                        <div style={handleHeading(item.id)} className="w-full px-4 py-4 text-left cursor-pointer rounded-md shadow-[0_3px_10px_5px_rgba(0,0,0,0.1)] transition-all duration-200">
+                                            <div className="flex items-center justify-between">
+                                                <span className="tracking-wide text-lg font-medium">{` ${item.ques}`}</span>
+                                                <span className={`transition-transform duration-200 transform ${handleRotate(item.id)}`}>
+                                                    <svg className="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                    </svg>
+                                                </span>
                                             </div>
-
-                                            <div
-                                                style={handleToggle(item.id)}
-                                                className="relative overflow-hidden transition-all duration-200 max-h-0"
-                                            >
-                                                <div className="px-6 py-4 text-black text-base lg:text-xl font-normal">{`${item.ans}`}</div>
+                                        </div>
+                                        <div style={handleToggle(item.id)} className="relative overflow-hidden transition-all duration-200 max-h-0">
+                                            <div className="px-6 py-4 text-black">
+                                                {`${item.ans}`}
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 ))}
-                            </div>
-
-
-
-
-
-
-
+                            </div>    
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+            {/* End Why you sould choice us ? Section*/}
 
-            </div>
-
-
-
-
+            {/* Discover Places Nearby Section*/}
+            <section className="discover-places-nearby-section w-full md:py-20 max-md:py-10 ">
+                <div className='container mx-auto px-2'>
+                    <div className='dis-nearby-box max-w-[1140px] m-auto bg-[#E7F0F7] rounded-br-[80px] rounded-tl-[80px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.2)]'>
+                        <div className='flex gap-4 max-md:flex-col items-center'> 
+                            <div className='md:w-1/2 mb-5 text-center bg-contain bg-center bg-no-repeat max-md:w-full' style={{backgroundImage: `url('${mapdottedinfo}')`}}>
+                                <img className="m-auto mt-[-60px]" alt="hero" src={phonenearby} />
+                            </div>
+                            <div className='md:w-1/2 mb-5 py-5 px-3'>
+                                <h2 className='mb-3'>Discover Places Nearby</h2>
+                                <p className='mb-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <button className='flex bg-[#0B7132] text-[#fff] hover:bg-[#000] py-4 px-6 rounded-lg font-semibold duration-[400ms,700ms]'>See At Google Map</button>
+                            </div>
+                        </div>  
+                    </div>                    
+                </div>
+            </section>
         </>
     )
 }

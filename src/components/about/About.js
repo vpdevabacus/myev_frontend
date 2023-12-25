@@ -14,8 +14,7 @@ const About = () => {
     return (
         <>
             <div className='py-16  container mx-auto'>
-
-                <div className='  2xl:ml-80 my-16 w-10/12 md:w-11/12 xl:w-12/12 2xl:w-11/12 bg-white mx-auto 2xl:absolute pt-8 shadow-2xl rounded-xl '>
+                <div className='2xl:ml-80 my-16 w-10/12 md:w-11/12 xl:w-12/12 2xl:w-11/12 bg-white mx-auto 2xl:absolute pt-8 shadow-2xl rounded-xl '>
                     <div className=' lg:w-3.5/12 lg:flex shadow-lg  px-8 l pb-8'>
                         <div className=' '>
                             <div className='w-6/12  '>
@@ -70,22 +69,10 @@ const About = () => {
                                     <p class="text-black font-weight: 500 text-lg mt-3 ml-3">To propel the electric vehicle revolution, myEV Point is on a mission to establish a widespread network of cutting-edge charging stations. We are dedicated to advancing clean transportation, reducing carbon footprints, and contributing to a sustainable future by providing accessible and efficient charging solutions for electric vehicles worldwide.</p>
                                 </div>
                             </div>
-
-
-
-
                         </div>
-
-
                     </div>
-
                 </div>
-                <div className="bg-cover w-3/12 2xl:w-3/12 py-96 hidden 2xl:inline-block  " style={style}>
-
-
-
-                </div>
-
+                <div className="bg-cover w-3/12 2xl:w-3/12 py-96 hidden 2xl:inline-block  " style={style}></div>
             </div>
 
         </>

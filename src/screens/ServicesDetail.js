@@ -3,18 +3,19 @@ import Header from '../components/header/Header'
 import ServicesDetails from "../components/servicesDetail/ServicesDetail"
 import OurTeam from "../components/about/OurTeam"
 import Footer from '../components/footer/Footer'
-import Banner from '../components/servicesDetail/Banner'
 import WhyUs from '../components/servicesDetail/WhyUS'
-import Chargers from '../components/servicesDetail/Chargers'
+import InnerPageBanner from '../components/shared/InnerPageBanner';
+import aboutBanner from "../assets/Images/bannerimage.png";
+import ContactInfo from '../components/contact_info/ContactInfo';
 
 const ServicesDetail = () => {
     return (
         <>
             <Header />
-            <Banner />
+            <InnerPageBanner title='AC Charger Service' maxWidth='472px' innerPageBanner={aboutBanner} />
             <ServicesDetails />
-            <Chargers />
             <WhyUs />
+            <ContactInfo />
             <Footer />
         </>
     )

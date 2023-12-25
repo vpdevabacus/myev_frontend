@@ -71,10 +71,6 @@
 
 
 /* 19 Dec 2023 Common CSS */
-
- /* 19 Dec 2023 Common CSS  */
-
-
 *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
@@ -85,12 +81,11 @@ h1,h2, h3, h4, h5, h6{font-weight: 600;}
 
 h1{font-size: 64px;line-height: normal;}
 h2{font-size: 44px;line-height: normal;}
-h3{font-size: 44px;line-height: normal;}
-h4{font-size: 24px;line-height: normal;}
-body, p{font-size: 17px;line-height: normal;}
-
-
 body, p{font-size: 16px;line-height: normal;}
+
+.contact-txt-info {
+    background: linear-gradient(-6deg, #0B7132 74.9%, #fff0 75.2%);
+}
 
 @media (min-width: 1024px){
     h1{font-size: 64px;line-height: normal;}
@@ -102,23 +97,7 @@ body, p{font-size: 16px;line-height: normal;}
     h1{font-size: 34px;line-height: normal;}
     h2{font-size: 30px;line-height: 40px;}
     h3{font-size: 24px;line-height: 36px;}
-    h4{font-size: 18px;line-height: 26px;}
+    h4{font-size: 20px;line-height: 32px;}
 }
 /* End CSS */
 
-
-
- /* End CSS  */
-
-
- .home_charging-bg:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: rotateX(180deg);
-    clip-path: polygon(calc(100% - 28.5px) calc(100% - 0.90000000000001px), 32.2px calc(100% - 0.90000000000001px), 32.2px calc(100% - 0.90000000000001px), 26.973px calc(100% - 1.321px), 22.016px calc(100% - 2.54px), 17.395px calc(100% - 4.491px), 13.176px calc(100% - 7.108px), 9.425px calc(100% - 10.325px), 6.208px calc(100% - 14.076px), 3.591px calc(100% - 18.295px), 1.64px calc(100% - 22.916px), 0.421px calc(100% - 27.873px), 5.3248111102418E-31px calc(100% - 33.1px), 0px 87.4px, 0px 87.4px, 0.1942px 84.5609px, 0.7616px 81.8232px, 1.6794px 79.2163px, 2.9248px 76.7696px, 4.475px 74.5125px, 6.3072px 72.4744px, 8.3986px 70.6847px, 10.7264px 69.1728px, 13.2678px 67.9681px, 16px 67.1px, calc(100% - 30.8px) 0.700002px, calc(100% - 30.8px) 0.700002px, calc(100% - 26.1225px) 0.019601458px, calc(100% - 21.568px) 0.212801024px, calc(100% - 17.2235px) 1.211200686px, calc(100% - 13.176px) 2.946400432px, calc(100% - 9.5125px) 5.35000025px, calc(100% - 6.3200000000001px) 8.353600128px, calc(100% - 3.6855px) 11.888800054px, calc(100% - 1.696px) 15.887200016px, calc(100% - 0.43850000000003px) 20.280400002px, calc(100% - 5.6843418860808E-14px) 25px, calc(100% - 0px) calc(100% - 29.4px), calc(100% - 0px) calc(100% - 29.4px), calc(100% - 0.37139999999999px) calc(100% - 24.7869px), calc(100% - 1.4471999999999px) calc(100% - 20.4072px), calc(100% - 3.1698px) calc(100% - 16.3203px), calc(100% - 5.4816px) calc(100% - 12.5856px), calc(100% - 8.325px) calc(100% - 9.2625px), calc(100% - 11.6424px) calc(100% - 6.4104px), calc(100% - 15.3762px) calc(100% - 4.0887px), calc(100% - 19.4688px) calc(100% - 2.3568px), calc(100% - 23.8626px) calc(100% - 1.2741px), calc(100% - 28.5px) calc(100% - 0.90000000000001px));
- }
- 
