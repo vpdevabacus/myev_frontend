@@ -76,7 +76,7 @@ const Footer = () => {
                                                 <p className="text-white">DC Charger Services</p>
                                             </Link>
                                         </li>
-                                        <li className='mb-2'>
+                                        {/* <li className='mb-2'>
                                             <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white">EV Drivers Services</p>
@@ -93,7 +93,7 @@ const Footer = () => {
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white">Home Charging</p>
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="footer-col-three max-md:mb-6 max-lg:mb-8">
