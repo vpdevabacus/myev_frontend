@@ -23,7 +23,7 @@ const Testimonials = () => {
                     <div className="testimonials_titel text-center">
                         <h4 className="text-[#0B7132] font-medium uppercase	mb-[15px]">Testimonials</h4>
 
-                        <h2>What Client's Say About</h2>
+                        <h2>What Client's Say about</h2>
                     </div>
                     <div className="max-w-[1100px] m-auto">
                         <Slider className='mt-[40px] md:mt-[50px] px-[0] md:px-[80px] bg-top bg-auto pt-[33px] bg-no-repeat' {...settings} style={{ backgroundImage: `url(${quotesIcon})` }}>
@@ -40,7 +40,6 @@ const Testimonials = () => {
                                                 <span className="mx-[2.5px]">{item.rating}</span>
                                                 <span className="mx-[2.5px]">{item.rating}</span>
                                             </div>
-
                                             <div class="flex items-center justify-center">
                                                 <img class="h-[100px] w-[100px] duration-500 rounded-full group-hover:shadow-[0_0_12px_#bfbfbf]" src={item.profileImage} alt="" />
 
@@ -50,7 +49,6 @@ const Testimonials = () => {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             ))}
