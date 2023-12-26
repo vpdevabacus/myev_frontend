@@ -62,7 +62,7 @@ const Banner = () => {
                 <div className="car-bg-green-section bg-[#0B7132] pb-40 px-3">
                     <div className="bg-green-sec-info pb-7">
                         <div className="evcar-info text-center relative">
-                            <img className="evcar-img-info m-auto" src={evcaranimationpic} />
+                            <img className="evcar-img-info m-auto max-w-[1080px] w-full" src={evcaranimationpic} />
                         </div>
                     </div>
                 </div>
