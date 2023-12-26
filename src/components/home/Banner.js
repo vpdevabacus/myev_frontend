@@ -57,7 +57,7 @@ const Banner = () => {
                             <div className="discover-content-col max-md:mb-6">
                                 <h4 className="relative text-[#0B7132] font-medium mb-1 green-line-heading">CONVENIENT & FAST</h4>
                                 <h2 className="mb-3">Discover Places Nearby</h2>
-                                <p>Lorem Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                <p>Charge up your electric vehicle effortlessly with our strategically located charging stations. We've mapped out convenient spots near you, ensuring that wherever your journey takes you, a reliable charging solution is just around the corner.</p>
                             </div>
                             <div className="discover-nearby-col">
                                 <div className="discover-nearby-map-info">

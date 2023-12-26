@@ -15,7 +15,7 @@ const Strategy = () => {
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Fast Charging</h4>
-                      <p className="text-sm max-w-[210px] m-auto">Possimus laoreet lec exercit, ipsum adipisicing hic ipsum rec sith.</p>
+                      <p className="text-sm max-w-[210px] m-auto">Experience swift device charging with our efficient solutions. Enjoy quick power boosts that keep you connected and on the move, eliminating unnecessary delays.</p>
                     </div>
                 </div>
                 <div className="arrow-img-top-info max-md:hidden">
@@ -29,7 +29,7 @@ const Strategy = () => {
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Good Management</h4>
-                      <p className="text-sm max-w-[210px] m-auto">Possimus laoreet lec exercit, ipsum adipisicing hic ipsum rec sith.</p>
+                      <p className="text-sm max-w-[210px] m-auto">Good management is vital for organizational success, involving coordination, strategic decisions, and effective communication to steer teams towards their goals.</p>
                     </div>
                 </div>
                 <div className="arrow-img-bottom-info max-md:hidden">
@@ -43,7 +43,7 @@ const Strategy = () => {
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Renewable Energy</h4>
-                      <p className="text-sm max-w-[210px] m-auto">Possimus laoreet lec exercit, ipsum adipisicing hic ipsum rec sith.</p>
+                      <p className="text-sm max-w-[210px] m-auto">Renewable energy is the key to a sustainable future, harnessed from naturally replenishing sources like sunlight, wind, and water.</p>
                     </div>
                 </div>
                 <div className="arrow-img-top-info max-md:hidden">
@@ -57,7 +57,7 @@ const Strategy = () => {
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Quality Charger</h4>
-                      <p className="text-sm max-w-[210px] m-auto">Possimus laoreet lec exercit, ipsum adipisicing hic ipsum rec sith.</p>
+                      <p className="text-sm max-w-[210px] m-auto">Efficient, reliable charging for modern devices. Our high-quality charger delivers fast and safe power, meeting the demands of today's electronics.</p>
                     </div>
                 </div>
             </div>

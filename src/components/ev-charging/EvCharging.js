@@ -52,7 +52,11 @@ const EvCharging = () => {
 
                                 <div className='pl-[20px] text-left'>
                                     <h4 className='mb-[10px] text-[#016C80] font-semibold'>Our Vision</h4>
-                                    <p>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</p>
+                                    <p>Revolutionizing electric mobility, our vision is to establish a
+                seamless and accessible network of charging points, driving a
+                sustainable future for all. We're committed to making clean
+                energy an effortless choice, transforming the way the world
+                travels.</p>
                                 </div>
                             </div>
 
@@ -61,7 +65,7 @@ const EvCharging = () => {
 
                                 <div className='pl-[20px] text-left'>
                                     <h4 className='mb-[10px] text-[#016C80] font-semibold'>Our Mission</h4>
-                                    <p>Possimus laoreet lec exercit , ipsum adipisicing hic ipsum rec sith.</p>
+                                    <p>To propel the electric vehicle revolution, myEV Point is on a mission to establish a widespread network of cutting-edge charging stations. We are dedicated to advancing clean transportation, reducing carbon footprints, and contributing to a sustainable future by providing accessible and efficient charging solutions for electric vehicles worldwide.</p>
                                 </div>
                             </div>
 

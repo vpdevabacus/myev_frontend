@@ -3,7 +3,7 @@ import "./header.css";
 import ImageIcons from '../../common/ImageIcons'
 import { FaRegEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
-import { NavLink, Link,useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -11,6 +11,20 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import { IconButton } from '@mui/material';
+import StarBorder from '@mui/icons-material/StarBorder';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Collapse from '@mui/material/Collapse';
+import ListSubheader from '@mui/material/ListSubheader';
+import Info from '@mui/icons-material/Info';
+import Home from '@mui/icons-material/Home';
+import ContactPage from '@mui/icons-material/ContactPage';
+
+
+
 
 
 
@@ -20,7 +34,7 @@ const Header = () => {
 
     const location = useLocation();
     const { pathname } = location;
-  
+
 
     const [state, setState] = React.useState({
         top: false,
@@ -37,12 +51,18 @@ const Header = () => {
         setState({ ...state, [anchor]: open });
     };
 
+    const [open, setOpen] = React.useState(true);
+
+    const handleClick = () => {
+        setOpen(!open);
+    };
+
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
+        // onClick={toggleDrawer(anchor, false)}
+        // onKeyDown={toggleDrawer(anchor, false)}
         >
             {/* <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -58,31 +78,70 @@ const Header = () => {
           </List> */}
             <Divider />
 
-            <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer pt-4 pl-3' />
-            <List>
-                <ListItem disablePadding className={`${pathname === '/' && "bg-[#0B7132] text-white"}`}>
-                    <ListItemButton component={Link} to="/">
-                        {/* Add your logo here */}
-                        {/* <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer' /> */}
-                        <ListItemText primary="Home" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding className={`${pathname === '/about' && "bg-[#0B7132] text-white"}`}>
-                    <ListItemButton component={Link} to="/about">
-                        <ListItemText primary="About Us" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding className={`${pathname === '/services' && "bg-[#0B7132] text-white"}`}>
-                    <ListItemButton component={Link} to="/services">
-                        <ListItemText primary="Our Services" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding   className={`${pathname === '/contact' && "bg-[#0B7132] text-white"}`}>
-                    <ListItemButton component={NavLink} to="/contact" >
-                        <ListItemText primary="Contact Us" />
-                    </ListItemButton>
+            <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer pt-4 pl-3 pb-10' />
+            <List
+                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+                component="nav"
+                aria-labelledby="nested-list-subheader"
 
-                </ListItem>
+            >
+                <ListItemButton>
+                    <ListItemIcon>
+                        <Home />
+                    </ListItemIcon>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                        <ListItemText primary="Home" />
+                    </NavLink>
+                </ListItemButton>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <Info />
+                    </ListItemIcon>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                        <ListItemText primary="About Us" />
+                    </NavLink>
+                </ListItemButton>
+                <ListItemButton onClick={handleClick}>
+                    <ListItemIcon>
+                        <InboxIcon />
+                    </ListItemIcon>
+                    <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                        <ListItemText primary="Services" />
+                    </NavLink>
+                    {open ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 4 }}>
+                            {/* <ListItemIcon>
+                                <StarBorder />
+                                </ListItemIcon> */}
+                            <NavLink to="/services/ac_charger_services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                                <ListItemText primary="AC Charger Service" />
+                            </NavLink>
+                        </ListItemButton>
+                    </List>
+                </Collapse>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 4 }}>
+                            {/* <ListItemIcon>
+                                <StarBorder />
+                                </ListItemIcon> */}
+                            <NavLink to="/services/dc_charger_services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                                <ListItemText primary="DC Charger Service" />
+                            </NavLink>
+                        </ListItemButton>
+                    </List>
+                </Collapse>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <ContactPage />
+                    </ListItemIcon>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                        <ListItemText primary="Contact Us" />
+                    </NavLink>
+                </ListItemButton>
             </List>
         </Box>
     )
@@ -184,17 +243,17 @@ const Header = () => {
                                     <span className='clr-ddd mx-4'>|</span>
                                 </div>
                                 <div className='flex items-center'>
-                                    <MdPhone onClick={openMail} className='h-5 w-6 cursor-pointer' />
+                                    <MdPhone onClick={callPhoneNumber} className='h-5 w-6 cursor-pointer' />
                                     <span onClick={callPhoneNumber} className="ml-2 font-size-16 text-[#fff] cursor-pointer" >{phoneNumber}</span>
                                 </div>
                             </div>
                             {/* Social media links */}
                             <div className="flex items-center lg:gap-4 text-[#fff] max-lg:gap-3 max-lg:mb-2">
-                                <Link to='https://www.facebook.com/myevpoint'><FaFacebookF className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
-                                <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
-                                <Link to='https://in.pinterest.com/myevpoint/'><FaPinterest className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
-                                <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'><FaYoutube className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
-                                <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6  cursor-pointer hover:text-[#0B7132]' /></Link>
+                                <Link to='https://www.facebook.com/myevpoint' target="_blank"><FaFacebookF className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
+                                <Link to='https://twitter.com/myevpoint' target="_blank"><FaTwitter className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
+                                <Link to='https://in.pinterest.com/myevpoint/' target="_blank"><FaPinterest className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
+                                <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw' target="_blank"><FaYoutube className='h-5 w-6 cursor-pointer hover:text-[#0B7132]' /></Link>
+                                <Link to='https://www.linkedin.com/company/my-ev-point/' target="_blank"><FaLinkedinIn className='h-5 w-6  cursor-pointer hover:text-[#0B7132]' /></Link>
                             </div>
                         </div>
                     </div>
@@ -214,7 +273,7 @@ const Header = () => {
                                         <div className="hidden lg:flex items-center">
                                             <ul className='primary-menu-info flex list-none'>
                                                 <li className='menu-item-info'>
-                                                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>Home</NavLink>
+                                                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}> Home</NavLink>
                                                 </li>
                                                 <li className='menu-item-info'>
                                                     <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>About Us</NavLink>
@@ -225,8 +284,6 @@ const Header = () => {
                                                     </NavLink>
 
                                                     <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="icon-down-menu inline ml-1 transition-transform duration-200 transform"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000'></path></svg>
-
-
 
                                                     {dropdownOpen == true &&
 

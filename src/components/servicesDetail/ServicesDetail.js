@@ -7,6 +7,7 @@ import bgcoverimh1 from "../../assets/Images/bg-cover-imh1.png";
 import chaticon from "../../assets/Images/chat-icon.png";
 import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
+import { Link } from 'react-router-dom';
 
 const ServicesDetail = () => {
 
@@ -39,12 +40,12 @@ const ServicesDetail = () => {
                                 <div className='services-links-info'>
                                     <ul>
                                         <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>AC Charger Service</a>
+                                        <Link to='/services/ac_charger_services' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>AC Charger Service</Link>
                                         </li>
                                         <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>DC Charger Service</a>
+                                        <Link to='/services/dc_charger_services' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>DC Charger Service</Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Home Charger</a>
                                         </li>
                                         <li>
@@ -55,7 +56,7 @@ const ServicesDetail = () => {
                                         </li>
                                         <li>
                                             <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#fff]'>Public Stations</a>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -110,8 +111,8 @@ const ServicesDetail = () => {
                         {/* Single Services Content */}
                         <div className='single-service-right-sidebar'>
                             <h2 className='mb-4'>Charging Stations Will Provide AC Power</h2>
-                            <p className='mb-4'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will.</p>
-                            <p className='mb-4'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p>
+                            <p className='mb-4'>Elevate your electric vehicle fleet's charging experience with our premium AC Charger Service. Offering customized solutions tailored to your specific needs, our advanced technology ensures optimal charging efficiency, contributing to extended battery life. Our seamless integration process, coupled with 24/7 technical support, guarantees minimal disruptions and continuous operation. With remote monitoring capabilities and scalability to accommodate your growing fleet, our AC Charger Service is the strategic choice for a sustainable and efficient EV charging infrastructure. Contact us today to revolutionize your electric fleet's performance.</p>
+                            {/* <p className='mb-4'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p> */}
                             <div className="text-center py-4">
                                 <img src={singleservicefullimg} className='w-full' />
                             </div>

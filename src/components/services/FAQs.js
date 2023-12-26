@@ -81,7 +81,7 @@ const FAQs = () => {
             <div className='container mx-auto px-2'>
                 <div className='faq-heading mb-10'>
                     <h4 className='text-center text-[#0B7132] font-medium'>FAQ</h4>
-                    <h2 className='text-center'>General Question About Pertaev</h2>
+                    <h2 className='text-center'>General Question About my EVpoint</h2>
                 </div>
                 <div className="grid gap-6 px-2 text-lg leading-6 text-gray-800 md:gap-8 md:grid-cols-2">
                     {items.map((item) => (
