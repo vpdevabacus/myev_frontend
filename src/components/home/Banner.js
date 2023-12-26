@@ -6,6 +6,7 @@ import "./HomePage.css";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import evcaranimationpic from "../../assets/Images/ev-caranimation-pic.png";
 import discovernearbymap from "../../assets/Images/discover-nearby-map.png";
+import { Link } from 'react-router-dom'
 const backgroundImagePath = ImageIcons.bannerimage;
 
 const style = {
@@ -40,18 +41,22 @@ const Banner = () => {
                             <h1 className="text-[#fff] m-auto md:mb-8 max-md:mb-4">Best <span className="text-[#0B7132] bg-[#fff] px-3 font-bold">EV Vehicle</span> And Charging Station</h1>
                             <p className="text-[#fff] m-auto md:mb-10 max-md:mb-6 md:pb-5 max-md:pb-3">It’s your chance to own an EV Charging Station (Without having to manage it)</p>
                             <div className="button-hero-info flex gap-4 justify-center max-md:flex-col">
-                                <button className="cursor-pointer bg-white text-[#0B7132] hover:text-[#fff] hover:bg-[#0B7132] font-semibold md:py-3 max-md:py-3 md:px-5 max-md:px-4 rounded-lg inline-flex items-center justify-center duration-[400ms,700ms]">
+                            <Link to ="/contact" > <button className="cursor-pointer bg-white text-[#0B7132] hover:text-[#fff] hover:bg-[#0B7132] font-semibold md:py-3 max-md:py-3 md:px-5 max-md:px-4 rounded-lg inline-flex items-center justify-center duration-[400ms,700ms]">
+                      
                                     <span>
                                         <FaApple className='md:h-7 max-md:h-6 md:w-7 max-md:w-6 me-1' />
                                     </span>
                                     <span>APP STORE</span>
                                 </button>
+                                </Link>
+                                <Link to ="/contact" >
                                 <button className="cursor-pointer bg-white text-[#0B7132] hover:text-[#fff] hover:bg-[#0B7132] font-semibold md:py-3 max-md:py-3 md:px-5 max-md:px-4 rounded-lg inline-flex items-center justify-center duration-[400ms,700ms]">
                                     <span>
                                         <FaGooglePlay className='md:h-6 max-md:h-5 md:w-6 max-md:w-5 me-1' />
                                     </span>
                                     <span>GOOGLE PLAY</span>
                                 </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

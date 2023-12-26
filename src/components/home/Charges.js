@@ -1,6 +1,8 @@
 import React from "react";
 import ImageIcons from "../../common/ImageIcons";
 import aboutChargingBg from "../../assets/Images/about_charging_bg.svg";
+import { Link } from 'react-router-dom'
+
 
 const backgroundImagePath = ImageIcons.shape1;
 const backgroundImagePath1 = ImageIcons.shape2;
@@ -106,9 +108,11 @@ const Charges = () => {
                       <FeatureList key={item.id} item={item} />
                     ))}
                   </div>
+                  <Link to ="/contact">
                   <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#000] text-white rounded-lg">
                     Sign Up
                   </button>
+                  </Link>
                 </div>
               </div>
               <div className="relative px-[15px] pt-[35px] pb-[95px] home_charging-bg after:bg-[#000]" >
@@ -125,9 +129,11 @@ const Charges = () => {
                       <FeatureList1 key={item.id} item={item} />
                     ))}
                   </div>
+                  <Link to ="/contact">
                   <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#fff] hover:text-[#0B7132] text-white rounded-lg">
                     Sign Up
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

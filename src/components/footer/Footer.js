@@ -103,24 +103,32 @@ const Footer = () => {
                                     </div>
                                     <ul className='footer-links-info list-none'>
                                         <li className='mb-2'>
-                                            <Link to='/about' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/privacy_policy' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">About Us</p>
+                                                <p className="text-white">Privacy Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/terms&conditions' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Our Service</p>
+                                                <p className="text-white">Terms & Conditions</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/contact' className="flex items-center gap-2 cursor-pointer">
+                                        <Link
+                                        className="flex items-center gap-2 cursor-pointer "
+                                        to={brocher}
+                                        download="myEV_Point"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+
+
+                                     >
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Contact Us</p>
+                                                <p className="text-white">Download our Brocher</p>
                                             </Link>
                                         </li>
-                                        <li className='mb-2'>
+                                        {/* <li className='mb-2'>
                                             <Link to='#' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white">Charge Point Services</p>
@@ -131,7 +139,7 @@ const Footer = () => {
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white">24 Hour Support</p>
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="footer-col-four max-md:mb-6 max-lg:mb-8">
