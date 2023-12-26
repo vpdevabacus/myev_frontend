@@ -1,9 +1,11 @@
+import React, { useState } from "react";
 import ImageIcons from "../../common/ImageIcons";
 import { FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoFacebook } from "react-icons/bi";
 import { MdPhone, MdLocationPin } from "react-icons/md";
 import { FaRegEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import "./ContactUs.css";
 
 
@@ -11,25 +13,61 @@ const backgroundImagePath = ImageIcons.Rectangle1;
 const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
 
-    // height: '354px',
 };
 
-const phoneNumber = '+919592595975';
-const phoneLink = `tel:${phoneNumber}`;
 
-const callPhoneNumber = () => {
-    window.location.href = phoneLink;
-};
-
-const email = 'info@vpventuresindia.com';
-const mailtoLink = `mailto:${email}`;
-
-const openMail = () => {
-    window.open(mailtoLink);
-};
 
 
 const Contact = () => {
+
+    const phoneNumber = '+919592595975';
+    const phoneLink = `tel:${phoneNumber}`;
+
+    const callPhoneNumber = () => {
+        window.location.href = phoneLink;
+    };
+
+    const email = 'info@vpventuresindia.com';
+    const mailtoLink = `mailto:${email}`;
+
+    const openMail = () => {
+        window.open(mailtoLink);
+    };
+
+
+    const [fullName, setfullName] = useState("")
+    const [emailId, setEmailId] = useState("")
+    const [number, setNumber] = useState("")
+    const [message, setMessage] = useState("")
+
+    const baseURL = "http://localhost:8400/user/sendemail";
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post(baseURL, {
+                fullName: fullName,
+                email: emailId,
+                number: number,
+                message: message,
+            });
+
+            console.log("response", response);
+            console.log("finalResponse", response.data);
+
+            setfullName('')
+            setEmailId('')
+            setNumber('')
+            setMessage('')
+
+        } catch (error) {
+            console.error('Error submitting form:', error);
+
+        }
+    };
+
+
     return (
         <>
             {/* Contact Detail Section */}
@@ -120,18 +158,48 @@ const Contact = () => {
                         </div>
                         <div className="md:w-1/2 max-md:w-full  max-md:px-4">
                             <div class="contact-us-form-info bg-white md:py-14 max-md:py-8 md:px-10 max-md:px-5">
-                                <form>
+                                <form onSubmit={handleSubmit}>
                                     <div class="mb-5">
-                                        <input type="text" id="first_name" className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4" placeholder="Full name*" required></input>
+                                        <input type="text"
+                                            id="first_name"
+                                            className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4"
+                                            placeholder="Full name*"
+                                            value={fullName}
+                                            onChange={(e) => setfullName(e.target.value)}
+                                            required
+                                        ></input>
                                     </div>
                                     <div class="mb-5">
-                                        <input type="email" id="email" class="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4" placeholder="Email address*" required></input>
+                                        <input type="email"
+                                            id="email"
+                                            class="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4"
+                                            placeholder="Email address*"
+                                            value={emailId}
+                                            onChange={(e) => setEmailId(e.target.value)}
+                                            required
+                                        ></input>
                                     </div>
                                     <div class="mb-5">
-                                        <input type="number" id="phone" className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4" placeholder="Phone number*" required></input>
+                                        <input type="number"
+                                            id="phone"
+                                            className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4"
+                                            placeholder="Phone number*"
+                                            value={number}
+                                            onChange={(e) => setNumber(e.target.value)}
+                                            required
+                                        ></input>
                                     </div>
                                     <div class="mb-5">
-                                        <textarea id="message" name="message" rows="4" placeholder="Enter message" className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4"></textarea>
+                                        <textarea id="message"
+                                            name="message"
+                                            rows="4"
+                                            placeholder="Enter message*"
+                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4"
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
+                                            required
+
+                                        ></textarea>
                                     </div>
                                     <button type="submit" className="bg-[#0B7132] text-white hover:bg-[#000] rounded-lg block py-4 px-7 duration-[400ms,700ms]">Submit Message</button>
                                 </form>
@@ -141,7 +209,7 @@ const Contact = () => {
                 </div>
             </div>
             {/* End Contact Form Section */}
-    
+
             <img src={ImageIcons.mapsection} className="w-full" />
         </>
     )
