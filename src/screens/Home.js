@@ -12,18 +12,6 @@ import ContactInfo from "../components/contact_info/ContactInfo";
  const Home = () => {
     return (
         <>
-
-            {/* <Header />
-            <Header />
-
-            <Banner />
-            <AboutUs />
-            {/* <Features />
-            <Strategy />
-            <Charges /> */}
-
-            
-           
             <Header/>
             <Banner />
             <AboutUs />
@@ -32,15 +20,7 @@ import ContactInfo from "../components/contact_info/ContactInfo";
             <Charges />
             <Testimonials />
             <ContactInfo />
-            {/* <EvCharging /> */}
-            {/* <Counting /> */}
-
-            
-
-
             <Footer />
-
-            {/* <EvCharging /> */}
         </>
     )
 };

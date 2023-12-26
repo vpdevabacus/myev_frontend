@@ -40,7 +40,6 @@ const Testimonials = () => {
                                                 <span className="mx-[2.5px]">{item.rating}</span>
                                                 <span className="mx-[2.5px]">{item.rating}</span>
                                             </div>
-
                                             <div class="flex items-center justify-center">
                                                 <img class="h-[100px] w-[100px] duration-500 rounded-full group-hover:shadow-[0_0_12px_#bfbfbf]" src={item.profileImage} alt="" />
 
@@ -50,7 +49,6 @@ const Testimonials = () => {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             ))}

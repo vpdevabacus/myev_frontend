@@ -86,17 +86,9 @@ const Charges = () => {
               <div className="flex flex-row place-items-center">
                 <h4 className="font-medium relative text-[#0B7132] font-medium mb-[10px] green-line-heading">ABOUT ECHARGE </h4>
               </div>
-              <h2 className="font-semibold text-[#000] mb-[22px]">
-                Price of Our Services on The Road
-              </h2>
-              <p className="max-w-xl text-xl font-normal text-[#000] mt-6">
-                An EV charging station is a device that provides electric energy
-                for recharging electric vehicles, enabling the transfer of
-                electrical energy from the grid to the vehicle's battery pack.{" "}
-              </p>
-              <img src={ImageIcons.filling_machine}
-                className="absolute left-0 z-10 w-[340px] xl:w-[500px] lg:w-[380px] md:w-[500px] sm:w-[400px] mt-[15px]"
-              />
+              <h2 className="font-semibold text-[#000] mb-[22px]">Price of Our Services on The Road</h2>
+              <p className="max-w-xl text-xl font-normal text-[#000] mt-6"> An EV charging station is a device that provides electric energy for recharging electric vehicles, enabling the transfer of electrical energy from the grid to the vehicle's battery pack.</p>
+              <img src={ImageIcons.filling_machine} className="absolute left-0 z-10 w-[340px] xl:w-[500px] lg:w-[380px] md:w-[500px] sm:w-[400px] mt-[15px]" />
               <img className="absolute lg:left-[34%] lg:right-unset right-[30px] mt-[50px] xl:w-[280px] md:w-[250px] sm:w-[200px] w-[200px] mg:mt-[15px] md:mt-[70px] mt-[150px] " src={aboutChargingBg} />
             </div>
             <div className="lg:mt-0 mt-[40px] lg:w-[61%] md:w-[100%] grid grid-cols-1 sm:grid-cols-2 gap-y-[40px] gap-x-[20px] xl:gap-x-[26px] lg:gap-x-[15px]">
@@ -114,7 +106,7 @@ const Charges = () => {
                       <FeatureList key={item.id} item={item} />
                     ))}
                   </div>
-                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
+                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#000] text-white rounded-lg">
                     Sign Up
                   </button>
                 </div>
@@ -133,7 +125,7 @@ const Charges = () => {
                       <FeatureList1 key={item.id} item={item} />
                     ))}
                   </div>
-                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold	text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] text-white rounded-lg">
+                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#fff] hover:text-[#0B7132] text-white rounded-lg">
                     Sign Up
                   </button>
                 </div>

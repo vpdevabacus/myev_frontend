@@ -1,3 +1,6 @@
+import React, { useRef, useState } from "react";
+import GoogleMap from 'google-maps-react-markers';
+import Markers from '../Markers/Markers';
 import ImageIcons from "../../common/ImageIcons";
 import "./HomePage.css";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
@@ -11,6 +14,22 @@ const style = {
 };
 
 const Banner = () => {
+
+    const mapRef = useRef(null)
+    const [mapReady, setMapReady] = useState(false)
+
+
+    const onGoogleApiLoaded = ({ map, maps }) => {
+        mapRef.current = map
+        setMapReady(true)
+    }
+
+    const coordinates = [
+        // { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
+        // { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
+        // { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
+    ];
+
     return (
         <>
             <section className="home-banner-section w-full pb-20">
@@ -53,6 +72,7 @@ const Banner = () => {
                 <div className="discover-nearby-section px-3">
                     <div className="discover-nearby-info">
                         <div className="container m-auto">
+
                         <div className="grid max-md:grid-cols-1 md:grid-cols-2 md:gap-4 discover-nearby-box m-auto items-center bg-[#E7F0F7]">
                             <div className="discover-content-col max-md:mb-6">
                                 <h4 className="relative text-[#0B7132] font-medium mb-1 green-line-heading">CONVENIENT & FAST</h4>
@@ -62,9 +82,36 @@ const Banner = () => {
                             <div className="discover-nearby-col">
                                 <div className="discover-nearby-map-info">
                                     <img className="mappin-img-info m-auto" src={discovernearbymap} />
+
+                            <div className="grid max-md:grid-cols-1 md:grid-cols-2 md:gap-4 discover-nearby-box m-auto items-center bg-[#E7F0F7]">
+                                <div className="discover-content-col max-md:mb-6">
+                                    <h4 className="relative text-[#0B7132] font-medium mb-1 green-line-heading">CONVENIENT & FAST</h4>
+                                    <h2 className="mb-3">Discover Places Nearby</h2>
+                                    <p>Lorem Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                </div>
+                                <div className="discover-nearby-col">
+                                    <div className="discover-nearby-map-info">
+                                        <GoogleMap className="mappin-img-info m-auto"
+                                            apiKey="AIzaSyCkfOfMsbxXQJDddclN4qd_u6_l19bvpAc"
+                                            defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
+                                            defaultZoom={4}
+                                            mapMinHeight="400px"
+                                            onGoogleApiLoaded={onGoogleApiLoaded}
+                                            onChange={(map) => console.log('Map moved', map)}
+                                        >
+                                            {coordinates.map(({ lat, lng, name }, index) => (
+                                                <Markers
+                                                    key={index}
+                                                    lat={lat}
+                                                    lng={lng}
+                                                    markerId={name}
+                                                />
+                                            ))}
+                                        </GoogleMap>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
