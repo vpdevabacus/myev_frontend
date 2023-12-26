@@ -25,9 +25,9 @@ const Banner = () => {
     }
 
     const coordinates = [
-        // { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
-        // { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
-        // { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
+        { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
+        { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
+        { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
     ];
 
     return (
