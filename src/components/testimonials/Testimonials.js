@@ -22,6 +22,7 @@ const Testimonials = () => {
                 <div className="container m-auto">
                     <div className="testimonials_titel text-center">
                         <h4 className="text-[#0B7132] font-medium uppercase	mb-[15px]">Testimonials</h4>
+
                         <h2>What Client's Say about</h2>
                     </div>
                     <div className="max-w-[1100px] m-auto">
