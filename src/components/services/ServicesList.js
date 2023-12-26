@@ -60,7 +60,7 @@ const ServicesList = () => {
                                     </div>
                                     <p className="text-center mb-[20px]">Elevate your electric vehicle fleet's charging experience with our premium AC Charger Service. </p>
                                     <div className='btn-readmore-info pb-3'>
-                                        <Link href="#" className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
+                                        <Link to={`/services/AC`} className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
                                             Read More
                                             <FaArrowRightLong className='w-6 h-5 ml-1' />
                                         </Link>
@@ -79,10 +79,10 @@ const ServicesList = () => {
                                     </div>
                                     <p className="text-center mb-[20px]">Revolutionize your electric vehicle charging experience with our cutting-edge DC Charger Service.</p>
                                     <div className='btn-readmore-info pb-3'>
-                                        <a href="#" className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
+                                        <Link to={`/services/DC`} className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
                                             Read More
                                             <FaArrowRightLong className='w-6 h-5 ml-1' />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

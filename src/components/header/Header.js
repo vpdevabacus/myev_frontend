@@ -116,7 +116,7 @@ const Header = () => {
                             {/* <ListItemIcon>
                                 <StarBorder />
                                 </ListItemIcon> */}
-                            <NavLink to="/services/ac_charger_services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                            <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
                                 <ListItemText primary="AC Charger Service" />
                             </NavLink>
                         </ListItemButton>
@@ -128,7 +128,7 @@ const Header = () => {
                             {/* <ListItemIcon>
                                 <StarBorder />
                                 </ListItemIcon> */}
-                            <NavLink to="/services/dc_charger_services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                            <NavLink to="/services/DC" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
                                 <ListItemText primary="DC Charger Service" />
                             </NavLink>
                         </ListItemButton>
@@ -291,10 +291,10 @@ const Header = () => {
                                                             <div ref={dropdownRef} className='submenu-links bg-white'>
                                                                 <ul className='submenu-link-menu'>
                                                                     <li className='link-menu'>
-                                                                        <NavLink to="/services/ac_charger_services" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff] hover:bg-[#0B7132]"} onClick={closeDropdown}>AC Charger Service</NavLink>
+                                                                        <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff] hover:bg-[#0B7132]"} onClick={closeDropdown}>AC Charger Service</NavLink>
                                                                     </li>
                                                                     <li className='link-menu'>
-                                                                        <NavLink to="/services/dc_charger_services" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"} onClick={closeDropdown}>DC Charger Service</NavLink>
+                                                                        <NavLink to="/services/DC" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"} onClick={closeDropdown}>DC Charger Service</NavLink>
                                                                     </li>
                                                                 </ul>
                                                             </div>
