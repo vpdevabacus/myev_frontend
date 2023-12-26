@@ -58,12 +58,12 @@ const ServicesList = () => {
                                     <div className='mb-2 rounded-xl p-2 bg-[#fff] relative mb-[20px] md:mt-[-25px] max-md:mt-[-20px] shadow-lg'>
                                         <h4 className="text-center text-[#0B7132]">AC Charger Service</h4>
                                     </div>
-                                    <p className="text-center mb-[20px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                                    <p className="text-center mb-[20px]">Elevate your electric vehicle fleet's charging experience with our premium AC Charger Service. </p>
                                     <div className='btn-readmore-info pb-3'>
-                                        <a href="#" className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
+                                        <Link href="#" className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
                                             Read More
                                             <FaArrowRightLong className='w-6 h-5 ml-1' />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@ const ServicesList = () => {
                                     <div className='mb-2 rounded-xl p-2 bg-[#fff] relative mb-[20px] md:mt-[-25px] max-md:mt-[-20px] shadow-lg'>
                                         <h4 className="text-center text-[#0B7132]">DC Charger Service</h4>
                                     </div>
-                                    <p className="text-center mb-[20px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                                    <p className="text-center mb-[20px]">Revolutionize your electric vehicle charging experience with our cutting-edge DC Charger Service.</p>
                                     <div className='btn-readmore-info pb-3'>
                                         <a href="#" className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
                                             Read More
@@ -87,7 +87,7 @@ const ServicesList = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/3 relative mb-5">
+                        {/* <div className="md:w-1/3 relative mb-5">
                             <div className="services-list-info">
                                 <div className="service-img-info text-center rounded-t-[35px]">
                                     <img src={serviceonepic} alt="image" className="w-full rounded-t-[35px]" />
@@ -105,9 +105,9 @@ const ServicesList = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="flex lg:gap-8 max-lg:gap-5 max-md:flex-col">
+                    {/* <div className="flex lg:gap-8 max-lg:gap-5 max-md:flex-col">
                         <div className="md:w-1/3 relative mb-5">
                             <div className="services-list-info">
                                 <div className="service-img-info text-center rounded-t-[35px]">
@@ -165,7 +165,7 @@ const ServicesList = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             {/* End Services List Section */}

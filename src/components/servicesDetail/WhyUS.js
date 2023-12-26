@@ -53,7 +53,7 @@ const WhyUs = () => {
             <section className="why-choice-us-section w-full md:pb-20 max-md:pb-10 ">
                 <div className='container mx-auto px-2'>
                     <div className='text-center mb-10'>
-                        <h2 className='mb-3'>Why you sould choice us ?</h2>
+                        <h2 className='mb-3'>Why you sould choose us ?</h2>
                         <p className='max-w-[1080px] m-auto'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p>
                     </div> 
                     <div className='flex gap-4 max-md:flex-col max-w-[1024px] m-auto'>

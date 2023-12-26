@@ -97,23 +97,23 @@ const Features = () => {
                   <div className="left-icon-box-info mb-8">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
                         <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">01</div>
-                        <h4 className="text-[#fff]">AC Charger Services</h4>
+                        <h4 className="text-[#fff]">Maximize Your Earnings</h4>
                       </div>
-                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                      <p className="text-[#fff]">Earn up to ₹ 4 /unit</p>
                   </div>
                   <div className="left-icon-box-info mb-8">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
                         <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">02</div>
-                        <h4 className="text-[#fff]">EV Drivers Services</h4>
+                        <h4 className="text-[#fff]">Top Income Opportunities</h4>
                       </div>
-                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                      <p className="text-[#fff]">The Ultimate Passive Income Opportunity Awaits You!</p>
                   </div>
                   <div className="left-icon-box-info md:mb-8 max-md:mb-[10px]">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
                         <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">03</div>
-                        <h4 className="text-[#fff]">EV Drivers Services</h4>
+                        <h4 className="text-[#fff]">Effortless Earnings</h4>
                       </div>
-                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                      <p className="text-[#fff]">Automated Monthly Payouts and Monitoring</p>
                   </div>
               </div>
               <div className="md:w-1/3 max-md:order-3">
@@ -125,23 +125,23 @@ const Features = () => {
                 <div className="left-icon-box-info mb-8">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
                         <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">04</div>
-                        <h4 className="text-[#fff]">DC Charger Services</h4>
+                        <h4 className="text-[#fff]">Cost Reduction Strategies</h4>
                       </div>
-                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                      <p className="text-[#fff]">Lower Maintenance cost</p>
                   </div>
                   <div className="left-icon-box-info mb-8">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
                         <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">05</div>
-                        <h4 className="text-[#fff]">Home Charging</h4>
+                        <h4 className="text-[#fff]">Eco-Friendly Finances</h4>
                       </div>
-                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                      <p className="text-[#fff]">Going Green and Growing Wealth.</p>
                   </div>
                   <div className="left-icon-box-info mb-8">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
                         <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">06</div>
-                        <h4 className="text-[#fff]">Building Services</h4>
+                        <h4 className="text-[#fff]">Smooth Sailing</h4>
                       </div>
-                      <p className="text-[#fff]">Possimus laoreet lec exercit , ipsum adipisicing hicipsum rec sith.</p>
+                      <p className="text-[#fff]">No operational headaches, just smooth sailing.</p>
                   </div>
               </div>
             </div>

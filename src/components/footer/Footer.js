@@ -32,27 +32,29 @@ const Footer = () => {
                         <div className="sm:container lg:container m-auto">
                             <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 px-2 md:1 max-lg:gap-3 lg:gap-2 xl:gap-4">
                                 <div className="footer-col-first max-md:mb-6 max-lg:mb-8">
+                                    <Link to ='/'>
                                     <div className='site-logo-footer max-lg:mb-3 lg:mb-5'>
                                         <img src={ImageIcons.footer_myEV_logo} className='footer-logo-size lg:h-20 lg:w-44' />
                                     </div>
+                                    </Link>
                                     <div className='max-lg:mb-5 lg:mb-9'>
                                         <p className='text-white'>It’s your chance to own an EV Charging Station (Without having to manage it)</p>
                                     </div>
                                     <div className="social-links-info flex">
                                         <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
-                                            <Link to='https://www.facebook.com/myevpoint'><BiLogoFacebook className='h-10 w-10 p-2 text-white' /></Link>
+                                            <Link to='https://www.facebook.com/myevpoint' target="_blank"><BiLogoFacebook className='h-10 w-10 p-2 text-white' /></Link>
                                         </div>
                                         <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
-                                            <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-10 w-10 p-3 text-white' /></Link>
+                                            <Link to='https://twitter.com/myevpoint' target="_blank"><FaTwitter className='h-10 w-10 p-3 text-white' /></Link>
                                         </div>
                                         <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
-                                            <Link to='https://in.pinterest.com/myevpoint/'><FaPinterest className='h-10 w-10 p-3 text-white' /></Link>
+                                            <Link to='https://in.pinterest.com/myevpoint/' target="_blank"><FaPinterest className='h-10 w-10 p-3 text-white' /></Link>
                                         </div>
                                         <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
-                                            <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'><FaYoutube className='h-12 w-12 p-3 text-white' /></Link>
+                                            <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw ' target="_blank"><FaYoutube className='h-12 w-12 p-3 text-white' /></Link>
                                         </div>
                                         <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
-                                            <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-12 w-12 p-3 text-white' /></Link>
+                                            <Link to='https://www.linkedin.com/company/my-ev-point/' target="_blank"><FaLinkedinIn className='h-12 w-12 p-3 text-white' /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -101,31 +103,31 @@ const Footer = () => {
                                     </div>
                                     <ul className='footer-links-info list-none'>
                                         <li className='mb-2'>
-                                            <Link to='/services/ac_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/about' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Building Technology</p>
+                                                <p className="text-white">About Us</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/services' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">EV Drivers</p>
+                                                <p className="text-white">Our Service</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/contact' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">EV Drivers Services</p>
+                                                <p className="text-white">Contact Us</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='#' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white">Charge Point Services</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='#' className="flex items-center gap-2 cursor-pointer">
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white">24 Hour Support</p>
                                             </Link>
@@ -149,7 +151,7 @@ const Footer = () => {
                                         </li>
                                         <li className="flex">
                                             <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132]' />
-                                            <p className="text-white">+91 95925-95975</p>
+                                            <p className="text-white">+91-75081-00021</p>
                                         </li>
                                     </ul>
                                 </div>

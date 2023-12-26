@@ -65,7 +65,7 @@ const testimonialData = [
         name: "Alex Margaret",
         designation: "Managing Director",
         profileImage: clientImage1,
-        text: "I appreciate your hospital really good environment and excellent patient care. You are continuously handle patient treatment wonderfully. Thanks for your great service. Please enjoy the chocolates.",
+        text: "I recently used the EV charging station near my office, and I'm impressed! The charging process was super reliable, and I got a significant boost in battery capacity in no time. It's great to have a station I can count on for my daily commutes.",
         rating: <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ const testimonialData = [
         name: "Margaret",
         designation: "Managing Director",
         profileImage: clientImage1,
-        text: "I appreciate your hospital really good environment and excellent patient care. You are continuously handle patient treatment wonderfully. Thanks for your great service. Please enjoy the chocolates.",
+        text: "I've tried a few charging stations in the area, and this one stands out for its transparent pricing. No hidden fees, and the rates were reasonable. It's refreshing to find an affordable option without sacrificing quality.",
         rating: <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const testimonialData = [
         name: "Alex ",
         designation: "Managing Director",
         profileImage: clientImage1,
-        text: "I appreciate your hospital really good environment and excellent patient care. You are continuously handle patient treatment wonderfully. Thanks for your great service. Please enjoy the chocolates.",
+        text: "Charging my EV here was a pleasant surprise. The station was clean, well-lit, and felt safe. They've clearly put effort into maintaining the facility. It's the little things that make the charging experience enjoyable.",
         rating: <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

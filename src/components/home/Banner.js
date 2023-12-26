@@ -72,6 +72,17 @@ const Banner = () => {
                 <div className="discover-nearby-section px-3">
                     <div className="discover-nearby-info">
                         <div className="container m-auto">
+
+                        <div className="grid max-md:grid-cols-1 md:grid-cols-2 md:gap-4 discover-nearby-box m-auto items-center bg-[#E7F0F7]">
+                            <div className="discover-content-col max-md:mb-6">
+                                <h4 className="relative text-[#0B7132] font-medium mb-1 green-line-heading">CONVENIENT & FAST</h4>
+                                <h2 className="mb-3">Discover Places Nearby</h2>
+                                <p>Charge up your electric vehicle effortlessly with our strategically located charging stations. We've mapped out convenient spots near you, ensuring that wherever your journey takes you, a reliable charging solution is just around the corner.</p>
+                            </div>
+                            <div className="discover-nearby-col">
+                                <div className="discover-nearby-map-info">
+                                    <img className="mappin-img-info m-auto" src={discovernearbymap} />
+
                             <div className="grid max-md:grid-cols-1 md:grid-cols-2 md:gap-4 discover-nearby-box m-auto items-center bg-[#E7F0F7]">
                                 <div className="discover-content-col max-md:mb-6">
                                     <h4 className="relative text-[#0B7132] font-medium mb-1 green-line-heading">CONVENIENT & FAST</h4>
@@ -98,6 +109,7 @@ const Banner = () => {
                                             ))}
                                         </GoogleMap>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
