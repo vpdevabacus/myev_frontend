@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageIcons from '../common/ImageIcons';
+import ImageIcons from "../../common/ImageIcons"
 
 
 const Markers = () => {
