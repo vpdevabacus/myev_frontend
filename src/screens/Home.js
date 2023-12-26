@@ -35,7 +35,6 @@ import ContactInfo from "../components/contact_info/ContactInfo";
             {/* <EvCharging /> */}
             {/* <Counting /> */}
 
-            <Footer /> 
             
 
 
