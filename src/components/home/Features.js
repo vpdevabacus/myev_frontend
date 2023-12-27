@@ -92,7 +92,7 @@ const Features = () => {
         <div className="container mx-auto px-2">
           <h2 className="text-center md:pb-12 max-md:pb-8 text-[#fff]">Excellent And Best Services</h2>
           <div className="features-listing-info">
-            <div className="flex items-center gap-5 max-md:flex-col">
+            <div className="flex md:items-center gap-5 max-md:flex-col">
               <div className="md:w-1/3 max-md:order-1">
                   <div className="left-icon-box-info mb-8">
                       <div className="left-icon-h4-info flex items-center gap-2 mb-3">
