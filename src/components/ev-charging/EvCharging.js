@@ -12,7 +12,7 @@ const EvCharging = () => {
             <section className="py-[80px] px-[20px] relative">
                 <div className="container relative flex">
                     <div className="ev-charging_img absolute top-[0] h-[100%] w-[100%] lg:w-auto">
-                        <img className="h-[100%]  w-[100%] lg:w-auto" src={evCharging} />
+                        <img className="h-[100%] w-[100%] lg:w-auto rounded-[10px]" src={evCharging} />
                     </div>
                     <div className="ev-charging_contant w-full relative z-99 xl:ml-[362px] lg:ml-[230px] rounded-[10px] bg-[#fff] p-[20px] pt-[40px] lg-pt-[30px] md:p-[30px] !pr-[20px] lg:!pr-0 flex justify-between mb-0 lg:mb-[55px] mt-[350px] lg:mt-[55px] lg:flex-row flex-col mx-[15px] lg:mx-0	">
                         <div className="w-[100%] lg:w-[46%] mb-[30px] lg:mb-0">
