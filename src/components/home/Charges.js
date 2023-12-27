@@ -84,7 +84,7 @@ const Charges = () => {
       <section className="md:py-[90px] py-[50px] bg-[#F1F8E8]">
         <div className="container">
           <div className="flex lg:flex-row flex-col xl:gap-[30px] lg:gap-[20px]">
-            <div className="lg:w-[39%] md:w-[100%] lg:mb-[0] mb-[360px]">
+            <div className="lg:w-[39%] md:w-[100%] lg:mb-[0] md:mb-[360px] max-md:mb-[260px]">
               <div className="flex flex-row place-items-center">
                 <h4 className="font-medium relative text-[#0B7132] font-medium mb-[10px] green-line-heading">ABOUT ECHARGE </h4>
               </div>

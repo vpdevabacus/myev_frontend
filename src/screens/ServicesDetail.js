@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom"
 import Header from '../components/header/Header'
 import ServicesDetails from "../components/servicesDetail/ServicesDetail"
 import OurTeam from "../components/about/OurTeam"
@@ -9,10 +10,23 @@ import aboutBanner from "../assets/Images/bannerimage.png";
 import ContactInfo from '../components/contact_info/ContactInfo';
 
 const ServicesDetail = () => {
+
+    const { type } = useParams();
+    console.log(">>>", type)
+
+    const [serviceDetails, setServiceDetails] = useState(null);
+
+    useEffect(() => {
+        const selectedService = servicesList.find(service => service.type === type);
+        setServiceDetails(selectedService);
+    }, [type])
+    console.log(">>>ffdfffff", serviceDetails)
+
+
     return (
         <>
             <Header />
-            <InnerPageBanner title='AC Charger Service' maxWidth='472px' innerPageBanner={aboutBanner} />
+            <InnerPageBanner title={serviceDetails?.title} maxWidth='472px' innerPageBanner={aboutBanner} />
             <ServicesDetails />
             <WhyUs />
             <ContactInfo />
@@ -20,5 +34,17 @@ const ServicesDetail = () => {
         </>
     )
 }
+
+const servicesList = [
+    {
+        type: "AC",
+        title: 'AC Charger Service',
+    },
+    {
+        type: "DC",
+        title: 'DC Charger Service',
+    },
+
+];
 
 export default ServicesDetail;
