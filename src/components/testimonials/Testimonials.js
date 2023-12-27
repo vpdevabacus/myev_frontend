@@ -62,7 +62,7 @@ const Testimonials = () => {
 
 const testimonialData = [
     {
-        name: "Alex Margaret",
+        name: "Ashish Wadhawan",
         designation: "Managing Director",
         profileImage: clientImage1,
         text: "I recently used the EV charging station near my office, and I'm impressed! The charging process was super reliable, and I got a significant boost in battery capacity in no time. It's great to have a station I can count on for my daily commutes.",
@@ -81,7 +81,7 @@ const testimonialData = [
         </svg>,
     },
     {
-        name: "Margaret",
+        name: "Shubham Gupta",
         designation: "Managing Director",
         profileImage: clientImage1,
         text: "I've tried a few charging stations in the area, and this one stands out for its transparent pricing. No hidden fees, and the rates were reasonable. It's refreshing to find an affordable option without sacrificing quality.",
@@ -100,7 +100,7 @@ const testimonialData = [
         </svg>,
     },
     {
-        name: "Alex ",
+        name: "Santosh Thakur ",
         designation: "Managing Director",
         profileImage: clientImage1,
         text: "Charging my EV here was a pleasant surprise. The station was clean, well-lit, and felt safe. They've clearly put effort into maintaining the facility. It's the little things that make the charging experience enjoyable.",
