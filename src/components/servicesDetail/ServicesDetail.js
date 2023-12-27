@@ -8,6 +8,8 @@ import chaticon from "../../assets/Images/chat-icon.png";
 import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
 import { Link } from 'react-router-dom';
+import brocher from "../../assets/utils/myEV_borcher.pdf"
+
 
 const ServicesDetail = () => {
 
@@ -90,10 +92,18 @@ const ServicesDetail = () => {
                                     </div>
                                     <div className='download-txt-info'>
                                         <h5 className='text-lg font-medium'>Download our Brochures</h5>
-                                        <p><a href="#" className='text-[#0B7132] font-medium'>Download</a></p>
+                                        <p><Link
+                                        className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
+                                        to={brocher}
+                                        download="myEV_Point"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+
+
+                                      >Download</Link></p>
                                     </div>
                                 </div>
-                                <div className='download-info flex gap-4'>
+                                {/* <div className='download-info flex gap-4'>
                                     <div className='download-pdf-icon'>
                                         <img src={pdficon2} className='w-full' />    
                                     </div>
@@ -101,7 +111,7 @@ const ServicesDetail = () => {
                                         <h5 className='text-lg font-medium'>Our company details</h5>
                                         <p><a href="#" className='text-[#0B7132] font-medium'>Download</a></p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
