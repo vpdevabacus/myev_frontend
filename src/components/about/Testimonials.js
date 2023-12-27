@@ -21,7 +21,7 @@ const Testimonials = () => {
     const testimonialsData = [
         {
             text: "I recently used the EV charging station near my office, and I'm impressed! The charging process was super reliable, and I got a significant boost in battery capacity in no time. It's great to have a station I can count on for my daily commutes.",
-            author: "Tania Andrew",
+            author: "Ashish Wadhawan",
             position: "Frontend Lead @ Google",
             image: ImageIcons.team_member_1,
         },

@@ -9,6 +9,8 @@ import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
 import { Link } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
+import services1 from "../../assets/Images/services1.png"
+
 
 
 const ServicesDetail = () => {
@@ -119,7 +121,7 @@ const ServicesDetail = () => {
                                 <p className='mb-4'>{serviceDetails?.desc1}</p>
                                 {/* <p className='mb-4'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p> */}
                                 <div className="text-center py-4">
-                                    <img src={singleservicefullimg} className='w-full' />
+                                    <img src={serviceDetails?.image} className='w-full' />
                                 </div>
                             </div>
 

@@ -3,6 +3,9 @@ import ImageIcons from '../../common/ImageIcons'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 import serviceonepic from "../../assets/Images/services1.png"
+import services2 from "../../assets/Images/services2.png"
+
+
 
 const ServicesList = () => {
 
@@ -71,7 +74,7 @@ const ServicesList = () => {
                         <div className="md:w-1/3 relative mb-5">
                             <div className="services-list-info">
                                 <div className="service-img-info text-center rounded-t-[35px]">
-                                    <img src={serviceonepic} alt="image" className="w-full rounded-t-[35px]" />
+                                    <img src={services2} alt="image" className="w-full rounded-t-[35px]" />
                                 </div>
                                 <div className='services-list-content bg-[#F8F8F8] xl:px-10 max-xl:px-3 pb-5 rounded-b-[35px]'>
                                     <div className='mb-2 rounded-xl p-2 bg-[#fff] relative mb-[20px] md:mt-[-25px] max-md:mt-[-20px] shadow-lg'>
