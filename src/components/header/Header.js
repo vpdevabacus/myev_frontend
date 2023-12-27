@@ -283,7 +283,7 @@ const Header = () => {
                                                         Our Service
                                                     </NavLink>
 
-                                                    <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="icon-down-menu inline ml-1 transition-transform duration-200 transform"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000'></path></svg>
+                                                    <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="icon-down-menu inline ml-1 transition-transform duration-200 transform pointer"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" color='#000' cursor='pointer'></path></svg>
 
                                                     {dropdownOpen == true &&
 
@@ -342,9 +342,9 @@ const Header = () => {
 
 
 
-                                            <div class="lg:hidden ml-10 mt-1 " onClick={toggleDrawer('left', true)}>
-                                                <button type="button" class="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
-                                                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                            <div class="lg:hidden ml-10 mt-1  " onClick={toggleDrawer('left', true)}>
+                                                <button type="button" class="block pointer text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+                                                    <svg class="h-6 w-6 fill-current " viewBox="0 0 24 24">
                                                         <path class="hidden" d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
                                                         <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
                                                     </svg>

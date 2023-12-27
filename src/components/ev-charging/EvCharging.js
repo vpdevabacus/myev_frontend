@@ -61,7 +61,7 @@ const EvCharging = () => {
                                 </div>
                             </div>
                             <div className='button-getstarted flex'>
-                                <Link to='#' className="font-size-18 h-[60px] font-semibold  text-white bg-[#0B7132] hover:bg-black rounded-lg px-[45px] py-3 inline-flex items-center duration-[400ms,700ms]">
+                                <Link to='/contact' className="font-size-18 h-[60px] font-semibold  text-white bg-[#0B7132] hover:bg-black rounded-lg px-[45px] py-3 inline-flex items-center duration-[400ms,700ms]">
                                     More About Us
                                 </Link>
                             </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import ImageIcons from "../../common/ImageIcons";
 import aboutChargingBg from "../../assets/Images/about_charging_bg.svg";
+import { Link } from 'react-router-dom'
+
 
 const backgroundImagePath = ImageIcons.shape1;
 const backgroundImagePath1 = ImageIcons.shape2;
@@ -82,7 +84,7 @@ const Charges = () => {
       <section className="md:py-[90px] py-[50px] bg-[#F1F8E8]">
         <div className="container">
           <div className="flex lg:flex-row flex-col xl:gap-[30px] lg:gap-[20px]">
-            <div className="lg:w-[39%] md:w-[100%] lg:mb-[0] mb-[360px]">
+            <div className="lg:w-[39%] md:w-[100%] lg:mb-[0] md:mb-[360px] max-md:mb-[260px]">
               <div className="flex flex-row place-items-center">
                 <h4 className="font-medium relative text-[#0B7132] font-medium mb-[10px] green-line-heading">ABOUT ECHARGE </h4>
               </div>
@@ -106,9 +108,11 @@ const Charges = () => {
                       <FeatureList key={item.id} item={item} />
                     ))}
                   </div>
+                  <Link to ="/contact">
                   <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#000] text-white rounded-lg">
                     Sign Up
                   </button>
+                  </Link>
                 </div>
               </div>
               <div className="relative px-[15px] pt-[35px] pb-[95px] home_charging-bg after:bg-[#000]" >
@@ -125,9 +129,11 @@ const Charges = () => {
                       <FeatureList1 key={item.id} item={item} />
                     ))}
                   </div>
+                  <Link to ="/contact">
                   <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#fff] hover:text-[#0B7132] text-white rounded-lg">
                     Sign Up
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
