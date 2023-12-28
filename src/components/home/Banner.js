@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import GoogleMap from 'google-maps-react-markers';
 import Markers from '../Markers/Markers';
 import ImageIcons from "../../common/ImageIcons";
@@ -7,6 +7,8 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 import evcaranimationpic from "../../assets/Images/ev-caranimation-pic.png";
 import discovernearbymap from "../../assets/Images/discover-nearby-map.png";
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+
 const backgroundImagePath = ImageIcons.bannerimage;
 
 const style = {
@@ -18,18 +20,40 @@ const Banner = () => {
 
     const mapRef = useRef(null)
     const [mapReady, setMapReady] = useState(false)
+    const [data, setData] = useState([]);
+    
+    const [error, setError] = useState([]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            // Make a GET request
+            const response = await axios.get('http://localhost:8400/user/getlocation');
+            // Set the data in the state
+            setData(response.data.data);
+        } catch (error) {
+            // Set the error in the state
+            setError(error);
+            console.log("no new data",error)
+        }
+    };
+    
+    // Call the fetchData function
+    fetchData();
+}, []);
+
+console.log("my new data",data)
 
     const onGoogleApiLoaded = ({ map, maps }) => {
         mapRef.current = map
         setMapReady(true)
     }
 
-    const coordinates = [
-        { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
-        { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
-        { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
-    ];
+    // const coordinates = [
+    //     { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
+    //     { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
+    //     { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
+    // ];
 
     return (
         <>
@@ -93,11 +117,11 @@ const Banner = () => {
                                             onGoogleApiLoaded={onGoogleApiLoaded}
                                             onChange={(map) => console.log('Map moved', map)}
                                         >
-                                            {coordinates.map(({ lat, lng, name }, index) => (
+                                            {data.map(({ latitude, longitude, name }, index) => (
                                                 <Markers
                                                     key={index}
-                                                    lat={lat}
-                                                    lng={lng}
+                                                    lat={latitude}
+                                                    lng={longitude}
                                                     markerId={name}
                                                 />
                                             ))}
