@@ -1,9 +1,17 @@
 import ImageIcons from "../../common/ImageIcons";
 import "./HomePage.css";
+import gallery1 from '../../assets/Images/services1.png';
+import gallery2 from '../../assets/Images/services2.png';
+import gallery3 from '../../assets/Images/servies-pic1.png';
+import gallery4 from '../../assets/Images/whyUS.png';
+import gallery5 from '../../assets/Images/ac-services-pic1.png';
+import gallery6 from '../../assets/Images/banner-bg-img.png';
+import evchargingnews from '../../assets/Images/ev_charging23.png'
 
 const Strategy = () => {
   return (
     <>
+      {/* How We Work Section */}
       <div className="how-we-work-section md:py-20 max-md:py-[50px] relative">
         <div className="container mx-auto px-2">
           <h2 className="text-center md:pb-12 max-md:pb-8 text-[#000]">How We Work</h2>
@@ -64,6 +72,8 @@ const Strategy = () => {
           </div>
         </div>
       </div>  
+      {/* End How We Work Section */}
+
     </>
   );
 };
