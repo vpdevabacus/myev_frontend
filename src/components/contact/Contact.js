@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import ImageIcons from "../../common/ImageIcons";
 import { FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoFacebook } from "react-icons/bi";
 import { MdPhone, MdLocationPin } from "react-icons/md";
 import { FaRegEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import GoogleMap from 'google-maps-react-markers';
+import Markers from '../Markers/Markers';
 import axios from 'axios';
 import "./ContactUs.css";
 
@@ -39,6 +41,42 @@ const Contact = () => {
     const [emailId, setEmailId] = useState("")
     const [number, setNumber] = useState("")
     const [message, setMessage] = useState("")
+    const [mapReady, setMapReady] = useState(false)
+    const [data, setData] = useState([]);
+    const [error, setError] = useState([]);
+    const mapRef = useRef(null)
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            // Make a GET request
+            const response = await axios.get('http://localhost:8400/user/getlocation');
+            // Set the data in the state
+            setData(response.data.data);
+        } catch (error) {
+            // Set the error in the state
+            setError(error);
+            console.log("no new data",error)
+        }
+    };
+    
+    // Call the fetchData function
+    fetchData();
+}, []);
+
+
+
+    const onGoogleApiLoaded = ({ map, maps }) => {
+        mapRef.current = map
+        setMapReady(true)
+    }
+
+    const coordinates = [
+        { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
+        { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
+        { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
+    ];
 
     const baseURL = "http://localhost:8400/user/sendemail";
 
@@ -210,7 +248,27 @@ const Contact = () => {
             </div>
             {/* End Contact Form Section */}
 
-            <img src={ImageIcons.mapsection} className="w-full" />
+            <div className="discover-nearby-col">
+                                    <div className="discover-nearby-map-info">
+                                        <GoogleMap className="mappin-img-info m-auto"
+                                            apiKey="AIzaSyCkfOfMsbxXQJDddclN4qd_u6_l19bvpAc"
+                                            defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
+                                            defaultZoom={4}
+                                            mapMinHeight="400px"
+                                            onGoogleApiLoaded={onGoogleApiLoaded}
+                                            onChange={(map) => console.log('Map moved', map)}
+                                        >
+                                            {data.map(({ latitude, longitude, name }, index) => (
+                                                <Markers
+                                                    key={index}
+                                                    lat={latitude}
+                                                    lng={longitude}
+                                                    markerId={name}
+                                                />
+                                            ))}
+                                        </GoogleMap>
+                                    </div>
+                                </div>
         </>
     )
 }
