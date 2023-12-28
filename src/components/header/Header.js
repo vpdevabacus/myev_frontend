@@ -18,10 +18,10 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
-import ListSubheader from '@mui/material/ListSubheader';
 import Info from '@mui/icons-material/Info';
 import Home from '@mui/icons-material/Home';
 import ContactPage from '@mui/icons-material/ContactPage';
+import { windowScroll } from "../../helpers/ScrollToTop";
 
 
 
@@ -51,99 +51,102 @@ const Header = () => {
         setState({ ...state, [anchor]: open });
     };
 
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
         setOpen(!open);
     };
 
+    console.log("Current pathname:", pathname);
+
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
             role="presentation"
-        // onClick={toggleDrawer(anchor, false)}
-        // onKeyDown={toggleDrawer(anchor, false)}
         >
-            {/* <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List> */}
             <Divider />
 
-            <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer pt-4 pl-3 pb-10' />
+            <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer py-4 pl-3 ' />
             <List
                 sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
                 component="nav"
                 aria-labelledby="nested-list-subheader"
 
             >
-                <ListItemButton>
-                    <ListItemIcon>
-                        <Home />
-                    </ListItemIcon>
-                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
-                        <ListItemText primary="Home" />
-                    </NavLink>
-                </ListItemButton>
-                <ListItemButton>
-                    <ListItemIcon>
-                        <Info />
-                    </ListItemIcon>
-                    <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
-                        <ListItemText primary="About Us" />
-                    </NavLink>
-                </ListItemButton>
-                <ListItemButton onClick={handleClick}>
-                    <ListItemIcon>
-                        <InboxIcon />
-                    </ListItemIcon>
-                    <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
-                        <ListItemText primary="Services" />
-                    </NavLink>
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
+                <Divider />
+
+                <ListItem disablePadding className={`${pathname === '/' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton className={`${pathname === '/' && "bg-[#0B7132] text-white"}`}>
+                        <NavLink to="/" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                            <ListItemText primary="Home" />
+                        </NavLink>
+                    </ListItemButton>
+                </ListItem>
+
+                <Divider />
+
+                <ListItem disablePadding className={`${pathname === '/about' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton>
+                        <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                            <ListItemText primary="About Us" />
+                        </NavLink>
+                    </ListItemButton>
+                </ListItem>
+
+                <Divider />
+
+                <ListItem disablePadding className={`${(pathname === '/services' || pathname === '/services/AC' || pathname === '/services/DC') && "bg-[#0B7132] "} `}>
+                    <ListItemButton onClick={handleClick} >
+                        <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#fff]" : "text-[#000] hover:text-[#0B7132]"} onClick={windowScroll}>
+                            <ListItemText className={`${(pathname === '/services' || pathname === '/services/AC' || pathname === '/services/DC') ? "text-white" : "text-black"}`} primary="Services" />
+                        </NavLink>
+
+                        <div className='absolute right-[10px]'>{open ? <ExpandLess /> : <ExpandMore />}</div>
+                    </ListItemButton>
+                </ListItem>
+
+
+
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            {/* <ListItemIcon>
-                                <StarBorder />
-                                </ListItemIcon> */}
-                            <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
-                                <ListItemText primary="AC Charger Service" />
-                            </NavLink>
-                        </ListItemButton>
+                        <ListItem disablePadding className={`${pathname === '/services/AC' ? "bg-[rgba(11,113,50,0.7)] text-white" : "bg-[#000] text-white"}`}>
+
+                            <ListItemButton sx={{ pl: 4 }}>
+
+                                <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                                    <ListItemText primary="AC Charger Service" />
+                                </NavLink>
+                            </ListItemButton>
+                        </ListItem>
                     </List>
                 </Collapse>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            {/* <ListItemIcon>
-                                <StarBorder />
-                                </ListItemIcon> */}
-                            <NavLink to="/services/DC" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
-                                <ListItemText primary="DC Charger Service" />
-                            </NavLink>
-                        </ListItemButton>
+                        <ListItem disablePadding className={`${pathname === '/services/DC' ? "bg-[rgba(11,113,50,0.7)] text-white" : "bg-[#000] text-white"}`}>
+
+                            <ListItemButton sx={{ pl: 4 }}>
+
+                                <NavLink to="/services/DC" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                                    <ListItemText primary="DC Charger Service" />
+                                </NavLink>
+                            </ListItemButton>
+                        </ListItem>
                     </List>
                 </Collapse>
-                <ListItemButton>
-                    <ListItemIcon>
-                        <ContactPage />
-                    </ListItemIcon>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
-                        <ListItemText primary="Contact Us" />
-                    </NavLink>
-                </ListItemButton>
+                <Divider />
+
+
+                <ListItem disablePadding className={`${pathname === '/contact' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton>
+                        <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                            <ListItemText primary="Contact Us" />
+                        </NavLink>
+                    </ListItemButton>
+                </ListItem>
+                <Divider />
+
             </List>
-        </Box>
+        </Box >
     )
 
 
@@ -165,6 +168,7 @@ const Header = () => {
 
     const closeDropdown = () => {
         setDropdownOpen(false)
+        windowScroll()
     }
 
     const phoneNumber = '+919592595975';
@@ -273,13 +277,13 @@ const Header = () => {
                                         <div className="hidden lg:flex items-center">
                                             <ul className='primary-menu-info flex list-none'>
                                                 <li className='menu-item-info'>
-                                                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}> Home</NavLink>
+                                                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}> Home</NavLink>
                                                 </li>
                                                 <li className='menu-item-info'>
-                                                    <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>About Us</NavLink>
+                                                    <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}>About Us</NavLink>
                                                 </li>
                                                 <li className='menu-item-info'>
-                                                    <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"}>
+                                                    <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                                                         Our Service
                                                     </NavLink>
 
@@ -303,7 +307,7 @@ const Header = () => {
 
                                                 </li>
                                                 <li className='menu-item-info'>
-                                                    <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132]" : "text-[#000] hover:text-[#0B7132]"}>Contact Us</NavLink>
+                                                    <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132]" : "text-[#000] hover:text-[#0B7132]"} onClick={windowScroll}>Contact Us</NavLink>
                                                 </li>
                                             </ul>
                                             <div className='button-getstarted flex'>
@@ -352,7 +356,7 @@ const Header = () => {
                                             </div>
 
 
-                                            <Drawer
+                                            <Drawer className='block lg:hidden'
                                                 anchor={'left'}
                                                 open={state['left']}
                                                 onClose={toggleDrawer('left', false)}
@@ -416,887 +420,3 @@ const Header = () => {
 }
 
 export default Header;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

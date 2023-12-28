@@ -8,8 +8,6 @@ import ServicesDetail from '../screens/ServicesDetail';
 import ContactUs from "../screens/ContactUs"
 import Terms from "../screens/Terms"
 import Privacy from "../screens/Privacy"
-
-import PrivacyPolicy from '../components/termsPrivacy/Privacy';
 import PdfComp from '../components/footer/PdfComp';
 
 const router = createBrowserRouter(
