@@ -1,4 +1,4 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ImageIcons from "../../common/ImageIcons";
 import { FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoFacebook } from "react-icons/bi";
@@ -49,21 +49,21 @@ const Contact = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            // Make a GET request
-            const response = await axios.get('http://localhost:8400/user/getlocation');
-            // Set the data in the state
-            setData(response.data.data);
-        } catch (error) {
-            // Set the error in the state
-            setError(error);
-            console.log("no new data",error)
-        }
-    };
-    
-    // Call the fetchData function
-    fetchData();
-}, []);
+            try {
+                // Make a GET request
+                const response = await axios.get('http://localhost:8400/user/getlocation');
+                // Set the data in the state
+                setData(response.data.data);
+            } catch (error) {
+                // Set the error in the state
+                setError(error);
+                console.log("no new data", error)
+            }
+        };
+
+        // Call the fetchData function
+        fetchData();
+    }, []);
 
 
 
@@ -121,7 +121,7 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <h4 className="text-center mb-2">Phone</h4>
-                                    <p className="text-center cursor-pointer" onClick={callPhoneNumber}>+91 75081 00021</p>
+                                    <p className="text-center cursor-pointer" onClick={callPhoneNumber}>{phoneNumber}</p>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <h4 className="text-center mb-2">Email</h4>
-                                    <p className="text-center cursor-pointer" onClick={openMail}>info@vpventuresindia.com</p>
+                                    <p className="text-center cursor-pointer" onClick={openMail}>{email}</p>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <h4 className="text-center mb-2">Location</h4>
-                                    <p className="text-center px-2">MAGNET Co-Work Plot No. 130, Industrial Area, Phase 1, Chandigarh</p>
+                                    <p className="text-center px-2">Plot No. B-70, Phase 7, SAS Nagar, Punjab 160055</p>
                                 </div>
                             </div>
                         </div>
@@ -166,27 +166,27 @@ const Contact = () => {
                                 <h2 className="mb-3">Get in touch</h2>
                                 <p className="mb-7 max-w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                                 <div className="social-media-links flex">
-                                    <Link to='https://www.facebook.com/myevpoint'>
+                                    <Link to='https://www.facebook.com/myevpoint' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-3 hover:scale-[1.1]">
                                             <BiLogoFacebook className='h-6 w-6 text-[#0B7132]' />
                                         </div>
                                     </Link>
-                                    <Link to='https://twitter.com/myevpoint'>
+                                    <Link to='https://twitter.com/myevpoint' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
                                             <FaTwitter className='h-5 w-6 text-[#0B7132]' />
                                         </div>
                                     </Link>
-                                    <Link to='https://in.pinterest.com/myevpoint/'>
+                                    <Link to='https://in.pinterest.com/myevpoint/' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
                                             <FaInstagram className='h-5 w-6 text-[#0B7132]' />
                                         </div>
                                     </Link>
-                                    <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'>
+                                    <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
                                             <FaYoutube className='h-5 w-6 text-[#0B7132]' />
                                         </div>
                                     </Link>
-                                    <Link to='https://www.linkedin.com/company/my-ev-point/'>
+                                    <Link to='https://www.linkedin.com/company/my-ev-point/' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1] h">
                                             <FaLinkedinIn className='h-5 w-6 text-[#0B7132]' />
                                         </div>
@@ -197,48 +197,60 @@ const Contact = () => {
                         <div className="md:w-1/2 max-md:w-full  max-md:px-4">
                             <div class="contact-us-form-info bg-white md:py-14 max-md:py-8 md:px-10 max-md:px-5">
                                 <form onSubmit={handleSubmit}>
-                                    <div class="mb-5">
+
+                                    <div class="relative mb-6">
+                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
+                                          absolute">Full name*</p>
                                         <input type="text"
                                             id="first_name"
-                                            className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4"
-                                            placeholder="Full name*"
+                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
                                             value={fullName}
                                             onChange={(e) => setfullName(e.target.value)}
                                             required
-                                        ></input>
+                                        />
                                     </div>
-                                    <div class="mb-5">
+
+
+                                    <div class="relative mb-6">
+                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
+                                          absolute">Email address*</p>
                                         <input type="email"
                                             id="email"
-                                            class="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4"
-                                            placeholder="Email address*"
+                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
                                             value={emailId}
                                             onChange={(e) => setEmailId(e.target.value)}
                                             required
-                                        ></input>
+                                        />
                                     </div>
-                                    <div class="mb-5">
+
+
+
+                                    <div class="relative mb-6">
+                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
+                                          absolute">Phone number*</p>
                                         <input type="number"
                                             id="phone"
-                                            className="bg-[#F1F8E8] text-gray-900 rounded-lg block w-full p-4"
-                                            placeholder="Phone number*"
+                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
                                             value={number}
                                             onChange={(e) => setNumber(e.target.value)}
                                             required
-                                        ></input>
+                                        />
                                     </div>
-                                    <div class="mb-5">
+
+
+                                    <div class="relative mb-6">
+                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
+                                          absolute">Enter message*</p>
                                         <textarea id="message"
                                             name="message"
                                             rows="4"
-                                            placeholder="Enter message*"
-                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4"
+                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
                                             value={message}
                                             onChange={(e) => setMessage(e.target.value)}
                                             required
-
-                                        ></textarea>
+                                        />
                                     </div>
+
                                     <button type="submit" className="bg-[#0B7132] text-white hover:bg-[#000] rounded-lg block py-4 px-7 duration-[400ms,700ms]">Submit Message</button>
                                 </form>
                             </div>
@@ -249,26 +261,26 @@ const Contact = () => {
             {/* End Contact Form Section */}
 
             <div className="discover-nearby-col">
-                                    <div className="discover-nearby-map-info">
-                                        <GoogleMap className="mappin-img-info m-auto"
-                                            apiKey="AIzaSyCkfOfMsbxXQJDddclN4qd_u6_l19bvpAc"
-                                            defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
-                                            defaultZoom={4}
-                                            mapMinHeight="400px"
-                                            onGoogleApiLoaded={onGoogleApiLoaded}
-                                            onChange={(map) => console.log('Map moved', map)}
-                                        >
-                                            {data.map(({ latitude, longitude, name }, index) => (
-                                                <Markers
-                                                    key={index}
-                                                    lat={latitude}
-                                                    lng={longitude}
-                                                    markerId={name}
-                                                />
-                                            ))}
-                                        </GoogleMap>
-                                    </div>
-                                </div>
+                <div className="discover-nearby-map-info">
+                    <GoogleMap className="mappin-img-info m-auto"
+                        apiKey="AIzaSyCkfOfMsbxXQJDddclN4qd_u6_l19bvpAc"
+                        defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
+                        defaultZoom={4}
+                        mapMinHeight="400px"
+                        onGoogleApiLoaded={onGoogleApiLoaded}
+                        onChange={(map) => console.log('Map moved', map)}
+                    >
+                        {data.map(({ latitude, longitude, name }, index) => (
+                            <Markers
+                                key={index}
+                                lat={latitude}
+                                lng={longitude}
+                                markerId={name}
+                            />
+                        ))}
+                    </GoogleMap>
+                </div>
+            </div>
         </>
     )
 }

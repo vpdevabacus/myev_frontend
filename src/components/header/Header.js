@@ -26,10 +26,6 @@ import { windowScroll } from "../../helpers/ScrollToTop";
 
 
 
-
-
-
-
 const Header = () => {
 
     const location = useLocation();
@@ -190,7 +186,9 @@ const Header = () => {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            const isIconClick = event.target.closest('.exclude-icon-class');
+
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target) && !isIconClick) {
                 setDropdownOpen(false);
             }
         };
@@ -240,14 +238,14 @@ const Header = () => {
                             {/* contact email and phone */}
                             <div className="flex text-[#fff] max-lg:mb-2">
                                 <div className='flex items-center'>
-                                    <FaRegEnvelope onClick={openMail} className='h-5 w-6 cursor-pointer' />
+                                    <FaRegEnvelope className='h-5 w-6 cursor-pointer' />
                                     <span onClick={openMail} className="ml-2 font-size-16 text-[#fff] cursor-pointer" >{email}</span>
                                 </div>
                                 <div className='flex items-center'>
                                     <span className='clr-ddd mx-4'>|</span>
                                 </div>
                                 <div className='flex items-center'>
-                                    <MdPhone onClick={callPhoneNumber} className='h-5 w-6 cursor-pointer' />
+                                    <MdPhone className='h-5 w-6 cursor-pointer' />
                                     <span onClick={callPhoneNumber} className="ml-2 font-size-16 text-[#fff] cursor-pointer" >{phoneNumber}</span>
                                 </div>
                             </div>
@@ -287,18 +285,18 @@ const Header = () => {
                                                         Our Service
                                                     </NavLink>
 
-                                                    <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" class="icon-down-menu inline ml-1 transition-transform duration-200 transform pointer"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" color='#000' cursor='pointer'></path></svg>
+                                                    <svg onClick={toggleDropdown} fill="currentColor" viewBox="0 0 20 20" className="icon-down-menu inline ml-1 transition-transform duration-200 transform pointer exclude-icon-class"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" color='#000' cursor='pointer'></path></svg>
 
-                                                    {dropdownOpen == true &&
+                                                    {dropdownOpen &&
 
-                                                        <div className='submenu-info'>
+                                                        <div className='submenu-info '>
                                                             <div ref={dropdownRef} className='submenu-links bg-white'>
                                                                 <ul className='submenu-link-menu'>
-                                                                    <li className='link-menu'>
-                                                                        <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff] hover:bg-[#0B7132]"} onClick={closeDropdown}>AC Charger Service</NavLink>
+                                                                    <li className={`${pathname === '/services/AC' ? "link-menu1" : "link-menu"}`}>
+                                                                        <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#fff] hover:bg-[#0B7132]"} onClick={closeDropdown}>AC Charger Service</NavLink>
                                                                     </li>
-                                                                    <li className='link-menu'>
-                                                                        <NavLink to="/services/DC" className={({ isActive }) => isActive ? "text-[#000]" : "hover:text-[#fff]  hover:bg-[#0B7132]"} onClick={closeDropdown}>DC Charger Service</NavLink>
+                                                                    <li className={`${pathname === '/services/DC' ? "link-menu1" : "link-menu"}`}>
+                                                                        <NavLink to="/services/DC" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#fff]  hover:bg-[#0B7132]"} onClick={closeDropdown}>DC Charger Service</NavLink>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -311,9 +309,9 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                             <div className='button-getstarted flex'>
-                                                <button className="font-size-16 text-white bg-[#0B7132] hover:bg-black rounded-lg ml-5 px-5 py-3 inline-flex items-center">
+                                                <NavLink to="/contact" className="font-size-16 text-white bg-[#0B7132] hover:bg-black rounded-lg ml-5 px-5 py-3 inline-flex items-center" onClick={windowScroll}>
                                                     Get Started
-                                                </button>
+                                                </NavLink>
                                             </div>
                                         </div>
                                         {/* End Navbar menu */}
