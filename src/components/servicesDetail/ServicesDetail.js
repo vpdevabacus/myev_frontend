@@ -7,13 +7,18 @@ import bgcoverimh1 from "../../assets/Images/bg-cover-imh1.png";
 import chaticon from "../../assets/Images/chat-icon.png";
 import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
 import services1 from "../../assets/Images/services1.png"
+import "../header/header.css"
 
 
 
 const ServicesDetail = () => {
+
+    const location = useLocation();
+    const { pathname } = location;
+
 
     const { type } = useParams();
     console.log(">>>", type)
@@ -43,10 +48,10 @@ const ServicesDetail = () => {
                                     </div>
                                     <div className='services-links-info'>
                                         <ul>
-                                            <li>
+                                            <li className={`${pathname === '/services/AC' && "bg-[#0B7132] text-white rounded-md"}`}>
                                                 <Link to='/services/AC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>AC Charger Service</Link>
                                             </li>
-                                            <li>
+                                            <li className={`${pathname === '/services/DC' && "bg-[#0B7132] text-white rounded-md"}`}>
                                                 <Link to='/services/DC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>DC Charger Service</Link>
                                             </li>
                                             {/* <li>
@@ -76,7 +81,7 @@ const ServicesDetail = () => {
                                                 <img src={chaticon} className='w-15 h-15 m-auto' />
                                             </div>
                                             <h4 className='mb-3 mt-4 text-white font-medium'>Do you need any help?</h4>
-                                            <p className='font-medium text-white'>+91 75081 00021</p>
+                                            <p className='font-medium text-white'>+91 95925 95975</p>
                                             <p className='font-medium text-white'>info@vpventuresindia.com</p>
                                         </div>
                                     </div>
@@ -88,17 +93,20 @@ const ServicesDetail = () => {
                                         <h4>Download</h4>
                                         <hr class="green-hr-line" />
                                     </div>
-                                    <div className='download-txt-info'>
-                                        <h5 className='text-lg font-medium'>Download our Brochures</h5>
-                                        <p><Link
-                                        className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
-                                        to={brocher}
-                                        download="myEV_Point"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <div className='flex flex-row'>
+                                        <img src={pdficon1} className='w-12 h-12 mr-2' />
+                                        <div className='download-txt-info'>
+                                            <h5 className='text-lg font-medium'>Download our Brochures</h5>
+                                            <p><Link
+                                                className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
+                                                to={brocher}
+                                                download="myEV_Point"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
 
 
-                                      >Download</Link></p>
+                                            >Download</Link></p>
+                                        </div>
                                     </div>
                                 </div>
                                 {/* <div className='download-info flex gap-4'>

@@ -23,7 +23,7 @@ const Testimonials = () => {
                     <div className="testimonials_titel text-center">
                         <h4 className="text-[#0B7132] font-medium uppercase	mb-[15px]">Testimonials</h4>
 
-                        <h2>What Client's Say about</h2>
+                        <h2>What Client's Say About</h2>
                     </div>
                     <div className="max-w-[1100px] m-auto">
                         <Slider className='mt-[40px] md:mt-[50px] px-[0] md:px-[80px] bg-top bg-auto pt-[33px] bg-no-repeat' {...settings} style={{ backgroundImage: `url(${quotesIcon})` }}>

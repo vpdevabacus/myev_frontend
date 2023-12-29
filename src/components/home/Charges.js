@@ -101,17 +101,17 @@ const Charges = () => {
                     <span className="font-sans font-normal">₹</span> 1,18,000/-
                   </h2>
                   <p className="text-[#676767] text-[20px]">
-                    Amet minim mollit no duis deser ulamco sit enim aliqua.
+                    Explore our professional installation services to ensure a seamless and safe home charging setup.
                   </p>
                   <div className="p-[20px] my-[30px] border border-solid border-[#E5E5E5] rounded-3xl">
                     {features.map((item) => (
                       <FeatureList key={item.id} item={item} />
                     ))}
                   </div>
-                  <Link to ="/contact">
-                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#000] text-white rounded-lg">
-                    Sign Up
-                  </button>
+                  <Link to="/contact">
+                    <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#000] text-white rounded-lg">
+                      Sign Up
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -122,17 +122,17 @@ const Charges = () => {
                     <span className="font-sans font-normal">₹</span> 2,10,000/-
                   </h2>
                   <p className="text-white text-[20px]">
-                    Amet minim mollit no duis deser ulamco sit enim aliqua.
+                    Find public charging stations near popular destinations, highways, and key locations.
                   </p>
                   <div className="p-[20px] my-[30px] border border-solid border-[#E5E5E5] rounded-3xl">
                     {features1.map((item) => (
                       <FeatureList1 key={item.id} item={item} />
                     ))}
                   </div>
-                  <Link to ="/contact">
-                  <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#fff] hover:text-[#0B7132] text-white rounded-lg">
-                    Sign Up
-                  </button>
+                  <Link to="/contact">
+                    <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#fff] hover:text-[#0B7132] text-white rounded-lg">
+                      Sign Up
+                    </button>
                   </Link>
                 </div>
               </div>

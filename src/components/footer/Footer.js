@@ -4,7 +4,8 @@ import ImageIcons from '../../common/ImageIcons'
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaRegEnvelope, FaTwitter, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdLocationPin, MdPhone } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { windowScroll } from '../../helpers/ScrollToTop';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
 import footerleftbg from "../../assets/Images/footer-left-bg.png";
 import footerrightbg from "../../assets/Images/footer-right-bg.png";
@@ -22,20 +23,40 @@ const style = {
 };
 
 const Footer = () => {
+
+    const location = useLocation();
+    const { pathname } = location;
+
     const currentYear = new Date().getFullYear();
+
+    const phoneNumber = '+919592595975';
+    const phoneLink = `tel:${phoneNumber}`;
+
+    const callPhoneNumber = () => {
+        window.location.href = phoneLink;
+    };
+
+
+    const email = 'info@vpventuresindia.com';
+    const mailtoLink = `mailto:${email}`;
+
+    const openMail = () => {
+        window.open(mailtoLink);
+    };
+
     return (
         <>
             {/* Footer Section Start */}
             <footer className="w-full bg-[#212226]">
                 <div className="footer-sec-info">
-                    <div className="footer-top-info max-sm:pb-6 sm:pb-2 md:pb-2 lg:pb-20" style={{ backgroundImage: `url(${footerleftbg}), url(${footerrightbg})`}}>
+                    <div className="footer-top-info max-sm:pb-6 sm:pb-2 md:pb-2 lg:pb-20" style={{ backgroundImage: `url(${footerleftbg}), url(${footerrightbg})` }}>
                         <div className="sm:container lg:container m-auto">
                             <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 px-2 md:1 max-lg:gap-3 lg:gap-2 xl:gap-4">
                                 <div className="footer-col-first max-md:mb-6 max-lg:mb-8">
-                                    <Link to ='/'>
-                                    <div className='site-logo-footer max-lg:mb-3 lg:mb-5'>
-                                        <img src={ImageIcons.footer_myEV_logo} className='footer-logo-size lg:h-20 lg:w-44' />
-                                    </div>
+                                    <Link to='/'>
+                                        <div className='site-logo-footer max-lg:mb-3 lg:mb-5'>
+                                            <img src={ImageIcons.footer_myEV_logo} className='footer-logo-size lg:h-20 lg:w-44' />
+                                        </div>
                                     </Link>
                                     <div className='max-lg:mb-5 lg:mb-9'>
                                         <p className='text-white'>It’s your chance to own an EV Charging Station (Without having to manage it)</p>
@@ -65,15 +86,15 @@ const Footer = () => {
                                     </div>
                                     <ul className='footer-links-info'>
                                         <li className='mb-2'>
-                                            <Link to='/services/ac_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <NavLink to='/services/AC' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">AC Charger Services</p>
-                                            </Link>
+                                                <p className={`${pathname === '/services/AC' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>AC Charger Services</p>
+                                            </NavLink>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/services/DC' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">DC Charger Services</p>
+                                                <p className={`${pathname === '/services/DC' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>DC Charger Services</p>
                                             </Link>
                                         </li>
                                         {/* <li className='mb-2'>
@@ -103,29 +124,29 @@ const Footer = () => {
                                     </div>
                                     <ul className='footer-links-info list-none'>
                                         <li className='mb-2'>
-                                            <Link to='/privacy_policy' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/privacy_policy' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Privacy Policy</p>
+                                                <p className={`${pathname === '/privacy_policy' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>Privacy Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/terms&conditions' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/terms&conditions' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Terms & Conditions</p>
+                                                <p className={`${pathname === '/terms&conditions' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Terms & Conditions</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                        <Link
-                                        className="flex items-center gap-2 cursor-pointer "
-                                        to={brocher}
-                                        download="myEV_Point"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                            <Link
+                                                className="flex items-center gap-2 cursor-pointer  "
+                                                to={brocher}
+                                                download="myEV_Point"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
 
 
-                                     >
+                                            >
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Download our Brocher</p>
+                                                <p className="text-white hover:text-[#0B7132]">Download our Brocher</p>
                                             </Link>
                                         </li>
                                         {/* <li className='mb-2'>
@@ -151,15 +172,15 @@ const Footer = () => {
                                         <li className="flex mb-4">
                                             <MdLocationPin className='max-md:h-7 max-md:w-7 max-md:me-1 md:h-10 md:w-10 md:me-2 xl:h-10 xl:w-10 xl:me-2 text-[#0B7132]' />
                                             <p className="text-white">Plot No. B-70, Phase 7,
-                                            SAS Nagar, Punjab 160055</p>
+                                                SAS Nagar, Punjab 160055</p>
                                         </li>
                                         <li className="flex mb-4">
                                             <FaRegEnvelope className='max-md:h-5 max-md:w-5 max-md:me-3 md:h-7 md:w-7 md:me-3 xl:h-6 xl:w-6 xl:me-4 text-[#0B7132]' />
-                                            <p className="text-white">info@vpventuresindia.com</p>
+                                            <p onClick={openMail} className="text-white">{email}</p>
                                         </li>
                                         <li className="flex">
                                             <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132]' />
-                                            <p className="text-white">+91-75081-00021</p>
+                                            <p nClick={callPhoneNumber} className="text-white">{phoneNumber}</p>
                                         </li>
                                     </ul>
                                 </div>
