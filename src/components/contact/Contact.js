@@ -164,7 +164,7 @@ const Contact = () => {
                             <div className="content-form-txt">
                                 <h4 className="text-[#0B7132] font-medium">Send a message</h4>
                                 <h2 className="mb-3">Get in touch</h2>
-                                <p className="mb-7 max-w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <p className="mb-7 max-w-[500px]">Stay ahead of the curve with our state-of-the-art charging infrastructure. We're committed to embracing the latest in EV charging technology to keep you plugged in efficiently.</p>
                                 <div className="social-media-links flex">
                                     <Link to='https://www.facebook.com/myevpoint' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-3 hover:scale-[1.1]">
