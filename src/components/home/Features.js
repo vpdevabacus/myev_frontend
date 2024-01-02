@@ -1,100 +1,160 @@
 import React from "react";
 import ImageIcons from "../../common/ImageIcons";
+import bgimgservices from "../../assets/Images/bg-img-services.png";
+import bgimgmachine from "../../assets/Images/bg-img-machine.png";
 
-const backgroundImagePath = ImageIcons.feature_bg;
+const backgroundImagePath = ImageIcons.blueBg;
 
 const style = {
-    backgroundImage: `url('${backgroundImagePath}')`,
-    height: '950px',
+  backgroundImage: `url('${backgroundImagePath}')`,
 };
 
 const Features = () => {
+  const leftItems = [
+    {
+      id: "01",
+      text: "Maximize Your Earnings",
+      description: "Earn up to ₹4 Per Unit with Our Exclusive Rewards Program!",
+    },
+    {
+      id: "02",
+      text: "Top Income Opportunities",
+      description: "The Ultimate Passive Income Opportunity Awaits You!",
+    },
+    {
+      id: "03",
+      text: "Effortless Earnings",
+      description: "Automated Monthly Payouts and Monitoring",
+    },
+  ];
+  const rightItems = [
+    {
+      id: "04",
+      text: "Cost Reduction Strategies",
+      description: "Lower Maintenance cost",
+    },
+    {
+      id: "05",
+      text: "Eco-Friendly Finances",
+      description: "Going Green and Growing Wealth.",
+    },
+    {
+      id: "06",
+      text: "Smooth Sailing",
+      description: "No operational headaches, just smooth sailing.",
+    },
+  ];
 
-    const leftItems = [
-        {
-            id: '01',
-            text: "Maximize Your Earnings",
-            description: "Earn up to ₹4 Per Unit with Our Exclusive Rewards Program!",
-        },
-        {
-            id: '02',
-            text: "Top Income Opportunities",
-            description: "The Ultimate Passive Income Opportunity Awaits You!",
-
-        },
-        {
-            id: '03',
-            text: "Effortless Earnings",
-            description: "Automated Monthly Payouts and Monitoring",
-
-        },
-
-    ]
-    const rightItems = [
-        {
-            id: '04',
-            text: "Cost Reduction Strategies",
-            description: "Lower Maintenance cost",
-        },
-        {
-            id: '05',
-            text: "Eco-Friendly Finances",
-            description: "Going Green and Growing Wealth.",
-
-        },
-        {
-            id: '06',
-            text: "Smooth Sailing",
-            description: "No operational headaches, just smooth sailing.",
-
-        },
-
-    ]
-
-    const ListItem = ({ item }) => (
-        <div className='my-5 md:my-12 flex flex-col sm:d-block '>
-            <div className=" flex flex-row items-center justify-start ">
-                <div className="rounded-full w-12 h-12 md:h-16 md:w-16 bg-[#fff] py-3 md:py-4" >
-                    <p className=" text-black text-center font-bold text-base sm:text-lg md:text-xl 2xl:text-2xl ">
-                        {item.id}
-                    </p>
-                </div>
-                <p className='ml-4 text-base sm:text-lg md:text-xl 2xl:text-3xl'>{item.text}</p>
-
-            </div>
-            <div className=' mt-2'>
-                <p className=" text-white  font-normal text-sm sm:text-base md:text-lg 2xl:text-2xl text-left whitespace-wrap">
-                    {item.description}
-                </p>
-            </div>
+  const ListItem = ({ item }) => (
+    <div className="my-5 md:my-12 flex flex-col sm:d-block ">
+      <div className=" flex flex-row items-center justify-start ">
+        <div className="rounded-full w-12 h-12 md:h-16 md:w-16 bg-[#fff] py-3 md:py-4">
+          <p className=" text-black text-center font-bold text-base sm:text-lg md:text-xl 2xl:text-2xl ">
+            {item.id}
+          </p>
         </div>
-    );
-    const ListItem1 = ({ item }) => (
-        <div className='my-5 md:my-12 flex flex-col '>
-            <div className=" flex flex-row items-center justify-start ">
-                <div className="rounded-full w-12 h-12 md:h-16 md:w-16 bg-[#fff] py-3 md:py-4" >
-                    <p className=" text-black text-center font-bold text-base sm:text-lg  md:text-xl 2xl:text-2xl ">
-                        {item.id}
-                    </p>
-                </div>
-                <p className='ml-4 text-base sm:text-lg md:text-xl 2xl:text-3xl'>{item.text}</p>
-
-            </div>
-
-            <div className=' mt-2  '>
-                <p className=" text-white  font-normal text-sm sm:text-base md:text-lg 2xl:text-2xl text-start whitespace-wrap">
-                    {item.description}
-                </p>
-            </div>
-
+        <p className="ml-4 text-base sm:text-lg md:text-xl 2xl:text-3xl">
+          {item.text}
+        </p>
+      </div>
+      <div className=" mt-2">
+        <p className=" text-white  font-normal text-sm sm:text-base md:text-lg 2xl:text-2xl text-left whitespace-wrap">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  );
+  const ListItem1 = ({ item }) => (
+    <div className="my-5 md:my-12 flex flex-col ">
+      <div className=" flex flex-row items-center justify-start ">
+        <div className="rounded-full w-12 h-12 md:h-16 md:w-16 bg-[#fff] py-3 md:py-4">
+          <p className=" text-black text-center font-bold text-base sm:text-lg  md:text-xl 2xl:text-2xl ">
+            {item.id}
+          </p>
         </div>
-    );
+        <p className="ml-4 text-base sm:text-lg md:text-xl 2xl:text-3xl">
+          {item.text}
+        </p>
+      </div>
 
+      <div className=" mt-2  ">
+        <p className=" text-white  font-normal text-sm sm:text-base md:text-lg 2xl:text-2xl text-start whitespace-wrap">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  );
 
+  return (
+    <>
+      {/* Service Section Start */}
+      <div className="features-section md:py-20 max-md:py-[50px] relative bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${bgimgservices})`}} >
+        <div className="container mx-auto px-2">
+          <h2 className="text-center md:pb-12 max-md:pb-8 text-[#fff]">Excellent And Best Services</h2>
+          <div className="features-listing-info">
+            <div className="flex md:items-center gap-5 max-md:flex-col">
+              <div className="md:w-1/3 max-md:order-1">
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">01</div>
+                        <h4 className="text-[#fff]">Maximize Your Earnings</h4>
+                      </div>
+                      <p className="text-[#fff]">Earn up to ₹ 4 /unit</p>
+                  </div>
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">02</div>
+                        <h4 className="text-[#fff]">Top Income Opportunities</h4>
+                      </div>
+                      <p className="text-[#fff]">The Ultimate Passive Income Opportunity Awaits You!</p>
+                  </div>
+                  <div className="left-icon-box-info md:mb-8 max-md:mb-[10px]">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">03</div>
+                        <h4 className="text-[#fff]">Effortless Earnings</h4>
+                      </div>
+                      <p className="text-[#fff]">Automated Monthly Payouts and Monitoring</p>
+                  </div>
+              </div>
+              <div className="md:w-1/3 max-md:order-3">
+                <div className="mid-img-info text-center bg-no-repeat bg-contain bg-center" style={{ backgroundImage: `url(${bgimgmachine})`}}> 
+                  <img src={ImageIcons.EVCharging} />
+                </div>
+              </div>
+              <div className="md:w-1/3 max-md:order-2">
+                <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">04</div>
+                        <h4 className="text-[#fff]">Cost Reduction Strategies</h4>
+                      </div>
+                      <p className="text-[#fff]">Lower Maintenance cost</p>
+                  </div>
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">05</div>
+                        <h4 className="text-[#fff]">Eco-Friendly Finances</h4>
+                      </div>
+                      <p className="text-[#fff]">Going Green and Growing Wealth.</p>
+                  </div>
+                  <div className="left-icon-box-info mb-8">
+                      <div className="left-icon-h4-info flex items-center gap-2 mb-3">
+                        <div className="text-xl font-medium flex items-center rounded-full justify-center text-[#000] bg-[#fff] w-11 h-11">06</div>
+                        <h4 className="text-[#fff]">Smooth Sailing</h4>
+                      </div>
+                      <p className="text-[#fff]">No operational headaches, just smooth sailing.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Service Section End */}
+
+      {/* <div className="mt-20">
     return (
         <>
+            {/* <div className="mt-20">
 
-            <div className="mt-20">
                 <section>
                     <section className="relative ">
                         <div className="bg-cover " style={style}>
@@ -126,15 +186,11 @@ const Features = () => {
                                 </div>
                             </div>
                         </div>
-
-
                     </section>
                 </section>
-            </div>
-
-        </>
-    )
-
-}
+            </div> */}
+    </>
+  );
+};
 
 export default Features;

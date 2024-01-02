@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import "./Footer.css";
 import ImageIcons from '../../common/ImageIcons'
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaRegEnvelope, FaTwitter, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 import { MdLocationPin, MdPhone } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { windowScroll } from '../../helpers/ScrollToTop';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
+import footerleftbg from "../../assets/Images/footer-left-bg.png";
+import footerrightbg from "../../assets/Images/footer-right-bg.png";
 
 import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -18,165 +22,182 @@ const style = {
     backgroundImage: `url('${backgroundImagePath}')`,
 };
 
-
-
-
-
 const Footer = () => {
+
+    const location = useLocation();
+    const { pathname } = location;
 
     const currentYear = new Date().getFullYear();
 
-    // const handlePdfShow = () => {
+    const phoneNumber = '+919592595975';
+    const phoneLink = `tel:${phoneNumber}`;
 
-    //     window.open(`http://localhost:3000/myEV_Point_brocher`, '_blank', 'noreferrer');
+    const callPhoneNumber = () => {
+        window.location.href = phoneLink;
+    };
 
 
-    // };
+    const email = 'info@vpventuresindia.com';
+    const mailtoLink = `mailto:${email}`;
+
+    const openMail = () => {
+        window.open(mailtoLink);
+    };
 
     return (
         <>
-
-
-            {/* <div className=" bg-[#0B7132] px-6 py-12  ">
-                <div className="container mx-auto  ">
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-y-10 md:grid-cols-6 flex items-center  ">
-                        <div className="sm:col-span-2 flex text-center">
-                            <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Find Our near Branches</h1>
-                            <img src={ImageIcons.earth} className='h-10 w-10 ml-2 hidden sm:block' />
-                        </div>
-                        <div className="sm:col-span-2 text-left sm:text-center ">
-                            <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">Call Us On</h1>
-                            <h1 className="max-w-lg text-xl  font-semibold tracking-tight text-white xl:text-2xl dark:text-white">+91 75081 00021</h1>
-                        </div>
-                        <div className="sm:col-span-2 flex flex-col text-left sm:flex-row sm:text-end justify-end ">
-                            <img src={ImageIcons.clock} className='h-10 w-10 mr-2 hidden sm:block' />
-                            <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-white ">24/7 Emergency Services</h1>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
-
-            <footer className="w-full text-gray-700 bg-[#212226] body-font">
-                <div
-                    className="container flex flex-col flex-wrap px-5 pb-20 pt-12 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap ">
-                    <div className="flex-shrink-0 w-80 mx-auto text-center  md:text-left md:mb-10 " >
-                        <div className="flex items-center font-medium  title-font">
-                            <img src={ImageIcons.footer_myEV_logo} className='h-12 w-24 lg:h-20 lg:w-44 ' />
-                        </div>
-                        <p className="mt-6 text-lg text-white font-medium  ">It’s your chance to own an EV </p>
-                        <p className="mt-1 text-lg text-white font-medium">Charging Station (Without having to manage it)</p>
-                        <div className="mt-4 inline-flex justify-center mt-2 sm:ml-auto sm:mt-3 sm:justify-start">
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
-                                <Link to='https://www.facebook.com/myevpoint'><BiLogoFacebook className='h-5 w-6 text-white' /></Link>
-                            </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
-                                <Link to='https://twitter.com/myevpoint'><FaTwitter className='h-5 w-6 text-white' /></Link>
-
-                            </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
-                                <Link to='https://in.pinterest.com/myevpoint/'>
-                                    <FaPinterest className='h-5 w-6 text-white ' />
-                                </Link>
-
-                            </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
-                                <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw'><FaYoutube className='h-5 w-6 text-white' /></Link>
-
-                            </div>
-                            <div className="w-12 h-12 mr-2 rounded-full bg-[#4D4E51] px-3 py-3.5 hover:scale-[1.1] hover:bg-[#0B7132]">
-                                <Link to='https://www.linkedin.com/company/my-ev-point/'><FaLinkedinIn className='h-5 w-6 text-white' /></Link>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap flex-grow mt-10 -mb-10  md:pl-20 md:mt-0 md:text-left">
-                        <div className="w-full px-4 lg:w-1/3 md:w-1/2">
-                            <h2 className="mb-3  text-2xl font-medium text-white tracking-widest title-font">Our Services</h2>
-                            <div className="h-0.5 w-16 bg-[#0B7132]"></div>
-                            <nav className="mb-10 list-none mt-12">
-                                <Link to='/services/ac_charger_services' className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-4 w-4 mr-2 mt-1' />
-                                    <p className="text-white cursor-pointer hover:text-gray-500 text-base font-medium tracking-wider">AC Charger Services</p>
-                                </Link>
-                                <Link to='/services/dc_charger_services' className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-4 w-4 mr-2 mt-1' />
-                                    <p className="text-white cursor-pointer hover:text-gray-500 text-base font-medium tracking-wider">DC Charger Services</p>
-                                </Link>
-                            </nav>
-                        </div>
-                        <div className="w-full px-4 lg:w-1/3 md:w-1/2">
-                            <h2 className="mb-3  text-2xl font-medium text-white tracking-widest title-font">Useful Links</h2>
-                            <div className="h-0.5 w-16 bg-[#0B7132]"></div>
-                            <nav className="mb-10 list-none mt-12">
-                                <li className=" flex ">
-
-                                    <Link
-                                        className=" flex "
-                                        to={brocher}
-                                        download="myEV_Point"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-
-
-                                    >
-                                        <img src={ImageIcons.Polygon} className='h-4 w-4 mr-2 mt-1' />
-                                        <p className="text-white cursor-pointer hover:text-gray-500 text-base font-medium tracking-wider">Download our Brochures</p>
+            {/* Footer Section Start */}
+            <footer className="w-full bg-[#212226]">
+                <div className="footer-sec-info">
+                    <div className="footer-top-info max-sm:pb-6 sm:pb-2 md:pb-2 lg:pb-20" style={{ backgroundImage: `url(${footerleftbg}), url(${footerrightbg})` }}>
+                        <div className="sm:container lg:container m-auto">
+                            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 px-2 md:1 max-lg:gap-3 lg:gap-2 xl:gap-4">
+                                <div className="footer-col-first max-md:mb-6 max-lg:mb-8">
+                                    <Link to='/'>
+                                        <div className='site-logo-footer max-lg:mb-3 lg:mb-5'>
+                                            <img src={ImageIcons.footer_myEV_logo} className='footer-logo-size lg:h-20 lg:w-44' />
+                                        </div>
                                     </Link>
+                                    <div className='max-lg:mb-5 lg:mb-9'>
+                                        <p className='text-white'>It’s your chance to own an EV Charging Station (Without having to manage it)</p>
+                                    </div>
+                                    <div className="social-links-info flex">
+                                        <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
+                                            <Link to='https://www.facebook.com/myevpoint' target="_blank"><BiLogoFacebook className='h-10 w-10 p-2 text-white' /></Link>
+                                        </div>
+                                        <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
+                                            <Link to='https://twitter.com/myevpoint' target="_blank"><FaTwitter className='h-10 w-10 p-3 text-white' /></Link>
+                                        </div>
+                                        <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
+                                            <Link to='https://in.pinterest.com/myevpoint/' target="_blank"><FaPinterest className='h-10 w-10 p-3 text-white' /></Link>
+                                        </div>
+                                        <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
+                                            <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw ' target="_blank"><FaYoutube className='h-12 w-12 p-3 text-white' /></Link>
+                                        </div>
+                                        <div className="socila-link-info flex justify-center items-center w-10 h-10 mr-2 rounded-full hover:scale-[1.1] hover:bg-[#0B7132]">
+                                            <Link to='https://www.linkedin.com/company/my-ev-point/' target="_blank"><FaLinkedinIn className='h-12 w-12 p-3 text-white' /></Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="footer-col-second max-md:mb-6 max-lg:mb-8">
+                                    <div className='max-lg:mb-3 lg:mb-10 pb-2'>
+                                        <h4 className='text-white font-medium mb-2'>Our Services</h4>
+                                        <hr className='green-hr-line' />
+                                    </div>
+                                    <ul className='footer-links-info'>
+                                        <li className='mb-2'>
+                                            <NavLink to='/services/AC' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className={`${pathname === '/services/AC' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>AC Charger Services</p>
+                                            </NavLink>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link to='/services/DC' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className={`${pathname === '/services/DC' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>DC Charger Services</p>
+                                            </Link>
+                                        </li>
+                                        {/* <li className='mb-2'>
+                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className="text-white">EV Drivers Services</p>
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className="text-white">Charge Point Services</p>
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link to='/services/dc_charger_services' className="flex items-center gap-2 cursor-pointer">
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className="text-white">Home Charging</p>
+                                            </Link>
+                                        </li> */}
+                                    </ul>
+                                </div>
+                                <div className="footer-col-three max-md:mb-6 max-lg:mb-8">
+                                    <div className='max-lg:mb-3 lg:mb-10 pb-2'>
+                                        <h4 className='text-white font-medium mb-2'>Useful Links</h4>
+                                        <hr className='green-hr-line' />
+                                    </div>
+                                    <ul className='footer-links-info list-none'>
+                                        <li className='mb-2'>
+                                            <Link to='/privacy_policy' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className={`${pathname === '/privacy_policy' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>Privacy Policy</p>
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link to='/terms&conditions' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className={`${pathname === '/terms&conditions' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Terms & Conditions</p>
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link
+                                                className="flex items-center gap-2 cursor-pointer  "
+                                                to={brocher}
+                                                download="myEV_Point"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
 
-                                </li>
-                                <Link to='/terms&conditions' className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-4 w-4 mr-2 mt-1' />
-                                    <p className="text-white cursor-pointer hover:text-gray-500 text-base font-medium tracking-wider">Terms & Conditions</p>
-                                </Link>
-                                <Link to='/privacy_policy' className="mt-3 flex ">
-                                    <img src={ImageIcons.Polygon} className='h-4 w-4 mr-2 mt-1' />
-                                    <p className="text-white cursor-pointer hover:text-gray-500 text-base font-medium tracking-wider">Privacy Policy</p>
-                                </Link>
 
-
-                                {/* {showPdf === true &&
-                                    <PdfComp pdfFile={showPdf} />
-                                } */}
-                            </nav>
-
-
-                        </div>
-
-
-                        <div className="w-full px-4 lg:w-1/3 md:w-1/2">
-                            <h2 className="mb-3  text-2xl font-medium text-white tracking-widest title-font">Contact Info</h2>
-                            <div className="h-0.5 w-16 bg-[#0B7132]"></div>
-                            <nav className="mb-10 mt-12 list-none">
-                                <li className="mt-3 flex ">
-                                    <MdLocationPin className='h-10 w-10 mr-3 text-[#0B7132]' />
-                                    <p className="text-white  text-base font-medium tracking-wider">Plot No. B-70, Phase 7,
-
-                                        SAS Nagar, Punjab 160055</p>
-                                </li>
-                                <li className="mt-4 flex ">
-                                    <FaRegEnvelope className='h-5 w-5 mr-3 ml-1 text-[#0B7132]' />
-                                    <p className="text-white  text-base font-medium tracking-wider">info@vpventuresindia.com</p>
-                                </li>
-                                <li className="mt-4 flex ">
-                                    <MdPhone className='h-6 w-6 mr-3 ml-1 text-[#0B7132]' />
-                                    <p className="text-white text-base font-medium tracking-wider">+91 95925-95975</p>
-                                </li>
-                            </nav>
+                                            >
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className="text-white hover:text-[#0B7132]">Download our Brocher</p>
+                                            </Link>
+                                        </li>
+                                        {/* <li className='mb-2'>
+                                            <Link to='#' className="flex items-center gap-2 cursor-pointer">
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className="text-white">Charge Point Services</p>
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link to='#' className="flex items-center gap-2 cursor-pointer">
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className="text-white">24 Hour Support</p>
+                                            </Link>
+                                        </li> */}
+                                    </ul>
+                                </div>
+                                <div className="footer-col-four max-md:mb-6 max-lg:mb-8">
+                                    <div className='max-lg:mb-3 lg:mb-10 pb-2'>
+                                        <h4 className='text-white font-medium mb-2'>Contact Info</h4>
+                                        <hr className='green-hr-line' />
+                                    </div>
+                                    <ul className="list-none">
+                                        <li className="flex mb-4">
+                                            <MdLocationPin className='max-md:h-7 max-md:w-7 max-md:me-1 md:h-10 md:w-10 md:me-2 xl:h-10 xl:w-10 xl:me-2 text-[#0B7132]' />
+                                            <p className="text-white">Plot No. B-70, Phase 7,
+                                                SAS Nagar, Punjab 160055</p>
+                                        </li>
+                                        <li className="flex mb-4">
+                                            <FaRegEnvelope className='max-md:h-5 max-md:w-5 max-md:me-3 md:h-7 md:w-7 md:me-3 xl:h-6 xl:w-6 xl:me-4 text-[#0B7132]' />
+                                            <p onClick={openMail} className="text-white">{email}</p>
+                                        </li>
+                                        <li className="flex">
+                                            <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132]' />
+                                            <p nClick={callPhoneNumber} className="text-white">{phoneNumber}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="bg-[#212226] border-t border-[#ffffff] text-center">
-                    <div className="container px-5 py-4 mx-auto">
-                        <p className="text-sm text-white capitalize xl:text-center">Copyright {currentYear}  by VP Clean Energy Pvt. Ltd. All Right Reserved.</p>
+                    {/* Copyright Content */}
+                    <div className="footer-copyright-info bg-[#212226]">
+                        <div className="container px-2 max-md:py-4 md:py-6 mx-auto">
+                            <p className="text-white text-center">Copyright {currentYear}  by VP Clean Energy Pvt. Ltd. All Right Reserved.</p>
+                        </div>
                     </div>
                 </div>
             </footer>
-
-
+            {/* Footer Section End */}
         </>
     )
-
 }
 
 export default Footer;

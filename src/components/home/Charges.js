@@ -1,182 +1,147 @@
-import React from 'react';
-import ImageIcons from '../../common/ImageIcons';
+import React from "react";
+import ImageIcons from "../../common/ImageIcons";
+import aboutChargingBg from "../../assets/Images/about_charging_bg.svg";
+import { Link } from 'react-router-dom'
+
 
 const backgroundImagePath = ImageIcons.shape1;
 const backgroundImagePath1 = ImageIcons.shape2;
+const backgroundImagePath2 = ImageIcons.EVCharging1;
 
 const style = {
-    backgroundImage: `url('${backgroundImagePath}')`,
-    height: '646px',
-
+  backgroundImage: `url('${backgroundImagePath}')`,
+  height: "100%",
 };
 
 const style1 = {
-    backgroundImage: `url('${backgroundImagePath1}')`,
-    height: '646px',
-
+  backgroundImage: `url('${backgroundImagePath1}')`,
+  height: "100%",
+};
+const style2 = {
+  backgroundImage: `url('${backgroundImagePath2}')`,
+  height: "100%",
+  background: "cover",
 };
 
 const Charges = () => {
+  const features = [
+    {
+      id: "01",
+      text: "Charging station for home",
+    },
+    {
+      id: "02",
+      text: "Charge point setting",
+    },
+    {
+      id: "03",
+      text: "Free Support",
+    },
+    {
+      id: "04",
+      text: "1 year hardware warranty",
+    },
+  ];
 
-    const features = [
-        {
-            id: '01',
-            text: "Access advanced charging infrastructure during your work hours.",
-        },
-        {
-            id: '02',
-            text: "Blends seamlessly with office environments.",
+  const features1 = [
+    {
+      id: "01",
+      text: "Public charging station",
+    },
+    {
+      id: "02",
+      text: "Charge point setting",
+    },
+    {
+      id: "03",
+      text: "Free Support",
+    },
+    {
+      id: "04",
+      text: "1 year hardware warranty",
+    },
+  ];
 
-        },
-        {
-            id: '03',
-            text: "Fast and efficient charging to keep you on the move.",
+  const FeatureList = ({ item }) => (
+    <div className="my-[5px] flex flex-col ">
+      <div className=" flex flex-row items-center justify-start">
+        <img src={ImageIcons.Polygon} />
+        <p className="ml-[10px] text-[#6E6E6E]">{item.text}</p>
+      </div>
+    </div>
+  );
+  const FeatureList1 = ({ item }) => (
+    <div className="my-[5px] flex flex-col ">
+      <div className=" flex flex-row items-center justify-start">
+        <img src={ImageIcons.Polygon} />
+        <p className="ml-[10px] text-[#fff]">{item.text}</p>
+      </div>
+    </div>
+  );
 
-        },
-        {
-            id: '04',
-            text: "Schedule charging sessions to align with your workday activities.",
-
-        },
-
-
-
-    ]
-
-    const features1 = [
-        {
-            id: '01',
-            text: "Conveniently located in popular malls and hotels.",
-        },
-        {
-            id: '02',
-            text: "Fast and efficient charging for reduced wait times.",
-
-        },
-        {
-            id: '03',
-            text: "Special packages combining accommodation and charging.",
-
-        },
-        {
-            id: '04',
-            text: "Hotels dedicated to eco-friendly guest options.",
-
-        },
-
-
-
-    ]
-
-    const FeatureList = ({ item }) => (
-        <div className='my-1 flex flex-col '>
-            <div className=" flex flex-row items-center justify-start">
-                <img src={ImageIcons.Polygon} />
-                <p className='ml-4 text-lg text-[#6E6E6E]'>{item.text}</p>
-
+  return (
+    <>
+      <section className="md:py-[90px] py-[50px] bg-[#F1F8E8]">
+        <div className="container">
+          <div className="flex lg:flex-row flex-col xl:gap-[30px] lg:gap-[20px]">
+            <div className="lg:w-[39%] md:w-[100%] lg:mb-[0] md:mb-[360px] max-md:mb-[260px]">
+              <div className="flex flex-row place-items-center">
+                <h4 className="font-medium relative text-[#0B7132] font-medium mb-[10px] green-line-heading">ABOUT ECHARGE </h4>
+              </div>
+              <h2 className="font-semibold text-[#000] mb-[22px]">Price of Our Services on The Road</h2>
+              <p className="max-w-xl text-xl font-normal text-[#000] mt-6"> An EV charging station is a device that provides electric energy for recharging electric vehicles, enabling the transfer of electrical energy from the grid to the vehicle's battery pack.</p>
+              <img src={ImageIcons.filling_machine} className="absolute left-0 z-10 w-[340px] xl:w-[500px] lg:w-[380px] md:w-[500px] sm:w-[400px] mt-[15px]" />
+              <img className="absolute lg:left-[34%] lg:right-unset right-[30px] mt-[50px] xl:w-[280px] md:w-[250px] sm:w-[200px] w-[200px] mg:mt-[15px] md:mt-[70px] mt-[150px] " src={aboutChargingBg} />
             </div>
-
-        </div>
-    );
-    const FeatureList1 = ({ item }) => (
-        <div className='my-1 flex flex-col '>
-            <div className=" flex flex-row items-center justify-start">
-                <img src={ImageIcons.Polygon} />
-                <p className='ml-4 text-lg text-[#fff]'>{item.text}</p>
-
-            </div>
-
-        </div>
-    );
-
-    return (
-        <>
-
-            <div className="  flex items-center justify-center  w-full bg-[#F1F8E8]">
-                <div className="my-20 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:w-full xl:container xl:px-6 lg:px-20">
-
-
-
-
-                    <div className="max-w-sm text-center lg:text-left">
-                        <div>
-                            <div className='flex flex-row place-items-center'>
-                                <p className="text-xl font-medium tracking-tight text-[#0B7132] sm:text-3xl leading-9">
-                                    EV CHARGING SOLUTIONS                                </p>
-                                <img src={ImageIcons.Rectangle} className='h-0.5 w-20 ml-8' />
-                            </div>
-                            <p className="text-3xl font-semibold  text-[#000] sm:text-5xl mt-3">
-                                Empowering Sustainability Anywhere You Go                            </p>
-                            <p className="max-w-xl text-xl font-normal text-[#000] mt-6">
-                                Greening workplaces with seamless integration and convenient charging during office hours, while offering eco-friendly options at popular leisure destinations. Join us in powering sustainability wherever you go!                                </p>
-                            <img src={ImageIcons.filling_machine} className='h-auto w-22' />
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
-
-                    <div className="max-w-sm mx-auto relative rounded-lg ">
-                        <div className="bg-cover px-4 py-8 " style={style}>
-                            <div className="relative m-0 mb-0 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
-                                <p className="text-xl font-semibold tracking-tight text-[#0B7132] sm:text-3xl leading-9">
-                                    OFFICE AND WORKPLACE
-                                </p>
-                                {/* <p className="text-4xl font-semibold  text-[#000] sm:text-6xl mt-3">
-                                    ₹ 1,18,000/-
-                                </p> */}
-                                <p className="text-xl font-normal  text-[#676767] sm:text-xl mt-7">
-                                    Charge your EV conveniently at work! Our workplace stations support eco-friendly commuting, making sustainability effortless.
-                                </p>
-                            </div>
-                            <div className="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
-                                {features.map((item) => (
-                                    <FeatureList key={item.id} item={item} />
-                                ))}
-                            </div>
-                            {/* <div className="mt-6 p-0">
-                                <div className="flex justify-center gap-3 lg:justify-start">
-                                    <button className="px-3 md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl"><i className="fa-solid fa-arrow-right-to-bracket"></i>Sign Up</button>
-
-                                </div>
-                            </div> */}
-                        </div>
-                    </div>
-
-
-                    <div className="max-w-sm mx-auto relative rounded-lg  ">
-                        <div className="bg-cover px-4 py-8 " style={style1}>
-                            <div className="relative m-0 mb-0 overflow-hidden rounded-none  bg-transparent bg-clip-border pb-2 text-left text-gray-700 shadow-none">
-                                <p className="text-xl font-semibold tracking-tight text-[#fff] sm:text-3xl leading-9">
-                                    MALLS AND HOTELS
-                                </p>
-                                {/* <p className="text-4xl font-semibold  text-[#fff] sm:text-6xl mt-3">
-                                    ₹ 1,18,000/-
-                                </p> */}
-                                <p className="text-xl font-normal  text-[#fff] sm:text-xl mt-7">
-                                    Explore our EV Charging Stations at top malls and hotels! As the world embraces sustainability, our cutting-edge solutions offer convenient electric vehicle charging. Join us in the green revolution!                                </p>
-                            </div>
-                            <div className="p-6 mt-6 border border-solid border-[#E5E5E5] rounded-3xl">
-                                {features1.map((item) => (
-                                    <FeatureList1 key={item.id} item={item} />
-                                ))}
-                            </div>
-                            {/* <div className="mt-6 p-0">
-                                <div className="flex justify-center gap-3 lg:justify-start">
-                                    <button className="px-3 md:px-8 py-1 md:py-4 bg-[#0B7132] text-white rounded-lg text-xl"><i className="fa-solid fa-arrow-right-to-bracket"></i>Sign Up</button>
-                                </div>
-                            </div> */}
-                        </div>
-                    </div>
+            <div className="lg:mt-0 mt-[40px] lg:w-[61%] md:w-[100%] grid grid-cols-1 sm:grid-cols-2 gap-y-[40px] gap-x-[20px] xl:gap-x-[26px] lg:gap-x-[15px]">
+              <div className="relative px-[15px] pt-[35px] pb-[95px] home_charging-bg after:bg-[#fff]">
+                <div className="relative z-20">
+                  <h4 className="text-[#0B7132] mb-[5px]">HOME CHARGING </h4>
+                  <h2 className="text-black mb-[15px] xl:text-[44px] lg:text-[42px]">
+                    <span className="font-sans font-normal">₹</span> 1,18,000/-
+                  </h2>
+                  <p className="text-[#676767] text-[20px]">
+                    Explore our professional installation services to ensure a seamless and safe home charging setup.
+                  </p>
+                  <div className="p-[20px] my-[30px] border border-solid border-[#E5E5E5] rounded-3xl">
+                    {features.map((item) => (
+                      <FeatureList key={item.id} item={item} />
+                    ))}
+                  </div>
+                  <Link to="/contact">
+                    <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#000] text-white rounded-lg">
+                      Sign Up
+                    </button>
+                  </Link>
                 </div>
-            </div >
-        </>
-    );
-}
+              </div>
+              <div className="relative px-[15px] pt-[35px] pb-[95px] home_charging-bg after:bg-[#000]" >
+                <div className="relative z-20">
+                  <h4 className="text-white mb-[5px]">PUBLIC CHARGING</h4>
+                  <h2 className="text-white mb-[15px] xl:text-[44px] lg:text-[42px]">
+                    <span className="font-sans font-normal">₹</span> 2,10,000/-
+                  </h2>
+                  <p className="text-white text-[20px]">
+                    Find public charging stations near popular destinations, highways, and key locations.
+                  </p>
+                  <div className="p-[20px] my-[30px] border border-solid border-[#E5E5E5] rounded-3xl">
+                    {features1.map((item) => (
+                      <FeatureList1 key={item.id} item={item} />
+                    ))}
+                  </div>
+                  <Link to="/contact">
+                    <button className="duration-[400ms,700ms] px-3 min-w-[175px] font-semibold text-[18px] md:px-8 h-[60px] py-1 md:py-4 bg-[#0B7132] hover:bg-[#fff] hover:text-[#0B7132] text-white rounded-lg">
+                      Sign Up
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Charges;

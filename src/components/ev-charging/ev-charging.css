@@ -1,0 +1,13 @@
+ @media screen and (max-width: 1024px) {
+    .ev-charging_img {
+        height: 450px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .ev-charging_img img {
+        height: 100%; 
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+ }

@@ -3,21 +3,20 @@ import { FaRegEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "r
 import { Link } from 'react-router-dom';
 import ImageIcons from '../../common/ImageIcons';
 
+
 const OurTeam = () => {
     return (
-        <section className="our_teem w-full  px-8 bg-[#F1F8E8] py-16">
-            <div className=" container mx-auto ">
-
-                <div className="mb-10 text-center">
-                    <h4 className="text-center text-lg text-[#0B7132] font-medium md:text-xl lg:text-2xl mb-6">OUR TEAM MEMBER</h4>
-
-                    <h2 className="text-center text-3xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Group of Certified & Experienced</h2>
-
+        <section className="our_teem bg-[#F1F8E8] py-[75px]">
+            <div className="container mx-auto">
+                <div className="md:mb-[50px] mb-[35px]  text-center">
+                    <h4 className="text-center text-[#0B7132] font-medium mb-[15px]">OUR TEAM MEMBER</h4>
+                    <h2>Group of Certified & Experienced</h2>
                 </div>
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 col:grid-cols-1 gap-[30px] btn-holder md:max-w-[unset] max-w-[350px] m-auto">
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 xl:gap-x-[30px] lg:gap-x-[20px] sm:gap-x-[30px] md:gap-y-[50px] gap-y-[40px] btn-holder sm:max-w-[unset] max-w-[360px] m-auto">
                     {teamData.map((item, i) => (
-                        <div key={i} className={`team_box relative duration-500   rounded-[5px] group flex flex-col  btn btn-2 hover-slide-down`}>
-                            <figure className=' relative h-[400px] duration-500 overflow-hidden before:content before:absolute before:top-[0] before:left-[0] before:h-[100%] before:w-[100%] group-hover:before:bg-[#F1F8E8]/[.6] before:z-10 rounded-tl-3xl rounded-br-3xl'>
+                        <div key={i} className={`team_box relative duration-500 rounded-[5px] group flex flex-col  btn btn-2 hover-slide-down`}>
+                            <figure className='relative h-[450px] 2xl:h-[450px] xl:h-[400px] lg:h-[340px] md:h-[440px] sm:h-[380px] duration-500 overflow-hidden before:content before:absolute before:top-[0] before:left-[0] before:h-[100%] before:w-[100%] group-hover:before:bg-[#F1F8E88C] before:z-10 rounded-tl-[30px] rounded-br-[30px]'>
                                 <img
                                     src={item.teamImage}
                                     className='w-[100%] h-[100%] object-cover   duration-500 group-hover:scale-[1.1]'
@@ -26,23 +25,19 @@ const OurTeam = () => {
                                     height=""
                                 />
                                 <figcaption className='duration-500 flex justify-center absolute left-[0] translate-y-[-50%] top-[50%] tr right-[0] text-center gap-[10px] z-20 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                    <Link to={item.facebookLink} className='w-[35px] h-[35px] rounded-[50%] bg-[#0B7132] duration-300 text-[#fff]  flex justify-center items-center hover:scale-[1.2]' ><FaFacebookF /></Link>
-                                    <Link to={item.linkedinLink} className='w-[35px] h-[35px] rounded-[50%] bg-[#0B7132] duration-300 text-[#fff]  flex justify-center items-center hover:scale-[1.2]' ><FaTwitter /></Link>
-                                    <Link to={item.tweeterLink} className='w-[35px] h-[35px] rounded-[50%] bg-[#0B7132] duration-300 text-[#fff]  flex justify-center items-center hover:scale-[1.2]'><FaTwitter /></Link>
-                                    {/* <Link to={item.Instagram} className='w-[35px] h-[35px] rounded-[50%] bg-[#0B7132] duration-300 text-[#fff]  flex justify-center items-center hover:scale-[1.2]'><FaYoutube /></Link> */}
+                                    <Link to={item.facebookLink} className='w-[50px] h-[50px] text-[28px] rounded-[50%] bg-[#0B7132] duration-500 text-[#fff] flex justify-center items-center hover:bg-[#000]' ><FaFacebookF /></Link>
+                                    <Link to={item.linkedinLink} className='w-[50px] h-[50px] text-[28px] rounded-[50%] bg-[#0B7132] duration-500 text-[#fff] flex justify-center items-center hover:bg-[#000]' ><FaTwitter /></Link>
+                                    <Link to={item.tweeterLink} className='w-[50px] h-[50px] text-[28px] rounded-[50%] bg-[#0B7132] duration-500 text-[#fff] flex justify-center items-center hover:bg-[#000]'><FaInstagram /></Link>
                                 </figcaption>
                                 <div className='boxAnimation '></div>
                             </figure>
-                            <div className='team_title py-[20px] pr-[30px] text-left'>
+                            <div className='team_title pt-[20px]'>
                                 <div className='flex flex-row items-center'>
-                                    <p className='text-[#0B7132]  mb-[0] text-xl font-medium'>{item.subTitle}</p>
-                                    <img src={ImageIcons.Rectangle} className='h-0.5 w-10 ml-5' />
+                                    <h5  className='relative text-[#0B7132] text-[18px] font-medium mb-[5px] green-line-heading after:!w-[50px] after:!ml-[15px]'>{item.subTitle}</h5  >
                                 </div>
-                                <h4 className='mb-[8px] text-[#000] text-2xl font-medium'>{item.title}</h4>
+                                <h4 className='mb-0 font-medium'>{item.title}</h4>
                             </div>
-
                         </div>
-
                     ))}
                 </div>
             </div>

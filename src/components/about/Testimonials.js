@@ -20,25 +20,25 @@ const Testimonials = () => {
 
     const testimonialsData = [
         {
-            text: "The electric vehicle charging point was conveniently located, making it easy for me to charge my EV while running errands.",
-            author: "Tania Andrew",
+            text: "I recently used the EV charging station near my office, and I'm impressed! The charging process was super reliable, and I got a significant boost in battery capacity in no time. It's great to have a station I can count on for my daily commutes.",
+            author: "Ashish Wadhawan",
             position: "Frontend Lead @ Google",
             image: ImageIcons.team_member_1,
         },
         {
-            text: "I liked the simplicity of the payment system and the ease of connecting my EV to the charging point.",
+            text: "Found this charging station during a road trip, and it was a lifesaver! The location was convenient, right off the highway. The station was easy to use, and the touchscreen interface was intuitive. Loved the hassle-free experience.",
             author: "Tania Andrew",
             position: "Frontend Lead @ Google",
             image: ImageIcons.team_member_2,
         },
         {
-            text: "The fast-charging capabilities allowed me to top up my battery quickly, minimizing downtime.",
+            text: "I've tried a few charging stations in the area, and this one stands out for its transparent pricing. No hidden fees, and the rates were reasonable. It's refreshing to find an affordable option without sacrificing quality.",
             author: "Tania Andrew",
             position: "Frontend Lead @ Google",
             image: ImageIcons.team_member_3,
         },
         {
-            text: "The availability of free or discounted charging at certain locations is a great incentive for EV owners.",
+            text: "Charging my EV here was a pleasant surprise. The station was clean, well-lit, and felt safe. They've clearly put effort into maintaining the facility. It's the little things that make the charging experience enjoyable.",
             author: "Tania Andrew",
             position: "Frontend Lead @ Google",
             image: ImageIcons.team_member_1,
@@ -68,7 +68,7 @@ const Testimonials = () => {
 
                         <div className="mb-16 text-center">
                             <p className="text-[#0B7132] text-lg font-semibold lg:w-8/12 lg:mx-auto">TESTIMONIALS</p>
-                            <h2 className="mb-4 text-center mt-4 text-2xl text-gray-900 font-bold md:text-4xl">What Client's Say about</h2>
+                            <h2 className="mb-4 text-center mt-4 text-2xl text-gray-900 font-bold md:text-4xl">What Client's Say About</h2>
                         </div>
 
                     </div>

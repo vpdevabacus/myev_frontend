@@ -6,15 +6,26 @@ import Features from "../components/home/Features";
 import Strategy from "../components/home/Strategy";
 import Charges from "../components/home/Charges";
 import Footer from "../components/footer/Footer";
-const Home = () => {
+import Testimonials from "../components/testimonials/Testimonials";
+import ContactInfo from "../components/contact_info/ContactInfo";
+import Ourgallery from "../components/home/OurGallery";
+import Ournewsletter from "../common/OurNewsletter";
+import Blogsection from "../common/BlogSection";
+
+ const Home = () => {
     return (
         <>
-            <Header />
+            <Header/>
             <Banner />
             <AboutUs />
-            <Features />
-            <Strategy />
+            <Features/>
+            <Strategy/>
+            <Ourgallery/>
+            <Ournewsletter/>
             <Charges />
+            <Testimonials />
+            <Blogsection />
+            <ContactInfo />
             <Footer />
         </>
     )

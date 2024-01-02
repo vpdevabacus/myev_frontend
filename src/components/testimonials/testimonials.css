@@ -1,0 +1,85 @@
+.testimonials .slick-arrow {
+    height: 130px;
+    width: 44px;
+    background-color: #000;
+    z-index: 99;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.4s;
+}
+
+.testimonials .slick-prev:before,
+.testimonials .slick-next:before {
+    font-size: 0;
+    left: 0;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+.slick-prev:before {
+    background-image: url("../../assets/icons/left-arrow.svg");
+}
+
+.slick-next:before {
+    background-image: url("../../assets/icons/right-arrow.svg");
+}
+
+.testimonials .slick-arrow:hover {
+    background: unset;
+    background-color: #0B7132;
+}
+
+@media screen and (max-width: 1200px) {
+    .testimonials .slick-prev {
+        left: 20px;
+    }
+
+    .testimonials .slick-next {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials .slick-slider {
+        background-size: 80px;
+    }
+
+    .testimonials .slick-prev,
+    .testimonials .slick-next {
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    .testimonials:hover .slick-prev,
+    .testimonials:hover .slick-next {
+        visibility: visible;
+        overflow: visible;
+    }
+
+    .testimonials .slick-prev {
+        left: -10px;
+    }
+
+    .testimonials .slick-next {
+        right: -10px;
+    }
+
+    .testimonials .slick-prev:before,
+    .testimonials .slick-next:before {
+        background-size: 13px;
+    }
+
+    .testimonials .slick-arrow {
+        height: 60px;
+        width: 35px;
+        opacity: 0.5;
+
+    }
+}
