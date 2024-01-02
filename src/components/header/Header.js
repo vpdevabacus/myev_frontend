@@ -53,7 +53,6 @@ const Header = () => {
         setOpen(!open);
     };
 
-    console.log("Current pathname:", pathname);
 
     const list = (anchor) => (
         <Box
@@ -130,7 +129,22 @@ const Header = () => {
                     </List>
                 </Collapse>
                 <Divider />
-
+                <ListItem disablePadding className={`${pathname === '/blog' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton>
+                        <NavLink to="/blog" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                            <ListItemText primary="Blogs" />
+                        </NavLink>
+                    </ListItemButton>
+                </ListItem>
+                <Divider />
+                <ListItem disablePadding className={`${pathname === '/gallery' && "bg-[#0B7132] text-white"}`}>
+                    <ListItemButton>
+                        <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                            <ListItemText primary="Gallery" />
+                        </NavLink>
+                    </ListItemButton>
+                </ListItem>
+                <Divider />
 
                 <ListItem disablePadding className={`${pathname === '/contact' && "bg-[#0B7132] text-white"}`}>
                     <ListItemButton>
@@ -146,13 +160,11 @@ const Header = () => {
     )
 
 
-    const [show, setshow] = useState(false)
+
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const handleMenu = () => {
-        setshow(s => !s)
 
-    }
+
 
     const toggleDropdown = () => {
         setDropdownOpen(s => !s);
@@ -202,11 +214,10 @@ const Header = () => {
 
     const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
     const headerRef = useRef(null);
-    console.log('headerRef:', headerRef);
 
 
     const handleScroll = (elTopOffset, elHeight) => {
-        console.log('Scrolling...');
+        // console.log('Scrolling...');
 
         if (window.pageYOffset > (elTopOffset + elHeight)) {
             setSticky({ isSticky: true, offset: elHeight });
@@ -217,9 +228,9 @@ const Header = () => {
 
     useEffect(() => {
         var header = headerRef.current.getBoundingClientRect();
-        console.log('Header top:', header.top, 'Header height:', header.height);
+        // console.log('Header top:', header.top, 'Header height:', header.height);
         const handleScrollEvent = () => {
-            console.log('Scroll event triggered...');
+            // console.log('Scroll event triggered...');
             handleScroll(header.top, header.height);
         };
         window.addEventListener('scroll', handleScrollEvent);
@@ -305,6 +316,12 @@ const Header = () => {
 
                                                 </li>
                                                 <li className='menu-item-info'>
+                                                    <NavLink to="/blog" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}>Blogs</NavLink>
+                                                </li>
+                                                <li className='menu-item-info'>
+                                                    <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}>Gallery</NavLink>
+                                                </li>
+                                                <li className='menu-item-info'>
                                                     <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132]" : "text-[#000] hover:text-[#0B7132]"} onClick={windowScroll}>Contact Us</NavLink>
                                                 </li>
                                             </ul>
@@ -367,41 +384,8 @@ const Header = () => {
 
 
 
-                                        {show == true &&
-                                            <div
-                                                className="absolute right-0 w-full  md:max-w-screen-sm md:w-screen mt-16 origin-top-right text-black md:hidden transition-all duration-300 ease-out"
-                                                style={{
-                                                    transformOrigin: 'top right',
-                                                    transform: show ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-28 scale-90 pointer-events-none',
-                                                }}
-                                            >
-                                                <div className=" bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
-                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                                                        <div className="flex flex-row items-start rounded-lg  w-full" >
 
-                                                            <NavLink to="/" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">Home</div></NavLink>
-
-                                                        </div>
-
-                                                        <div className="flex flex-row items-start rounded-lg  w-full" >
-
-                                                            <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">About Us</div></NavLink>
-
-                                                        </div>
-
-                                                        <div className="flex flex-row items-start rounded-lg  w-full" >
-
-                                                            <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">Our Services</div></NavLink>
-
-                                                        </div>
-                                                        <div className="flex flex-row items-start rounded-lg  w-full" >
-                                                            <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#fff]  font-normal text-lg lg:text-xl w-full bg-[#0B7132]" : " font-normal text-lg lg:text-xl text-[#000] w-full bg-white"}><div className=" w-full py-3 pl-6">Contact Us</div></NavLink>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        }
                                         {/* Mobile Navbar menu end */}
 
 

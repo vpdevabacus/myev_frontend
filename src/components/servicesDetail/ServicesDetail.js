@@ -32,6 +32,20 @@ const ServicesDetail = () => {
     console.log(">>>ffdfffff", serviceDetails)
 
 
+    const phoneNumber = '+91 95925 95975';
+    const phoneLink = `tel:${phoneNumber}`;
+
+    const callPhoneNumber = () => {
+        window.location.href = phoneLink;
+    };
+
+    const email = 'info@vpventuresindia.com';
+    const mailtoLink = `mailto:${email}`;
+
+    const openMail = () => {
+        window.open(mailtoLink);
+    };
+
     return (
         <>
             <div className='single-service-page w-full md:py-20 max-md:py-10'>
@@ -81,8 +95,8 @@ const ServicesDetail = () => {
                                                 <img src={chaticon} className='w-15 h-15 m-auto' />
                                             </div>
                                             <h4 className='mb-3 mt-4 text-white font-medium'>Do you need any help?</h4>
-                                            <p className='font-medium text-white'>+91 95925 95975</p>
-                                            <p className='font-medium text-white'>info@vpventuresindia.com</p>
+                                            <p onClick={callPhoneNumber} className='font-medium text-white cursor-pointer'>{phoneNumber}</p>
+                                            <p onClick={openMail} className='font-medium text-white cursor-pointer'>{email}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -51,7 +51,7 @@ const Contact = () => {
         const fetchData = async () => {
             try {
                 // Make a GET request
-                const response = await axios.get('http://localhost:8400/user/getlocation');
+                const response = await axios.get(`${process.env.REACT_APP_URL}/user/getlocation`);
                 // Set the data in the state
                 setData(response.data.data);
             } catch (error) {
@@ -78,13 +78,12 @@ const Contact = () => {
         { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
     ];
 
-    const baseURL = "http://localhost:8400/user/sendemail";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(baseURL, {
+            const response = await axios.post(`${process.env.REACT_APP_URL}/user/sendemail`, {
                 fullName: fullName,
                 email: emailId,
                 number: number,
@@ -197,10 +196,10 @@ const Contact = () => {
                         <div className="md:w-1/2 max-md:w-full  max-md:px-4">
                             <div class="contact-us-form-info bg-white md:py-14 max-md:py-8 md:px-10 max-md:px-5">
                                 <form onSubmit={handleSubmit}>
-
+                                    <p class=" font-medium text-black
+                                          ">Full name*</p>
                                     <div class="relative mb-6">
-                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
-                                          absolute">Full name*</p>
+
                                         <input type="text"
                                             id="first_name"
                                             className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
@@ -210,10 +209,10 @@ const Contact = () => {
                                         />
                                     </div>
 
-
+                                    <p class=" font-medium text-black
+                                          ">Email address*</p>
                                     <div class="relative mb-6">
-                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
-                                          absolute">Email address*</p>
+
                                         <input type="email"
                                             id="email"
                                             className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
@@ -224,10 +223,10 @@ const Contact = () => {
                                     </div>
 
 
-
+                                    <p class=" font-medium text-black
+                                          ">Phone number*</p>
                                     <div class="relative mb-6">
-                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
-                                          absolute">Phone number*</p>
+
                                         <input type="number"
                                             id="phone"
                                             className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
@@ -237,10 +236,10 @@ const Contact = () => {
                                         />
                                     </div>
 
-
+                                    <p class=" font-medium text-black
+                                          ">Enter message*</p>
                                     <div class="relative mb-6">
-                                        <p class="bg-transparent pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-500
-                                          absolute">Enter message*</p>
+
                                         <textarea id="message"
                                             name="message"
                                             rows="4"
