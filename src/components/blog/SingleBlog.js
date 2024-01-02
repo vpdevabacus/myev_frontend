@@ -11,8 +11,23 @@ import { Link } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
 
 const SingleBlogPage = () => {
-  return (
-    <>
+
+    const phoneNumber = '+91 95925 95975';
+    const phoneLink = `tel:${phoneNumber}`;
+
+    const callPhoneNumber = () => {
+        window.location.href = phoneLink;
+    };
+
+    const email = 'info@vpventuresindia.com';
+    const mailtoLink = `mailto:${email}`;
+
+    const openMail = () => {
+        window.open(mailtoLink);
+    };
+
+    return (
+        <>
             <div className='single-blog-page w-full md:py-20 max-md:py-10'>
                 <div className='container mx-auto px-2'>
                     <div className='single-blog-info flex gap-10 max-md:flex-col'>
@@ -47,7 +62,7 @@ const SingleBlogPage = () => {
                                                 <Link to='/services/DC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Charging Stations Will Provide Power</Link>
                                             </li>
                                             <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</a>
+                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</a>
                                             </li>
                                             <li>
                                                 <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Charging Stations Will Provide Power</a>
@@ -73,8 +88,8 @@ const SingleBlogPage = () => {
                                                 <img src={chaticon} className='w-15 h-15 m-auto' />
                                             </div>
                                             <h4 className='mb-3 mt-4 text-white font-medium'>Do you need any help?</h4>
-                                            <p className='font-medium text-white'>+91 75081 00021</p>
-                                            <p className='font-medium text-white'>info@vpventuresindia.com</p>
+                                            <p nClick={callPhoneNumber} className='font-medium text-white cursor-pointer'>{phoneNumber}</p>
+                                            <p nClick={openMail} className='font-medium text-white cursor-pointer'>{email}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,15 +100,18 @@ const SingleBlogPage = () => {
                                         <h4>Download</h4>
                                         <hr class="green-hr-line" />
                                     </div>
-                                    <div className='download-txt-info'>
-                                        <h5 className='text-lg font-medium'>Download our Brochures</h5>
-                                        <p><Link
-                                        className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
-                                        to={brocher}
-                                        download="myEV_Point"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                      >Download</Link></p>
+                                    <div className='flex flex-row'>
+                                        <img src={pdficon1} className='w-12 h-12 mr-2' />
+                                        <div className='download-txt-info'>
+                                            <h5 className='text-lg font-medium'>Download our Brochures</h5>
+                                            <p><Link
+                                                className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
+                                                to={brocher}
+                                                download="myEV_Point"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >Download</Link></p>
+                                        </div>
                                     </div>
                                 </div>
                                 {/* <div className='download-info flex gap-4'>
@@ -131,6 +149,6 @@ const SingleBlogPage = () => {
                 </div>
             </div> */}
         </>
-  );
+    );
 };
 export default SingleBlogPage;
