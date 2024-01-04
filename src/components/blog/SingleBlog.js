@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ImageIcons from '../../common/ImageIcons'
-import { useParams } from "react-router-dom"
-import Chargers from '../servicesDetail/Chargers'
 import singleservicefullimg from "../../assets/Images/single-service-fullimg.png";
 import bgcoverimh1 from "../../assets/Images/bg-cover-imh1.png";
 import chaticon from "../../assets/Images/chat-icon.png";
@@ -9,8 +6,16 @@ import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
 import { Link } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
+import { useParams } from "react-router-dom"
 
-const SingleBlogPage = () => {
+const imageBaseUrl = "http://localhost:8400/uploads";
+
+
+const SingleBlogPage = ({ blogDetails }) => {
+
+    const { type } = useParams();
+    console.log(">>>blogDetails(SingleBlogPage)", blogDetails)
+
 
     const phoneNumber = '+91 95925 95975';
     const phoneLink = `tel:${phoneNumber}`;
@@ -35,11 +40,11 @@ const SingleBlogPage = () => {
                         <div className='md:w-3/4 relative mb-5 max-md:order-1'>
                             {/* Single Blog Content */}
                             <div className='single-service-right-sidebar'>
-                                <h2 className='mb-4'>Charging Stations Will Provide Power</h2>
-                                <p className='mb-4'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p>
-                                <p className='mb-4'>Voluptatem earum? Lorem facilisis et sociis justo exercitationem consequuntur? Sit. Deserunt feugiat potenti ad vehicula odit, dictumst? Inceptos, torquent consequatur autem potenti quisque animi? Eget consequatur, saepe euismod adipiscing debitis! Nascetur adipiscing porro fugit distinctio optio. Dictum lacinia iure maecenas. Iaculis illum pariatur a possimus excepteur ad labore, accumsan ad aperiam dolores, excepteur do! Pariatur integer, impedit mus vulputate nec? At nonummy, sagittis donec saepe delectus aliqua asperiores ratione tenetur! Primis, neque sapiente vehicula, voluptatibus? Adipisicing ultricies commodi fugiat earum? Ridiculus praesentium est maiores? Curabitur expedita dicta primis voluptas consectetuer quo eligendi accusantium metus consequatur, integer, doloribus, velit dignissim rhoncus.</p>
+                                <h2 className='mb-4'>{blogDetails?.title}</h2>
+                                <p className='mb-4'>{blogDetails?.description}</p>
+                                {/* <p className='mb-4'>Voluptatem earum? Lorem facilisis et sociis justo exercitationem consequuntur? Sit. Deserunt feugiat potenti ad vehicula odit, dictumst? Inceptos, torquent consequatur autem potenti quisque animi? Eget consequatur, saepe euismod adipiscing debitis! Nascetur adipiscing porro fugit distinctio optio. Dictum lacinia iure maecenas. Iaculis illum pariatur a possimus excepteur ad labore, accumsan ad aperiam dolores, excepteur do! Pariatur integer, impedit mus vulputate nec? At nonummy, sagittis donec saepe delectus aliqua asperiores ratione tenetur! Primis, neque sapiente vehicula, voluptatibus? Adipisicing ultricies commodi fugiat earum? Ridiculus praesentium est maiores? Curabitur expedita dicta primis voluptas consectetuer quo eligendi accusantium metus consequatur, integer, doloribus, velit dignissim rhoncus.</p> */}
                                 <div className="text-center py-4">
-                                    <img src={singleservicefullimg} className='w-full' />
+                                    <img src={`${imageBaseUrl}/${blogDetails?.image}`} className='w-full' />
                                 </div>
                             </div>
                         </div>
