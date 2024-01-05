@@ -28,7 +28,10 @@ const Banner = () => {
         const fetchData = async () => {
             try {
                 // Make a GET request
+
+
                 const response = await axios.get(`${process.env.REACT_APP_URL}/user/getlocation`);
+
                 // Set the data in the state
                 setData(response.data.data);
             } catch (error) {
