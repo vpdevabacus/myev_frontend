@@ -285,9 +285,7 @@ const Header = () => {
                                         {/* Navbar menu */}
                                         <div className="hidden lg:flex items-center">
                                             <ul className='primary-menu-info flex list-none'>
-                                                <li className='menu-item-info'>
-                                                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}> Home</NavLink>
-                                                </li>
+                                               
                                                 <li className='menu-item-info'>
                                                     <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}>About Us</NavLink>
                                                 </li>
