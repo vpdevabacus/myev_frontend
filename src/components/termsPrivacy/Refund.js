@@ -40,7 +40,7 @@ const data = {
         },
         {
             header: "Refund Request Procedure",
-            desc: "<ul><p>To request a refund, please contact our customer support team at info@skypro.co.in  with the subject line 'Refund Request'. </p><p>Provide detailed information regarding the reason for the refund along with any supporting documentation or evidence.</p></ul>"
+            desc: "<ul><p>To request a refund, please contact our customer support team at info@myEvpoint.co.in  with the subject line 'Refund Request'. </p><p>Provide detailed information regarding the reason for the refund along with any supporting documentation or evidence.</p></ul>"
         },
         {
             header: "Limitations",
@@ -48,7 +48,7 @@ const data = {
         },
         {
             header: "Our Commitment",
-            desc: "<ul><p>We strive to provide the best services to our clients and will make every effort to address and rectify any issues. Your satisfaction is our priority.</p><p>By using our services and making a purchase on info@skypro.co.in, you agree to adhere to the terms and conditions of this refund policy.</p><p>For any questions or concerns regarding our refund policy, please contact us at info@skypro.co.in.</p></ul>"
+            desc: "<ul><p>We strive to provide the best services to our clients and will make every effort to address and rectify any issues. Your satisfaction is our priority.</p><p>By using our services and making a purchase on info@myEvpoint.co.in, you agree to adhere to the terms and conditions of this refund policy.</p><p>For any questions or concerns regarding our refund policy, please contact us at info@myEvpoint.co.in.</p></ul>"
         },
         
 
