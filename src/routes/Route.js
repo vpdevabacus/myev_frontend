@@ -8,6 +8,8 @@ import ServicesDetail from '../screens/ServicesDetail';
 import ContactUs from "../screens/ContactUs"
 import Terms from "../screens/Terms"
 import Privacy from "../screens/Privacy"
+import Refund from "../screens/Refund"
+import Cancellation from "../screens/Cancellation"
 
 import PrivacyPolicy from '../components/termsPrivacy/Privacy';
 import PdfComp from '../components/footer/PdfComp';
@@ -25,6 +27,8 @@ const router = createBrowserRouter(
             <Route path="/services/:type" element={<ServicesDetail />} />
             <Route path="terms&conditions" element={<Terms />} />
             <Route path="privacy_policy" element={<Privacy />} />
+            <Route path="refund policy" element={<Refund />} />
+            <Route path="cancellation" element={<Cancellation />} />
             <Route path="myEV_Point_brocher" element={<PdfComp />} />
 
 
