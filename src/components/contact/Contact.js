@@ -42,7 +42,7 @@ const Contact = () => {
     const [emailId, setEmailId] = useState("")
     const [number, setNumber] = useState("")
     const [message, setMessage] = useState("")
-    const [mapReady, setMapReady] = useState(false)
+ 
     const [data, setData] = useState([]);
     const [error, setError] = useState([]);
     const mapRef = useRef(null)
@@ -54,7 +54,9 @@ const Contact = () => {
         const fetchData = async () => {
             try {
                 // Make a GET request
+
                 const response = await axios.get(`${process.env.REACT_APP_URL}/user/getlocation`);
+
                 // Set the data in the state
                 setData(response.data.data);
             } catch (error) {
@@ -64,22 +66,17 @@ const Contact = () => {
             }
         };
 
-
         fetchData();
     }, []);
 
 
+       
 
-    const onGoogleApiLoaded = ({ map, maps }) => {
-        mapRef.current = map
-        setMapReady(true)
-    }
 
-    const coordinates = [
-        { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
-        { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
-        { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
-    ];
+
+
+     
+    const baseURL = "http://localhost:8400/user/sendemail";
 
 
     const handleSubmit = async (e) => {
@@ -283,27 +280,16 @@ const Contact = () => {
             </div>
             {/* End Contact Form Section */}
 
-            <div className="discover-nearby-col">
-                <div className="discover-nearby-map-info">
-                    <GoogleMap className="mappin-img-info m-auto"
-                        apiKey="AIzaSyCkfOfMsbxXQJDddclN4qd_u6_l19bvpAc"
-                        defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
-                        defaultZoom={4}
-                        mapMinHeight="400px"
-                        onGoogleApiLoaded={onGoogleApiLoaded}
-                        onChange={(map) => console.log('Map moved', map)}
-                    >
-                        {data.map(({ latitude, longitude, name }, index) => (
-                            <Markers
-                                key={index}
-                                lat={latitude}
-                                lng={longitude}
-                                markerId={name}
-                            />
-                        ))}
-                    </GoogleMap>
-                </div>
-            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4079.200739425459!2d76.69185718317433!3d30.71319131412005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef99cc17fe25%3A0x6a593a19f7208f9b!2sAbacus%20Cloud!5e0!3m2!1sen!2sin!4v1700492253995!5m2!1sen!2sin"
+                width="100%"
+                height="500"
+                //   style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
         </>
     )
 }
