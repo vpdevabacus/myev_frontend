@@ -143,9 +143,9 @@ const Footer = () => {
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/cancellation' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
+                                            <Link to='/cancellation-policy' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className={`${pathname === '/cancellation' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Cancellation Policy</p>
+                                                <p className={`${pathname === '/cancellation-policy' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Cancellation Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>

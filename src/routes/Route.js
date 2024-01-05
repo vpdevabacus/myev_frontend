@@ -37,7 +37,7 @@ const router = createBrowserRouter(
             <Route path="terms&conditions" element={<Terms />} />
             <Route path="privacy-policy" element={<Privacy />} />
             <Route path="refund-policy" element={<Refund />} />
-            <Route path="cancellation" element={<Cancellation />} />
+            <Route path="cancellation-policy" element={<Cancellation />} />
             <Route path="myEV_Point_brochure" element={<PdfComp />} />
         </Route>
 
