@@ -39,7 +39,7 @@ const BlogPage = () => {
                 <div className="md:w-1/3 relative max-md:mb-5" key={item.id}>
                   <div className="blog-list-info bg-[#fff] rounded p-4 shadow-[0px_0px_25px_0px_rgba(0,0,0,0.15)]">
                     <div className="blog-img-info mb-3">
-                      <img className="w-full rounded-lg cursor-pointer object-center object-cover h-[300px]" src={`${imageBaseUrl}/${item?.image}`} alt="blog img" />
+                      <img className="w-full rounded-lg cursor-pointer object-center object-cover h-[300px]" src={item?.image} alt="blog img" />
                     </div>
 
                     <div className="blog-content-info lg:p-4">
