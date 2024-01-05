@@ -44,7 +44,7 @@ const SingleBlogPage = ({ blogDetails }) => {
                                 <p className='mb-4'>{blogDetails?.description}</p>
                                 {/* <p className='mb-4'>Voluptatem earum? Lorem facilisis et sociis justo exercitationem consequuntur? Sit. Deserunt feugiat potenti ad vehicula odit, dictumst? Inceptos, torquent consequatur autem potenti quisque animi? Eget consequatur, saepe euismod adipiscing debitis! Nascetur adipiscing porro fugit distinctio optio. Dictum lacinia iure maecenas. Iaculis illum pariatur a possimus excepteur ad labore, accumsan ad aperiam dolores, excepteur do! Pariatur integer, impedit mus vulputate nec? At nonummy, sagittis donec saepe delectus aliqua asperiores ratione tenetur! Primis, neque sapiente vehicula, voluptatibus? Adipisicing ultricies commodi fugiat earum? Ridiculus praesentium est maiores? Curabitur expedita dicta primis voluptas consectetuer quo eligendi accusantium metus consequatur, integer, doloribus, velit dignissim rhoncus.</p> */}
                                 <div className="text-center py-4">
-                                    <img src={`${imageBaseUrl}/${blogDetails?.image}`} className='w-full' />
+                                    <img src={blogDetails?.image} className='w-full' />
                                 </div>
                             </div>
                         </div>

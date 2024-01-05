@@ -5,6 +5,8 @@ import axios from 'axios';
 const Ournewsletter = () => {
 
   const [email, setEmail] = useState("")
+  const [successMsg, setSuccessMsg] = useState(false)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,9 +18,11 @@ const Ournewsletter = () => {
       });
 
       console.log(response.data.message);
-
       setEmail('')
-
+      setSuccessMsg(true)
+      setTimeout(() => {
+        setSuccessMsg(false)
+      }, 2000);
     } catch (error) {
       console.error('Error submitting form:', error);
 
@@ -34,21 +38,35 @@ const Ournewsletter = () => {
             <div className="md:w-1/2 relative md:py-[40px] max-md:pt-[40px] max-md:pb-[20px]">
               <h2 className="text-[#FFF]">Our Newsletter</h2>
               <p className="text-[#FFF]">Sign Up To Get Exclusive Offers And News From Our Favorite Brands !</p>
-              <div className="newsletter-form-info mt-8">
-                <form onSubmit={handleSubmit} className="flex pb-5 md:max-w-[550px]">
-                  <div class="w-full relative max-lg:flex max-lg:flex-col">
-                    <input
-                      type="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      class="focus:outline-none bg-[#fff] text-gray-900 rounded-full block w-full p-4 lg:pe-[180px] max-lg:mb-4"
-                      placeholder="Email Address*"
-                      required />
-                    <button className="lg:absolute lg:right-0 lg:top-0 lg:ml-2 rounded-full bg-[#000] text-[#fff] hover:bg-[#F1F8E8] hover:text-[#000] block py-4 px-7 duration-[400ms,700ms]">Subscribe Now</button>
-                  </div>
-                </form>
-              </div>
+              {successMsg ?
+                <div className="newsletter-form-info mt-8">
+                  <form className="flex pb-5 md:max-w-[550px] ">
+                    <div class="w-full relative max-lg:flex max-lg:flex-col bg-black rounded-full">
+                      <div
+                        class=" bg-[#000] text-white rounded-full block w-full p-4 max-lg:mb-4 ">
+                        <p className="text-[#FFF] text-center w-full">Thank you! Your message has been sent.</p>
+                      </div>
+                      {/* <button className="lg:absolute lg:right-0 lg:top-0 lg:ml-2 rounded-full bg-[#000] text-[#fff] hover:bg-[#F1F8E8] hover:text-[#000] block py-4 px-7 duration-[400ms,700ms]">Subscribe Now</button> */}
+                    </div>
+                  </form>
+                </div>
+                :
+                <div className="newsletter-form-info mt-8">
+                  <form onSubmit={handleSubmit} className="flex pb-5 md:max-w-[550px]">
+                    <div class="w-full relative max-lg:flex max-lg:flex-col">
+                      <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        class="focus:outline-none bg-[#fff] text-gray-900 rounded-full block w-full p-4 lg:pe-[180px] max-lg:mb-4"
+                        placeholder="Email Address*"
+                        required />
+                      <button className="lg:absolute lg:right-0 lg:top-0 lg:ml-2 rounded-full bg-[#000] text-[#fff] hover:bg-[#F1F8E8] hover:text-[#000] block py-4 px-7 duration-[400ms,700ms]">Subscribe Now</button>
+                    </div>
+                  </form>
+                </div>
+              }
             </div>
             <div className="md:w-1/2 relative">
               <div>

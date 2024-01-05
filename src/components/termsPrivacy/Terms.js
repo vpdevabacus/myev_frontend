@@ -63,7 +63,7 @@ const data = {
         },
         {
             header: "Changes in Terms",
-            desc: "myEV Point may update these Terms and Conditions from time to time. Users will be notified of any material changes, and continued use of the Services implies acceptance of the revised Terms.<br/>By connecting with myEV PointCloud, Users enter into a mutually beneficial partnership, and understanding and following these Terms and Conditions ensures a smooth and secure collaboration. If you have any questions or concerns, don't hesitate to contact our support team."
+            desc: "myEV Point may update these Terms and Conditions from time to time. Users will be notified of any material changes, and continued use of the Services implies acceptance of the revised Terms.<br/>By connecting with myEV PointCloud, Users enter into a mutually beneficial, and understanding and following these Terms and Conditions ensures a smooth and secure collaboration. If you have any questions or concerns, don't hesitate to contact our support team."
         },
 
     ]
