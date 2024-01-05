@@ -7,7 +7,7 @@ const Cancellations = () => {
 
             <section>
 
-                <div className='container !max-w-[800px] mx-auto py-40 px-6 md:px-4 '>
+                <div className='container !max-w-[800px] mx-auto pb-20 pt-20 px-6 md:px-4 '>
                     <div className="xl:mb-2 text-center">
                         <h2 className="text-center text-3xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Cancellation Policy</h2>
 
