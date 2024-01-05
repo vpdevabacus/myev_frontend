@@ -11,9 +11,7 @@ import ScrollToTop from './helpers/ScrollToTop';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} >
-      <ScrollToTop />
-    </RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

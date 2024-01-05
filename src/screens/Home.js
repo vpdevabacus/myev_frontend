@@ -8,6 +8,9 @@ import Charges from "../components/home/Charges";
 import Footer from "../components/footer/Footer";
 import Testimonials from "../components/testimonials/Testimonials";
 import ContactInfo from "../components/contact_info/ContactInfo";
+import Ourgallery from "../components/home/OurGallery";
+import Ournewsletter from "../common/OurNewsletter";
+import Blogsection from "../common/BlogSection";
 
  const Home = () => {
     return (
@@ -17,8 +20,11 @@ import ContactInfo from "../components/contact_info/ContactInfo";
             <AboutUs />
             <Features/>
             <Strategy/>
+            <Ourgallery/>
+            <Ournewsletter/>
             <Charges />
             <Testimonials />
+            <Blogsection />
             <ContactInfo />
             <Footer />
         </>

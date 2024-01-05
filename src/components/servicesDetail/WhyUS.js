@@ -102,9 +102,9 @@ const WhyUs = () => {
                             </div>
                             <div className='md:w-1/2 mb-5 py-5 px-3'>
                                 <h2 className='mb-3'>Discover Places Nearby</h2>
-                                <p className='mb-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <p className='mb-8'>Stay in the know with real-time updates on station availability, charging speeds, and user reviews. We're committed to providing you with the latest and most accurate information.</p>
                                 <Link to='/contact'>
-                                <button className='flex bg-[#0B7132] text-[#fff] hover:bg-[#000] py-4 px-6 rounded-lg font-semibold duration-[400ms,700ms]'>Contact Us</button></Link>
+                                    <button className='flex bg-[#0B7132] text-[#fff] hover:bg-[#000] py-4 px-6 rounded-lg font-semibold duration-[400ms,700ms]'>Contact Us</button></Link>
                             </div>
                         </div>
                     </div>

@@ -32,7 +32,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <Testimonials />
-            <OurTeam />
+            {/* <OurTeam /> */}
             <ContactInfo />
             <Footer />
         </>

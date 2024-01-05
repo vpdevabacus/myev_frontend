@@ -17,6 +17,13 @@
 .arrow-img-top-info {position: absolute;right: -115px;top: 3px;}
 .arrow-img-bottom-info {position: absolute;bottom: -30px;right: -60px;}
 
+/* Gallery Section */
+.gallery-info {overflow: hidden;overflow-x: scroll;column-gap: 5px;}
+.gallery-info li img {object-fit: cover;object-position: center;height: 100%;}
+.gallery-info::-webkit-scrollbar {height: 5px;}
+.gallery-info::-webkit-scrollbar-track {background: #f1f1f1;border-radius: 5px;}
+.gallery-info::-webkit-scrollbar-thumb {background: #0B7132;border-radius: 5px;}
+  
 /* Responsive css */
 @media (min-width: 1024px){
     .hero-content-info p {font-size: 18px;}
@@ -25,6 +32,9 @@
     /* car-bg-green-section css */
     .evcar-info {margin-top: -175px;}
     .hero-content-info {padding-bottom: 180px;}
+    
+    /* Gallery css */
+    .gallery-info li {width: 25%;flex: 0 0 25%;}
 }
 @media (max-width: 1280px){
     .arrow-img-top-info {right: -90px;}
@@ -35,6 +45,9 @@
     /* car-bg-green-section css */
     .evcar-info {margin-top: -95px;}
     .hero-content-info {padding-bottom: 130px;}
+
+    /* Gallery css */
+    .gallery-info li {width: 33.333%;flex: 0 0 33.333%;}
 }
 @media (max-width: 768px){
     .button-hero-info {max-width: 205px;margin: 0px auto;}
@@ -42,4 +55,7 @@
     /* car-bg-green-section css */
     .evcar-info {margin-top: -80px;}
     .hero-content-info {padding-bottom: 110px;}
+
+    /* Gallery css */
+    .gallery-info li {width: 50%;flex: 0 0 50%;}
 }

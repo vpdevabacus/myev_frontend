@@ -1,35 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import ImageIcons from '../../common/ImageIcons'
-import { useParams } from "react-router-dom"
-import Chargers from '../servicesDetail/Chargers'
 import singleservicefullimg from "../../assets/Images/single-service-fullimg.png";
 import bgcoverimh1 from "../../assets/Images/bg-cover-imh1.png";
 import chaticon from "../../assets/Images/chat-icon.png";
 import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
-import services1 from "../../assets/Images/services1.png"
-import "../header/header.css"
+import { useParams } from "react-router-dom"
+
+const imageBaseUrl = "http://localhost:8400/uploads";
 
 
-
-const ServicesDetail = () => {
-
-    const location = useLocation();
-    const { pathname } = location;
-
+const SingleBlogPage = ({ blogDetails }) => {
 
     const { type } = useParams();
-    console.log(">>>", type)
-
-    const [serviceDetails, setServiceDetails] = useState(null);
-
-    useEffect(() => {
-        const selectedService = servicesList.find(service => service.type === type);
-        setServiceDetails(selectedService);
-    }, [type])
-    console.log(">>>ffdfffff", serviceDetails)
+    console.log(">>>blogDetails(SingleBlogPage)", blogDetails)
 
 
     const phoneNumber = '+91 95925 95975';
@@ -48,38 +33,51 @@ const ServicesDetail = () => {
 
     return (
         <>
-            <div className='single-service-page w-full md:py-20 max-md:py-10'>
+            <div className='single-blog-page w-full md:py-20 max-md:py-10'>
                 <div className='container mx-auto px-2'>
-                    <div className='single-services-info flex gap-10 max-md:flex-col'>
+                    <div className='single-blog-info flex gap-10 max-md:flex-col'>
                         {/* Left Side Bar Info */}
+                        <div className='md:w-3/4 relative mb-5 max-md:order-1'>
+                            {/* Single Blog Content */}
+                            <div className='single-service-right-sidebar'>
+                                <h2 className='mb-4'>{blogDetails?.title}</h2>
+                                <p className='mb-4'>{blogDetails?.description}</p>
+                                {/* <p className='mb-4'>Voluptatem earum? Lorem facilisis et sociis justo exercitationem consequuntur? Sit. Deserunt feugiat potenti ad vehicula odit, dictumst? Inceptos, torquent consequatur autem potenti quisque animi? Eget consequatur, saepe euismod adipiscing debitis! Nascetur adipiscing porro fugit distinctio optio. Dictum lacinia iure maecenas. Iaculis illum pariatur a possimus excepteur ad labore, accumsan ad aperiam dolores, excepteur do! Pariatur integer, impedit mus vulputate nec? At nonummy, sagittis donec saepe delectus aliqua asperiores ratione tenetur! Primis, neque sapiente vehicula, voluptatibus? Adipisicing ultricies commodi fugiat earum? Ridiculus praesentium est maiores? Curabitur expedita dicta primis voluptas consectetuer quo eligendi accusantium metus consequatur, integer, doloribus, velit dignissim rhoncus.</p> */}
+                                <div className="text-center py-4">
+                                    <img src={`${imageBaseUrl}/${blogDetails?.image}`} className='w-full' />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Side Bar Info */}
                         <div className='md:w-1/4 relative mb-5  max-md:order-2'>
-                            <div className='single-service-left-sidebar'>
-                                {/* Our Services Sidebar Links */}
+                            <div className='single-blog-left-sidebar'>
+                                {/* Our Recent Post Sidebar Links */}
                                 <div className='box-shodow-info xl:px-10 xl:py-10 max-xl:px-5 max-xl:py-5 rounded-md shadow-[0_3px_10px_5px_rgba(0,0,0,0.1)] xl:mb-10 max-xl:mb-5'>
                                     <div className='title-sidebar mb-5'>
-                                        <h4>Our Services</h4>
+                                        <h4>Recent Post</h4>
                                         <hr class="green-hr-line" />
                                     </div>
-                                    <div className='services-links-info'>
+                                    <div className='blog-links-info'>
                                         <ul>
-                                            <li className={`${pathname === '/services/AC' && "bg-[#0B7132] text-white rounded-md"}`}>
-                                                <Link to='/services/AC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>AC Charger Service</Link>
+                                            <li>
+                                                <Link to='/services/AC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</Link>
                                             </li>
-                                            <li className={`${pathname === '/services/DC' && "bg-[#0B7132] text-white rounded-md"}`}>
-                                                <Link to='/services/DC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>DC Charger Service</Link>
+                                            <li>
+                                                <Link to='/services/DC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Charging Stations Will Provide Power</Link>
                                             </li>
-                                            {/* <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Home Charger</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Support EV Brand</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Commercial Systems</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#fff]'>Public Stations</a>
-                                        </li> */}
+                                            <li>
+                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Charging Stations Will Provide Power</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#fff]'>Charging Stations Will Provide Power</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -95,8 +93,8 @@ const ServicesDetail = () => {
                                                 <img src={chaticon} className='w-15 h-15 m-auto' />
                                             </div>
                                             <h4 className='mb-3 mt-4 text-white font-medium'>Do you need any help?</h4>
-                                            <p onClick={callPhoneNumber} className='font-medium text-white cursor-pointer'>{phoneNumber}</p>
-                                            <p onClick={openMail} className='font-medium text-white cursor-pointer'>{email}</p>
+                                            <p nClick={callPhoneNumber} className='font-medium text-white cursor-pointer'>{phoneNumber}</p>
+                                            <p nClick={openMail} className='font-medium text-white cursor-pointer'>{email}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -117,8 +115,6 @@ const ServicesDetail = () => {
                                                 download="myEV_Point"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-
-
                                             >Download</Link></p>
                                         </div>
                                     </div>
@@ -135,23 +131,6 @@ const ServicesDetail = () => {
                             </div>
                         </div>
 
-                        {/* Right Side Bar Info */}
-                        <div className='md:w-3/4 relative mb-5 max-md:order-1'>
-                            {/* Single Services Content */}
-                            <div className='single-service-right-sidebar'>
-                                <h2 className='mb-4'>Charging Stations Will Provide {serviceDetails?.type} Power</h2>
-                                <p className='mb-4'>{serviceDetails?.desc1}</p>
-                                {/* <p className='mb-4'>Duis viverra quis diam quis porta. Cras eget ullamcorper augue. Nulla suscipit eleifend diam nec faucibus. Cras aliquet accumsan mi non condimentum. Sed eu tristique tortor. Vestibulum congue sodales sem a aliquam. Mauris tristique sollicitudin dolor. Aliquam nec mauris quis nibh commodo condimentum. Curabitur malesuada erat ut elementum iaculis.</p> */}
-                                <div className="text-center py-4">
-                                    <img src={serviceDetails?.image} className='w-full' />
-                                </div>
-                            </div>
-
-                            {/* Chargers Services Content */}
-                            <div className='chargers-content-info'>
-                                <Chargers />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -175,23 +154,6 @@ const ServicesDetail = () => {
                 </div>
             </div> */}
         </>
-    )
-}
-
-const servicesList = [
-    {
-        type: "AC",
-        title: 'AC Charger Service',
-        desc1: "Elevate your electric vehicle fleet's charging experience with our premium AC Charger Service. Offering customized solutions tailored to your specific needs, our advanced technology ensures optimal charging efficiency, contributing to extended battery life. Our seamless integration process, coupled with 24/7 technical support, guarantees minimal disruptions and continuous operation. With remote monitoring capabilities and scalability to accommodate your growing fleet, our AC Charger Service is the strategic choice for a sustainable and efficient EV charging infrastructure. Contact us today to revolutionize your electric fleet's performance.",
-        image: ImageIcons.services1,
-    },
-    {
-        type: "DC",
-        title: 'DC Charger Service',
-        desc1: 'Revolutionize your electric vehicle charging experience with our cutting-edge DC Charger Service.Experience a seamless integration process with our DC Charger Service, supported by 24/7 technical assistance to minimize disruptions and ensure continuous operation. Benefit from remote monitoring capabilities, providing real-time insights into charging activities.',
-        image: ImageIcons.services2,
-    },
-
-];
-
-export default ServicesDetail
+    );
+};
+export default SingleBlogPage;

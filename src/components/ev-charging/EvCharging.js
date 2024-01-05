@@ -4,6 +4,7 @@ import vision from "../../assets/Images/vision.png";
 import mission from "../../assets/Images/mission.png";
 import "./ev-charging.css";
 import { Link } from 'react-router-dom'
+import { windowScroll } from "../../helpers/ScrollToTop";
 
 
 const EvCharging = () => {
@@ -47,10 +48,10 @@ const EvCharging = () => {
                                 <div className='pl-[20px] text-left'>
                                     <h4 className='mb-[10px] text-[#016C80] font-semibold'>Our Vision</h4>
                                     <p>Revolutionizing electric mobility, our vision is to establish a
-                seamless and accessible network of charging points, driving a
-                sustainable future for all. We're committed to making clean
-                energy an effortless choice, transforming the way the world
-                travels.</p>
+                                        seamless and accessible network of charging points, driving a
+                                        sustainable future for all. We're committed to making clean
+                                        energy an effortless choice, transforming the way the world
+                                        travels.</p>
                                 </div>
                             </div>
                             <div class="flex items-center mb-[40px]">
@@ -60,7 +61,7 @@ const EvCharging = () => {
                                     <p>To propel the electric vehicle revolution, myEV Point is on a mission to establish a widespread network of cutting-edge charging stations. We are dedicated to advancing clean transportation, reducing carbon footprints, and contributing to a sustainable future by providing accessible and efficient charging solutions for electric vehicles worldwide.</p>
                                 </div>
                             </div>
-                            <div className='button-getstarted flex'>
+                            <div className='button-getstarted flex' onClick={windowScroll}>
                                 <Link to='/contact' className="font-size-18 h-[60px] font-semibold  text-white bg-[#0B7132] hover:bg-black rounded-lg px-[45px] py-3 inline-flex items-center duration-[400ms,700ms]">
                                     More About Us
                                 </Link>
