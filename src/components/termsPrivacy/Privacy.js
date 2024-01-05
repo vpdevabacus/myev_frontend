@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
 }
 
 const data = {
-    description: "At myEV Point  we value your privacy and are committed to protecting and processing your personal information responsibly. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services at https://www.themyEV Point.in/.",
+    description: `At myEV Point  we value your privacy and are committed to protecting and processing your personal information responsibly. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services at https://www.themyEV Point.in/.`,
     conditions: [
         {
             header: "Information We Collect",

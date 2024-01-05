@@ -187,12 +187,12 @@ const Footer = () => {
                                                 SAS Nagar, Punjab 160055</p>
                                         </li>
                                         <li className="flex mb-4">
-                                            <FaRegEnvelope className='max-md:h-5 max-md:w-5 max-md:me-3 md:h-7 md:w-7 md:me-3 xl:h-6 xl:w-6 xl:me-4 text-[#0B7132]' />
-                                            <p onClick={openMail} className="text-white">{email}</p>
+                                            <FaRegEnvelope className='max-md:h-5 max-md:w-5 max-md:me-3 md:h-7 md:w-7 md:me-3 xl:h-6 xl:w-6 xl:me-4 text-[#0B7132] ' />
+                                            <p onClick={openMail} className="text-white cursor-pointer">{email}</p>
                                         </li>
                                         <li className="flex">
-                                            <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132]' />
-                                            <p nClick={callPhoneNumber} className="text-white">{phoneNumber}</p>
+                                            <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132] ' />
+                                            <p className="text-white cursor-pointer" onClick={callPhoneNumber} >{phoneNumber}</p>
                                         </li>
                                     </ul>
                                 </div>
