@@ -137,15 +137,15 @@ const Footer = () => {
                                         </li>
                                         <li className='mb-2'>
 
-                                            <Link to='/refund policy' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/refund policy' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Refund Policy</p>
+                                                <p className={`${pathname === '/refund policy' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Refund Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link to='/cancellation' className="flex items-center gap-2 cursor-pointer">
+                                            <Link to='/cancellation' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white">Cancellation Policy</p> 
+                                                <p className={`${pathname === '/cancellation' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Cancellation Policy</p> 
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
@@ -156,16 +156,7 @@ const Footer = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
 
-                                            <Link
-                                                className="flex items-center gap-2 cursor-pointer  "
-                                                to={brocher}
-                                                download="myEV_Point"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-
-
-
-                                            >
+                                                                                       >
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white hover:text-[#0B7132]">Download our Brocher</p>
                                             </Link>
