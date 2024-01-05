@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
 
             <section>
 
-                <div className='container !max-w-[800px] mx-auto py-40 px-6 md:px-4 '>
+                <div className='container !max-w-[800px] mx-auto pb-20 pt-20 px-6 md:px-4 '>
                     <div className="xl:mb-2 text-center">
                         <h2 className="text-center text-3xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Privacy Policy</h2>
 
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
 }
 
 const data = {
-    description: "At myEV Point  we value your privacy and are committed to protecting and processing your personal information responsibly. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services at https://www.themyEV Point.in/.",
+    description: `At myEV Point  we value your privacy and are committed to protecting and processing your personal information responsibly. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services at https://www.themyEV Point.in/.`,
     conditions: [
         {
             header: "Information We Collect",

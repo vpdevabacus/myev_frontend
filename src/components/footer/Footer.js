@@ -136,15 +136,27 @@ const Footer = () => {
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link
-                                                className="flex items-center gap-2 cursor-pointer  "
-                                                to={brocher}
-                                                download="myEV_Point"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
 
+                                            <Link to='/refund policy' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className={`${pathname === '/refund policy' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Refund Policy</p>
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                            <Link to='/cancellation' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
+                                                <img src={ImageIcons.Polygon} className='h-4 w-4' />
+                                                <p className={`${pathname === '/cancellation' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Cancellation Policy</p> 
+                                            </Link>
+                                        </li>
+                                        <li className='mb-2'>
+                                        <Link
+                                        className="flex items-center gap-2 cursor-pointer "
+                                        to={brocher}
+                                        download="myEV_Point"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
 
-                                            >
+                                                                                       >
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
                                                 <p className="text-white hover:text-[#0B7132]">Download our Brocher</p>
                                             </Link>
@@ -175,12 +187,12 @@ const Footer = () => {
                                                 SAS Nagar, Punjab 160055</p>
                                         </li>
                                         <li className="flex mb-4">
-                                            <FaRegEnvelope className='max-md:h-5 max-md:w-5 max-md:me-3 md:h-7 md:w-7 md:me-3 xl:h-6 xl:w-6 xl:me-4 text-[#0B7132]' />
-                                            <p onClick={openMail} className="text-white">{email}</p>
+                                            <FaRegEnvelope className='max-md:h-5 max-md:w-5 max-md:me-3 md:h-7 md:w-7 md:me-3 xl:h-6 xl:w-6 xl:me-4 text-[#0B7132] ' />
+                                            <p onClick={openMail} className="text-white cursor-pointer">{email}</p>
                                         </li>
                                         <li className="flex">
-                                            <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132]' />
-                                            <p nClick={callPhoneNumber} className="text-white">{phoneNumber}</p>
+                                            <MdPhone className='max-md:h-6 max-md:w-6 max-md:me-1 md:h-6 md:w-6 md:me-2 xl:h-7 xl:w-7 xl:me-3 text-[#0B7132] ' />
+                                            <p className="text-white cursor-pointer" onClick={callPhoneNumber} >{phoneNumber}</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -190,7 +202,7 @@ const Footer = () => {
                     {/* Copyright Content */}
                     <div className="footer-copyright-info bg-[#212226]">
                         <div className="container px-2 max-md:py-4 md:py-6 mx-auto">
-                            <p className="text-white text-center">Copyright {currentYear}  by VP Clean Energy Pvt. Ltd. All Right Reserved.</p>
+                            <p className="text-white text-center">Copyright {currentYear}  by VP Ventures. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>

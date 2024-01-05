@@ -51,17 +51,22 @@ const ServicesList = () => {
             {/* Services List Section */}
             <div className="services-list-section w-full md:py-20 max-md:py-10">
                 <div className="container mx-auto px-2">
-                    <div className="flex lg:gap-8 max-lg:gap-5 max-md:flex-col mb-5">
-                        <div className="md:w-1/3 relative mb-5">
+                    <div className="flex lg:gap-8 max-lg:gap-5 max-md:flex-col max-w-[992px] m-auto mb-5">
+                        <div className="md:w-1/2 relative mb-5">
                             <div className="services-list-info">
                                 <div className="service-img-info text-center rounded-t-[35px]">
-                                    <img src={serviceonepic} alt="image" className="w-full rounded-t-[35px]" />
+                                    <img src={serviceonepic} alt="image" className="w-full rounded-t-[35px] rounded-lg cursor-pointer object-center object-cover h-[300px]" />
                                 </div>
                                 <div className='services-list-content bg-[#F8F8F8] xl:px-10 max-xl:px-3 pb-5 rounded-b-[35px]'>
                                     <div className='mb-2 rounded-xl p-2 bg-[#fff] relative mb-[20px] md:mt-[-25px] max-md:mt-[-20px] shadow-lg'>
                                         <h4 className="text-center text-[#0B7132]">AC Charger Service</h4>
                                     </div>
-                                    <p className="text-center mb-[20px]">Elevate your electric vehicle fleet's charging experience with our premium AC Charger Service. </p>
+                                    <p className="text-center mb-[20px]" style={{
+                                        display: '-webkit-box',
+                                        WebkitBoxOrient: 'vertical',
+                                        overflow: 'hidden',
+                                        WebkitLineClamp: 2
+                                    }}>Elevate your electric vehicle fleet's charging experience with our premium AC Charger Service. </p>
                                     <div className='btn-readmore-info pb-3'>
                                         <Link to={`/services/AC`} className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
                                             Read More
@@ -71,16 +76,21 @@ const ServicesList = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/3 relative mb-5">
+                        <div className="md:w-1/2 relative mb-5">
                             <div className="services-list-info">
                                 <div className="service-img-info text-center rounded-t-[35px]">
-                                    <img src={services2} alt="image" className="w-full rounded-t-[35px]" />
+                                    <img src={services2} alt="image" className="w-full rounded-t-[35px] rounded-lg cursor-pointer object-center object-cover h-[300px]" />
                                 </div>
                                 <div className='services-list-content bg-[#F8F8F8] xl:px-10 max-xl:px-3 pb-5 rounded-b-[35px]'>
                                     <div className='mb-2 rounded-xl p-2 bg-[#fff] relative mb-[20px] md:mt-[-25px] max-md:mt-[-20px] shadow-lg'>
                                         <h4 className="text-center text-[#0B7132]">DC Charger Service</h4>
                                     </div>
-                                    <p className="text-center mb-[20px]">Revolutionize your electric vehicle charging experience with our cutting-edge DC Charger Service.</p>
+                                    <p className="text-center mb-[20px]" style={{
+                                        display: '-webkit-box',
+                                        WebkitBoxOrient: 'vertical',
+                                        overflow: 'hidden',
+                                        WebkitLineClamp: 2
+                                    }}>Revolutionize your electric vehicle charging experience with our cutting-edge DC Charger Service.</p>
                                     <div className='btn-readmore-info pb-3'>
                                         <Link to={`/services/DC`} className='flex flex-row justify-center items-center font-medium hover:text-[#0B7132]'>
                                             Read More

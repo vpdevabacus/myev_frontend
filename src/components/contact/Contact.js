@@ -7,9 +7,10 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import GoogleMap from 'google-maps-react-markers';
 import Markers from '../Markers/Markers';
+import { CheckCircle } from '@mui/icons-material';
 import axios from 'axios';
 import "./ContactUs.css";
-
+import Loader from "../shared/loader";
 
 const backgroundImagePath = ImageIcons.Rectangle1;
 const style = {
@@ -41,17 +42,21 @@ const Contact = () => {
     const [emailId, setEmailId] = useState("")
     const [number, setNumber] = useState("")
     const [message, setMessage] = useState("")
-    const [mapReady, setMapReady] = useState(false)
+ 
     const [data, setData] = useState([]);
     const [error, setError] = useState([]);
     const mapRef = useRef(null)
+    const [successMsg, setSuccessMsg] = useState(false)
+    const [disabled, setDisabled] = useState(false);
 
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 // Make a GET request
+
                 const response = await axios.get(`${process.env.REACT_APP_URL}/user/getlocation`);
+
                 // Set the data in the state
                 setData(response.data.data);
             } catch (error) {
@@ -61,27 +66,22 @@ const Contact = () => {
             }
         };
 
-        // Call the fetchData function
         fetchData();
     }, []);
 
 
+       
 
-    const onGoogleApiLoaded = ({ map, maps }) => {
-        mapRef.current = map
-        setMapReady(true)
-    }
 
-    const coordinates = [
-        { lat: 26.9124, lng: 75.7873, name: 'Jaipur', },
-        { lat: 21.1458, lng: 79.0882, name: 'Nagpur', },
-        { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad', },
-    ];
+
+
+     
+    const baseURL = "http://localhost:8400/user/sendemail";
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setDisabled(true);
         try {
             const response = await axios.post(`${process.env.REACT_APP_URL}/user/sendemail`, {
                 fullName: fullName,
@@ -97,6 +97,12 @@ const Contact = () => {
             setEmailId('')
             setNumber('')
             setMessage('')
+            setSuccessMsg(true)
+            setTimeout(() => {
+                setSuccessMsg(false)
+                setDisabled(false);
+
+            }, 3000);
 
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -193,65 +199,80 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/2 max-md:w-full  max-md:px-4">
+                        <div className="md:w-1/2 max-md:w-full  max-md:px-4 relative">
                             <div class="contact-us-form-info bg-white md:py-14 max-md:py-8 md:px-10 max-md:px-5">
-                                <form onSubmit={handleSubmit}>
-                                    <p class=" font-medium text-black
+                                {successMsg ?
+                                    <div className="py-24 text-center ">
+                                        <div className="text-center py-20">
+                                            <h2>Thank You</h2>
+                                            <p className='text-[20px] text-[#008000] font-bold'>We have received your message.</p>
+                                            <CheckCircle sx={{ fontSize: "100px", color: "#008000" }} className='mx-auto' />
+                                        </div>
+                                        <p className='text-[16px] font-bold'>You will be contacted soon by one of our team member.</p>
+                                    </div>
+                                    :
+                                    <>
+                                        {disabled && (<Loader />)}
+
+                                        <form onSubmit={handleSubmit}>
+                                            <p class=" font-medium text-black
                                           ">Full name*</p>
-                                    <div class="relative mb-6">
+                                            <div class="relative mb-6">
 
-                                        <input type="text"
-                                            id="first_name"
-                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
-                                            value={fullName}
-                                            onChange={(e) => setfullName(e.target.value)}
-                                            required
-                                        />
-                                    </div>
+                                                <input type="text"
+                                                    id="first_name"
+                                                    className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
+                                                    value={fullName}
+                                                    onChange={(e) => setfullName(e.target.value)}
+                                                    required
+                                                />
+                                            </div>
 
-                                    <p class=" font-medium text-black
+                                            <p class=" font-medium text-black
                                           ">Email address*</p>
-                                    <div class="relative mb-6">
+                                            <div class="relative mb-6">
 
-                                        <input type="email"
-                                            id="email"
-                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
-                                            value={emailId}
-                                            onChange={(e) => setEmailId(e.target.value)}
-                                            required
-                                        />
-                                    </div>
+                                                <input type="email"
+                                                    id="email"
+                                                    className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
+                                                    value={emailId}
+                                                    onChange={(e) => setEmailId(e.target.value)}
+                                                    required
+                                                />
+                                            </div>
 
 
-                                    <p class=" font-medium text-black
+                                            <p class=" font-medium text-black
                                           ">Phone number*</p>
-                                    <div class="relative mb-6">
+                                            <div class="relative mb-6">
 
-                                        <input type="number"
-                                            id="phone"
-                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
-                                            value={number}
-                                            onChange={(e) => setNumber(e.target.value)}
-                                            required
-                                        />
-                                    </div>
+                                                <input type="number"
+                                                    id="phone"
+                                                    className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
+                                                    value={number}
+                                                    onChange={(e) => setNumber(e.target.value)}
+                                                    required
+                                                />
+                                            </div>
 
-                                    <p class=" font-medium text-black
+                                            <p class=" font-medium text-black
                                           ">Enter message*</p>
-                                    <div class="relative mb-6">
+                                            <div class="relative mb-6">
 
-                                        <textarea id="message"
-                                            name="message"
-                                            rows="4"
-                                            className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
-                                            value={message}
-                                            onChange={(e) => setMessage(e.target.value)}
-                                            required
-                                        />
-                                    </div>
+                                                <textarea id="message"
+                                                    name="message"
+                                                    rows="4"
+                                                    className="bg-[#F1F8E8] rounded-lg block text-gray-900 w-full p-4 focus:outline-none"
+                                                    value={message}
+                                                    onChange={(e) => setMessage(e.target.value)}
+                                                    required
+                                                />
+                                            </div>
 
-                                    <button type="submit" className="bg-[#0B7132] text-white hover:bg-[#000] rounded-lg block py-4 px-7 duration-[400ms,700ms]">Submit Message</button>
-                                </form>
+                                            <button type="submit" className="bg-[#0B7132] text-white hover:bg-[#000] rounded-lg block py-4 px-7 duration-[400ms,700ms]">Submit Message</button>
+                                        </form>
+                                    </>
+                                }
                             </div>
                         </div>
                     </div>
@@ -259,27 +280,16 @@ const Contact = () => {
             </div>
             {/* End Contact Form Section */}
 
-            <div className="discover-nearby-col">
-                <div className="discover-nearby-map-info">
-                    <GoogleMap className="mappin-img-info m-auto"
-                        apiKey="AIzaSyCkfOfMsbxXQJDddclN4qd_u6_l19bvpAc"
-                        defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
-                        defaultZoom={4}
-                        mapMinHeight="400px"
-                        onGoogleApiLoaded={onGoogleApiLoaded}
-                        onChange={(map) => console.log('Map moved', map)}
-                    >
-                        {data.map(({ latitude, longitude, name }, index) => (
-                            <Markers
-                                key={index}
-                                lat={latitude}
-                                lng={longitude}
-                                markerId={name}
-                            />
-                        ))}
-                    </GoogleMap>
-                </div>
-            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4079.200739425459!2d76.69185718317433!3d30.71319131412005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef99cc17fe25%3A0x6a593a19f7208f9b!2sAbacus%20Cloud!5e0!3m2!1sen!2sin!4v1700492253995!5m2!1sen!2sin"
+                width="100%"
+                height="500"
+                //   style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
         </>
     )
 }

@@ -6,7 +6,7 @@ const TermsConditions = () => {
 
             <section>
 
-                <div className='container !max-w-[800px] mx-auto py-40 px-6 md:px-4 '>
+                <div className='container !max-w-[800px] mx-auto pb-20 pt-20 px-6 md:px-4 '>
                     <div className="xl:mb-2 text-center">
                         <h2 className="text-center text-3xl text-black font-semibold md:text-4xl lg:text-5xl mb-10 md:mb-0">Terms and Conditions</h2>
 
@@ -63,7 +63,7 @@ const data = {
         },
         {
             header: "Changes in Terms",
-            desc: "myEV Point may update these Terms and Conditions from time to time. Users will be notified of any material changes, and continued use of the Services implies acceptance of the revised Terms.<br/>By connecting with myEV PointCloud, Users enter into a mutually beneficial partnership, and understanding and following these Terms and Conditions ensures a smooth and secure collaboration. If you have any questions or concerns, don't hesitate to contact our support team."
+            desc: "myEV Point may update these Terms and Conditions from time to time. Users will be notified of any material changes, and continued use of the Services implies acceptance of the revised Terms.<br/>By connecting with myEV PointCloud, Users enter into a mutually beneficial, and understanding and following these Terms and Conditions ensures a smooth and secure collaboration. If you have any questions or concerns, don't hesitate to contact our support team."
         },
 
     ]
