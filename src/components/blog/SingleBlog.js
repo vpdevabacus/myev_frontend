@@ -6,8 +6,8 @@ import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
 import { Link } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
-import { useParams } from "react-router-dom"
-
+import { useParams } from "react-router-dom";
+import axios from 'axios';
 const imageBaseUrl = "http://localhost:8400/uploads";
 
 
@@ -30,6 +30,20 @@ const SingleBlogPage = ({ blogDetails }) => {
     const openMail = () => {
         window.open(mailtoLink);
     };
+
+
+    const [allBlogs, setAllBlogs] = useState([])
+
+    const fetchBlogs = async () => {
+        const response = await axios.get(`${process.env.REACT_APP_URL}/user/getblogs`);
+        console.log("res", response.data)
+        setAllBlogs(response.data.data)
+    }
+
+
+    useEffect(() => {
+        fetchBlogs()
+    }, [])
 
     return (
         <>
@@ -58,28 +72,20 @@ const SingleBlogPage = ({ blogDetails }) => {
                                         <h4>Recent Post</h4>
                                         <hr class="green-hr-line" />
                                     </div>
-                                    <div className='blog-links-info'>
-                                        <ul>
-                                            <li>
-                                                <Link to='/services/AC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</Link>
-                                            </li>
-                                            <li>
-                                                <Link to='/services/DC' className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Charging Stations Will Provide Power</Link>
-                                            </li>
-                                            <li>
-                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Charging Stations Will Provide Power</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>Eget eu hymenaeos blandit blandit ipsum ab.</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#fff]'>Charging Stations Will Provide Power</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    {allBlogs.map((item) => {
+                                        return (
+                                            <div className='blog-links-info' key={item.id}>
+                                                <ul>
+                                                    <li>
+                                                        <Link to={`/blog-detail/${item?.handle}`} className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>
+                                                            {item.title}
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        );
+                                    })}
+
                                 </div>
 
                                 {/* Contact Info Sidebar */}
