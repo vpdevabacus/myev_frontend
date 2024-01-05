@@ -35,10 +35,10 @@ const router = createBrowserRouter(
             <Route path="contact" element={<ContactUs />} />
             <Route path="/services/:type" element={<ServicesDetail />} />
             <Route path="terms&conditions" element={<Terms />} />
-            <Route path="privacy_policy" element={<Privacy />} />
-            <Route path="refund policy" element={<Refund />} />
+            <Route path="privacy-policy" element={<Privacy />} />
+            <Route path="refund-policy" element={<Refund />} />
             <Route path="cancellation" element={<Cancellation />} />
-            <Route path="myEV_Point_brocher" element={<PdfComp />} />
+            <Route path="myEV_Point_brochure" element={<PdfComp />} />
         </Route>
 
     )

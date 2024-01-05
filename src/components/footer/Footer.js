@@ -124,9 +124,9 @@ const Footer = () => {
                                     </div>
                                     <ul className='footer-links-info list-none'>
                                         <li className='mb-2'>
-                                            <Link to='/privacy_policy' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
+                                            <Link to='/privacy-policy' className="flex items-center gap-2 cursor-pointer" onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className={`${pathname === '/privacy_policy' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>Privacy Policy</p>
+                                                <p className={`${pathname === '/privacy-policy' ? "text-[#0B7132] font-semibold" : "text-white hover:text-[#0B7132]"}`}>Privacy Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
@@ -137,28 +137,28 @@ const Footer = () => {
                                         </li>
                                         <li className='mb-2'>
 
-                                            <Link to='/refund policy' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
+                                            <Link to='/refund-policy' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className={`${pathname === '/refund policy' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Refund Policy</p>
+                                                <p className={`${pathname === '/refund-policy' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Refund Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
                                             <Link to='/cancellation' className="flex items-center gap-2 cursor-pointer " onClick={windowScroll}>
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className={`${pathname === '/cancellation' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Cancellation Policy</p> 
+                                                <p className={`${pathname === '/cancellation' ? "text-[#0B7132] font-semibold  " : "text-white hover:text-[#0B7132]"}`}>Cancellation Policy</p>
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                        <Link
-                                        className="flex items-center gap-2 cursor-pointer "
-                                        to={brocher}
-                                        download="myEV_Point"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                            <Link
+                                                className="flex items-center gap-2 cursor-pointer "
+                                                to={brocher}
+                                                download="myEV_Point"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
 
-                                                                                       >
+                                            >
                                                 <img src={ImageIcons.Polygon} className='h-4 w-4' />
-                                                <p className="text-white hover:text-[#0B7132]">Download our Brocher</p>
+                                                <p className="text-white hover:text-[#0B7132]">Download our Brochure</p>
                                             </Link>
                                         </li>
                                         {/* <li className='mb-2'>

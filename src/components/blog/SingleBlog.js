@@ -114,7 +114,7 @@ const SingleBlogPage = ({ blogDetails }) => {
                                     <div className='flex flex-row'>
                                         <img src={pdficon1} className='w-12 h-12 mr-2' />
                                         <div className='download-txt-info'>
-                                            <h5 className='text-lg font-medium'>Download our Brochures</h5>
+                                            <h5 className='text-lg font-medium'>Download our Brochure</h5>
                                             <p><Link
                                                 className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
                                                 to={brocher}
