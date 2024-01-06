@@ -6,12 +6,16 @@ import pdficon1 from "../../assets/Images/pdf-icon-1.png";
 import pdficon2 from "../../assets/Images/pdficon2.png";
 import { Link } from 'react-router-dom';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import axios from 'axios';
 const imageBaseUrl = "http://localhost:8400/uploads";
 
 
 const SingleBlogPage = ({ blogDetails }) => {
+
+    const location = useLocation();
+    const { pathname } = location;
+    console.log(">>>>pathname", pathname)
 
     const { type } = useParams();
     console.log(">>>blogDetails(SingleBlogPage)", blogDetails)
@@ -74,7 +78,7 @@ const SingleBlogPage = ({ blogDetails }) => {
                                     </div>
                                     {allBlogs.map((item) => {
                                         return (
-                                            <div className='blog-links-info' key={item.id}>
+                                            <div className={`${pathname === `/blog-detail/${item?.handle}` && "bg-[#0B7132] text-white rounded-md"} blog-links-info `} key={item.id}>
                                                 <ul>
                                                     <li>
                                                         <Link to={`/blog-detail/${item?.handle}`} className='flex px-4 py-2 hover:bg-[#0B7132] hover:text-[#fff] rounded-md border-b border-solid border-[#ddd]'>
@@ -116,7 +120,7 @@ const SingleBlogPage = ({ blogDetails }) => {
                                         <div className='download-txt-info'>
                                             <h5 className='text-lg font-medium'>Download our Brochure</h5>
                                             <p><Link
-                                                className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium"
+                                                className="flex items-center gap-2 cursor-pointer text-[#0B7132] font-medium "
                                                 to={brocher}
                                                 download="myEV_Point"
                                                 target="_blank"

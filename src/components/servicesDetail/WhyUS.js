@@ -55,7 +55,7 @@ const WhyUs = () => {
             <section className="why-choice-us-section w-full md:pb-20 max-md:pb-10 ">
                 <div className='container mx-auto px-2'>
                     <div className='text-center mb-10'>
-                        <h2 className='mb-3'>Why you sould choose us ?</h2>
+                        <h2 className='mb-3'>Why you should choose us ?</h2>
                         <p className='max-w-[1080px] m-auto'>myEV Point is more than just a charging network; it's a community. Connect with fellow EV enthusiasts, share experiences, and stay informed about the latest developments in the world of electric vehicles. Choose myEV Point — Where Innovation Meets Reliability. Join us on the road to a sustainable and electrifying future.</p>
                     </div>
                     <div className='flex gap-4 max-md:flex-col max-w-[1024px] m-auto'>
