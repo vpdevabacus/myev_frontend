@@ -3,12 +3,14 @@ import "./Footer.css";
 import ImageIcons from '../../common/ImageIcons'
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaRegEnvelope, FaTwitter, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
-import { MdLocationPin, MdPhone } from "react-icons/md";
+import { MdLocationPin, MdPhone, MdArrowUpward } from "react-icons/md";
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { windowScroll } from '../../helpers/ScrollToTop';
 import brocher from "../../assets/utils/myEV_borcher.pdf"
 import footerleftbg from "../../assets/Images/footer-left-bg.png";
 import footerrightbg from "../../assets/Images/footer-right-bg.png";
+import useScrollPosition from '../shared/useScrollPosition';
+
 
 import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -23,6 +25,8 @@ const style = {
 };
 
 const Footer = () => {
+
+    const scrollPosition = useScrollPosition();
 
     const location = useLocation();
     const { pathname } = location;
@@ -205,6 +209,14 @@ const Footer = () => {
                             <p className="text-white text-center">Copyright {currentYear}  by VP Ventures. All Right Reserved.</p>
                         </div>
                     </div>
+                    {scrollPosition > 600 && (
+                        <button
+                            className='itms-center fixed group md:right-[50px] md:bottom-[50px] duration-500 right-[15px] bottom-[15px] bg-[#F1F8E8] hover:bg-[#0B7132] w-[50px] h-[50px] shadow-md rounded-[10px] shadow-[#000244]'
+                            onClick={windowScroll}
+                        >
+                            <MdArrowUpward className="text-[#0B7132] group-hover:text-white mx-auto text-3xl" />
+                        </button>
+                    )}
                 </div>
             </footer>
             {/* Footer Section End */}

@@ -277,7 +277,7 @@ const Header = () => {
                                 <div className='flex mx-auto justify-between gap-4 py-2 px-2'>
                                     {/* Navbar Logo */}
                                     <div className='site-logo-info'>
-                                        <NavLink to="/">
+                                        <NavLink to="/" onClick={windowScroll}>
                                             <img src={ImageIcons.myEV_logo} className='logo-size-w cursor-pointer' />
                                         </NavLink>
                                     </div>
@@ -285,7 +285,7 @@ const Header = () => {
                                         {/* Navbar menu */}
                                         <div className="hidden lg:flex items-center">
                                             <ul className='primary-menu-info flex list-none'>
-                                               
+
                                                 <li className='menu-item-info'>
                                                     <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#0B7132]" : "hover:text-[#0B7132]"} onClick={windowScroll}>About Us</NavLink>
                                                 </li>
