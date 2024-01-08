@@ -48,7 +48,7 @@ const Chargers = () => {
                                         ))}
                                     </div>
                                     <div className="w-2/5 text-center m-auto">
-                                        <img src={ImageIcons.slowMachine} />
+                                        <img src={ImageIcons.evmachines} />
                                     </div>
                                 </div>
                                 :
@@ -60,7 +60,7 @@ const Chargers = () => {
                                         ))}
                                     </div>
                                     <div className="w-2/5 text-center m-auto">
-                                        <img src={ImageIcons.fastMachine} />
+                                        <img src={ImageIcons.evmachines} />
                                     </div>
                                 </div>
                             }
@@ -95,7 +95,7 @@ const Chargers = () => {
                                         ))}
                                     </div>
                                     <div className=" md:w-7/12 lg:w-4/12 md:mx-auto lg:mx-0 items-center my-auto">
-                                        <img src={ImageIcons.slowMachine} className='rounded-2xl w-12/12' />
+                                        <img src={ImageIcons.evmachines} className='rounded-2xl w-12/12' />
                                     </div>
                                 </div>
                                 :
@@ -108,7 +108,7 @@ const Chargers = () => {
                                         ))}
                                     </div>
                                     <div className=" md:w-7/12 lg:w-4/12 md:mx-auto lg:mx-0 items-center my-auto">
-                                        <img src={ImageIcons.fastMachine} className='rounded-2xl w-12/12' />
+                                        <img src={ImageIcons.evmachines} className='rounded-2xl w-12/12' />
                                     </div>
                                 </div>
                             }

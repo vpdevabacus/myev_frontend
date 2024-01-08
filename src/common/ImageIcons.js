@@ -59,6 +59,8 @@ import afterimg from "../assets/Images/after-img.png"
 import EVCharging from "../assets/Images/ev-machine.png"
 import EVCharging1 from "../assets/Images/About_E_Charge.jpg"
 import marker from "../assets/Images/marker.png"
+import evmachines from "../assets/Images/evmachines.png"
+
 
 
 
@@ -130,7 +132,8 @@ const ImageIcons = {
   footer_right_bg,
   footer_left_bg,
   EVCharging1,
-  marker
+  marker,
+  evmachines
 
 }
 
