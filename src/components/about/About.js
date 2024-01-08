@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 import ImageIcons from '../../common/ImageIcons'
 
@@ -24,7 +26,7 @@ const About = () => {
                             </div>
                             <div className='bg-[#33333] w-11/12'>
                                 <p className="text-3xl font-semibold text-[#000] text-4xl lg:text-5xl mt-7">
-                                    What is an EV Charging Station?
+                                    What is an EV Charging Station?h
                                 </p>
                             </div>
                             <p className="max-w-xl lg: max-w-sm mt-7  text-xl font-normal text-[#000]">

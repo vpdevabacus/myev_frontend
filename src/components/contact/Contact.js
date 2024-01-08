@@ -23,7 +23,7 @@ const style = {
 
 const Contact = () => {
 
-    const phoneNumber = '+919592595975';
+    const phoneNumber = '+91 9592-595975';
     const phoneLink = `tel:${phoneNumber}`;
 
     const callPhoneNumber = () => {

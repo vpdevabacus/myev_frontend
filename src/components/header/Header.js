@@ -69,49 +69,55 @@ const Header = () => {
 
             >
                 <Divider />
-
+                <NavLink to="/" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                 <ListItem disablePadding className={`${pathname === '/' && "bg-[#0B7132] text-white"}`}>
+               
                     <ListItemButton className={`${pathname === '/' && "bg-[#0B7132] text-white"}`}>
-                        <NavLink to="/" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                       
                             <ListItemText primary="Home" />
-                        </NavLink>
+                        
                     </ListItemButton>
+                    
                 </ListItem>
+                </NavLink>
 
                 <Divider />
-
+                <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                 <ListItem disablePadding className={`${pathname === '/about' && "bg-[#0B7132] text-white"}`}>
                     <ListItemButton>
-                        <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                        
                             <ListItemText primary="About Us" />
-                        </NavLink>
+                        
                     </ListItemButton>
                 </ListItem>
+                </NavLink>
 
                 <Divider />
-
+                <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#fff]" : "text-[#000] hover:text-[#0B7132]"} onClick={windowScroll}>
                 <ListItem disablePadding className={`${(pathname === '/services' || pathname === '/services/AC' || pathname === '/services/DC') && "bg-[#0B7132] "} `}>
                     <ListItemButton onClick={handleClick} >
-                        <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#fff]" : "text-[#000] hover:text-[#0B7132]"} onClick={windowScroll}>
+                        
                             <ListItemText className={`${(pathname === '/services' || pathname === '/services/AC' || pathname === '/services/DC') ? "text-white" : "text-black"}`} primary="Services" />
-                        </NavLink>
+                        
 
                         <div className='absolute right-[10px]'>{open ? <ExpandLess /> : <ExpandMore />}</div>
                     </ListItemButton>
                 </ListItem>
+                </NavLink>
 
 
 
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                         <ListItem disablePadding className={`${pathname === '/services/AC' ? "bg-[rgba(11,113,50,0.7)] text-white" : "bg-[#000] text-white"}`}>
-
+                        <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                             <ListItemButton sx={{ pl: 4 }}>
 
-                                <NavLink to="/services/AC" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                                
                                     <ListItemText primary="AC Charger Service" />
-                                </NavLink>
+                               
                             </ListItemButton>
+                            </NavLink>
                         </ListItem>
                     </List>
                 </Collapse>
@@ -129,30 +135,35 @@ const Header = () => {
                     </List>
                 </Collapse>
                 <Divider />
+                <NavLink to="/blog" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                 <ListItem disablePadding className={`${pathname === '/blog' && "bg-[#0B7132] text-white"}`}>
                     <ListItemButton>
-                        <NavLink to="/blog" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                       
                             <ListItemText primary="Blogs" />
-                        </NavLink>
+                       
                     </ListItemButton>
                 </ListItem>
+                </NavLink>
                 <Divider />
+                <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                 <ListItem disablePadding className={`${pathname === '/gallery' && "bg-[#0B7132] text-white"}`}>
                     <ListItemButton>
-                        <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                        
                             <ListItemText primary="Gallery" />
-                        </NavLink>
+                       
                     </ListItemButton>
                 </ListItem>
+                </NavLink>
                 <Divider />
-
+                <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
                 <ListItem disablePadding className={`${pathname === '/contact' && "bg-[#0B7132] text-white"}`}>
                     <ListItemButton>
-                        <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#fff]" : "hover:text-[#0B7132]"} onClick={windowScroll}>
+                        
                             <ListItemText primary="Contact Us" />
-                        </NavLink>
+                        
                     </ListItemButton>
                 </ListItem>
+                </NavLink>
                 <Divider />
 
             </List>

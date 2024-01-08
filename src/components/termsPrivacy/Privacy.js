@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
 }
 
 const data = {
-    description: `At myEV Point  we value your privacy and are committed to protecting and processing your personal information responsibly. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services at https://www.themyEV Point.in/.`,
+    description: `At myEV Point  we value your privacy and are committed to protecting and processing your personal information responsibly. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services at info@vpventuresindia.com.`,
     conditions: [
         {
             header: "Information We Collect",
@@ -64,8 +64,9 @@ const data = {
         },
         {
             header: "Contact Us",
-            desc: "If you have questions or concerns about this Privacy Policy, please contact us at <a href='mailto:info@themyEV Point.in' className='text-white text-[16px] mailto:leading-[164.706%]'>info@themyEV Point.in</a>"
-        },
+            desc: "If you have questions or concerns about this Privacy Policy, please contact us at <a href='mailto:info@vpventuresindia.com' className='text-white text-[16px] leading-[164.706%]'>info@vpventuresindia.com</a>"
+
+        },                                                                                           
 
     ]
 };

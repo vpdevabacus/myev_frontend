@@ -1,5 +1,6 @@
 import ImageIcons from "../../common/ImageIcons";
 import "./HomePage.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import gallery1 from '../../assets/Images/services1.png';
 import gallery2 from '../../assets/Images/services2.png';
 import gallery3 from '../../assets/Images/servies-pic1.png';
@@ -19,7 +20,7 @@ const Strategy = () => {
             <div className="md:w-1/4 relative">
                 <div className="top-img-box-info relative">
                     <div className="top-circle-img mb-3">
-                        <img className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work} alt="Fast Charging" loading="lazy" />
+                        <LazyLoadImage className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work} alt="Fast Charging" loading="lazy" />
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Fast Charging</h4>
@@ -33,7 +34,7 @@ const Strategy = () => {
             <div className="md:w-1/4 relative">
                 <div className="top-img-box-info md:pt-[50px]">
                     <div className="top-circle-img mb-3">
-                        <img className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work1} alt="Fast Charging" loading="lazy" />
+                        <LazyLoadImage className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work1} alt="Fast Charging" loading="lazy" />
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Good Management</h4>
@@ -47,7 +48,7 @@ const Strategy = () => {
             <div className="md:w-1/4 relative">
                 <div className="top-img-box-info relative">
                     <div className="top-circle-img mb-3">
-                        <img className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work2} alt="Fast Charging" loading="lazy" />
+                        <LazyLoadImage className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work2} alt="Fast Charging" loading="lazy" />
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Renewable Energy</h4>
@@ -61,7 +62,7 @@ const Strategy = () => {
             <div className="md:w-1/4 relative">
                 <div className="top-img-box-info relative md:pt-[50px]">
                     <div className="top-circle-img mb-3">
-                        <img className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work3} alt="Fast Charging" loading="lazy" />
+                        <LazyLoadImage className="mx-auto xl:max-w-[210px] max-xl:max-w-[150px] md:40" src={ImageIcons.work3} alt="Fast Charging" loading="lazy" />
                     </div>
                     <div className="text-center">
                       <h4 className="mb-1">Quality Charger</h4>
