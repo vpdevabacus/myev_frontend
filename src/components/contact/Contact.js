@@ -183,7 +183,7 @@ const Contact = () => {
                                     </Link>
                                     <Link to='https://in.pinterest.com/myevpoint/' target="_blank">
                                         <div className="w-12 h-12 me-3 rounded-full bg-[#F1F8E8] p-[13px] hover:scale-[1.1]">
-                                            <FaInstagram className='h-5 w-6 text-[#0B7132]' />
+                                            <FaPinterest className='h-5 w-6 text-[#0B7132]' />
                                         </div>
                                     </Link>
                                     <Link to='https://www.youtube.com/channel/UCI3qj7D2eG-hqQ-HP948QWw' target="_blank">
@@ -252,6 +252,7 @@ const Contact = () => {
                                                     value={number}
                                                     onChange={(e) => setNumber(e.target.value)}
                                                     required
+                                                    
                                                 />
                                             </div>
 

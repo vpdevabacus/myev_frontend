@@ -35,7 +35,7 @@ const SingleBlogPage = ({ blogDetails }) => {
     const [allBlogs, setAllBlogs] = useState([])
 
     const fetchBlogs = async () => {
-        const response = await axios.get(`${process.env.REACT_APP_URL}/user/getblogs`);
+        const response = await axios.get(`${process.env.REACT_APP_URL}/user/getBlogs`);
         console.log("res", response.data)
         setAllBlogs(response.data.data)
     }
