@@ -16,17 +16,14 @@ const ContactInfo = () => {
         <>
             <section className="testimonials py-[50px] md:py-[40px] px-[20px] bg-[#0B7132]">
                 <div className="container m-auto">
-                    <div className="flex md:flex-row flex-col justify-between items-center">
-                        <h4 className="text-[22px] md:text-[18px] lg:text-[25px] xl:text-[30px]  text-white font-medium flex items-center">
-                            Find Our near Branches
-                            <span className="pl-[13px] w-[40px] xl:w-[50px]"> <img src={earthIcon} alt="" /></span>
+                    <div className="flex md:flex-row flex-col justify-between items-center gap-3">
+                        <h4 className="text-[22px] md:text-[18px] lg:text-[24px] xl:text-[28px] text-white font-medium flex items-center">
+                            <span className="md:hidden pr-[13px] w-[40px] xl:w-[50px]"> <img src={earthIcon} alt="" /></span> Find Our near Branches <span className="max-md:hidden pl-[13px] w-[40px] xl:w-[50px]"> <img src={earthIcon} alt="" /></span>
                         </h4>
-
-                        <div className="my-[40px] md:my-0 flex items-center text-center bg-center bg-contain bg-no-repeat h-[100px] md:h-[80px] lg:h-[100px] xl:h-[128px]" style={{ backgroundImage: `url(${callInfo})` }}>
-                            <h3 onClick={callPhoneNumber} className="text-[24px] md:text-[20px] lg:text-[28px] xl:text-[34px] text-white font-medium cursor-pointer">Call US On <br />{phoneNumber}</h3>
+                        <div className="my-[20px] md:my-0 flex items-center text-center bg-center bg-contain bg-no-repeat h-[100px] md:h-[80px] lg:h-[100px] xl:h-[128px]" style={{ backgroundImage: `url(${callInfo})` }}>
+                            <h3 onClick={callPhoneNumber} className="md:text-[18px] lg:text-[24px] xl:text-[28px] text-white font-medium cursor-pointer">Call US On <br />{phoneNumber}</h3>
                         </div>
-
-                        <h4 className="text-[22px] md:text-[18px] lg:text-[25px] xl:text-[30px]   text-white font-medium flex items-center">
+                        <h4 className="text-[22px] md:text-[18px] lg:text-[24px] xl:text-[28px] text-white font-medium flex items-center">
                             <span className="pr-[13px] w-[40px] xl:w-[50px]"> <img src={clockIcon} alt="" /></span>
                             24/7 Emergency Services
                         </h4>
