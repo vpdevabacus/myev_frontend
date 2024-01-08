@@ -86,7 +86,7 @@ const Chargers = () => {
                                 <p className="mt-7 text-base md:text-lg lg:text-2xl font-medium text-[#000] text-left">Dual Charging Setup</p>
                             </div>
                             {isChecked ?
-                                <div className='flex flex-col w-11/12 justify-between mx-auto md:flex-row mb-0'>
+                                <div className='flex flex-col w-11/12 justify-between mx-auto md:flex-row mb-0 md:mt-8'>
                                     <div className="py-12 md:w-5/12 md:mt-8 lg:mx-0 lg:w-8/12">
                                         <h2 className="text-left text-2xl text-black font-semibold md:text-3xl lg:text-5xl mb-10 md:mb-10">Dual Charging Setup</h2>
 
@@ -94,12 +94,12 @@ const Chargers = () => {
                                             <FeatureList key={item.id} item={item} />
                                         ))}
                                     </div>
-                                    <div className=" md:w-7/12 lg:w-4/12 md:mx-auto lg:mx-0 items-center my-auto">
+                                    <div className="md:w-7/12 lg:w-4/12 mx-auto lg:mx-0 items-center my-auto">
                                         <img src={ImageIcons.evmachines} className='rounded-2xl w-12/12' />
                                     </div>
                                 </div>
                                 :
-                                <div className='flex flex-col w-11/12 justify-between mx-auto md:flex-row mb-0'>
+                                <div className='flex flex-col w-11/12 justify-between mx-auto md:flex-row mb-0  md:mt-8'>
                                     <div className="py-12 md:w-5/12 md:mt-8 lg:mx-0 lg:w-8/12">
                                         <h2 className="text-left text-2xl text-black font-semibold md:text-3xl lg:text-5xl mb-10 md:mb-10">Single Charging Setup</h2>
 
@@ -107,7 +107,7 @@ const Chargers = () => {
                                             <FeatureList key={item.id} item={item} />
                                         ))}
                                     </div>
-                                    <div className=" md:w-7/12 lg:w-4/12 md:mx-auto lg:mx-0 items-center my-auto">
+                                    <div className="md:w-7/12 lg:w-4/12 mx-auto lg:mx-0 items-center my-auto">
                                         <img src={ImageIcons.evmachines} className='rounded-2xl w-12/12' />
                                     </div>
                                 </div>

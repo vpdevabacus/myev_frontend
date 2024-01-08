@@ -41,7 +41,11 @@ const SingleBlogPage = ({ blogDetails }) => {
     const fetchBlogs = async () => {
         const response = await axios.get(`${process.env.REACT_APP_URL}/user/getBlogs`);
         console.log("res", response.data)
-        setAllBlogs(response.data.data)
+
+        const sortedBlogs = response.data.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        const latest6Blogs = sortedBlogs.slice(0, 6);
+
+        setAllBlogs(latest6Blogs)
     }
 
 

@@ -58,7 +58,7 @@ const Footer = () => {
                         <div className="sm:container lg:container m-auto">
                             <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 px-2 md:1 max-lg:gap-3 lg:gap-2 xl:gap-4">
                                 <div className="footer-col-first max-md:mb-6 max-lg:mb-8">
-                                    <Link to='/'>
+                                    <Link to='/' onClick={windowScrollTop}>
                                         <div className='site-logo-footer max-lg:mb-3 lg:mb-5'>
                                             <img src={ImageIcons.footer_myEV_logo} className='footer-logo-size lg:h-20 lg:w-44' />
                                         </div>
@@ -212,7 +212,7 @@ const Footer = () => {
                     </div>
                     {scrollPosition > 600 && (
                         <button
-                            className='itms-center fixed group md:right-[50px] md:bottom-[50px] duration-500 right-[15px] bottom-[15px] bg-[#F1F8E8] hover:bg-[#0B7132] w-[50px] h-[50px] shadow-md rounded-[10px] shadow-[#000244]'
+                            className='itms-center fixed group md:right-[50px] md:bottom-[50px] duration-500 right-[15px] bottom-[15px] bg-[#F1F8E8] hover:bg-[#0B7132] w-[50px] h-[50px] shadow-md rounded-[10px] shadow-[#000]'
                             onClick={windowScrollTop}
                         >
                             <MdArrowUpward className="text-[#0B7132] group-hover:text-white mx-auto text-3xl" />

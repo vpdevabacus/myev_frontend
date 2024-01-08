@@ -10,7 +10,10 @@ const Blogsection = () => {
   const fetchBlogs = async () => {
     const response = await axios.get(`${process.env.REACT_APP_URL}/user/getBlogs`);
     console.log("res", response.data)
-    setAllBlogs(response.data.data)
+    const sortedBlogs = response.data.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const latest3Blogs = sortedBlogs.slice(0, 3);
+
+    setAllBlogs(latest3Blogs)
   }
 
 

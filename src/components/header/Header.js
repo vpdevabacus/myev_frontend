@@ -272,7 +272,7 @@ const Header = () => {
                     </div>
                     {/* Header Navbar */}
                     <div className={`${sticky.isSticky ? 'sticky' : ''} ${sticky.isSticky ? 'z-50' : ''}`} ref={headerRef}>
-                        <div className="w-full bg-white header-navbar-info">
+                        <div className="w-full bg-white header-navbar-info shadow-md">
                             <div className='container mx-auto'>
                                 <div className='flex mx-auto justify-between gap-4 py-2 px-2'>
                                     {/* Navbar Logo */}
@@ -323,7 +323,7 @@ const Header = () => {
                                                     <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#0B7132]" : "text-[#000] hover:text-[#0B7132]"} onClick={windowScroll}>Contact Us</NavLink>
                                                 </li>
                                             </ul>
-                                            <div className='button-getstarted flex'>
+                                            <div className='button-getstarted flex text-center '>
                                                 <NavLink to="/contact" className="font-size-16 text-white bg-[#0B7132] hover:bg-black rounded-lg ml-5 px-5 py-3 inline-flex items-center" onClick={windowScroll}>
                                                     Get Started
                                                 </NavLink>
